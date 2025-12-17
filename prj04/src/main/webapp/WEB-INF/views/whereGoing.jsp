@@ -453,4 +453,26 @@
   <%-- //이병주 JS코드 --%>
   <%@ include file="/WEB-INF/views/common/footer.jsp" %>
   </body>
+  <%-- 희정님 js 코드 --%>
+  <%-- 
+  <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    // 처음에 rec div 전부 숨김
+		    $("[id^='rec']").hide();
+		    $("[id^='travel_destination']").on("click", function(){
+		        // 클릭한 div의 id
+		        let clickId = $(this).attr("id");
+		        // 숫자만 추출 (01 ~ 10)
+		        let num = clickId.replace("travel_destination", "");
+		        // 모든 req 숨기기
+		        $("[id^='rec']").hide();
+		        // 같은 번호의 rec만 show
+		        $("#rec" + num).show();
+		    });
+		});
+	</script>
+	--%>
 </html>
