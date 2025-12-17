@@ -29,9 +29,9 @@
   </head>
   <body>
   <!-- 헤더 연결하기 -->
-    <header>
-    	<%@ include file="header.jsp" %>
-    </header>
+    <%-- <header>
+    	<%@ include file="#" %>
+    </header> --%>
     <!-- //헤더 연결하기 -->
 		<!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정-->
     <div class="hero-wrap js-fullheight" style="background-image: url('images/Recommend_Destination3.png');" data-stellar-background-ratio="0.5">
@@ -404,9 +404,9 @@
 
   </body>
   <!-- footer 연결하기 -->
-    <footer>
-    	<%@ include file="footer.jsp" %>
-    </<footer>
+    <%-- <footer>
+  	<%@ include file="#" %>
+    </<footer> --%>
     <!-- //footer 연결하기 -->
 
   <!-- loader -->
