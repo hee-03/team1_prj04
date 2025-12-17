@@ -9553,3 +9553,10 @@ footer .container p:last-child{
 	text-align: center;
 	font-weight: 400;
 }
+/* 희정 작성 --------------------------------------*/
+/* rec_travel.jsp*/
+.tr_dst_circle{
+	width:80px;height:80px;
+	border-radius:50%;
+	position:absolute;
+}
