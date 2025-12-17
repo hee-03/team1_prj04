@@ -36,7 +36,7 @@ public class A01_MVC_Controller {
        return "festival"; // → /WEB-INF/view/festival.jsp
    }
       
-      
+   //이병주   
    //http://localhost:7070/whereGoing
    @GetMapping("whereGoing")
    public String whereGoing() {
