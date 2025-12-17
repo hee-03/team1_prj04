@@ -24,8 +24,7 @@ public class A01_MVC_Controller {
 	public String mytrip() {
 		return "mytrip";
 	}
-	
-	//heejeong/rec_travel
+
 	// http://localhost:6060/rec_travel
 		@GetMapping("rec_travel")
 		public String rec_travel() {
