@@ -164,7 +164,32 @@
 	            </p>
 	          </div>
 	        </div>
-	
+	        
+	        <!-- 카드 1 -->
+	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
+	          <div class="col-md-5 d-flex">
+	            <div class="img w-100" style="background-image:url('/images/about.jpg');"></div>
+	          </div>
+	          <div class="col-md-7 p-4">
+	            <h3 class="mb-2">With Us</h3>
+	            <p class="mb-0">
+	              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
+	            </p>
+	          </div>
+	        </div>
+	        
+	        <!-- 카드 1 -->
+	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
+	          <div class="col-md-5 d-flex">
+	            <div class="img w-100" style="background-image:url('/images/about.jpg');"></div>
+	          </div>
+	          <div class="col-md-7 p-4">
+	            <h3 class="mb-2">With Us</h3>
+	            <p class="mb-0">
+	              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
+	            </p>
+	          </div>
+	        </div>
 	      </div>
 	
 	      <!-- 지도 -->
