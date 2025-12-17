@@ -9493,9 +9493,71 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
-
     
-/* 세진 작성 css ------------------------------------------------------------*/
+/* 세진 작성 css main page ------------------------------------------------------------*/
+#mainImg.hero-wrap .overlay {
+	opacity: .1;
+}
+
+/* 검색바 배경 */
+.search-wrap-1{
+  background:#fff;
+}
+
+/* select 박스 공통 */
+.custom-selectbox{
+  height:58px;
+  min-width:160px;
+  font-size:22px;
+  font-weight:700;
+  border:2px solid #111;
+  border-radius:6px;
+  padding:0 18px;
+  background:#fff;
+  color:#111;
+}
+
+/* 드롭다운 옵션 글자색 안 보이는 문제 방지 */
+.custom-selectbox option{
+  color:#111;
+  background:#fff;
+}
+
+/* 조사(에/와/을) */
+.keyword{
+  font-size:22px;
+  font-weight:700;
+  color:#777;
+  padding:0 10px 10px;
+  white-space:nowrap;
+}
+
+/* '순천에서!' 강조 */
+.keyword-place{
+  color:#1e8e5a;      /* 초록 느낌 */
+  padding-right:18px;
+}
+
+/* 검색 버튼 */
+.search-btn{
+  height:58px;
+  min-width:150px;
+  font-size:22px;
+  font-weight:800;
+  border-radius:6px;
+  padding:0 34px;
+}
+
+/* 줄바꿈 방지 + 간격 예쁘게 */
+.search-property-1 .row{
+  gap:14px;
+}
+
+.col-auto {
+	border: 1px solid #000;
+}
+    
+/* 세진 작성 css mytrip page ------------------------------------------------------------*/
 /* header */
 .gnb > ul {
 	background-color: #f1f9ff;

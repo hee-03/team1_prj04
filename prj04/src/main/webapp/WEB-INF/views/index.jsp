@@ -31,96 +31,97 @@
   <body>
     <%@ include file="/WEB-INF/views/common/header.jsp" %>
 	<!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정-->
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/main/homemainimg.png');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" id="mainImg" style="background-image: url('images/main/homemainimg.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+        <!-- <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-9 text text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
             <p class="caps" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">여행담기</p>
             <h1 data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">당신의 여행, 취향을 담다.</h1>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
-
-		<!-- 추천 여행 검색 -->
+   	
+   	<!-- 추천 여행 검색 -->
     <section class="ftco-section ftco-no-pb ftco-no-pt">
-    	<div class="container">
-	    	<div class="row">
-					<div class="col-md-12">
-						<div class="search-wrap-1 ftco-animate p-4">
-							<form action="#" class="search-property-1">
-		        		<div class="row">
-		        			<div class="col-lg align-items-end">
-		        				<div class="form-group">
-		        					<label for="#">Destination</label>
-		          				<div class="form-field">
-		          					<div class="icon"><span class="ion-ios-search"></span></div>
-				                <input type="text" class="form-control" placeholder="Search place">
-				              </div>
-			              </div>
-		        			</div>
-		        			<div class="col-lg align-items-end">
-		        				<div class="form-group">
-		        					<label for="#">Check-in date</label>
-		        					<div class="form-field">
-		          					<div class="icon"><span class="ion-ios-calendar"></span></div>
-				                <input type="text" class="form-control checkin_date" placeholder="Check In Date">
-				              </div>
-			              </div>
-		        			</div>
-		        			<div class="col-lg align-items-end">
-		        				<div class="form-group">
-		        					<label for="#">Check-out date</label>
-		        					<div class="form-field">
-		          					<div class="icon"><span class="ion-ios-calendar"></span></div>
-				                <input type="text" class="form-control checkout_date" placeholder="Check Out Date">
-				              </div>
-			              </div>
-		        			</div>
-		        			<div class="col-lg align-items-end">
-		        				<div class="form-group">
-		        					<label for="#">Price Limit</label>
-		        					<div class="form-field">
-		          					<div class="select-wrap">
-		                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-		                      <select name="" id="" class="form-control">
-		                        <option value="">$5,000</option>
-		                        <option value="">$10,000</option>
-		                        <option value="">$50,000</option>
-		                        <option value="">$100,000</option>
-		                        <option value="">$200,000</option>
-		                        <option value="">$300,000</option>
-		                        <option value="">$400,000</option>
-		                        <option value="">$500,000</option>
-		                        <option value="">$600,000</option>
-		                        <option value="">$700,000</option>
-		                        <option value="">$800,000</option>
-		                        <option value="">$900,000</option>
-		                        <option value="">$1,000,000</option>
-		                        <option value="">$2,000,000</option>
-		                      </select>
-		                    </div>
-				              </div>
-			              </div>
-		        			</div>
-		        			<div class="col-lg align-self-end">
-		        				<div class="form-group">
-		        					<div class="form-field">
-				                <input type="submit" value="Search" class="form-control btn btn-primary">
-				              </div>
-			              </div>
-		        			</div>
-		        		</div>
-		        	</form>
-		        </div>
-					</div>
-	    	</div>
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12">
+	        <div class="search-wrap-1 ftco-animate p-4">
+	          <form action="#" class="search-property-1">
+	            <div class="row align-items-end flex-nowrap justify-content-center">
+	
+	              <!-- 언제 -->
+	              <div class="col-auto">
+	                <div class="form-group mb-0">
+	                  <div class="form-field">
+	                    <select class="form-control custom-selectbox">
+	                      <option selected disabled>언제?</option>
+	                      <option>봄</option>
+	                      <option>여름</option>
+	                      <option>가을</option>
+	                      <option>겨울</option>
+	                    </select>
+	                  </div>
+	                </div>
+	              </div>
+	
+	              <div class="col-auto keyword">에</div>
+	
+	              <!-- 누구와 -->
+	              <div class="col-auto">
+	                <div class="form-group mb-0">
+	                  <div class="form-field">
+	                    <select class="form-control custom-selectbox">
+	                      <option selected disabled>누구와?</option>
+	                      <option>혼자</option>
+	                      <option>연인</option>
+	                      <option>가족</option>
+	                      <option>친구</option>
+	                    </select>
+	                  </div>
+	                </div>
+	              </div>
+	
+	              <div class="col-auto keyword">와</div>
+	
+	              <!-- 무엇을 -->
+	              <div class="col-auto">
+	                <div class="form-group mb-0">
+	                  <div class="form-field">
+	                    <select class="form-control custom-selectbox">
+	                      <option selected disabled>무엇을?</option>
+	                      <option>힐링</option>
+	                      <option>액티비티</option>
+	                      <option>맛집</option>
+	                      <option>자연</option>
+	                      <option>도시</option>
+	                    </select>
+	                  </div>
+	                </div>
+	              </div>
+	
+	              <div class="col-auto keyword">을</div>
+	
+	              <!-- 고정문구 -->
+	              <div class="col-auto keyword keyword-place">어디에서?</div>
+	
+	              <!-- 검색 -->
+	              <div class="col-auto">
+	                <button type="submit" class="btn btn-primary search-btn">검색</button>
+	              </div>
+	
+	            </div>
+	          </form>
+	        </div>
+	      </div>
 	    </div>
-    </section>
-		<!-- //추천 여행 검색 -->
+	  </div>
+	</section>
 
-		<!-- 이달의 여행지-->
+	
+	<!-- 이달의 여행지-->
     <section class="ftco-counter img" id="section-counter">
     	<div class="container">
     		<div class="row d-flex">

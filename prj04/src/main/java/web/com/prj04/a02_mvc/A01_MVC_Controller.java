@@ -25,12 +25,10 @@ public class A01_MVC_Controller {
 		return "mytrip";
 	}
 	
-	//heejeong/rec_travel
-	// http://localhost:7070/rec_travel
-		@GetMapping("rec_travel")
-		public String rec_travel() {
-			return "rec_travel";
-		}
+	@GetMapping("rec_travel")
+	public String rec_travel() {
+		return "rec_travel";
+	}
 	
 		
 		
