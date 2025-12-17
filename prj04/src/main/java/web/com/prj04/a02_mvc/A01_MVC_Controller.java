@@ -13,7 +13,7 @@ public class A01_MVC_Controller {
 	@Autowired
 	private A02_MVC_Service service;
 	
-	// http://localhost:70700/main
+	// http://localhost:7070/main
 	@GetMapping("main")
 	public String main() {
 		return "index";
