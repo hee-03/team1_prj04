@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>중간 프로젝트04</title>
+    <title>지금 가장 좋은 여행</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -29,24 +29,19 @@
   </head>
   <body>
   <!-- 헤더 연결하기 -->
-    <%-- <header>
-    	<%@ include file="#" %>
-    </header> --%>
-    <!-- //헤더 연결하기 -->
-		<!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정-->
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/Recommend_Destination3.png');" data-stellar-background-ratio="0.5">
+    <%@ include file="/WEB-INF/views/common/header.jsp" %>
+  <!-- //헤더 연결하기 -->
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/rec_travel/Recommend_Destination3.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-9 text text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <!--
-			<p class="caps" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Travel to the any corner of the world, without going around in circles</p>
-            <h1 data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Make Your Tour Amazing With Us</h1>
-			-->
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">지금가장 좋은 여행</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
 
 	<!-- 제철여행지도(이미지 넣고 동그라미 클릭시 하단에 해당 여행지 출력)-->
@@ -55,7 +50,7 @@
     		<div class="row justify-content-center pb-4">
           		<div class="col-md-12 heading-section text-center ftco-animate">
 	          		<div>
-    					<div style="background-image: url('images/Dec_travel_map.png');background-size: contain;
+    					<div style="background-image: url('images/rec_travel/Dec_travel_map.png');background-size: contain;
     							 background-repeat: no-repeat;background-position:center;height: 800px;">
     						<div id="travel_destination01" class="tr_dst_circle" style="background-color:red;left:422px;top:216px;">파라다이스</div>
     						<div id="travel_destination02" class="tr_dst_circle" style="background-color:orange;left:602px;top:192px;">나무향기한증막</div>
@@ -80,7 +75,7 @@
     	<div id="rec01" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec01.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec01.PNG);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -107,7 +102,7 @@
     	<div id="rec02" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec02.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec02.PNG);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -126,7 +121,7 @@
     	<div id="rec03" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec03.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec03.PNG);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -150,7 +145,7 @@
     	<div id="rec04" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec04.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec04.png);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -171,7 +166,7 @@
     	<div id="rec05" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec05.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec05.png);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -198,7 +193,7 @@
 		<div id="rec06" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec06.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec06.png);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -220,7 +215,7 @@
     	<div id="rec07" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec07.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec07.png);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -242,7 +237,7 @@
     	<div id="rec08" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec08.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec08.png);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -264,7 +259,7 @@
     	<div id="rec09" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec09.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec09.png);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -290,7 +285,7 @@
     	<div id="rec10" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec10.png);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec10.png);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
@@ -401,35 +396,14 @@
       </div>
     </section>
 	<!-- //추천 여행지2 -->
-
-  </body>
-  <!-- footer 연결하기 -->
-    <%-- <footer>
-  	<%@ include file="#" %>
-    </<footer> --%>
+	
+	<!-- footer 연결하기 -->
+  	<%@ include file="/WEB-INF/views/common/footer.jsp" %>
     <!-- //footer 연결하기 -->
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+  </body>
   
+
+ 
   
   
   <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>

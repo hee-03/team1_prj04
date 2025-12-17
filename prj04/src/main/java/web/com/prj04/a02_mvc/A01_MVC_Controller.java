@@ -13,30 +13,24 @@ public class A01_MVC_Controller {
    @Autowired
    private A02_MVC_Service service;
    
-   // http://localhost:6060/main
+   // http://localhost:7070/main
    @GetMapping("main")
    public String main() {
       return "index";
    }
    
-   // http://localhost:6060/mytrip
+   // http://localhost:7070/mytrip
    @GetMapping("mytrip")
    public String mytrip() {
       return "mytrip";
    }
    
-   //heejeong/rec_travel
-   // http://localhost:6060/rec_travel
-      @GetMapping("rec_travel")
-      public String rec_travel() {
-         return "rec_travel";
-      }
+   @GetMapping("rec_travel")
+   public String rec_travel() {
+      return "rec_travel";
+   }
    
-  	//http://localhost:7070/festival
-      @GetMapping("/festival")
-      public String festival() {
-          return "festival"; // → /WEB-INF/view/festival.jsp
-      }
+      
       
       
       
