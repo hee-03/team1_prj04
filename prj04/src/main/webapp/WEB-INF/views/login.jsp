@@ -89,7 +89,7 @@
 .login-button {
     width: 100%;
     padding: 12px;
-    background-image: url("images/loginbar.png");
+    background-image: url("images/login/loginbar.png");
     background-repeat: no-repeat;
     background-size: cover;
     border: none;

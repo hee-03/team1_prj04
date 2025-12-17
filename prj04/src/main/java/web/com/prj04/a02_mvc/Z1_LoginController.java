@@ -38,7 +38,7 @@ public class Z1_LoginController {
 	//http://localhost:7070/getJoinList
      @RequestMapping("getJoinList")
      public String getJoinList() {
-    	 return "login";
+    	 return "join";
      }
      
      /*
