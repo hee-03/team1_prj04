@@ -44,7 +44,7 @@
     </div>
    	
    	<!-- 추천 여행 검색 -->
-    <section class="ftco-section ftco-no-pb ftco-no-pt">
+    <section class="ftco-section rec-section">
 	  <div class="container">
 	    <div class="row">
 	      <div class="col-md-12">
@@ -53,11 +53,11 @@
 	            <div class="row align-items-end flex-nowrap justify-content-center">
 	
 	              <!-- 언제 -->
-	              <div class="col-auto">
+	              <div class="col-auto selectBox">
 	                <div class="form-group mb-0">
 	                  <div class="form-field">
 	                    <select class="form-control custom-selectbox">
-	                      <option selected disabled>언제?</option>
+	                      <option selected disabled>언제</option>
 	                      <option>봄</option>
 	                      <option>여름</option>
 	                      <option>가을</option>
@@ -70,11 +70,11 @@
 	              <div class="col-auto keyword">에</div>
 	
 	              <!-- 누구와 -->
-	              <div class="col-auto">
+	              <div class="col-auto selectBox">
 	                <div class="form-group mb-0">
 	                  <div class="form-field">
 	                    <select class="form-control custom-selectbox">
-	                      <option selected disabled>누구와?</option>
+	                      <option selected disabled>누구와</option>
 	                      <option>혼자</option>
 	                      <option>연인</option>
 	                      <option>가족</option>
@@ -87,11 +87,11 @@
 	              <div class="col-auto keyword">와</div>
 	
 	              <!-- 무엇을 -->
-	              <div class="col-auto">
+	              <div class="col-auto selectBox">
 	                <div class="form-group mb-0">
 	                  <div class="form-field">
 	                    <select class="form-control custom-selectbox">
-	                      <option selected disabled>무엇을?</option>
+	                      <option selected disabled>무엇을</option>
 	                      <option>힐링</option>
 	                      <option>액티비티</option>
 	                      <option>맛집</option>
@@ -122,8 +122,13 @@
 
 	
 	<!-- 이달의 여행지-->
-    <section class="ftco-counter img" id="section-counter">
+    <section class="ftco-counter img thisMonthTour" id="section-counter">
     	<div class="container">
+    		<div class="row justify-content-center">
+	          <div class="col-md-7 text-center heading-section ftco-animate">
+	            <h2 class="mb-4">여행담기 PICK! 이달의 여행지는?</h2>
+	          </div>
+	        </div>
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
