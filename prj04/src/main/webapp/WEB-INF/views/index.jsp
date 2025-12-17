@@ -9,29 +9,29 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
 
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <%@ include file="/WEB-INF/views/common/header.jsp" %>
 	<!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정-->
-    <div class="hero-wrap js-fullheight" id="mainImg" style="background-image: url('images/main/homemainimg.png');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" id="mainImg" style="background-image: url('/images/main/homemainimg.png');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <!-- <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -144,147 +144,41 @@
         </div>
     	</div>
     </section>
-		<!-- //이달의 여행지-->
 
-		<!-- 어디로 여행을 떠나볼까요? -->
-		<section  class="d-flex">
-			<!-- container -->
-			<div class="container">
-				<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		          </div>
-		        </div>
+	<!-- 어디로 여행을 떠나볼까요? -->
+	<section class="ftco-section mytrip-list-map">
+	  <div class="container">
+	    <div class="row">
+	    	<!-- 왼쪽: 카드 리스트 -->
+	      	<div class="col-lg-8">
+	        
+	        <!-- 카드 1 -->
+	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
+	          <div class="col-md-5 d-flex">
+	            <div class="img w-100" style="background-image:url('/images/about.jpg');"></div>
+	          </div>
+	          <div class="col-md-7 p-4">
+	            <h3 class="mb-2">With Us</h3>
+	            <p class="mb-0">
+	              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
+	            </p>
+	          </div>
 	        </div>
-        </div>
-				<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		          </div>
-		        </div>
+	
+	      </div>
+	
+	      <!-- 지도 -->
+	      <div class="col-lg-4">
+	        <div class="map-box">
+	        	<a href="#"></a>	        
 	        </div>
-        </div>
-				<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-				<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-
-			</div>
-			<!-- // container -->
-			<!-- map -->
-			<div class="map" style="border: 1px solid red;">
-				<a href="#"><img src="" alt=""></a>
-				<a href="#"><img src="" alt=""></a>
-				<a href="#"><img src="" alt=""></a>
-				<a href="#"><img src="" alt=""></a>
-				<a href="#"><img src="" alt=""></a>
-			</div>
-		</section>
-		<!-- //어디로 여행을 떠나볼까요? -->
-
-		<!-- 봄여름가을겨울 -->
-		<section class="d-flex">
-			<!-- season -->
-			<div class="season" style="border: 1px solid red;">
-				<a href="#"><img src="" alt=""></a>
-				<a href="#"><img src="" alt=""></a>
-				<a href="#"><img src="" alt=""></a>
-				<a href="#"><img src="" alt=""></a>
-			</div>
-
-			<!-- container -->
-			<div class="container">
-				<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-				<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-				<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-				<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-
-			</div>
-			<!-- // container -->
-		</section>
-		<!-- //봄여름가을겨울 -->
+	      </div>
+	
+	    </div>
+	  </div>
+	</section>
+		
+	<!-- 봄여름가을겨울 -->
     
     <%@ include file="/WEB-INF/views/common/footer.jsp" %>
 </body>

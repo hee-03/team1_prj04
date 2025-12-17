@@ -9562,6 +9562,31 @@ textarea.form-control {
 .thisMonthTour {
 	margin-top: 80px;
 }
+
+.mytrip-list-map .mytrip-card{
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.mytrip-list-map .mytrip-card .img{
+  background-size:cover;
+  background-position:center;
+  min-height:140px;
+  border-radius:10px 0 0 10px;
+}
+
+/* 오른쪽 맵 박스 */
+.mytrip-list-map .map-box{
+  background:#fff;
+  border-radius:10px;
+  padding:16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 120px;   /* 헤더 높이에 맞춰 조절 */
+}
+
 /* 세진 작성 css mytrip page ------------------------------------------------------------*/
 /* header */
 .gnb > ul {
