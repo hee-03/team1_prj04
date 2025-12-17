@@ -12,7 +12,6 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif; 
-    
 }
 
 .hero-wrap {
@@ -202,7 +201,7 @@
 
          <div class="signup-prompt">
             아직 계정이 없으신가요? 
-            <a href="join.jsp" class="signup-link">회원가입</a>
+            <a href="${pageContext.request.contextPath}/Join" class="signup-link">회원가입</a>
          </div>
 
       </div>
