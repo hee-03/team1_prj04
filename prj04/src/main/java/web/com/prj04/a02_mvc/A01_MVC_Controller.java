@@ -31,7 +31,12 @@ public class A01_MVC_Controller {
 			return "rec_travel";
 		}
 	
-		
+	//이병주
+	//http://localhost:7070/whereGoing
+	@GetMapping("whereGoing")
+	public String whereGoing() {
+		return "whereGoing";
+	}
 		
 		
 		
@@ -50,4 +55,5 @@ public class A01_MVC_Controller {
 		 * }
 		 */
 	
+		
 }

@@ -9560,3 +9560,32 @@ footer .container p:last-child{
 	border-radius:50%;
 	position:absolute;
 }
+
+/*이병주 css -------------------------------------*/
+
+/* 도 or 특별시 단위 지역 선택 */
+#location_select{
+    text-align: center; /* 자식 요소인 .location_item을 중앙 정렬 */
+    margin: 300px auto 30px auto;
+}
+/* // 도 or 특별시 단위 지역 선택 */
+
+/* 지역 선택 요소들 */
+.location_item{
+    display: inline-block; /* 요소를 가로로 나열 */
+    margin: 5px;
+    border: 1px solid black;
+    border-radius:50%;
+    padding: 10px 20px;
+    width: 130px; height:130px;
+    font-size:24px;
+    line-height: 130px;
+    cursor: pointer;
+}
+/* //지역 선택 요소들 */
+
+/* 선택된 요소 */
+.selected_location{
+   text-decoration: underline;
+}
+/* //선택된 요소*/
