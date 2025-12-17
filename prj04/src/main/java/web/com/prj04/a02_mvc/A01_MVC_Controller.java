@@ -15,7 +15,7 @@ public class A01_MVC_Controller {
 	
 	
 	// Model : 핵심
-	// http://localhost:6060/deptList
+	// http://localhost:7070/deptList
 	@GetMapping("deptList")
 	public String deptList(Model d) {
 		// model : 핵심데이터, view 보낼데이터..
@@ -25,17 +25,21 @@ public class A01_MVC_Controller {
 	}
 	
 	
-	// http://localhost:6060/mytrip
+	// http://localhost:7070/mytrip
 	@GetMapping("mytrip")
 	public String mytrip() {
 		return "mytrip";
 	}
 	//heejeong/rec_travel
-	// http://localhost:6060/rec_travel
+	// http://localhost:7070/rec_travel
 		@GetMapping("rec_travel")
 		public String rec_travel() {
 			return "rec_travel";
 		}
-	
+		//http://localhost:7070/festival
+	    @GetMapping("/festival")
+	    public String festival() {
+	        return "festival"; // → /WEB-INF/view/festival.jsp
+	    }
 	
 }
