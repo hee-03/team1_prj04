@@ -37,8 +37,11 @@ public class A01_MVC_Controller {
    }
       
       
-      
-      
+   //http://localhost:7070/whereGoing
+   @GetMapping("whereGoing")
+   public String whereGoing() {
+	   return "whereGoing";
+   }
       
       
       
