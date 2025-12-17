@@ -30,7 +30,11 @@ public class A01_MVC_Controller {
       return "rec_travel";
    }
    
-      
+ 	//http://localhost:7070/festival
+   @GetMapping("/festival")
+   public String festival() {
+       return "festival"; // → /WEB-INF/view/festival.jsp
+   }
       
       
       
