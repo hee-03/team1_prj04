@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class A01_MVC_Controller {
@@ -21,4 +23,12 @@ public class A01_MVC_Controller {
 		return "deptList";
 		
 	}
+	
+	
+	// http://localhost:6060/mytrip
+	@GetMapping("mytrip")
+	public String mytrip() {
+		return "sejin/mytrip";
+	}
+	
 }
