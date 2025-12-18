@@ -24,7 +24,7 @@ public class A01_MVC_Controller {
    public String mytrip() {
       return "mytrip";
    }
-   
+   // http://localhost:7070/rec_travel
    @GetMapping("rec_travel")
    public String rec_travel() {
       return "rec_travel";
@@ -36,9 +36,12 @@ public class A01_MVC_Controller {
        return "festival"; // → /WEB-INF/view/festival.jsp
    }
       
-      
-      
-      
+   //이병주   
+   //http://localhost:7070/whereGoing
+   @GetMapping("whereGoing")
+   public String whereGoing() {
+	   return "whereGoing";
+   }
       
       
       
@@ -53,4 +56,5 @@ public class A01_MVC_Controller {
        * }
        */
    
+
 }
