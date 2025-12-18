@@ -44,8 +44,8 @@
 	    /* (선택) visitkorea처럼 위에 작은 컨트롤 박스 올리고 싶을 때 */
 	    .map-ui{
 	      position: absolute;
-	      top: 16px;
-	      left: 16px;
+	      bottom: -68px;
+	      right: 40px;
 	      z-index: 10;
 	      background: #fff;
 	      padding: 12px 14px;
