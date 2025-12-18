@@ -319,15 +319,15 @@
 		<!-- //이달의 여행지-->
 	
 	<!-- 추천 여행지 2 (세진님 템플릿) -->
-	<section class="ftco-section">
+	<section id="destination" class="ftco-section">
       <div class="container">
       	<div class="row justify-content-center pb-4">
-          <div class="col-md-7 text-center heading-section ftco-animate">
+          <div class="col-md-7 text-center heading-section">
             <h2 class="mb-4">추천여행지</h2>
           </div>
         </div>
-        <div class="row d-flex ">
-          <div class="region-code32 d-none col-md-4 d-flex ftco-animate">
+        <div class="row">
+          <div class="region-code32 col-md-4 d-flex">
           	<div class="blog-entry justify-content-end">
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
               </a>
@@ -337,7 +337,7 @@
               </div>
             </div>
           </div>
-          <div class="region-code32 d-none col-md-4 d-flex ftco-animate">
+          <div class="region-code32 col-md-4 d-flex">
           	<div class="blog-entry justify-content-end">
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
               </a>
@@ -347,7 +347,7 @@
               </div>
             </div>
           </div>
-          <div class="region-code01  d-none col-md-4 d-flex ftco-animate">
+          <div class="region-code01  col-md-4 d-flex">
           	<div class="blog-entry">
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
               </a>
@@ -358,7 +358,7 @@
             </div>
           </div>
 
-          <div class="region-code02 d-none col-md-4 d-flex ftco-animate">
+          <div class="region-code02 col-md-4 d-flex">
           	<div class="blog-entry justify-content-end">
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
               </a>
@@ -368,7 +368,7 @@
               </div>
             </div>
           </div>
-          <div class="region-code02 d-none col-md-4 d-flex ftco-animate">
+          <div class="region-code02 col-md-4 d-flex">
           	<div class="blog-entry justify-content-end">
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
               </a>
@@ -378,7 +378,7 @@
               </div>
             </div>
           </div>
-          <div class="region-code02 d-none col-md-4 d-flex ftco-animate">
+          <div class="region-code02 col-md-4 d-flex">
           	<div class="blog-entry">
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
               </a>
@@ -419,10 +419,10 @@
    
 	<script type="text/javascript">
 		$(document).ready(function(){
-		    // 처음에 rec div 전부 숨김
+		    // 초기상태: rec div, 추천여행지 전부 숨김 처리
+		    $("#destination").addClass("d-none");
 		    $("[id^='rec']").addClass("d-none");
-		    // 추천여행지도 전부 숨김
-		    $("[class*='region-code']").addClass("d-none");
+		    $("[class*='region-code']").removeClass("d-flex").addClass("d-none");
 		    
 		    // 지역명과 지역코드 매핑 (공공데이터 가져와야함)
 		    const regionCodeMap = {
@@ -441,24 +441,32 @@
 		        "전라": "37",
 		        "제주": "39"
 		    };
+		    
 		    // 클릭 이벤트
 		    $("[id^='travel_destination']").on("click", function(){
+		    	
+		        $("#destination").removeClass("d-none");
+		        
 		        // 클릭한 div의 id
 		        let clickId = $(this).attr("id");
 		        // 숫자만 추출 (01 ~ 10)
 		        let num = clickId.replace("travel_destination", "");
-		        // 모든 rec 숨기기
+		        
+		        // (재클릭시)모든 rec 숨기기
 		        $("[id^='rec']").addClass("d-none");
+		        // 클릭된 div와 동일한 숫자를 가진 rec 화면에 출력
 		        let $rec = $("#rec" + num).removeClass("d-none");
 		        
 		        // 클릭된 여행지 위치에서 지역명 추출
 		        let regionText = $rec.find("p.region").text().trim();
 		        let regionName = regionText.substring(0, 2);
 		        
-		        console.log(regionName);
+		        console.log("클릭된 지역명:", regionName);
 		        
 		        //지역코드로 변환
-		        let regionCode = regionCodeMap[regionName];
+		        //xml파싱을 위해 제거
+		        //let regionCode = regionCodeMap[regionName];
+		        console.log("클릭된 지역코드:", regionCode);
 		        
 		        //예외처리
 		        if(!regionCode){
