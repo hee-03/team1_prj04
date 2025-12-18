@@ -164,7 +164,7 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('images/main/mainrecimg.jpg');"></div>
+	            <div class="img w-100" style="background-image:url('images/main/yeosu.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
 	            <h3 class="mb-2">남해안 거점도시 미항 여수</h3>
@@ -178,7 +178,7 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('images/main/mainrecimg.jpg');"></div>
+	            <div class="img w-100" style="background-image:url('images/main/gyeongju.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
 	            <h3 class="mb-2">지붕없는 박물관 경주</h3>
@@ -192,7 +192,7 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('images/main/mainrecimg.jpg');"></div>
+	            <div class="img w-100" style="background-image:url('images/main/gangneung.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
 	            <h3 class="mb-2">솔내음 가득한 제일강릉</h3>
@@ -230,7 +230,7 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('images/main/mainrecimg.jpg');"></div>
+	            <div class="img w-100" style="background-image:url('images/main/yeosu.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
 	            <h3 class="mb-2">남해안 거점도시 미항 여수</h3>
@@ -244,7 +244,7 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('images/main/mainrecimg.jpg');"></div>
+	            <div class="img w-100" style="background-image:url('images/main/gyeongju.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
 	            <h3 class="mb-2">지붕없는 박물관 경주</h3>
@@ -258,7 +258,7 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('images/main/mainrecimg.jpg');"></div>
+	            <div class="img w-100" style="background-image:url('images/main/gangneung.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
 	            <h3 class="mb-2">솔내음 가득한 제일강릉</h3>
@@ -272,7 +272,7 @@
 	
 	      <!-- 지도 -->
 	      <div class="col-lg-4">
-	        <div class="map-box">
+	        <div class="map-box seasonBox">
 	        	<a href="#"></a>	        
 	        </div>
 	      </div>

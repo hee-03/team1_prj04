@@ -9592,9 +9592,15 @@ textarea.form-control {
   background: url(../images/main/mainmap.png)no-repeat center/ contain;
   height: 97%;
 }
+.mytrip-list-map .map-box.seasonBox{
+	background-image: url(../images/main/season.png);
+}
 
 .mytrip-list-map.reverse-layout .row {
   flex-direction: row-reverse;
+}
+.mytrip-list-map.reverse-layout .row .col-md-5 .img{
+	transform: scaleX(-1);
 }
 
 .ftco-section.mytrip-list-map{
