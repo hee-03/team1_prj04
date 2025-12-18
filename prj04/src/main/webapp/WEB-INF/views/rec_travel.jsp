@@ -51,7 +51,7 @@
           		<div class="col-md-12 heading-section text-center ftco-animate">
 	          		<div>
     					<div style="background-image: url('images/rec_travel/Dec_travel_map.png');background-size: contain;
-    							 background-repeat: no-repeat;background-position:center;height: 800px;">
+    							 background-repeat: no-repeat;background-position:center;width:1140px;height: 800px;position:relative;">
     						<div id="travel_destination01" class="tr_dst_circle" style="background-color:red;left:422px;top:216px;">파라다이스</div>
     						<div id="travel_destination02" class="tr_dst_circle" style="background-color:orange;left:602px;top:192px;">나무향기한증막</div>
     						<div id="travel_destination03" class="tr_dst_circle" style="background-color:yellow;left:693px;top:232px;">대관령자연휴양림</div>
@@ -464,8 +464,8 @@
 		        console.log("클릭된 지역명:", regionName);
 		        
 		        //지역코드로 변환
-		        //xml파싱을 위해 제거
-		        //let regionCode = regionCodeMap[regionName];
+		        //v   xml파싱을 위해 제거할 예정
+		        let regionCode = regionCodeMap[regionName];
 		        console.log("클릭된 지역코드:", regionCode);
 		        
 		        //예외처리
