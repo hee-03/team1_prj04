@@ -9700,20 +9700,65 @@ footer .container p:last-child{
 
 /* 지역 선택 요소들 */
 .location_item{
+	width: 130px; height:130px;
     display: inline-block; /* 요소를 가로로 나열 */
-    margin: 5px;
+    /*=======D=======*/
+    /*margin: 5px;
     border: 1px solid black;
     border-radius:50%;
     padding: 10px 20px;
-    width: 130px; height:130px;
     font-size:24px;
     line-height: 130px;
+    cursor: pointer;*/
+    /*//=======D=======*/
+    margin: 10px;
     cursor: pointer;
+    color:black;/*글자색 검정*/
+    
+    /* 배경 이미지 관련 핵심 설정 */
+    background-repeat: no-repeat;   /* 이미지 반복 방지 */
+    background-position: center;    /* 이미지를 정중앙에 위치 */
+    background-size: contain;       /* 이미지가 잘리지 않고 130px 안에 다 들어가도록 설정 */
+    
+    /* 텍스트가 있다면 이미지 아래나 중앙에 배치 (필요 없으면 삭제) */
+    line-height: 130px;
+    font-weight: bold;
+    transition: transform 0.2s;     /* 마우스 올렸을 때 부드러운 효과 */
 }
 /* //지역 선택 요소들 */
 
+#location01{
+	background-image:url('../images/whereGoing/Gyeongi.png');/*경기*/
+}
+#location02{
+	background-image:url('../images/whereGoing/Gangwon.png');/*강원*/
+}
+#location03{
+	background-image:url('../images/whereGoing/ChungCheongNam.png');/*충남*/
+}
+#location04{
+	background-image:url('../images/whereGoing/ChungCheongBook.png');/*충북*/
+}
+#location05{
+	background-image:url('../images/whereGoing/JeonRaNam.png');/*전남*/
+}
+#location06{
+	background-image:url('../images/whereGoing/JeonRaBook.png');/*전북*/
+}
+#location07{
+	background-image:url('../images/whereGoing/GyeongSangNam.png');/*경남*/
+}
+#location08{
+	background-image:url('../images/whereGoing/GyeongSangBook.png');/*경북*/
+}
+#location09{
+	background-image:url('../images/whereGoing/Jeju.png');/*제주*/
+}
+
 /* 선택된 요소 */
 .selected_location{
-   text-decoration: underline;
+   /* 이미지가 선택되었을 때 강조 (예: 테두리 추가) */
+   border: 2px solid #FFA648;
+   /*border-radius: 50%;*/ /* 원형으로 강조하고 싶을 때 */
 }
 /* //선택된 요소*/

@@ -51,14 +51,15 @@
 	    <%-- ================================================ --%>
 	    <%-- ★★★ id="location0N" 이거는 js dom 작업할 때 사용 ★★★ --%>
 	    <%-- ================================================ --%>
-	    <div id="location01" class="location_item selected_location">서울</div><%-- 초기에 서울에 default로 선택되게 지정. --%>
-	    <div id="location02" class="location_item">경기</div>
-	    <div id="location03" class="location_item">인천</div>
-	    <div id="location04" class="location_item">강원</div>
-	    <div id="location05" class="location_item">충청</div>
-	    <div id="location06" class="location_item">전라</div>
-	    <div id="location07" class="location_item">경상</div>
-	    <div id="location08" class="location_item">제주</div>
+	    <div id="location01" class="location_item selected_location">경기&서울</div><%-- 초기에 서울에 default로 선택되게 지정. --%>
+	    <div id="location02" class="location_item">강원</div>
+	    <div id="location03" class="location_item">충남</div>
+	    <div id="location04" class="location_item">충북</div>
+	    <div id="location05" class="location_item">전남</div>
+	    <div id="location06" class="location_item">전북</div>
+	    <div id="location07" class="location_item">경남</div>
+	    <div id="location08" class="location_item">경북</div>
+	    <div id="location09" class="location_item">제주</div>
 	</div>
 	<%-- //도 or 특별시 단위 지역 선택 (기본값: 서울)--%>
 	
@@ -437,7 +438,7 @@
             // 이미 'selected_location' 클래스가 있다면 색을 바꾸지 않도록 로직을 추가하는 것이 좋습니다.
             // 여기서는 단순 구현을 위해 일단 모두 적용
             this.style.border = "1px solid #FFA648";
-            this.style.color = "#FFA648";
+            this.style.color = "navy";
         });
 
         // 마우스 아웃
