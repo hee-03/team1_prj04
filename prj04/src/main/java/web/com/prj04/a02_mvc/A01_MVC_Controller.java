@@ -42,6 +42,12 @@ public class A01_MVC_Controller {
    public String whereGoing() {
 	   return "whereGoing";
    }
+   
+ //http://localhost:7070/map
+   @GetMapping("/map")
+   public String map() {
+       return "map";
+   }
       
       
       
