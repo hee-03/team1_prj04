@@ -116,7 +116,7 @@
     <div class="hero-wrap" style="background-image: url('images/login/login.png');" data-stellar-background-ratio="0.5">
       <div class="login">
             <div class="logo-section">
-            <a href="#"><img src="images/login/로고글씨2.png" alt="여행 아이콘" class="app-icon"></a>
+            <a href="/main"><img src="images/login/로고글씨2.png" alt="여행 아이콘" class="app-icon"></a>
          </div>
 
          <form class="login-form" method="post">
