@@ -9593,6 +9593,23 @@ textarea.form-control {
 }
 .mytrip-list-map .map-box.seasonBox{
 	background-image: url(../images/main/season.png);
+	position: relative;
+}
+.mytrip-list-map .map-box.seasonBox .eachSeason{
+	display: inline-block;
+	position: absolute;
+	width: 147px;
+	height: 183px;
+	top: 186px;
+	left: 25px;
+}
+.mytrip-list-map .map-box.seasonBox .eachSeason.summer,
+.mytrip-list-map .map-box.seasonBox .eachSeason.winter{
+	left: 177px;
+}
+.mytrip-list-map .map-box.seasonBox .eachSeason.autumn,
+.mytrip-list-map .map-box.seasonBox .eachSeason.winter{
+	top: 369px;
 }
 
 .mytrip-list-map.reverse-layout .row {

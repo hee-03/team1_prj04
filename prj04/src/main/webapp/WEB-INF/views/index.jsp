@@ -273,7 +273,10 @@
 	      <!-- 지도 -->
 	      <div class="col-lg-4">
 	        <div class="map-box seasonBox">
-	        	<a href="#"></a>	        
+	        	<a href="#" class="eachSeason spring"></a>        
+	        	<a href="#" class="eachSeason summer"></a>        
+	        	<a href="#" class="eachSeason autumn"></a>        
+	        	<a href="#" class="eachSeason winter"></a>        
 	        </div>
 	      </div>
 	
