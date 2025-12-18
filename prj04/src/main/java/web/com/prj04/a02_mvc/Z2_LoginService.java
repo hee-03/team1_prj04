@@ -13,15 +13,10 @@ public class Z2_LoginService {
 	private Z3_LoginDao dao;
 	
 	
-	public int inMembers(int inMem) {
-		return dao.inMembers(inMem);
-	}
-	
-	
-	
-	public void dbexp() {	
-		System.out.println("삭제 수 :" +dao.joinMember(null) );
-	}
+	public String insertMember(Members mem1) {
+		
+		return dao.insertMember(mem1)>0?"등록성공":"등록되지 않았습니다.";
+	};
 	
 	
 }

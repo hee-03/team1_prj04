@@ -154,7 +154,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>로그인</title>
 </head>
 <body>
 
@@ -167,10 +167,10 @@
          <form class="login-form" method="post">
             
             <label for="email">이메일</label>
-            <input type="email" id="email" placeholder="" required>
+            <input type="email" name="email" placeholder="email" required>
 
             <label for="password">비밀번호</label>
-            <input type="password" id="password" placeholder="" required>
+            <input type="password" name="pwd" placeholder="password" required>
             
             <div class="options-row">
                <div class="keep-login">

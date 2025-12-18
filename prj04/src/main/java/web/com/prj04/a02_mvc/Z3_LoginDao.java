@@ -12,7 +12,7 @@ public interface Z3_LoginDao {
 	@Select("SELECT count(*) FROM Members WHERE email = #{email} AND pwd = #{pwd}")
 	int inMembers(int inMem);
 	
-	@Insert("INSERT INTO Members values (#{email},#{phoneNum},#{name},#{pwd})")
-	int joinMember(Members mem1);
+	@Insert("INSERT INTO Members VALUES (#{email},#{phoneNum},#{name},#{pwd},memSeq01.nextval)")
+	int insertMember(Members mem1);
 	
 }

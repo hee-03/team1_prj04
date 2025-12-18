@@ -94,11 +94,23 @@
 
 
 </style>
-
+<script type="text/javascript">
+   $(document).ready(function(){
+         let mem2 = "${mem2}" 
+         if(mem2 !=""){
+            if(confirm(mem2+"\n조회화면으로 이동하시겠습니까?")){
+               location.href="login"
+            }
+         }
+         $("#lstBtn").click(function(){
+            location.href="login"
+        });
+   });
+</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>회원가입</title>
 </head>
 <body>
 <!-- 
@@ -110,24 +122,24 @@
             <a href="#"><img src="images/login/로고글씨2.png" alt="여행 아이콘" class="app-icon"></a>
          </div>
 
-         <form class="login-form">
+         <form class="login-form" method="post">
             
             <label for="email">이메일</label>
-            <input type="email" id="email" placeholder="e-mail" required>
+            <input type="email" name="email" placeholder="e-mail" required>
 
             <label for="password">전화번호</label>
-            <input type="tel" id="phoneNum" placeholder="phone number" required>
+            <input type="tel" name="phoneNum" placeholder="phone number" required>
             
             <label for="password">이름</label>
-            <input type="text" id="name" placeholder="name" required>
+            <input type="text" name="name" placeholder="name" required>
             
             <label for="password">비밀번호</label>
-            <input type="password" id="pwd" placeholder="password" required>
+            <input type="password" name="pwd" placeholder="password" required>
             
             <label for="password">비밀번호확인</label>
             <input type="password" id="pwd2" placeholder="password" required>
             
-            <button type="submit" class="login-button">회원가입</button>
+            <button type="submit" id="lstBtn" class="login-button">회원가입</button>
          </form>
 
       </div>
