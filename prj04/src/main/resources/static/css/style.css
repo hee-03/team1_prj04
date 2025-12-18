@@ -9563,6 +9563,10 @@ textarea.form-control {
 	margin-top: 80px;
 }
 
+.mainrecMontTour {
+	margin-bottom: 30px;
+}
+
 .mytrip-list-map .mytrip-card{
   background:#fff;
   border-radius:10px;
@@ -9584,7 +9588,17 @@ textarea.form-control {
   padding:16px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   position: sticky;
-  top: 120px;   /* 헤더 높이에 맞춰 조절 */
+  /*top: 120px;   /* 헤더 높이에 맞춰 조절 */
+  background: url(../images/main/mainmap.png)no-repeat center/ contain;
+  height: 97%;
+}
+
+.mytrip-list-map.reverse-layout .row {
+  flex-direction: row-reverse;
+}
+
+.ftco-section.mytrip-list-map{
+	padding: 7em 0 0 0;
 }
 
 /* 세진 작성 css mytrip page ------------------------------------------------------------*/
