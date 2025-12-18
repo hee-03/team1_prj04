@@ -32,7 +32,8 @@
   <body>
     <%@ include file="/WEB-INF/views/common/header.jsp" %>
 	<!-- íë©´ë³ ì²« ë©ì¸ ì´ë¯¸ì§, ì§ì¸ íììì´ ë°ë³µ ì¬ì© image urlë§ ìì -->
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/whereGoing/whereGoing_background.png');" data-stellar-background-ratio="0.5">
+      <%-- 배경이미지 형광빛 부분 제거 나중에 주석도 삭제예정
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -42,6 +43,7 @@
           </div>
         </div>
       </div>
+      --%>
     </div> 
 
 	<%-- 도 or 특별시 단위 지역 선택 (기본값: 서울)--%>

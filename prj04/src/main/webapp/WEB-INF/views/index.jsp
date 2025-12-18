@@ -124,20 +124,24 @@
 	<!-- 이달의 여행지-->
     <section class="ftco-counter img thisMonthTour" id="section-counter">
     	<div class="container">
-    		<div class="row justify-content-center">
+    		<div class="row justify-content-center mainrecMontTour">
 	          <div class="col-md-7 text-center heading-section ftco-animate">
 	            <h2 class="mb-4">여행담기 PICK! 이달의 여행지는?</h2>
 	          </div>
 	        </div>
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/main/mainrecimg.jpg);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+		            <h2 class="mb-4">순천만국가정원</h2>
+		            <p>
+		            	클래스가 다른 꽃들의 향연, 꽃들이 이토록 아름다울 수 있을까.<br>인간이 아니라 신이 조경한 듯 황활한 정원들이 다채로운 모습으로 반긴다.
+		            	우리 조상들이 가꾸던 전통 정원을 비롯해 세계적 정원 디자이너 찰스쟁스가 디자인한 호수정원이 있는 테마정원, 11개국의 세계정원 등을 하나씩 감상하다 보면 
+		            	그 웅장한 규모와 기발한 디자인, 영롱한 자태에 매료돼 시간이 어떻게 가는지 모를 정도로 넋 놓고 구경하게 될 것이다.
+		            </p>
 		          </div>
 		        </div>
 	        </div>
@@ -148,6 +152,11 @@
 	<!-- 어디로 여행을 떠나볼까요? -->
 	<section class="ftco-section mytrip-list-map">
 	  <div class="container">
+	  	<div class="row justify-content-center mainrecMontTour">
+	          <div class="col-md-7 text-center heading-section ftco-animate">
+	            <h2 class="mb-4">어디로 가볼까?</h2>
+	          </div>
+	    </div>
 	    <div class="row">
 	    	<!-- 왼쪽: 카드 리스트 -->
 	      	<div class="col-lg-8">
@@ -155,12 +164,13 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('/images/about.jpg');"></div>
+	            <div class="img w-100" style="background-image:url('images/main/yeosu.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
-	            <h3 class="mb-2">With Us</h3>
+	            <h3 class="mb-2">남해안 거점도시 미항 여수</h3>
 	            <p class="mb-0">
-	              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
+	              국제 해양관광의 중심 전남 여수시. 3천여 그루의 동백나무로 가득 찬 붉은 섬 오동도는 웰빙 트래킹 코스를 갖추고 있어 한층 더 운치 있다. 
+	              해상 케이블카를 타면 마치 바다 위를 걷는 듯한 느낌이 들며 탁 트인 바다 전망을 감상할 수 있다. 노래 가사에도 나오는...
 	            </p>
 	          </div>
 	        </div>
@@ -168,12 +178,13 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('/images/about.jpg');"></div>
+	            <div class="img w-100" style="background-image:url('images/main/gyeongju.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
-	            <h3 class="mb-2">With Us</h3>
+	            <h3 class="mb-2">지붕없는 박물관 경주</h3>
 	            <p class="mb-0">
-	              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
+	              발길이 닿는 어느 곳이든 문화 유적지를 만날 수 있는 곳이다. 
+	              밤이면 더 빛나는 동궁과 월지를 비롯해 허허벌판에 자리를 굳건히 지키고 있는 첨성대. 뛰어난 건축미를 자랑하는 불국사 석굴암까지 어느 하나 빼놓을 수 없...
 	            </p>
 	          </div>
 	        </div>
@@ -181,12 +192,13 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('/images/about.jpg');"></div>
+	            <div class="img w-100" style="background-image:url('images/main/gangneung.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
-	            <h3 class="mb-2">With Us</h3>
+	            <h3 class="mb-2">솔내음 가득한 제일강릉</h3>
 	            <p class="mb-0">
-	              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...
+	              은은한 커피향이 남다른 강원도 강릉시. 그중에도 카페거리로 유명한 안목해변은 발이 닿는 어디든 향긋한 커피 한 잔에 지평선 끝까지 펼쳐지는 바다 풍경은 덤으로 얻을 수 있다. 
+	              일출 명소로 유명한 정동진과 야경이 아름다운 경포대는 대표 여행 코스! 구름도...
 	            </p>
 	          </div>
 	        </div>
@@ -204,7 +216,74 @@
 	</section>
 		
 	<!-- 봄여름가을겨울 -->
-    
+    <section class="ftco-section mytrip-list-map reverse-layout">
+	  <div class="container">
+	  	<div class="row justify-content-center mainrecMontTour">
+	          <div class="col-md-7 text-center heading-section ftco-animate">
+	            <h2 class="mb-4">봄·여름·가을·겨울</h2>
+	          </div>
+	    </div>
+	    <div class="row">
+	    	<!-- 왼쪽: 카드 리스트 -->
+	      	<div class="col-lg-8">
+	        
+	        <!-- 카드 1 -->
+	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
+	          <div class="col-md-5 d-flex">
+	            <div class="img w-100" style="background-image:url('images/main/yeosu.jpg');"></div>
+	          </div>
+	          <div class="col-md-7 p-4">
+	            <h3 class="mb-2">남해안 거점도시 미항 여수</h3>
+	            <p class="mb-0">
+	              국제 해양관광의 중심 전남 여수시. 3천여 그루의 동백나무로 가득 찬 붉은 섬 오동도는 웰빙 트래킹 코스를 갖추고 있어 한층 더 운치 있다. 
+	              해상 케이블카를 타면 마치 바다 위를 걷는 듯한 느낌이 들며 탁 트인 바다 전망을 감상할 수 있다. 노래 가사에도 나오는...
+	            </p>
+	          </div>
+	        </div>
+	        
+	        <!-- 카드 1 -->
+	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
+	          <div class="col-md-5 d-flex">
+	            <div class="img w-100" style="background-image:url('images/main/gyeongju.jpg');"></div>
+	          </div>
+	          <div class="col-md-7 p-4">
+	            <h3 class="mb-2">지붕없는 박물관 경주</h3>
+	            <p class="mb-0">
+	              발길이 닿는 어느 곳이든 문화 유적지를 만날 수 있는 곳이다. 
+	              밤이면 더 빛나는 동궁과 월지를 비롯해 허허벌판에 자리를 굳건히 지키고 있는 첨성대. 뛰어난 건축미를 자랑하는 불국사 석굴암까지 어느 하나 빼놓을 수 없...
+	            </p>
+	          </div>
+	        </div>
+	        
+	        <!-- 카드 1 -->
+	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
+	          <div class="col-md-5 d-flex">
+	            <div class="img w-100" style="background-image:url('images/main/gangneung.jpg');"></div>
+	          </div>
+	          <div class="col-md-7 p-4">
+	            <h3 class="mb-2">솔내음 가득한 제일강릉</h3>
+	            <p class="mb-0">
+	              은은한 커피향이 남다른 강원도 강릉시. 그중에도 카페거리로 유명한 안목해변은 발이 닿는 어디든 향긋한 커피 한 잔에 지평선 끝까지 펼쳐지는 바다 풍경은 덤으로 얻을 수 있다. 
+	              일출 명소로 유명한 정동진과 야경이 아름다운 경포대는 대표 여행 코스! 구름도...
+	            </p>
+	          </div>
+	        </div>
+	      </div>
+	
+	      <!-- 지도 -->
+	      <div class="col-lg-4">
+	        <div class="map-box seasonBox">
+	        	<a href="#" class="eachSeason spring"></a>        
+	        	<a href="#" class="eachSeason summer"></a>        
+	        	<a href="#" class="eachSeason autumn"></a>        
+	        	<a href="#" class="eachSeason winter"></a>        
+	        </div>
+	      </div>
+	
+	    </div>
+	  </div>
+	</section>
+	
     <%@ include file="/WEB-INF/views/common/footer.jsp" %>
 </body>
 </html>
