@@ -52,16 +52,16 @@
 	          		<div>
     					<div style="background-image: url('images/rec_travel/Dec_travel_map.png');background-size: contain;
     							 background-repeat: no-repeat;background-position:center;width:1140px;height: 800px;position:relative;">
-    						<div id="travel_destination01" class="tr_dst_circle" style="background-color:red;left:422px;top:216px;">파라다이스</div>
-    						<div id="travel_destination02" class="tr_dst_circle" style="background-color:orange;left:602px;top:192px;">나무향기한증막</div>
-    						<div id="travel_destination03" class="tr_dst_circle" style="background-color:yellow;left:693px;top:232px;">대관령자연휴양림</div>
-    						<div id="travel_destination04" class="tr_dst_circle" style="background-color:green;left:508px;top:304px;">초정행궁</div>
-    						<div id="travel_destination05" class="tr_dst_circle" style="background-color:blue;left:404px;top:374px;">대전근현대사전시관</div>
-    						<div id="travel_destination06" class="tr_dst_circle" style="background-color:darkblue;left:665px;top:400px;">1925감포</div>
-    						<div id="travel_destination07" class="tr_dst_circle" style="background-color:purple;left:390px;top:540px;">정우굴구이</div>
-    						<div id="travel_destination08" class="tr_dst_circle" style="background-color:gray;left:513px;top:506px;">한마음식당</div>
-    						<div id="travel_destination09" class="tr_dst_circle" style="background-color:black;left:607px;top:628px;">부네치아 선셋 전망대</div>
-    						<div id="travel_destination10" class="tr_dst_circle" style="background-color:pink;left:712px;top:552px;">센텀시티 스파랜드</div>
+    						<div id="travel_destination01" class="tr_dst_circle" style="left:422px;top:216px;"></div><!-- 파라다이스 -->
+    						<div id="travel_destination02" class="tr_dst_circle" style="left:602px;top:192px;"></div><!-- 나무향기한증막 -->
+    						<div id="travel_destination03" class="tr_dst_circle" style="left:693px;top:232px;"></div><!-- 대관령자연휴양림 -->
+    						<div id="travel_destination04" class="tr_dst_circle" style="left:508px;top:304px;"></div><!-- 초정행궁 -->
+    						<div id="travel_destination05" class="tr_dst_circle" style="left:404px;top:374px;"></div><!-- 대전근현대사전시관 -->
+    						<div id="travel_destination06" class="tr_dst_circle" style="left:665px;top:400px;"></div><!-- 1925감포 -->
+    						<div id="travel_destination07" class="tr_dst_circle" style="left:390px;top:540px;"></div><!-- 정우굴구이 -->
+    						<div id="travel_destination08" class="tr_dst_circle" style="left:513px;top:506px;"></div><!-- 한마음식당 -->
+    						<div id="travel_destination09" class="tr_dst_circle" style="left:607px;top:628px;"></div><!-- 부네치아 선셋 전망대 -->
+    						<div id="travel_destination10" class="tr_dst_circle" style="left:712px;top:552px;"></div><!-- 센텀시티 스파랜드 -->
     					</div>
 	          		</div>
           		</div>
