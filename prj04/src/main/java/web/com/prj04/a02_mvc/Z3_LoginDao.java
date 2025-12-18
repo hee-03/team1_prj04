@@ -9,10 +9,11 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface Z3_LoginDao {
 
-	@Select("SELECT * FROM Members WHERE email = #{email} AND pwd = #{pwd}")
-	List<Members> getMembersList(String email, String pwd);
-
-	@Insert("INSERT INTO Members values (#{email},#{phoneNum},#{name},#{pwd})")
-	int joinMember(Members mem1);
+	@Select("SELECT count(*) FROM Members WHERE email = #{email} AND pwd = #{pwd}")
+	int inMembers(int inMem);
+	
+	 //http://localhost:7070/Join
+	@Insert("INSERT INTO Members VALUES (#{email},#{phoneNum},#{name},#{pwd},memSeq01.nextval)")
+	int insertMember(Members mem1);
 	
 }

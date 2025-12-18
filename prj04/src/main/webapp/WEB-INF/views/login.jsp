@@ -12,7 +12,6 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif; 
-    
 }
 
 .hero-wrap {
@@ -89,7 +88,7 @@
 .login-button {
     width: 100%;
     padding: 12px;
-    background-image: url("images/loginbar.png");
+    background-image: url("images/login/loginbar.png");
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
@@ -151,11 +150,9 @@
 }
 
 </style>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>로그인</title>
 </head>
 <body>
 
@@ -168,10 +165,10 @@
          <form class="login-form" method="post">
             
             <label for="email">이메일</label>
-            <input type="email" id="email" placeholder="" required>
+            <input type="email" name="email" placeholder="email" required>
 
             <label for="password">비밀번호</label>
-            <input type="password" id="password" placeholder="" required>
+            <input type="password" name="pwd" placeholder="password" required>
             
             <div class="options-row">
                <div class="keep-login">
@@ -202,7 +199,7 @@
 
          <div class="signup-prompt">
             아직 계정이 없으신가요? 
-            <a href="join.jsp" class="signup-link">회원가입</a>
+            <a href="${pageContext.request.contextPath}/Join" class="signup-link">회원가입</a>
          </div>
 
       </div>

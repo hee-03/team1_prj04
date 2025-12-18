@@ -12,16 +12,12 @@ public class Z2_LoginService {
 	@Autowired(required=false)
 	private Z3_LoginDao dao;
 	
-	public void dbexp() {	
-		
-		System.out.println("삭제 수 :" +dao.joinMember(null) );
-		
-	}
 	
-	public List<Members> getMembersList(
-		@Param("email") String email, @Param("pwd") String pwd){
-		return dao.getMembersList(email, pwd);
-	}
+	 //http://localhost:7070/Join
+	public String insertMember(Members mem1) {
+		
+		return dao.insertMember(mem1)>0?"등록성공":"등록되지 않았습니다.";
+	};
 	
 	
 }
