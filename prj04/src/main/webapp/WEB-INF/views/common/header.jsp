@@ -19,7 +19,7 @@
     <div class="gnb">
       <ul class="d-flex navbar-nav">
         <li><a href="#"><img src="/images/header/search.png" alt=""></a></li>
-        <li><a href="#"><img src="/images/header/map.png" alt=""></a></li>
+        <li><a href="/map"><img src="/images/header/map.png" alt=""></a></li>
         <li><a href="/login"><img src="/images/header/enter.png" alt=""></a></li>
         <li><a href="#"><img src="/images/header/lang.png" alt=""></a></li>
       </ul>
