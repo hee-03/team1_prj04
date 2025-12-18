@@ -9727,6 +9727,7 @@ footer .container p:last-child{
 }
 /* //지역 선택 요소들 */
 
+/* 지역별 지도 이미지 */
 #location01{
 	background-image:url('../images/whereGoing/Gyeongi.png');/*경기*/
 }
@@ -9754,6 +9755,7 @@ footer .container p:last-child{
 #location09{
 	background-image:url('../images/whereGoing/Jeju.png');/*제주*/
 }
+/* //지역별 지도 이미지 */
 
 /* 선택된 요소 */
 .selected_location{
