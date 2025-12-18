@@ -52,7 +52,7 @@
 	    <%-- ★★★ id="location0N" 이거는 js dom 작업할 때 사용 ★★★ --%>
 	    <%-- ================================================ --%>
 	    <div id="location01" class="location_item selected_location">경기&서울</div><%-- 초기에 서울에 default로 선택되게 지정. --%>
-	    <div id="location02" class="location_item">강원</div>
+	    <div id="location02" class="location_item">강원</div><%-- 테스트: 강원도 클릭시 맨 처음 하트 아이콘이 다이아몬드로 바뀜. --%><%-- 나중에 이 기능은 없앨거임. --%>
 	    <div id="location03" class="location_item">충남</div>
 	    <div id="location04" class="location_item">충북</div>
 	    <div id="location05" class="location_item">전남</div>
@@ -449,8 +449,18 @@
     });
   	/*//마우스 오버시 색 변환 */
   	
+  	/* 요소 클릭시 바뀌는 거 테스트*/
+  	/* ☆☆☆나중에 반드시 지울것!!!☆☆☆ */
+  	let location02 = document.querySelector("#location02");
+  	let heartIcon = document.querySelector(".heartIcon");
+  	
+  	location02.addEventListener("click", function(){
+  		heartIcon.innerText = "◆";
+  	})
+  	/*//요소 클릭시 바뀌는 거 테스트*/
+  	
+  	
   });
-  <%-- --%>
   	
   </script>
   <%-- //이병주 JS코드 --%>
