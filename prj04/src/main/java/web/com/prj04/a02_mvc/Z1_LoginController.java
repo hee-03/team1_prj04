@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class Z1_LoginController {
@@ -13,12 +13,29 @@ public class Z1_LoginController {
 	@Autowired(required=false)
 	private Z2_LoginService service;
 	
-	//http://localhost:7070/login
-    @RequestMapping("login")
+	
+	//http://localhost:7070/loginCheck
+    @GetMapping("loginCheck")
     public String login() {
-   	 return "login";
-    } 
+   	 return "login";}
+
     
+	@PostMapping("loginCheck")
+	public String loginCheck(@RequestParam(name="email",defaultValue = "") String email,
+			@RequestParam(name="pwd",defaultValue = "") String pwd
+			) {
+
+		String logIn = service.loginCheck(email, pwd);
+		if (logIn.equals("로그인성공")) {
+			return "redirect:/main";
+		}else {
+			return "redirect:/loginCheck";
+		}
+		
+	}
+	
+	
+	
   //http://localhost:7070/Join 
   //http://localhost:7070/Join
     @GetMapping("Join")

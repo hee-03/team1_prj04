@@ -13,6 +13,12 @@ public class Z2_LoginService {
 	private Z3_LoginDao dao;
 	
 	
+	
+	public String loginCheck(String email, String pwd) {
+		return dao.loginCheck(email, pwd)==1?"로그인성공":"로그인실패";
+	}
+		
+	
 	 //http://localhost:7070/Join
 	public String insertMember(Members mem1) {
 		
