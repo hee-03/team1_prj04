@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/main">
       <img alt="logo" src="/images/header/logo.png">
     </a>
 
