@@ -19,8 +19,7 @@ public class Z1_LoginController {
    	 return "login";
     } 
     
-  //http://localhost:7070/Join
-  //http://localhost:7070/Join
+  //http://localhost:7070/Join 
   //http://localhost:7070/Join
     @GetMapping("Join")
     public String Join() {

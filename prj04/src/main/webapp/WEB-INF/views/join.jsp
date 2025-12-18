@@ -113,9 +113,6 @@
     <title>회원가입</title>
 </head>
 <body>
-<!-- 
-<jsp:include page="/WEB-INF/views/common/header.jsp" />
- -->
     <div class="hero-wrap" style="background-image: url('images/login/login.png');" data-stellar-background-ratio="0.5">
       <div class="login">
             <div class="logo-section">

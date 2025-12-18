@@ -13,6 +13,7 @@ public class Z2_LoginService {
 	private Z3_LoginDao dao;
 	
 	
+	 //http://localhost:7070/Join
 	public String insertMember(Members mem1) {
 		
 		return dao.insertMember(mem1)>0?"등록성공":"등록되지 않았습니다.";

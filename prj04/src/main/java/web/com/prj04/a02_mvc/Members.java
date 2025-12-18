@@ -1,5 +1,6 @@
 package web.com.prj04.a02_mvc;
 
+//http://localhost:7070/Join
 public class Members {
 	private String email;
 	private String phoneNum;
