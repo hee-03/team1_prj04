@@ -478,6 +478,7 @@
 	    });
 
 	    // 마우스 오버/아웃 효과 (기존 코드 유지)
+	    /*
 	    locationItems.forEach(function(item) {
 	        item.addEventListener('mouseover', function() {
 	            this.style.border = "3px solid navy";
@@ -486,6 +487,7 @@
 	            this.style.border = "";
 	        });
 	    });
+	    */
 	});  
 
   	
