@@ -32,7 +32,6 @@
     <%@ include file="/WEB-INF/views/common/header.jsp" %>
 	<!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정-->
     <div class="hero-wrap js-fullheight" id="mainImg" style="background-image: url('/images/main/homemainimg.png');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
       <div class="container">
         <!-- <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-9 text text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
