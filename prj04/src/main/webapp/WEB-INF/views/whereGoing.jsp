@@ -45,7 +45,7 @@
       </div>
       --%>
     </div> 
-	<%-- --%>
+	
 	<%-- 도 or 특별시 단위 지역 선택 (기본값: 서울)--%>
 	<div id="location_select">
 	    <%-- ================================================ --%>
@@ -74,30 +74,30 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <a href="#" id="city-img01" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </a><%--여기 a 태그에 있던 거 (해당 모든 a태그 공통) : blog-single.html --%>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><a href="#">서울</a><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              <a href="#" id="city-img02" class="block-20" style="background-image: url('images/image_2.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><a href="#">수원</a><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              <a href="#" id="city-img03" class="block-20" style="background-image: url('images/image_3.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><a href="#">인천</a><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -430,6 +430,23 @@
   	  	});
   	});
   	/* //서울,경기, 강원 등 요소 선택 */
+  	
+  	/*경기, 강원 같은 지역 요소 선택 아이디로 상세 변경*/
+  	//location01
+  	
+  	let location01 = document.querySelector("location01");//경기
+  	let location02 = document.querySelector("location02");//강원
+  	let location03 = document.querySelector("location03");//충남
+  	let location04 = document.querySelector("location04");//충북
+  	let location05 = document.querySelector("location05");//전남
+  	let location06 = document.querySelector("location06");//전북
+  	let location07 = document.querySelector("location07");//경남
+  	let location08 = document.querySelector("location08");//경북
+  	let location09 = document.querySelector("location09");//제주
+  	
+  	location01.addEventListener("click", function(event){
+  		
+  	})
   	
   	/* 마우스 오버시 색 변환 */
   	locationItems.forEach(function(item) { // item(개별 요소)에 등록해야 합니다.
