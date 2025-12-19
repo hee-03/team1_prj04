@@ -32,7 +32,11 @@
   <body>
 <jsp:include page="/WEB-INF/views/common/header.jsp" />
     
+<<<<<<< HEAD
+<!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정합니다.    -->
+=======
     <!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정    -->
+>>>>>>> branch 'master' of https://github.com/hee-03/team1_prj04.git
     <section class="hero-wrap js-fullheight" style="background-image: url('images/festival/festivalmain.png');" data-stellar-background-ratio="0.5">
       <div class="overlay" style="opacity: .2"></div>
       <div class="container">
@@ -138,7 +142,7 @@
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2 class="mb-4">내가 좋아하는 여행</h2>
+            <h2 class="mb-4">가고싶은 축제와 행사</h2>
           </div>
         </div>
         <div class="row d-flex">
