@@ -323,7 +323,7 @@
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section">
-            <h2 class="mb-4">추천여행지</h2>
+            <h2 class="mb-4">다른 여행지 둘러보기🗺</h2>
           </div>
         </div>
         <div class="row">
