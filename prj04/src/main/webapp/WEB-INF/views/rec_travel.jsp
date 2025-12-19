@@ -31,13 +31,12 @@
   <!-- 헤더 연결하기 -->
     <%@ include file="/WEB-INF/views/common/header.jsp" %>
   <!-- //헤더 연결하기 -->
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/rec_travel/recmain.png');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/rec_travel/recmain.png'); margin-top: 50px;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">지금가장 좋은 여행</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
+          <div class="col-md-9 ftco-animate text-center" style="padding-bottom: 380px; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);">
+            <h1 class="mb-3 bread">지금 가장 좋은 여행</h1>
           </div>
         </div>
       </div>
