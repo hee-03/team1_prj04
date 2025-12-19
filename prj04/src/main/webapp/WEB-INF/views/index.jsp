@@ -209,7 +209,7 @@
 	        <div class="map-box">
 	        	<a href="#" class="region region1"><p>경기</p></a>	        
 	        	<a href="#" class="region region2"><p>강원</p></a>	        
-	        	<a href="#" class="region region3"><p>충남핑</p></a>	        
+	        	<a href="#" class="region region3"><p>충남</p></a>	        
 	        	<a href="#" class="region region4"><p>충북연핑</p></a>	        
 	        	<a href="#" class="region region5"><p>경북연파</p></a>	        
 	        	<a href="#" class="region region6"><p>전북노란</p></a>	        

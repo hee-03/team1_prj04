@@ -9612,13 +9612,20 @@ textarea.form-control {
 	top: 159px;
     left: 137px;
 }
-/* .mytrip-list-map .map-box .region.region3{
-	background-image: url(../images/main/gangwon.png);
-	width: calc(327px / 3);
-	height: calc(258px / 3);
-	top: 159px;
-    left: 137px;
-} */
+.mytrip-list-map .map-box .region.region3{
+	background-image: url(../images/main/chungNam.png);
+	width: calc(259px / 3);
+	height: calc(212px / 3);
+	top: 257px;
+    left: 76px;
+}
+.mytrip-list-map .map-box .region.region4{
+	background-image: url(../images/main/chungNam.png);
+	width: calc(259px / 3);
+	height: calc(212px / 3);
+	top: 257px;
+    left: 76px;
+}
 .mytrip-list-map .map-box .region p{
 	position: absolute;
 	top: 50%;
