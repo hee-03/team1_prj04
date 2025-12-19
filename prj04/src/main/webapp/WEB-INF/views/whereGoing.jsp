@@ -31,21 +31,23 @@
   </head>
   <body>
     <%@ include file="/WEB-INF/views/common/header.jsp" %>
-	<!-- íë©´ë³ ì²« ë©ì¸ ì´ë¯¸ì§, ì§ì¸ íììì´ ë°ë³µ ì¬ì© image urlë§ ìì -->
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/whereGoing/whereGoing_background.png');" data-stellar-background-ratio="0.5">
-      <%-- 배경이미지 형광빛 부분 제거 나중에 주석도 삭제예정
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/whereGoing/wheregoingmain.png'); margin-top: 50px;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-9 text text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <p class="caps" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Travel to the any corner of the world, without going around in circles</p>
-            <h1 data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Make Your Tour Amazing With Us</h1>
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate text-center" style="padding-bottom: 380px; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);">
+            <h1 class="mb-3 bread">지금 가장 좋은 여행</h1>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       --%>
     </div> 
 	
+=======
+    </section> 
+	<%-- --%>
+>>>>>>> branch 'master' of https://github.com/hee-03/team1_prj04.git
 	<%-- 도 or 특별시 단위 지역 선택 (기본값: 서울)--%>
 	<div id="location_select">
 	    <%-- ================================================ --%>
