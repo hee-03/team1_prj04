@@ -9867,7 +9867,7 @@ footer .container p:last-child{
 /* 선택된 요소 */
 .selected_location .loc_img{
    /* 이미지가 선택되었을 때 강조 (예: 테두리 추가) */
-   border: 3px solid #FFA648;
+   border: 10px solid #FFA648;
    /*border-radius: 50%;*/ /* 원형으로 강조하고 싶을 때 */
 }
 .selected_location .loc_text {

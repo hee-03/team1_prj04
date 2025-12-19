@@ -44,9 +44,9 @@
     </section> 
 	<%-- 도 or 특별시 단위 지역 선택 (기본값: 서울)--%>
 	<div id="location_select">
-	    <%-- ================================================ --%>
+	    <%-- ================================================= --%>
 	    <%-- ★★★ id="location0N" 이거는 js dom 작업할 때 사용 ★★★ --%>
-	    <%-- ================================================ --%>
+	    <%-- ================================================= --%>
 	    <div id="location01" class="location_item selected_location">
 	    	<div class="loc_img"></div><div class="loc_text">경기&서울</div>
 	    </div><%-- 초기에 `경기/서울`이 default로 선택되게 지정. --%>
@@ -86,35 +86,35 @@
           </div>
         </div>
         <div class="row d-flex">
-          <div id="city01" class="col-md-4 d-flex ftco-animate">
+          <div id="city01" class="col-md-4 d-flex ftco-animate" data-city="서울"><%-- data-city 속성 반드시 지정 --%>
           	<div class="blog-entry justify-content-end">
           	  <%-- 도시 이미지 --%>
               <span id="city-img01" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-seoul.jpg');">
               </span><%--여기 a 태그에 있던 거 (해당 모든 a태그 공통) : blog-single.html --%>
               <div class="text mt-3 float-right d-block">
-                <h3 id="city-name01" class="heading"><span>서울</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
+                <h3 class="heading"><span id="city-name01">서울</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
-          <div id="city02" class="col-md-4 d-flex ftco-animate">
+          <div id="city02" class="col-md-4 d-flex ftco-animate" data-city="수원"><%-- data-city 속성 반드시 지정 --%>
           	<div class="blog-entry justify-content-end">
               <%-- 도시 이미지 --%>
               <span id="city-img02" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-suwon.jpg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 id="city-name02" class="heading"><span>수원</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
+                <h3 class="heading"><span id="city-name02">수원</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
-          <div id="city03" class="col-md-4 d-flex ftco-animate">
+          <div id="city03" class="col-md-4 d-flex ftco-animate" data-city="안산"><%-- data-city 속성 반드시 지정 --%>
           	<div class="blog-entry">
           	  <%-- 도시 이미지 --%>
               <span id="city-img03" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-ansan.jpeg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 id="city-name03" class="heading"><span>안산</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
+                <h3 class="heading"><span id="city-name03">안산</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -427,18 +427,17 @@
     <%-- //호텔 --%>
   <%-- 이병주 JS코드 --%>
   <script>
-  
   document.addEventListener('DOMContentLoaded', function() {
 	    // 1. 공통 요소 선택
 	    const locationItems = document.querySelectorAll('.location_item');
 	    
-	    const cityImg01 = document.querySelector("#city-img01");
+	    const cityImg01 = document.querySelector("#city-img01");//도시 이미지
 	    const cityImg02 = document.querySelector("#city-img02");
 	    const cityImg03 = document.querySelector("#city-img03");
 	    
-	    const cityName01 = document.querySelector("#city-name01 > a");
-	    const cityName02 = document.querySelector("#city-name02 > a");
-	    const cityName03 = document.querySelector("#city-name03 > a");
+	    const cityName01 = document.querySelector("#city-name01");//도시 이름
+	    const cityName02 = document.querySelector("#city-name02");
+	    const cityName03 = document.querySelector("#city-name03");
 	    // 2. 클릭 이벤트 통합 관리
 	    locationItems.forEach(function(item) {
 	        item.addEventListener('click', function(event) {
@@ -467,10 +466,13 @@
 	                cityName01.innerText = "속초";
 	                cityName02.innerText = "춘천";
 	                cityName03.innerText = "평창";
+	                
 	            }
 	            // 나머지 location03~09도 같은 방식으로 추가 가능
 	        });
 	    });
+	    
+
 
 	    // 마우스 오버/아웃 효과 (기존 코드 유지)
 	    /*
