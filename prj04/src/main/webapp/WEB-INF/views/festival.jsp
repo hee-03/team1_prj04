@@ -32,13 +32,13 @@
   <body>
 <jsp:include page="/WEB-INF/views/common/header.jsp" />
     
-    <!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정    -->
-    <section class="hero-wrap js-fullheight" style="background-image: url('images/festival/Festival.png');" data-stellar-background-ratio="0.5">
+<!-- 화면별 첫 메인 이미지, 지울 필요없이 반복 사용 image url만 수정    -->
+    <section class="hero-wrap js-fullheight" style="background-image: url('images/festival/festivalmain.png');" data-stellar-background-ratio="0.5">
+      <div class="overlay" style="opacity: .2"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">축제와 공연</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
+          <div class="col-md-9 ftco-animate text-center" style="padding-bottom: 380px; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);">
+            <h1 class="bread">축제와 공연</h1>
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2 class="mb-4">내가 좋아하는 여행</h2>
+            <h2 class="mb-4">가고싶은 축제와 행사</h2>
           </div>
         </div>
         <div class="row d-flex">
