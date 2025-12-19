@@ -207,15 +207,15 @@
 	      <!-- 지도 -->
 	      <div class="col-lg-4">
 	        <div class="map-box">
-	        	<a href="#" class="region"></a>	        
-	        	<a href="#" class="region"></a>	        
-	        	<a href="#" class="region"></a>	        
-	        	<a href="#" class="region"></a>	        
-	        	<a href="#" class="region"></a>	        
-	        	<a href="#" class="region"></a>	        
-	        	<a href="#" class="region"></a>	        
-	        	<a href="#" class="region"></a>	        
-	        	<a href="#" class="region"></a>	        
+	        	<a href="#" class="region region1"><p>경기</p></a>	        
+	        	<a href="#" class="region region2"><p>강원</p></a>	        
+	        	<a href="#" class="region region3"><p>충남핑</p></a>	        
+	        	<a href="#" class="region region4"><p>충북연핑</p></a>	        
+	        	<a href="#" class="region region5"><p>경북연파</p></a>	        
+	        	<a href="#" class="region region6"><p>전북노란</p></a>	        
+	        	<a href="#" class="region region7"><p>경남청록</p></a>	        
+	        	<a href="#" class="region region8"><p>전남오렌지</p></a>	        
+	        	<a href="#" class="region region9"><p>제주</p></a>	        
 	        </div>
 	      </div>
 	
@@ -278,11 +278,13 @@
 	
 	      <!-- 지도 -->
 	      <div class="col-lg-4">
-	        <div class="map-box seasonBox">
-	        	<a href="#" class="eachSeason spring"></a>        
-	        	<a href="#" class="eachSeason summer"></a>        
-	        	<a href="#" class="eachSeason autumn"></a>        
-	        	<a href="#" class="eachSeason winter"></a>        
+	        <div class="map-box seasonBoxWrap">
+	        	<div class="seasonBox">
+		        	<a href="#" class="eachSeason spring"></a>        
+		        	<a href="#" class="eachSeason summer"></a>        
+		        	<a href="#" class="eachSeason autumn"></a>        
+		        	<a href="#" class="eachSeason winter"></a>   
+	        	</div>     
 	        </div>
 	      </div>
 	

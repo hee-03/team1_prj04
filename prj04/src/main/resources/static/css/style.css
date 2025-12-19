@@ -9590,26 +9590,60 @@ textarea.form-control {
   /*top: 120px;   /* 헤더 높이에 맞춰 조절 */
   background: url(../images/main/mainmap.png)no-repeat center/ contain;
   height: 97%;
+  position: relative;
 }
-.mytrip-list-map .map-box.seasonBox{
-	background-image: url(../images/main/season.png);
-	position: relative;
-}
-.mytrip-list-map .map-box.seasonBox .eachSeason{
+
+/* region */
+.mytrip-list-map .map-box .region{
 	display: inline-block;
+	background: url(../images/main/gyeongi.png)no-repeat center / contain;
 	position: absolute;
-	width: 147px;
-	height: 183px;
-	top: 186px;
-	left: 25px;
 }
-.mytrip-list-map .map-box.seasonBox .eachSeason.summer,
-.mytrip-list-map .map-box.seasonBox .eachSeason.winter{
-	left: 177px;
+.mytrip-list-map .map-box .region.region1{
+	width: calc(228px / 3);
+	height: calc(273px / 3);
+	top: 166px;
+    left: 86px;
 }
-.mytrip-list-map .map-box.seasonBox .eachSeason.autumn,
-.mytrip-list-map .map-box.seasonBox .eachSeason.winter{
-	top: 369px;
+.mytrip-list-map .map-box .region.region2{
+	background-image: url(../images/main/gangwon.png);
+	width: calc(327px / 3);
+	height: calc(258px / 3);
+	top: 159px;
+    left: 137px;
+}
+/* .mytrip-list-map .map-box .region.region3{
+	background-image: url(../images/main/gangwon.png);
+	width: calc(327px / 3);
+	height: calc(258px / 3);
+	top: 159px;
+    left: 137px;
+} */
+.mytrip-list-map .map-box .region p{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+/* season */
+.mytrip-list-map .map-box.seasonBoxWrap{
+	background-image: url(../images/main/season.png);
+}
+.mytrip-list-map .map-box.seasonBoxWrap .seasonBox {
+	width: 86%;
+	height: 60%;
+	position: absolute;
+	top: 117px;
+	left: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	gap:4px;
+}
+
+.mytrip-list-map .map-box.seasonBoxWrap .seasonBox .eachSeason{
+	display: inline-block;
+	width: 49%;
+	height: 49%;
 }
 
 .mytrip-list-map.reverse-layout .row {
