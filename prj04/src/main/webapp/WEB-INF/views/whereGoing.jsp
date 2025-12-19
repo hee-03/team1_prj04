@@ -52,7 +52,7 @@
 	    </div><%-- 초기에 `경기/서울`이 default로 선택되게 지정. --%>
 	    <div id="location02" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">강원</div>
-	    </div><%-- 테스트: 강원도 클릭시 맨 처음 하트 아이콘이 다이아몬드로 바뀜. --%><%-- 나중에 이 기능은 없앨거임. --%>
+	    </div>
 	    <div id="location03" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">충남</div>
 	    </div>
@@ -86,10 +86,10 @@
           </div>
         </div>
         <div class="row d-flex">
-          <div id="city01" class="col-md-4 d-flex ftco-animate" data-city="서울"><%-- data-city 속성 반드시 지정 --%>
+          <div id="city01" class="city_item col-md-4 d-flex ftco-animate" data-city="서울"><%-- data-city 속성 반드시 지정 --%>
           	<div class="blog-entry justify-content-end">
           	  <%-- 도시 이미지 --%>
-              <span id="city-img01" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-seoul.jpg');">
+              <span id="city-img01" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-seoul.png');">
               </span><%--여기 a 태그에 있던 거 (해당 모든 a태그 공통) : blog-single.html --%>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><span id="city-name01">서울</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
@@ -97,7 +97,7 @@
               </div>
             </div>
           </div>
-          <div id="city02" class="col-md-4 d-flex ftco-animate" data-city="수원"><%-- data-city 속성 반드시 지정 --%>
+          <div id="city02" class="city_item col-md-4 d-flex ftco-animate" data-city="수원"><%-- data-city 속성 반드시 지정 --%>
           	<div class="blog-entry justify-content-end">
               <%-- 도시 이미지 --%>
               <span id="city-img02" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-suwon.jpg');">
@@ -108,7 +108,7 @@
               </div>
             </div>
           </div>
-          <div id="city03" class="col-md-4 d-flex ftco-animate" data-city="안산"><%-- data-city 속성 반드시 지정 --%>
+          <div id="city03" class="city_item col-md-4 d-flex ftco-animate" data-city="안산"><%-- data-city 속성 반드시 지정 --%>
           	<div class="blog-entry">
           	  <%-- 도시 이미지 --%>
               <span id="city-img03" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-ansan.jpeg');">
@@ -137,20 +137,20 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <span id="attraction_image01" class="block-20" style="background-image: url('images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attraction_name01">경복궁</span><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
+              <span class="block-20" style="background-image: url('images/image_2.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span>와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
@@ -212,10 +212,10 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <span id="festivalImage01" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="festivalName01">순천만 생태 체험선</span><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
@@ -287,10 +287,10 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <span id="restaurantImage01" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="restaurantName01">순천만 생태 체험선</span><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
@@ -362,10 +362,10 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <span id="hotelImage01" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="hotelName01">순천만 생태 체험선</span><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
@@ -429,15 +429,26 @@
   <script>
   document.addEventListener('DOMContentLoaded', function() {
 	    // 1. 공통 요소 선택
-	    const locationItems = document.querySelectorAll('.location_item');
+	    const locationItems = document.querySelectorAll('.location_item');//지역 요소들 배열 형태로 저장
+	    const cityItems = document.querySelectorAll('.city_item');//도시 요소들 배열 형태로 저장
 	    
-	    const cityImg01 = document.querySelector("#city-img01");//도시 이미지
-	    const cityImg02 = document.querySelector("#city-img02");
-	    const cityImg03 = document.querySelector("#city-img03");
+	    const city01 = document.querySelector("#city01");//첫번째 도시
+	    const city02 = document.querySelector("#city02");//두번째 도시
+	    const city03 = document.querySelector("#city03");//세번째 도시
 	    
-	    const cityName01 = document.querySelector("#city-name01");//도시 이름
-	    const cityName02 = document.querySelector("#city-name02");
-	    const cityName03 = document.querySelector("#city-name03");
+	    const cityImg01 = document.querySelector("#city-img01");//첫번째 도시 이미지
+	    const cityImg02 = document.querySelector("#city-img02");//두번째 도시 이미지
+	    const cityImg03 = document.querySelector("#city-img03");//세번째 도시 이미지
+	    
+	    const cityName01 = document.querySelector("#city-name01");//첫번째 도시 이름
+	    const cityName02 = document.querySelector("#city-name02");//두번째 도시 이름
+	    const cityName03 = document.querySelector("#city-name03");//세번째 도시 이름
+	    
+	    //attraction_image01
+	    const attractionImage01 = document.querySelector("#attraction_image01");
+	    //attraction_name01
+	    const attractionName01 = document.querySelector("#attraction_name01");
+	    
 	    // 2. 클릭 이벤트 통합 관리
 	    locationItems.forEach(function(item) {
 	        item.addEventListener('click', function(event) {
@@ -450,7 +461,7 @@
 	            const selectedId = this.id;
 
 	            if (selectedId === "location01") { // 경기&서울
-	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-seoul.jpg')";
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-seoul.png')";
 	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-suwon.jpg')";
 	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-ansan.jpeg')";
 	                
@@ -465,13 +476,53 @@
 	                
 	                cityName01.innerText = "속초";
 	                cityName02.innerText = "춘천";
-	                cityName03.innerText = "평창";
-	                
+	                cityName03.innerText = "평창";   
 	            }
 	            // 나머지 location03~09도 같은 방식으로 추가 가능
 	        });
 	    });
 	    //일단, 경기도 서울 클릭시 코드부터 추가하고, 나머지 하기.
+	    
+	    
+	    //도시 선택
+	    //attraction_image01
+	    //attraction_name01
+	    cityItems.forEach(function(item){
+	    	item.addEventListener('click',function(event){
+	    		const selectedId = this.id;
+	    		if(selectedId=="city01"){
+	    			//alert("서울클릭");//테스트
+	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg')";
+	    			attractionName01.innerText = "경복궁";
+	    			festivalImage01.style.backgroundImage = "url('images/image_1.jpg')";
+	    			festivalName01.innerText = "순천만 생태 체험선";
+	    			restaurantImage01.style.backgroundImage = "url('images/image_1.jpg')";
+	    			restaurantName01.innerText = "순천만 생태 체험선";
+	    			hotelImage01.style.backgroundImage = "url('images/image_1.jpg')";
+	    			hotelName01.innerText = "순천만 생태 체험선";
+	    		}else if(selectedId=="city02"){
+	    			//alert("수원클릭");//테스트
+	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonHwaseong.jpg')";
+	    			attractionName01.innerText = "수원화성";
+	    			festivalImage01.style.backgroundImage = "url('images/whereGoing/festivalImage/SeoulAndGyeonggi/suwon/mediaArt.jpg')";
+	    			festivalName01.innerText = "수원화성 미디어아트";
+	    			restaurantImage01.style.backgroundImage = "url('images/whereGoing/restaurantImage/SeoulAndGyeonggi/suwon/JinmiChicken.jpg')";
+	    			restaurantName01.innerText = "진미통닭";
+	    			hotelImage01.style.backgroundImage = "url('images/whereGoing/hotelImage/SeoulAndGyeonggi/suwon/novotelSuwon.jpg')";
+	    			hotelName01.innerText = "노보텔 수원";
+	    		}else{
+	    			//alert("안산클릭");//테스트
+	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/ansan/DaeBuDo.jpg')";
+	    			attractionName01.innerText = "대부도";
+	    			festivalImage01.style.backgroundImage = "url('images/image_1.jpg')";
+	    			festivalName01.innerText = "순천만 생태 체험선";
+	    			restaurantImage01.style.backgroundImage = "url('images/image_1.jpg')";
+	    			restaurantName01.innerText = "순천만 생태 체험선";
+	    			hotelImage01.style.backgroundImage = "url('images/image_1.jpg')";
+	    			hotelName01.innerText = "순천만 생태 체험선";
+	    		}
+	    	})
+	    });
 
 
 	    // 마우스 오버/아웃 효과 (기존 코드 유지)
