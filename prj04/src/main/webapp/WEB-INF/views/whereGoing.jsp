@@ -47,15 +47,33 @@
 	    <%-- ================================================ --%>
 	    <%-- ★★★ id="location0N" 이거는 js dom 작업할 때 사용 ★★★ --%>
 	    <%-- ================================================ --%>
-	    <div id="location01" class="location_item selected_location">경기&서울</div><%-- 초기에 서울에 default로 선택되게 지정. --%>
-	    <div id="location02" class="location_item">강원</div><%-- 테스트: 강원도 클릭시 맨 처음 하트 아이콘이 다이아몬드로 바뀜. --%><%-- 나중에 이 기능은 없앨거임. --%>
-	    <div id="location03" class="location_item">충남</div>
-	    <div id="location04" class="location_item">충북</div>
-	    <div id="location05" class="location_item">전남</div>
-	    <div id="location06" class="location_item">전북</div>
-	    <div id="location07" class="location_item">경남</div>
-	    <div id="location08" class="location_item">경북</div>
-	    <div id="location09" class="location_item">제주</div>
+	    <div id="location01" class="location_item selected_location">
+	    	<div class="loc_img"></div><div class="loc_text">경기&서울</div>
+	    </div><%-- 초기에 `경기/서울`이 default로 선택되게 지정. --%>
+	    <div id="location02" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">강원</div>
+	    </div><%-- 테스트: 강원도 클릭시 맨 처음 하트 아이콘이 다이아몬드로 바뀜. --%><%-- 나중에 이 기능은 없앨거임. --%>
+	    <div id="location03" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">충남</div>
+	    </div>
+	    <div id="location04" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">충북</div>
+	    </div>
+	    <div id="location05" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">전남</div>
+	    </div>
+	    <div id="location06" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">전북</div>
+	    </div>
+	    <div id="location07" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">경남</div>
+	    </div>
+	    <div id="location08" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">경북</div>
+	    </div>
+	    <div id="location09" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">제주</div>
+	    </div>
 	</div>
 	<%-- //도 or 특별시 단위 지역 선택 (기본값: 서울)--%>
 	
@@ -462,12 +480,10 @@
 	    // 마우스 오버/아웃 효과 (기존 코드 유지)
 	    locationItems.forEach(function(item) {
 	        item.addEventListener('mouseover', function() {
-	            this.style.border = "1px solid #FFA648";
-	            this.style.color = "navy";
+	            this.style.border = "3px solid navy";
 	        });
 	        item.addEventListener('mouseout', function() {
 	            this.style.border = "";
-	            this.style.color = "";
 	        });
 	    });
 	});  

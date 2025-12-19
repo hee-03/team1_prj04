@@ -8633,12 +8633,12 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 3em 0;
+  padding: 5em 0;
   position: relative;
   width: 100%; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 2.5em 0; } }
+      padding: 3.5em 0; } }
 
 .ftco-no-pt {
   padding-top: 0 !important; }
@@ -9789,7 +9789,7 @@ footer .container p:last-child{
 /* 도 or 특별시 단위 지역 선택 */
 #location_select{
     text-align: center; /* 자식 요소인 .location_item을 중앙 정렬 */
-    margin: 220px auto 30px auto;
+    margin: 30px auto 30px auto;
 }
 /* // 도 or 특별시 단위 지역 선택 */
 
@@ -9797,65 +9797,80 @@ footer .container p:last-child{
 .location_item{
 	width: 130px; height:130px;
     display: inline-block; /* 요소를 가로로 나열 */
-    /*=======D=======*/
-    /*margin: 5px;
-    border: 1px solid black;
     border-radius:50%;
+    /*=======D=======*/
+    /*
+    border: 1px solid black;
+    
     padding: 10px 20px;
     font-size:24px;
     line-height: 130px;
-    cursor: pointer;*/
-    /*//=======D=======*/
+    
+    /* //=======D=======*/
     margin: 10px;
     cursor: pointer;
-    color:black;/*글자색 검정*/
-    
-    /* 배경 이미지 관련 핵심 설정 */
-    background-repeat: no-repeat;   /* 이미지 반복 방지 */
-    background-position: center;    /* 이미지를 정중앙에 위치 */
-    background-size: contain;       /* 이미지가 잘리지 않고 130px 안에 다 들어가도록 설정 */
-    
-    /* 텍스트가 있다면 이미지 아래나 중앙에 배치 (필요 없으면 삭제) */
-    line-height: 130px;
-    font-weight: bold;
-    transition: transform 0.2s;     /* 마우스 올렸을 때 부드러운 효과 */
+    vertical-align: top; /* 줄바꿈 시 정렬 흐트러짐 방지 */
 }
 /* //지역 선택 요소들 */
 
+/* 자식 1: 이미지 영역 */
+.loc_img {
+    width: 130px; 
+    height: 130px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* transition을 여기 주면 호버 시 이미지만 커지는 효과도 가능 */
+}
+
+/* 자식 2: 텍스트 영역 */
+.loc_text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* 글자색을 명확하게 분리 */
+    line-height: 1.2; /* 기존 130px 제거 */
+}
+
+
 /* 지역별 지도 이미지 */
-#location01{
-	background-image:url('../images/whereGoing/Gyeongi.png');/*경기*/
+#location01 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/경기_서울.png');/*경기*/
 }
-#location02{
-	background-image:url('../images/whereGoing/Gangwon.png');/*강원*/
+#location02 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/강원.png');/*강원*/
 }
-#location03{
-	background-image:url('../images/whereGoing/ChungCheongNam.png');/*충남*/
+#location03 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/충남.png');/*충남*/
 }
-#location04{
-	background-image:url('../images/whereGoing/ChungCheongBook.png');/*충북*/
+#location04 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/충북.png');/*충북*/
 }
-#location05{
-	background-image:url('../images/whereGoing/JeonRaNam.png');/*전남*/
+#location05 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/전남.png');/*전남*/
 }
-#location06{
-	background-image:url('../images/whereGoing/JeonRaBook.png');/*전북*/
+#location06 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/전북.png');/*전북*/
 }
-#location07{
-	background-image:url('../images/whereGoing/GyeongSangNam.png');/*경남*/
+#location07 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/경남.png');/*경남*/
 }
-#location08{
-	background-image:url('../images/whereGoing/GyeongSangBook.png');/*경북*/
+#location08 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/경북.png');/*경북*/
 }
-#location09{
-	background-image:url('../images/whereGoing/Jeju.png');/*제주*/
+#location09 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/제주.png');/*제주*/
 }
 /* //지역별 지도 이미지 */
 
 /* 선택된 요소 */
-.selected_location{
+.selected_location .loc_img{
    /* 이미지가 선택되었을 때 강조 (예: 테두리 추가) */
-   border: 2px solid #FFA648;
+   border: 3px solid #FFA648;
    /*border-radius: 50%;*/ /* 원형으로 강조하고 싶을 때 */
+}
+.selected_location .loc_text {
+    color: #FFA648; /* 텍스트 색상 변경 */
 }
 /* //선택된 요소*/
