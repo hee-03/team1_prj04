@@ -68,7 +68,7 @@
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2 class="mb-4">지역 클릭 시 여행지</h2>
+            <h2 class="mb-4">해당 지역 도시</h2>
           </div>
         </div>
         <div class="row d-flex">
@@ -451,12 +451,12 @@
   	
   	/* 요소 클릭시 바뀌는 거 테스트*/
   	/* ☆☆☆나중에 반드시 지울것!!!☆☆☆ */
-  	let location02 = document.querySelector("#location02");
+  	/*let location02 = document.querySelector("#location02");
   	let heartIcon = document.querySelector(".heartIcon");
   	
   	location02.addEventListener("click", function(){
   		heartIcon.innerText = "◆";
-  	})
+  	})*/
   	/*//요소 클릭시 바뀌는 거 테스트*/
   	
   	
