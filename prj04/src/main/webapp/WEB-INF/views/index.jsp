@@ -160,47 +160,47 @@
 	    	<!-- 왼쪽: 카드 리스트 -->
 	      	<div class="col-lg-8">
 	        
-	        <!-- 카드 1 -->
-	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
-	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('images/main/yeosu.jpg');"></div>
-	          </div>
-	          <div class="col-md-7 p-4">
-	            <h3 class="mb-2">남해안 거점도시 미항 여수</h3>
-	            <p class="mb-0">
-	              국제 해양관광의 중심 전남 여수시. 3천여 그루의 동백나무로 가득 찬 붉은 섬 오동도는 웰빙 트래킹 코스를 갖추고 있어 한층 더 운치 있다. 
-	              해상 케이블카를 타면 마치 바다 위를 걷는 듯한 느낌이 들며 탁 트인 바다 전망을 감상할 수 있다. 노래 가사에도 나오는...
-	            </p>
-	          </div>
-	        </div>
+		        <!-- 카드 1 -->
+		        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
+		          <div class="col-md-5 d-flex">
+		            <div class="img w-100" style="background-image:url('images/main/yeosu.jpg');"></div>
+		          </div>
+		          <div class="col-md-7 p-4">
+		            <h3 class="mb-2">남해안 거점도시 미항 여수</h3>
+		            <p class="mb-0">
+		              국제 해양관광의 중심 전남 여수시. 3천여 그루의 동백나무로 가득 찬 붉은 섬 오동도는 웰빙 트래킹 코스를 갖추고 있어 한층 더 운치 있다. 
+		              해상 케이블카를 타면 마치 바다 위를 걷는 듯한 느낌이 들며 탁 트인 바다 전망을 감상할 수 있다. 노래 가사에도 나오는...
+		            </p>
+		          </div>
+		        </div>
 	        
-	        <!-- 카드 1 -->
-	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
-	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('images/main/gyeongju.jpg');"></div>
-	          </div>
-	          <div class="col-md-7 p-4">
-	            <h3 class="mb-2">지붕없는 박물관 경주</h3>
-	            <p class="mb-0">
-	              발길이 닿는 어느 곳이든 문화 유적지를 만날 수 있는 곳이다. 
-	              밤이면 더 빛나는 동궁과 월지를 비롯해 허허벌판에 자리를 굳건히 지키고 있는 첨성대. 뛰어난 건축미를 자랑하는 불국사 석굴암까지 어느 하나 빼놓을 수 없...
-	            </p>
-	          </div>
-	        </div>
+		        <!-- 카드 1 -->
+		        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
+		          <div class="col-md-5 d-flex">
+		            <div class="img w-100" style="background-image:url('images/main/gyeongju.jpg');"></div>
+		          </div>
+		          <div class="col-md-7 p-4">
+		            <h3 class="mb-2">지붕없는 박물관 경주</h3>
+		            <p class="mb-0">
+		              발길이 닿는 어느 곳이든 문화 유적지를 만날 수 있는 곳이다. 
+		              밤이면 더 빛나는 동궁과 월지를 비롯해 허허벌판에 자리를 굳건히 지키고 있는 첨성대. 뛰어난 건축미를 자랑하는 불국사 석굴암까지 어느 하나 빼놓을 수 없...
+		            </p>
+		          </div>
+		        </div>
 	        
-	        <!-- 카드 1 -->
-	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
-	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('images/main/gangneung.jpg');"></div>
-	          </div>
-	          <div class="col-md-7 p-4">
-	            <h3 class="mb-2">솔내음 가득한 제일강릉</h3>
-	            <p class="mb-0">
-	              은은한 커피향이 남다른 강원도 강릉시. 그중에도 카페거리로 유명한 안목해변은 발이 닿는 어디든 향긋한 커피 한 잔에 지평선 끝까지 펼쳐지는 바다 풍경은 덤으로 얻을 수 있다. 
-	              일출 명소로 유명한 정동진과 야경이 아름다운 경포대는 대표 여행 코스! 구름도...
-	            </p>
-	          </div>
-	        </div>
+		        <!-- 카드 1 -->
+		        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
+		          <div class="col-md-5 d-flex">
+		            <div class="img w-100" style="background-image:url('images/main/gangneung.jpg');"></div>
+		          </div>
+		          <div class="col-md-7 p-4">
+		            <h3 class="mb-2">솔내음 가득한 제일강릉</h3>
+		            <p class="mb-0">
+		              은은한 커피향이 남다른 강원도 강릉시. 그중에도 카페거리로 유명한 안목해변은 발이 닿는 어디든 향긋한 커피 한 잔에 지평선 끝까지 펼쳐지는 바다 풍경은 덤으로 얻을 수 있다. 
+		              일출 명소로 유명한 정동진과 야경이 아름다운 경포대는 대표 여행 코스! 구름도...
+		            </p>
+		          </div>
+		        </div>
 	      </div>
 	
 	      <!-- 지도 -->
@@ -209,11 +209,11 @@
 	        	<a href="#" class="region region1"><p>경기</p></a>	        
 	        	<a href="#" class="region region2"><p>강원</p></a>	        
 	        	<a href="#" class="region region3"><p>충남</p></a>	        
-	        	<a href="#" class="region region4"><p>충북연핑</p></a>	        
-	        	<a href="#" class="region region5"><p>경북연파</p></a>	        
-	        	<a href="#" class="region region6"><p>전북노란</p></a>	        
-	        	<a href="#" class="region region7"><p>경남청록</p></a>	        
-	        	<a href="#" class="region region8"><p>전남오렌지</p></a>	        
+	        	<a href="#" class="region region4"><p>충북</p></a>	        
+	        	<a href="#" class="region region5"><p>경북</p></a>	        
+	        	<a href="#" class="region region6"><p>전북</p></a>	        
+	        	<a href="#" class="region region7"><p>경남</p></a>	        
+	        	<a href="#" class="region region8"><p>전남</p></a>	        
 	        	<a href="#" class="region region9"><p>제주</p></a>	        
 	        </div>
 	      </div>

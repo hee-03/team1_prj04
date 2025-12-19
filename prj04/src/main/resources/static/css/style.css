@@ -9599,6 +9599,10 @@ textarea.form-control {
 	background: url(../images/main/gyeongi.png)no-repeat center / contain;
 	position: absolute;
 }
+.mytrip-list-map .map-box .region:hover p{
+	font-size: 20px;
+	color: #000;
+}
 .mytrip-list-map .map-box .region.region1{
 	width: calc(228px / 3);
 	height: calc(273px / 3);
@@ -9612,6 +9616,9 @@ textarea.form-control {
 	top: 159px;
     left: 137px;
 }
+.mytrip-list-map .map-box .region.region2 p {
+	left: 42%;
+}
 .mytrip-list-map .map-box .region.region3{
 	background-image: url(../images/main/chungNam.png);
 	width: calc(259px / 3);
@@ -9620,17 +9627,57 @@ textarea.form-control {
     left: 76px;
 }
 .mytrip-list-map .map-box .region.region4{
-	background-image: url(../images/main/chungNam.png);
-	width: calc(259px / 3);
-	height: calc(212px / 3);
-	top: 257px;
-    left: 76px;
+	background-image: url(../images/main/chungBook.png);
+    width: calc(208px / 3);
+    height: calc(257px / 3);
+    top: 237px;
+    left: 143px;
+}
+.mytrip-list-map .map-box .region.region4 p{
+	top: 43%;
+    left: 43%;
+}
+.mytrip-list-map .map-box .region.region5{
+	background-image: url(../images/main/gyeongbook.png);
+    width: calc(315px / 3);
+    height: calc(319px / 3);
+    top: 240px;
+    left: 187px;
+}
+.mytrip-list-map .map-box .region.region6{
+	background-image: url(../images/main/jeonBook.png);
+    width: calc(251px / 3);
+    height: calc(166px / 3);
+    top: 321px;
+    left: 104px;
+}
+.mytrip-list-map .map-box .region.region7{
+	background-image: url(../images/main/gyeongNam.png);
+    width: calc(341px / 3);
+    height: calc(229px / 3);
+    top: 337px;
+    left: 178px;
+}
+.mytrip-list-map .map-box .region.region8{
+	background-image: url(../images/main/jeonNam.png);
+    width: calc(307px / 3);
+    height: calc(223px / 3);
+    top: 376px;
+    left: 94px;
+}
+.mytrip-list-map .map-box .region.region9{
+	background-image: url(../images/main/jeju.png);
+    width: calc(221px / 3);
+    height: calc(109px / 3);
+    top: 496px;
+    left: 88px;
 }
 .mytrip-list-map .map-box .region p{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	color: #a3a0a0;
 }
 /* season */
 .mytrip-list-map .map-box.seasonBoxWrap{
