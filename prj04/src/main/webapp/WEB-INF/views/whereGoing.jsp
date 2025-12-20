@@ -540,6 +540,7 @@
   </script> 
   <%-- //이병주 JS코드 --%>
   <%@ include file="/WEB-INF/views/common/footer.jsp" %>
+  
   </body>
   <%-- 희정님 js 코드 --%>
   <%-- 
