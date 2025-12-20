@@ -424,7 +424,8 @@
         </div>
       </div>
     </section>
-    <%-- //호텔 --%>
+    <%-- //호텔 --%>  
+    
   <%-- 이병주 JS코드 --%>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -448,6 +449,16 @@
 	    const attractionImage01 = document.querySelector("#attraction_image01");
 	    //attraction_name01
 	    const attractionName01 = document.querySelector("#attraction_name01");
+	    
+	    //GGG
+	    const festivalImage01 = document.querySelector("#festivalImage01");
+		const festivalName01 = document.querySelector("#festivalName01");
+		const restaurantImage01 = document.querySelector("#restaurantImage01");
+		const restaurantName01 = document.querySelector("#restaurantName01");
+		const hotelImage01 = document.querySelector("#hotelImage01");
+		const hotelName01 = document.querySelector("#hotelName01");
+	    //GGG
+	    
 	    
 	    // 2. 클릭 이벤트 통합 관리
 	    locationItems.forEach(function(item) {
@@ -544,6 +555,32 @@
 	    //도시 선택  attraction_image01  attraction_name01
 	    cityItems.forEach(function(item){
 	    	item.addEventListener('click',function(event){
+	    		//GGG	
+	   
+	    		// 1. 선택 시각 효과
+	            cityItems.forEach(c => c.classList.remove('selected_city'));
+	            this.classList.add('selected_city');
+
+	            // 2. 현재 칸에 적힌 '도시 이름' 읽기
+	            const cityName = this.querySelector('h3 span:first-child').innerText;
+
+	            // 3. 도시 이름에 맞춰 데이터 업데이트
+	            if (cityName === "서울") {
+	            	//축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
+	                updateDetails("images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg", "경복궁", "seoul_fest.jpg", "서울 페스티벌", "seoul_food.jpg", "서울 맛집", "seoul_hotel.jpg", "서울 호텔");
+	            } else if (cityName === "수원") {
+	                updateDetails("images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonHwaseong.jpg", "수원화성", "suwon/mediaArt.jpg", "수원 미디어아트", "suwon/JinmiChicken.jpg", "진미통닭", "suwon/novotelSuwon.jpg", "노보텔 수원");
+	            } else if (cityName === "안산") {
+	            	//축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
+	                updateDetails("images/whereGoing/attractionImage/SeoulAndGyeonggi/ansan/DaeBuDo.jpg", "대부도", "ansan_fest.jpg", "안산 거리축제", "ansan_food.jpg", "대부도 칼국수", "ansan_hotel.jpg", "안산 호텔");
+	            } else if (cityName === "속초") {
+	            	//축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
+	                updateDetails("images/whereGoing/attractionImage/Gangwon/sokcho/seolAkMountain.jpg", "설악산", "sokcho_fest.jpg", "속초 축제", "sokcho_food.jpg", "속초 닭강정", "sokcho_hotel.jpg", "속초 호텔");
+	            }
+	            // ... 나머지 도시는 이 아래에 else if로 계속 추가하면 됩니다!	  
+	            //GGG
+	    		
+	    		/* 원래 내 코드	    		
 	    		const selectedId = this.id;
 	    		if(selectedId=="city01"){
 	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg')";
@@ -572,7 +609,9 @@
 	    			restaurantName01.innerText = "순천만 생태 체험선";
 	    			hotelImage01.style.backgroundImage = "url('images/image_1.jpg')";
 	    			hotelName01.innerText = "순천만 생태 체험선";
-	    		}
+	    		} 
+	    			원래 내 코드*/
+
 	    	})
 	    });
 
@@ -588,8 +627,30 @@
 	        });
 	    });
 	    */
+	    
+		//GGG
+		function updateDetails(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
+		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
+		    attractionImage01.style.backgroundImage = `url('${attImg}')`;
+		    attractionName01.innerText = attName;
+		    
+		    festivalImage01.style.backgroundImage = `url('${festImg}')`;
+		    festivalName01.innerText = festName;
+		    
+		    restaurantImage01.style.backgroundImage = `url('${restImg}')`;
+		    restaurantName01.innerText = restName;
+		    
+		    hotelImage01.style.backgroundImage = `url('${hotelImg}')`;
+		    hotelName01.innerText = hotelName;
+		}
+		//GGG
+		
+		//GGG
+		// 초기 로딩 시 서울 클릭
+	    city01.click();
+	  	//GGG
 	});  
-  </script> 
+  </script>
   <%-- //이병주 JS코드 --%>
   <%@ include file="/WEB-INF/views/common/footer.jsp" %>
   
