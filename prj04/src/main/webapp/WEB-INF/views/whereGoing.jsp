@@ -492,7 +492,47 @@
 	                cityName01.innerText = "청주";
 	                cityName02.innerText = "충주";
 	                cityName03.innerText = "단양"; 
-	            }// 나머지 location05~09도 같은 방식으로 추가하기
+	            }else if (selectedId === "location05") {//전남
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-suncheon.png')";
+	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-yeosu.jpg')";
+	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-mokpo.png')";
+	                
+	                cityName01.innerText = "순천";
+	                cityName02.innerText = "여수";
+	                cityName03.innerText = "목포";   
+	            }else if (selectedId === "location06") {//전북
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-jeonju.png')";
+	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-gunsan.jpg')";
+	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-iksan.png')";
+	                
+	                cityName01.innerText = "전주";
+	                cityName02.innerText = "군산";
+	                cityName03.innerText = "익산";   
+	            }else if (selectedId === "location07") {//경남
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-tongyeong.jpg')";
+	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-geoje.png')";
+	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-namhae.jpg')";
+	                
+	                cityName01.innerText = "통영";
+	                cityName02.innerText = "거제";
+	                cityName03.innerText = "남해";   
+	            }else if (selectedId === "location08") {//경북
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-gyeongju.png')";
+	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-andong.png')";
+	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-pohang.png')";
+	                
+	                cityName01.innerText = "경주";
+	                cityName02.innerText = "안동";
+	                cityName03.innerText = "포항";
+	            }else if (selectedId === "location09") {//제주
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-jeju.png')";
+	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-seogwipo.png')";
+	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-udo.jpg')";
+	                
+	                cityName01.innerText = "제주";
+	                cityName02.innerText = "서귀포";
+	                cityName03.innerText = "우도";   
+           		}
 	            
 	         	// ★ 핵심: 지역(도,특별시)를 클릭하자마자 첫 번째 도시를 강제로 클릭시킴
 	            city01.click();
