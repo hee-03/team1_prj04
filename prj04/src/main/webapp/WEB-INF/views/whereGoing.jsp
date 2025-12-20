@@ -461,15 +461,14 @@
 	            const selectedId = this.id;
 
 	            if (selectedId === "location01") { // 경기&서울
-	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-seoul.png')";
-	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-suwon.jpg')";
-	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-ansan.jpeg')";
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-seoul.png')";//서울
+	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-suwon.jpg')";//수원
+	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-ansan.jpeg')";//안산
 	                
 	                cityName01.innerText = "서울";
 	                cityName02.innerText = "수원";
 	                cityName03.innerText = "안산";
-	            } 
-	            else if (selectedId === "location02") { // 강원
+	            }else if (selectedId === "location02") { // 강원
 	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-sokcho.jpg')";
 	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-cheuncheon.png')";
 	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-pyeongchang.png')";
@@ -477,21 +476,36 @@
 	                cityName01.innerText = "속초";
 	                cityName02.innerText = "춘천";
 	                cityName03.innerText = "평창";   
-	            }
-	            // 나머지 location03~09도 같은 방식으로 추가 가능
+	            }else if (selectedId === "location03") { //충남
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-cheonan.jpg')";//천안
+	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-asan.png')";//아산
+	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-boryeong.jpg')";//보령
+	                
+	                cityName01.innerText = "천안";
+	                cityName02.innerText = "아산";
+	                cityName03.innerText = "보령"; 	            	
+	            }else if (selectedId === "location04") { // 충북
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-cheongju.jpg')"; // 청주
+	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-chungju.png')"; // 충주
+	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-danyang.jpg')"; // 단양 (군 단위)
+	                
+	                cityName01.innerText = "청주";
+	                cityName02.innerText = "충주";
+	                cityName03.innerText = "단양"; 
+	            }// 나머지 location04~09도 같은 방식으로 추가하기
+	            
+	         	// ★ 핵심: 지역(도,특별시)를 클릭하자마자 첫 번째 도시를 강제로 클릭시킴
+	            city01.click();
 	        });
 	    });
 	    //일단, 경기도 서울 클릭시 코드부터 추가하고, 나머지 하기.
 	    
 	    
-	    //도시 선택
-	    //attraction_image01
-	    //attraction_name01
+	    //도시 선택  attraction_image01  attraction_name01
 	    cityItems.forEach(function(item){
 	    	item.addEventListener('click',function(event){
 	    		const selectedId = this.id;
 	    		if(selectedId=="city01"){
-	    			//alert("서울클릭");//테스트
 	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg')";
 	    			attractionName01.innerText = "경복궁";
 	    			festivalImage01.style.backgroundImage = "url('images/image_1.jpg')";
@@ -501,7 +515,6 @@
 	    			hotelImage01.style.backgroundImage = "url('images/image_1.jpg')";
 	    			hotelName01.innerText = "순천만 생태 체험선";
 	    		}else if(selectedId=="city02"){
-	    			//alert("수원클릭");//테스트
 	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonHwaseong.jpg')";
 	    			attractionName01.innerText = "수원화성";
 	    			festivalImage01.style.backgroundImage = "url('images/whereGoing/festivalImage/SeoulAndGyeonggi/suwon/mediaArt.jpg')";
@@ -511,7 +524,6 @@
 	    			hotelImage01.style.backgroundImage = "url('images/whereGoing/hotelImage/SeoulAndGyeonggi/suwon/novotelSuwon.jpg')";
 	    			hotelName01.innerText = "노보텔 수원";
 	    		}else{
-	    			//alert("안산클릭");//테스트
 	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/ansan/DaeBuDo.jpg')";
 	    			attractionName01.innerText = "대부도";
 	    			festivalImage01.style.backgroundImage = "url('images/image_1.jpg')";
