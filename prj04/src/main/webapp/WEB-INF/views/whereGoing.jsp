@@ -492,7 +492,7 @@
 	                cityName01.innerText = "청주";
 	                cityName02.innerText = "충주";
 	                cityName03.innerText = "단양"; 
-	            }// 나머지 location04~09도 같은 방식으로 추가하기
+	            }// 나머지 location05~09도 같은 방식으로 추가하기
 	            
 	         	// ★ 핵심: 지역(도,특별시)를 클릭하자마자 첫 번째 도시를 강제로 클릭시킴
 	            city01.click();
