@@ -126,8 +126,7 @@
 	
 	
 	<!-- 관광명소 -->
-		
-      <section class="ftco-section">
+    <section class="ftco-section">
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
@@ -232,10 +231,10 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <span id="festivalImage03" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="festivalName03">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -243,30 +242,30 @@
 
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <span id="festivalImage04" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="festivalName04">순천만 생태 체험선</span><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
+              <span id="festivalImage05" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="festivalName05">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <span id="festivalImage06" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="festivalName06">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -307,10 +306,10 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <span id="restaurantImage03" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="restaurantName03">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -318,30 +317,30 @@
 
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <span id="restaurantImage04" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="restaurantName04">순천만 생태 체험선</span><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
+              <span id="restaurantImage05" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="restaurantName05">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <span id="restaurantImage06" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="restaurantName06">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -382,10 +381,10 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <span id="hotelImage03" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="hotelName03">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -393,30 +392,30 @@
 
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <span id="hotelImage04" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="hotelName04">순천만 생태 체험선</span><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
+              <span id="hotelImage05" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="hotelName05">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <span id="hotelImage06" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="hotelName06">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -621,28 +620,370 @@
 	            const cityName = this.querySelector('h3 span:first-child').innerText;
 	            // 3. 도시 이름에 맞춰 데이터 업데이트
 	            /*
-	            함수 구조
+	            =====함수 구조=====
 	            updateDetails(
-	            		"명소 이미지 경로", "명소 이름", 
-	            		"축제 이미지 경로", "축제 이름",
-	            		"맛집 이미지 경로", "맛집 이름", 
-	            		"호텔 이미지 경로", "호텔이름"
+	            		"명소 이미지 경로", "명소 이름", url
+	            		"축제 이미지 경로", "축제 이름", url
+	            		"맛집 이미지 경로", "맛집 이름", url
+	            		"호텔 이미지 경로", "호텔이름", url
 	            )
 	            */
 	            if (cityName === "서울") {
 	            	//◆◆◆축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
-	                updateDetails01("images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg", "경복궁", "seoul_fest.jpg", "서울 페스티벌", "seoul_food.jpg", "서울 맛집", "seoul_hotel.jpg", "서울 호텔");
+	                updateDetails01(
+	                		"images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg","경복궁", "",
+	                		"seoul_fest.jpg", "서울 페스티벌", "",
+	                		"seoul_food.jpg", "서울 맛집", "", 
+	                		"seoul_hotel.jpg", "서울 호텔", ""
+	                );
+	                updateDetails02(
+	                		"","서울명소2","#",
+	                		"","서울축제2","#",
+	                		"","서울맛집2","#",
+	                		"","서울호텔2","#"
+	                );
 	            } else if (cityName === "수원") {
-	                updateDetails01("images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonHwaseong.jpg", "수원화성", "images/whereGoing/festivalImage/SeoulAndGyeonggi/suwon/mediaArt.jpg", "수원 미디어아트", "images/whereGoing/restaurantImage/SeoulAndGyeonggi/suwon/JinmiChicken.jpg", "진미통닭", "images/whereGoing/hotelImage/SeoulAndGyeonggi/suwon/novotelSuwon.jpg", "노보텔 수원");
-	                updateDetails02("images/starfield.jpg","수원 스타필드", "22f.jpg","수원축제2","22r.jpg","수원맛집2","22h.jpg","수원호텔2");
+	                updateDetails01(
+	                		"images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonHwaseong.jpg", "수원화성", "#",
+	                		"images/whereGoing/festivalImage/SeoulAndGyeonggi/suwon/mediaArt.jpg", "수원 미디어아트", "#",
+	                		"images/whereGoing/restaurantImage/SeoulAndGyeonggi/suwon/JinmiChicken.jpg", "진미통닭", "#",
+	                		"images/whereGoing/hotelImage/SeoulAndGyeonggi/suwon/novotelSuwon.jpg", "노보텔 수원", "#"
+	                );
+	                updateDetails02(
+	                		"images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonStarField.jpg","수원 스타필드", "#",
+	                		"22f.jpg","수원축제2", "#",
+	                		"22r.jpg","수원맛집2", "#",
+	                		"22h.jpg","수원호텔2", "#"
+	                );
 	            } else if (cityName === "안산") {
 	            	//◆◆◆축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
-	                updateDetails01("images/whereGoing/attractionImage/SeoulAndGyeonggi/ansan/DaeBuDo.jpg", "대부도", "ansan_fest.jpg", "안산 거리축제", "ansan_food.jpg", "대부도 칼국수", "ansan_hotel.jpg", "안산 호텔");
+	                updateDetails01(
+	                		"images/whereGoing/attractionImage/SeoulAndGyeonggi/ansan/DaeBuDo.jpg", "대부도", "#",
+	                		"ansan_fest.jpg", "안산 거리축제", "#",
+	                		"ansan_food.jpg", "대부도 칼국수", "#",
+	                		"ansan_hotel.jpg", "안산 호텔", "#"
+	                );
+	                updateDetails02(
+	                		"","안산명소2", "#",
+	                		"","안산축제2", "#",
+	                		"","안산맛집2", "#",
+	                		"","안산호텔2", "#"
+	                );
 	            } else if (cityName === "속초") {
 	            	//◆◆◆축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
-	                updateDetails01("images/whereGoing/attractionImage/Gangwon/sokcho/seolAkMountain.jpg", "설악산", "sokcho_fest.jpg", "속초 축제", "sokcho_food.jpg", "속초 닭강정", "sokcho_hotel.jpg", "속초 호텔");
-	            }
-	            // ... 나머지 도시는 이 아래에 else if로 계속 추가하면 됩니다!	  
+	                updateDetails01(
+	                		"images/whereGoing/attractionImage/Gangwon/sokcho/seolAkMountain.jpg", "설악산", "#",
+	                		"sokcho_fest.jpg", "속초 축제", "#", 
+	                		"sokcho_food.jpg", "속초 닭강정", "#",
+	                		"sokcho_hotel.jpg", "속초 호텔", "#"
+	                );
+	                updateDetails02(
+	                		"","속초명소2", "#",
+	                		"","속초축제2", "#",
+	                		"","속초맛집2", "#",
+	                		"","속초호텔2", "#"
+	                );
+	            } else if (cityName === "춘천") {
+	            	//◆◆◆축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
+	                updateDetails01(
+	                		"","춘천명소1", "#",
+	                		"","춘천축제1", "#",
+	                		"","춘천맛집1", "#",
+	                		"","춘천호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "평창") {
+	            	//◆◆◆축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
+	                updateDetails01(
+	                		"","평창명소1", "#",
+	                		"","평창축제1", "#",
+	                		"","평창맛집1", "#",
+	                		"","평창호텔1", "#"
+	                );
+	                updateDetails02(
+	                		"","평창명소2", "#",
+	                		"","평창축제2", "#",
+	                		"","평창맛집2", "#",
+	                		"","평창호텔2", "#"
+	                );
+	            } else if (cityName === "천안") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "blog-single.html",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "아산") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "보령") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "청주") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "충주") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "단양") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "순천") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "여수") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "목포") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "전주") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "군산") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "익산") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "통영") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "거제") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "남해") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "경주") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "안동") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "포항") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "제주") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "서귀포") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            } else if (cityName === "우도") {
+	            	//◆◆◆
+	                updateDetails01(
+	                		"","명소1", "#",
+	                		"","축제1", "#",
+	                		"","맛집1", "#",
+	                		"","호텔1", "#");
+	                updateDetails02(
+	                		"","명소2", "#",
+	                		"","축제2", "#",
+	                		"","맛집2", "#",
+	                		"","호텔2", "#"
+	                );
+	            }	  
 	            //GGG
 	    	});
 	    });
@@ -658,9 +999,63 @@
 	    });
 	    */
 		//GGG
-		function updateDetails01(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
+		function updateDetails01(attImg, attName, attLink, 
+			    festImg, festName, festLink, 
+			    restImg, restName, restLink, 
+			    hotelImg, hotelName, hotelLink) {
+	    	// --- 1. 관광 명소 (Attraction) 업데이트 ---
+	        const attSlot = attractionImage01.parentElement; // .blog-entry 요소
+	        attractionImage01.style.backgroundImage = "url('" + attImg + "')";
+	        attractionName01.innerText = attName;
+	        
+	        // 클릭 이벤트 설정
+	        attSlot.style.cursor = "pointer";
+	        attSlot.onclick = function() {
+	            if (attLink && attLink !== "#" && attLink !== "") {
+	                location.href = attLink;
+	            } else {
+	                console.log(attName + "의 링크가 아직 준비되지 않았습니다.");
+	            }
+	        };
+
+	        // --- 2. 관광 행사 (Festival) 업데이트 ---
+	        const festSlot = festivalImage01.parentElement;
+	        festivalImage01.style.backgroundImage = "url('" + festImg + "')";
+	        festivalName01.innerText = festName;
+	        
+	        festSlot.style.cursor = "pointer";
+	        festSlot.onclick = function() {
+	            if (festLink && festLink !== "#" && festLink !== "") {
+	                location.href = festLink;
+	            }
+	        };
+
+	        // --- 3. 맛집 (Restaurant) 업데이트 ---
+	        const restSlot = restaurantImage01.parentElement;
+	        restaurantImage01.style.backgroundImage = "url('" + restImg + "')";
+	        restaurantName01.innerText = restName;
+	        
+	        restSlot.style.cursor = "pointer";
+	        restSlot.onclick = function() {
+	            if (restLink && restLink !== "#" && restLink !== "") {
+	                location.href = restLink;
+	            }
+	        };
+
+	        // --- 4. 호텔 (Hotel) 업데이트 ---
+	        const hotelSlot = hotelImage01.parentElement;
+	        hotelImage01.style.backgroundImage = "url('" + hotelImg + "')";
+	        hotelName01.innerText = hotelName;
+	        
+	        hotelSlot.style.cursor = "pointer";
+	        hotelSlot.onclick = function() {
+	            if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
+	                location.href = hotelLink;
+	            }
+	        };	    	
+	    	
 		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
-		    attractionImage01.style.backgroundImage = "url('" + attImg + "')"; // 1번 명소 이미지
+/* 		    attractionImage01.style.backgroundImage = "url('" + attImg + "')"; // 1번 명소 이미지
 		    attractionName01.innerText = attName;
 		    
 		    festivalImage01.style.backgroundImage = "url('" + festImg + "')"  // 1번 축제 이미지
@@ -670,78 +1065,244 @@
 		    restaurantName01.innerText = restName;
 		    
 		    hotelImage01.style.backgroundImage = "url('" + hotelImg + "')"	  // 1번 호텔 이미지
-		    hotelName01.innerText = hotelName;
+		    hotelName01.innerText = hotelName; */
 		}
- 		function updateDetails02(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
-		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
-		    attractionImage02.style.backgroundImage = "url('" + attImg + "')"; // 2번 명소 이미지
-		    attractionName02.innerText = attName;
-		    
-		    festivalImage02.style.backgroundImage = "url('" + festImg + "')"  // 2번 축제 이미지
-		    festivalName02.innerText = festName;
-		    
-		    restaurantImage02.style.backgroundImage = "url('" + restImg + "')"// 2번 맛집 이미지
-		    restaurantName02.innerText = restName;
-		    
-		    hotelImage02.style.backgroundImage = "url('" + hotelImg + "')"	  // 2번 호텔 이미지
-		    hotelName02.innerText = hotelName;
-		}/*
-		function updateDetails03(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
-		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
-		    attractionImage03.style.backgroundImage = "url('" + attImg + "')"; // 3번 명소 이미지
-		    attractionName03.innerText = attName;
-		    
-		    festivalImage03.style.backgroundImage = "url('" + festImg + "')"  // 3번 축제 이미지
-		    festivalName03.innerText = festName;
-		    
-		    restaurantImage03.style.backgroundImage = "url('" + restImg + "')"// 3번 맛집 이미지
-		    restaurantName03.innerText = restName;
-		    
-		    hotelImage03.style.backgroundImage = "url('" + hotelImg + "')"	  // 3번 호텔 이미지
-		    hotelName03.innerText = hotelName;
-		}
-		function updateDetails04(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
-		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
-		    attractionImage04.style.backgroundImage = "url('" + attImg + "')"; // 4번 명소 이미지
-		    attractionName04.innerText = attName;
-		    
-		    festivalImage04.style.backgroundImage = "url('" + festImg + "')"  // 4번 축제 이미지
-		    festivalName04.innerText = festName;
-		    
-		    restaurantImage04.style.backgroundImage = "url('" + restImg + "')"// 4번 맛집 이미지
-		    restaurantName04.innerText = restName;
-		    
-		    hotelImage04.style.backgroundImage = "url('" + hotelImg + "')"	  // 4번 호텔 이미지
-		    hotelName04.innerText = hotelName;
-		}
-		function updateDetails05(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
-		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
-		    attractionImage05.style.backgroundImage = "url('" + attImg + "')"; // 5번 명소 이미지
-		    attractionName05.innerText = attName;
-		    
-		    festivalImage05.style.backgroundImage = "url('" + festImg + "')"  // 5번 축제 이미지
-		    festivalName05.innerText = festName;
-		    
-		    restaurantImage05.style.backgroundImage = "url('" + restImg + "')"// 5번 맛집 이미지
-		    restaurantName05.innerText = restName;
-		    
-		    hotelImage05.style.backgroundImage = "url('" + hotelImg + "')"	  // 5번 호텔 이미지
-		    hotelName05.innerText = hotelName;
-		}
-		function updateDetails06(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
-		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
-		    attractionImage06.style.backgroundImage = "url('" + attImg + "')"; // 6번 명소 이미지
-		    attractionName06.innerText = attName;
-		    
-		    festivalImage06.style.backgroundImage = "url('" + festImg + "')"  // 6번 축제 이미지
-		    festivalName06.innerText = festName;
-		    
-		    restaurantImage06.style.backgroundImage = "url('" + restImg + "')"// 6번 맛집 이미지
-		    restaurantName06.innerText = restName;
-		    
-		    hotelImage06.style.backgroundImage = "url('" + hotelImg + "')"	  // 6번 호텔 이미지
-		    hotelName06.innerText = hotelName;
-		} */
+	    function updateDetails02(
+	    	    attImg, attName, attLink, 
+	    	    festImg, festName, festLink, 
+	    	    restImg, restName, restLink, 
+	    	    hotelImg, hotelName, hotelLink
+	    	) {
+	    	    // --- 1. 관광 명소 (Attraction) 02 업데이트 ---
+	    	    const attSlot = attractionImage02.parentElement; 
+	    	    attractionImage02.style.backgroundImage = "url('" + attImg + "')";
+	    	    attractionName02.innerText = attName;
+	    	    
+	    	    attSlot.style.cursor = "pointer";
+	    	    attSlot.onclick = function() {
+	    	        if (attLink && attLink !== "#" && attLink !== "") {
+	    	            location.href = attLink;
+	    	        } else {
+	    	            console.log(attName + "의 링크가 아직 준비되지 않았습니다.");
+	    	        }
+	    	    };
+
+	    	    // --- 2. 관광 행사 (Festival) 02 업데이트 ---
+	    	    const festSlot = festivalImage02.parentElement;
+	    	    festivalImage02.style.backgroundImage = "url('" + festImg + "')";
+	    	    festivalName02.innerText = festName;
+	    	    
+	    	    festSlot.style.cursor = "pointer";
+	    	    festSlot.onclick = function() {
+	    	        if (festLink && festLink !== "#" && festLink !== "") {
+	    	            location.href = festLink;
+	    	        }
+	    	    };
+
+	    	    // --- 3. 맛집 (Restaurant) 02 업데이트 ---
+	    	    const restSlot = restaurantImage02.parentElement;
+	    	    restaurantImage02.style.backgroundImage = "url('" + restImg + "')";
+	    	    restaurantName02.innerText = restName;
+	    	    
+	    	    restSlot.style.cursor = "pointer";
+	    	    restSlot.onclick = function() {
+	    	        if (restLink && restLink !== "#" && restLink !== "") {
+	    	            location.href = restLink;
+	    	        }
+	    	    };
+
+	    	    // --- 4. 호텔 (Hotel) 02 업데이트 ---
+	    	    const hotelSlot = hotelImage02.parentElement;
+	    	    hotelImage02.style.backgroundImage = "url('" + hotelImg + "')";
+	    	    hotelName02.innerText = hotelName;
+	    	    
+	    	    hotelSlot.style.cursor = "pointer";
+	    	    hotelSlot.onclick = function() {
+	    	        if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
+	    	            location.href = hotelLink;
+	    	        }
+	    	    };
+	    	}/*
+	    	//=============================================================================
+	    	//이 updateDetatils03부터 updateDetatils06까지 나중에 함수 구조 위에 처럼 싹 갈아 엎어야함!!!!(클리어)
+	    	//싹 갈아엎었고, 나중에 주석 풀어.
+	    	//=============================================================================
+	    		
+	    		// --- 3번 슬롯 업데이트 함수 ---
+	    		function updateDetails03(attImg, attName, attLink, festImg, festName, festLink, restImg, restName, restLink, hotelImg, hotelName, hotelLink) {
+	    		    // 1. 관광 명소 (Attraction) 03
+	    		    const attSlot = attractionImage03.parentElement; 
+	    		    attractionImage03.style.backgroundImage = "url('" + attImg + "')";
+	    		    attractionName03.innerText = attName;
+	    		    attSlot.style.cursor = "pointer";
+	    		    attSlot.onclick = function() {
+	    		        if (attLink && attLink !== "#" && attLink !== "") {
+	    		            location.href = attLink;
+	    		        }
+	    		    };
+
+	    		    // 2. 관광 행사 (Festival) 03
+	    		    const festSlot = festivalImage03.parentElement;
+	    		    festivalImage03.style.backgroundImage = "url('" + festImg + "')";
+	    		    festivalName03.innerText = festName;
+	    		    festSlot.style.cursor = "pointer";
+	    		    festSlot.onclick = function() {
+	    		        if (festLink && festLink !== "#" && festLink !== "") {
+	    		            location.href = festLink;
+	    		        }
+	    		    };
+
+	    		    // 3. 맛집 (Restaurant) 03
+	    		    const restSlot = restaurantImage03.parentElement;
+	    		    restaurantImage03.style.backgroundImage = "url('" + restImg + "')";
+	    		    restaurantName03.innerText = restName;
+	    		    restSlot.style.cursor = "pointer";
+	    		    restSlot.onclick = function() {
+	    		        if (restLink && restLink !== "#" && restLink !== "") {
+	    		            location.href = restLink;
+	    		        }
+	    		    };
+
+	    		    // 4. 호텔 (Hotel) 03
+	    		    const hotelSlot = hotelImage03.parentElement;
+	    		    hotelImage03.style.backgroundImage = "url('" + hotelImg + "')";
+	    		    hotelName03.innerText = hotelName;
+	    		    hotelSlot.style.cursor = "pointer";
+	    		    hotelSlot.onclick = function() {
+	    		        if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
+	    		            location.href = hotelLink;
+	    		        }
+	    		    };
+	    		}
+
+	    		// --- 4번 슬롯 업데이트 함수 ---
+	    		function updateDetails04(attImg, attName, attLink, festImg, festName, festLink, restImg, restName, restLink, hotelImg, hotelName, hotelLink) {
+	    		    const attSlot = attractionImage04.parentElement; 
+	    		    attractionImage04.style.backgroundImage = "url('" + attImg + "')";
+	    		    attractionName04.innerText = attName;
+	    		    attSlot.style.cursor = "pointer";
+	    		    attSlot.onclick = function() {
+	    		        if (attLink && attLink !== "#" && attLink !== "") {
+	    		            location.href = attLink;
+	    		        }
+	    		    };
+
+	    		    const festSlot = festivalImage04.parentElement;
+	    		    festivalImage04.style.backgroundImage = "url('" + festImg + "')";
+	    		    festivalName04.innerText = festName;
+	    		    festSlot.style.cursor = "pointer";
+	    		    festSlot.onclick = function() {
+	    		        if (festLink && festLink !== "#" && festLink !== "") {
+	    		            location.href = festLink;
+	    		        }
+	    		    };
+
+	    		    const restSlot = restaurantImage04.parentElement;
+	    		    restaurantImage04.style.backgroundImage = "url('" + restImg + "')";
+	    		    restaurantName04.innerText = restName;
+	    		    restSlot.style.cursor = "pointer";
+	    		    restSlot.onclick = function() {
+	    		        if (restLink && restLink !== "#" && restLink !== "") {
+	    		            location.href = restLink;
+	    		        }
+	    		    };
+
+	    		    const hotelSlot = hotelImage04.parentElement;
+	    		    hotelImage04.style.backgroundImage = "url('" + hotelImg + "')";
+	    		    hotelName04.innerText = hotelName;
+	    		    hotelSlot.style.cursor = "pointer";
+	    		    hotelSlot.onclick = function() {
+	    		        if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
+	    		            location.href = hotelLink;
+	    		        }
+	    		    };
+	    		}
+
+	    		// --- 5번 슬롯 업데이트 함수 ---
+	    		function updateDetails05(attImg, attName, attLink, festImg, festName, festLink, restImg, restName, restLink, hotelImg, hotelName, hotelLink) {
+	    		    const attSlot = attractionImage05.parentElement; 
+	    		    attractionImage05.style.backgroundImage = "url('" + attImg + "')";
+	    		    attractionName05.innerText = attName;
+	    		    attSlot.style.cursor = "pointer";
+	    		    attSlot.onclick = function() {
+	    		        if (attLink && attLink !== "#" && attLink !== "") {
+	    		            location.href = attLink;
+	    		        }
+	    		    };
+
+	    		    const festSlot = festivalImage05.parentElement;
+	    		    festivalImage05.style.backgroundImage = "url('" + festImg + "')";
+	    		    festivalName05.innerText = festName;
+	    		    festSlot.style.cursor = "pointer";
+	    		    festSlot.onclick = function() {
+	    		        if (festLink && festLink !== "#" && festLink !== "") {
+	    		            location.href = festLink;
+	    		        }
+	    		    };
+
+	    		    const restSlot = restaurantImage05.parentElement;
+	    		    restaurantImage05.style.backgroundImage = "url('" + restImg + "')";
+	    		    restaurantName05.innerText = restName;
+	    		    restSlot.style.cursor = "pointer";
+	    		    restSlot.onclick = function() {
+	    		        if (restLink && restLink !== "#" && restLink !== "") {
+	    		            location.href = restLink;
+	    		        }
+	    		    };
+
+	    		    const hotelSlot = hotelImage05.parentElement;
+	    		    hotelImage05.style.backgroundImage = "url('" + hotelImg + "')";
+	    		    hotelName05.innerText = hotelName;
+	    		    hotelSlot.style.cursor = "pointer";
+	    		    hotelSlot.onclick = function() {
+	    		        if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
+	    		            location.href = hotelLink;
+	    		        }
+	    		    };
+	    		}
+
+	    		// --- 6번 슬롯 업데이트 함수 ---
+	    		function updateDetails06(attImg, attName, attLink, festImg, festName, festLink, restImg, restName, restLink, hotelImg, hotelName, hotelLink) {
+	    		    const attSlot = attractionImage06.parentElement; 
+	    		    attractionImage06.style.backgroundImage = "url('" + attImg + "')";
+	    		    attractionName06.innerText = attName;
+	    		    attSlot.style.cursor = "pointer";
+	    		    attSlot.onclick = function() {
+	    		        if (attLink && attLink !== "#" && attLink !== "") {
+	    		            location.href = attLink;
+	    		        }
+	    		    };
+
+	    		    const festSlot = festivalImage06.parentElement;
+	    		    festivalImage06.style.backgroundImage = "url('" + festImg + "')";
+	    		    festivalName06.innerText = festName;
+	    		    festSlot.style.cursor = "pointer";
+	    		    festSlot.onclick = function() {
+	    		        if (festLink && festLink !== "#" && festLink !== "") {
+	    		            location.href = festLink;
+	    		        }
+	    		    };
+
+	    		    const restSlot = restaurantImage06.parentElement;
+	    		    restaurantImage06.style.backgroundImage = "url('" + restImg + "')";
+	    		    restaurantName06.innerText = restName;
+	    		    restSlot.style.cursor = "pointer";
+	    		    restSlot.onclick = function() {
+	    		        if (restLink && restLink !== "#" && restLink !== "") {
+	    		            location.href = restLink;
+	    		        }
+	    		    };
+
+	    		    const hotelSlot = hotelImage06.parentElement;
+	    		    hotelImage06.style.backgroundImage = "url('" + hotelImg + "')";
+	    		    hotelName06.innerText = hotelName;
+	    		    hotelSlot.style.cursor = "pointer";
+	    		    hotelSlot.onclick = function() {
+	    		        if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
+	    		            location.href = hotelLink;
+	    		        }
+	    		    };
+	    		} */
 		//GGG
 		
 		//GGG
