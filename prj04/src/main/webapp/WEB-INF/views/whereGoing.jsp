@@ -147,20 +147,20 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <span class="block-20" style="background-image: url('images/image_2.jpg');">
+              <span id="attraction_image02" class="block-20" style="background-image: url('images/image_2.jpg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span>와온해변</span><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attraction_name02">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <span id="attraction_image03" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attraction_name03">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -168,30 +168,30 @@
 
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
+              <span id="attraction_image04" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attraction_name04">순천만 생태 체험선</span><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
+              <span id="attraction_image05" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attraction_name05">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
+              <span id="attraction_image06" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attraction_name06">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -222,10 +222,10 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
+              <span id="festivalImage02" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="festivalName02">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
@@ -297,10 +297,10 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
+              <span id="restaurantImage02" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="restaurantName02">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
@@ -372,10 +372,10 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
+              <span id="hotelImage02" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="hotelName02">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
@@ -429,6 +429,14 @@
   <%-- 이병주 JS코드 --%>
   <script>
   document.addEventListener('DOMContentLoaded', function() {
+	  
+	  if(!document.getElementById('map')) {
+		    const dummyMap = document.createElement('div');
+		    dummyMap.id = 'map';
+		    dummyMap.style.display = 'none';
+		    document.body.appendChild(dummyMap);
+		}
+	  
 	    // 1. 공통 요소 선택
 	    const locationItems = document.querySelectorAll('.location_item');//지역 요소들 배열 형태로 저장
 	    const cityItems = document.querySelectorAll('.city_item');//도시 요소들 배열 형태로 저장
@@ -445,19 +453,71 @@
 	    const cityName02 = document.querySelector("#city-name02");//두번째 도시 이름
 	    const cityName03 = document.querySelector("#city-name03");//세번째 도시 이름
 	    
-	    //attraction_image01
+	    //관광 명소 이미지
 	    const attractionImage01 = document.querySelector("#attraction_image01");
-	    //attraction_name01
+	    const attractionImage02 = document.querySelector("#attraction_image02");
+/* 	    const attractionImage03 = document.querySelector("#attraction_image03");
+	    const attractionImage04 = document.querySelector("#attraction_image04");
+	    const attractionImage05 = document.querySelector("#attraction_image05");
+	    const attractionImage06 = document.querySelector("#attraction_image06"); */
+	    
+	    //관광 명소 이름
 	    const attractionName01 = document.querySelector("#attraction_name01");
+	    const attractionName02 = document.querySelector("#attraction_name02");
+/* 	    const attractionName03 = document.querySelector("#attraction_name03");
+	    const attractionName04 = document.querySelector("#attraction_name04");
+	    const attractionName05 = document.querySelector("#attraction_name05");
+	    const attractionName06 = document.querySelector("#attraction_name06"); */
 	    
 	    //GGG
+	    //관광 행사 이미지
+	 // 1. 관광 행사 (Festival)
 	    const festivalImage01 = document.querySelector("#festivalImage01");
-		const festivalName01 = document.querySelector("#festivalName01");
-		const restaurantImage01 = document.querySelector("#restaurantImage01");
-		const restaurantName01 = document.querySelector("#restaurantName01");
-		const hotelImage01 = document.querySelector("#hotelImage01");
-		const hotelName01 = document.querySelector("#hotelName01");
-	    //GGG
+	    const festivalImage02 = document.querySelector("#festivalImage02");
+/* 	    const festivalImage03 = document.querySelector("#festivalImage03");
+	    const festivalImage04 = document.querySelector("#festivalImage04");
+	    const festivalImage05 = document.querySelector("#festivalImage05");
+	    const festivalImage06 = document.querySelector("#festivalImage06"); */
+
+	    const festivalName01 = document.querySelector("#festivalName01");
+	    const festivalName02 = document.querySelector("#festivalName02");
+/* 	    const festivalName03 = document.querySelector("#festivalName03");
+	    const festivalName04 = document.querySelector("#festivalName04");
+	    const festivalName05 = document.querySelector("#festivalName05");
+	    const festivalName06 = document.querySelector("#festivalName06"); */
+
+	    // 2. 맛집 (Restaurant)
+	    const restaurantImage01 = document.querySelector("#restaurantImage01");
+	    const restaurantImage02 = document.querySelector("#restaurantImage02");
+/* 	    const restaurantImage03 = document.querySelector("#restaurantImage03");
+	    const restaurantImage04 = document.querySelector("#restaurantImage04");
+	    const restaurantImage05 = document.querySelector("#restaurantImage05");
+	    const restaurantImage06 = document.querySelector("#restaurantImage06"); */
+
+	    const restaurantName01 = document.querySelector("#restaurantName01");
+	    const restaurantName02 = document.querySelector("#restaurantName02");
+/* 	    const restaurantName03 = document.querySelector("#restaurantName03");
+	    const restaurantName04 = document.querySelector("#restaurantName04");
+	    const restaurantName05 = document.querySelector("#restaurantName05");
+	    const restaurantName06 = document.querySelector("#restaurantName06"); */
+
+	    // 3. 호텔 (Hotel)
+	    const hotelImage01 = document.querySelector("#hotelImage01");
+	    const hotelImage02 = document.querySelector("#hotelImage02");
+/* 	    const hotelImage03 = document.querySelector("#hotelImage03");
+	    const hotelImage04 = document.querySelector("#hotelImage04");
+	    const hotelImage05 = document.querySelector("#hotelImage05");
+	    const hotelImage06 = document.querySelector("#hotelImage06"); */
+
+	    const hotelName01 = document.querySelector("#hotelName01");
+	    const hotelName02 = document.querySelector("#hotelName02");
+/* 	    const hotelName03 = document.querySelector("#hotelName03");
+	    const hotelName04 = document.querySelector("#hotelName04");
+	    const hotelName05 = document.querySelector("#hotelName05");
+	    const hotelName06 = document.querySelector("#hotelName06"); */
+	    
+
+
 	    
 	    
 	    // 2. 클릭 이벤트 통합 관리
@@ -467,10 +527,9 @@
 	            locationItems.forEach(li => li.classList.remove('selected_location'));
 	            // 클릭된 항목에 선택 클래스 추가
 	            this.classList.add('selected_location');
-
+	            
 	            // 클릭된 요소의 ID에 따라 데이터 변경
 	            const selectedId = this.id;
-
 	            if (selectedId === "location01") { // 경기&서울
 	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-seoul.png')";//서울
 	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-suwon.jpg')";//수원
@@ -544,7 +603,6 @@
 	                cityName02.innerText = "서귀포";
 	                cityName03.innerText = "우도";   
            		}
-	            
 	         	// ★ 핵심: 지역(도,특별시)를 클릭하자마자 첫 번째 도시를 강제로 클릭시킴
 	            city01.click();
 	        });
@@ -555,67 +613,39 @@
 	    //도시 선택  attraction_image01  attraction_name01
 	    cityItems.forEach(function(item){
 	    	item.addEventListener('click',function(event){
-	    		//GGG	
-	   
+	    		//GGG	   
 	    		// 1. 선택 시각 효과
 	            cityItems.forEach(c => c.classList.remove('selected_city'));
 	            this.classList.add('selected_city');
-
 	            // 2. 현재 칸에 적힌 '도시 이름' 읽기
 	            const cityName = this.querySelector('h3 span:first-child').innerText;
-
 	            // 3. 도시 이름에 맞춰 데이터 업데이트
+	            /*
+	            함수 구조
+	            updateDetails(
+	            		"명소 이미지 경로", "명소 이름", 
+	            		"축제 이미지 경로", "축제 이름",
+	            		"맛집 이미지 경로", "맛집 이름", 
+	            		"호텔 이미지 경로", "호텔이름"
+	            )
+	            */
 	            if (cityName === "서울") {
-	            	//축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
-	                updateDetails("images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg", "경복궁", "seoul_fest.jpg", "서울 페스티벌", "seoul_food.jpg", "서울 맛집", "seoul_hotel.jpg", "서울 호텔");
+	            	//◆◆◆축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
+	                updateDetails01("images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg", "경복궁", "seoul_fest.jpg", "서울 페스티벌", "seoul_food.jpg", "서울 맛집", "seoul_hotel.jpg", "서울 호텔");
 	            } else if (cityName === "수원") {
-	                updateDetails("images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonHwaseong.jpg", "수원화성", "suwon/mediaArt.jpg", "수원 미디어아트", "suwon/JinmiChicken.jpg", "진미통닭", "suwon/novotelSuwon.jpg", "노보텔 수원");
+	                updateDetails01("images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonHwaseong.jpg", "수원화성", "images/whereGoing/festivalImage/SeoulAndGyeonggi/suwon/mediaArt.jpg", "수원 미디어아트", "images/whereGoing/restaurantImage/SeoulAndGyeonggi/suwon/JinmiChicken.jpg", "진미통닭", "images/whereGoing/hotelImage/SeoulAndGyeonggi/suwon/novotelSuwon.jpg", "노보텔 수원");
+	                updateDetails02("images/starfield.jpg","수원 스타필드", "22f.jpg","수원축제2","22r.jpg","수원맛집2","22h.jpg","수원호텔2");
 	            } else if (cityName === "안산") {
-	            	//축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
-	                updateDetails("images/whereGoing/attractionImage/SeoulAndGyeonggi/ansan/DaeBuDo.jpg", "대부도", "ansan_fest.jpg", "안산 거리축제", "ansan_food.jpg", "대부도 칼국수", "ansan_hotel.jpg", "안산 호텔");
+	            	//◆◆◆축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
+	                updateDetails01("images/whereGoing/attractionImage/SeoulAndGyeonggi/ansan/DaeBuDo.jpg", "대부도", "ansan_fest.jpg", "안산 거리축제", "ansan_food.jpg", "대부도 칼국수", "ansan_hotel.jpg", "안산 호텔");
 	            } else if (cityName === "속초") {
-	            	//축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
-	                updateDetails("images/whereGoing/attractionImage/Gangwon/sokcho/seolAkMountain.jpg", "설악산", "sokcho_fest.jpg", "속초 축제", "sokcho_food.jpg", "속초 닭강정", "sokcho_hotel.jpg", "속초 호텔");
+	            	//◆◆◆축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
+	                updateDetails01("images/whereGoing/attractionImage/Gangwon/sokcho/seolAkMountain.jpg", "설악산", "sokcho_fest.jpg", "속초 축제", "sokcho_food.jpg", "속초 닭강정", "sokcho_hotel.jpg", "속초 호텔");
 	            }
 	            // ... 나머지 도시는 이 아래에 else if로 계속 추가하면 됩니다!	  
 	            //GGG
-	    		
-	    		/* 원래 내 코드	    		
-	    		const selectedId = this.id;
-	    		if(selectedId=="city01"){
-	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg')";
-	    			attractionName01.innerText = "경복궁";
-	    			festivalImage01.style.backgroundImage = "url('images/image_1.jpg')";
-	    			festivalName01.innerText = "순천만 생태 체험선";
-	    			restaurantImage01.style.backgroundImage = "url('images/image_1.jpg')";
-	    			restaurantName01.innerText = "순천만 생태 체험선";
-	    			hotelImage01.style.backgroundImage = "url('images/image_1.jpg')";
-	    			hotelName01.innerText = "순천만 생태 체험선";
-	    		}else if(selectedId=="city02"){
-	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonHwaseong.jpg')";
-	    			attractionName01.innerText = "수원화성";
-	    			festivalImage01.style.backgroundImage = "url('images/whereGoing/festivalImage/SeoulAndGyeonggi/suwon/mediaArt.jpg')";
-	    			festivalName01.innerText = "수원화성 미디어아트";
-	    			restaurantImage01.style.backgroundImage = "url('images/whereGoing/restaurantImage/SeoulAndGyeonggi/suwon/JinmiChicken.jpg')";
-	    			restaurantName01.innerText = "진미통닭";
-	    			hotelImage01.style.backgroundImage = "url('images/whereGoing/hotelImage/SeoulAndGyeonggi/suwon/novotelSuwon.jpg')";
-	    			hotelName01.innerText = "노보텔 수원";
-	    		}else{
-	    			attractionImage01.style.backgroundImage = "url('images/whereGoing/attractionImage/SeoulAndGyeonggi/ansan/DaeBuDo.jpg')";
-	    			attractionName01.innerText = "대부도";
-	    			festivalImage01.style.backgroundImage = "url('images/image_1.jpg')";
-	    			festivalName01.innerText = "순천만 생태 체험선";
-	    			restaurantImage01.style.backgroundImage = "url('images/image_1.jpg')";
-	    			restaurantName01.innerText = "순천만 생태 체험선";
-	    			hotelImage01.style.backgroundImage = "url('images/image_1.jpg')";
-	    			hotelName01.innerText = "순천만 생태 체험선";
-	    		} 
-	    			원래 내 코드*/
-
-	    	})
+	    	});
 	    });
-
-
 	    // 마우스 오버/아웃 효과 (기존 코드 유지)
 	    /*
 	    locationItems.forEach(function(item) {
@@ -627,22 +657,91 @@
 	        });
 	    });
 	    */
-	    
 		//GGG
-		function updateDetails(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
+		function updateDetails01(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
 		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
-		    attractionImage01.style.backgroundImage = `url('${attImg}')`;
+		    attractionImage01.style.backgroundImage = "url('" + attImg + "')"; // 1번 명소 이미지
 		    attractionName01.innerText = attName;
 		    
-		    festivalImage01.style.backgroundImage = `url('${festImg}')`;
+		    festivalImage01.style.backgroundImage = "url('" + festImg + "')"  // 1번 축제 이미지
 		    festivalName01.innerText = festName;
 		    
-		    restaurantImage01.style.backgroundImage = `url('${restImg}')`;
+		    restaurantImage01.style.backgroundImage = "url('" + restImg + "')"// 1번 맛집 이미지
 		    restaurantName01.innerText = restName;
 		    
-		    hotelImage01.style.backgroundImage = `url('${hotelImg}')`;
+		    hotelImage01.style.backgroundImage = "url('" + hotelImg + "')"	  // 1번 호텔 이미지
 		    hotelName01.innerText = hotelName;
 		}
+ 		function updateDetails02(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
+		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
+		    attractionImage02.style.backgroundImage = "url('" + attImg + "')"; // 2번 명소 이미지
+		    attractionName02.innerText = attName;
+		    
+		    festivalImage02.style.backgroundImage = "url('" + festImg + "')"  // 2번 축제 이미지
+		    festivalName02.innerText = festName;
+		    
+		    restaurantImage02.style.backgroundImage = "url('" + restImg + "')"// 2번 맛집 이미지
+		    restaurantName02.innerText = restName;
+		    
+		    hotelImage02.style.backgroundImage = "url('" + hotelImg + "')"	  // 2번 호텔 이미지
+		    hotelName02.innerText = hotelName;
+		}/*
+		function updateDetails03(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
+		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
+		    attractionImage03.style.backgroundImage = "url('" + attImg + "')"; // 3번 명소 이미지
+		    attractionName03.innerText = attName;
+		    
+		    festivalImage03.style.backgroundImage = "url('" + festImg + "')"  // 3번 축제 이미지
+		    festivalName03.innerText = festName;
+		    
+		    restaurantImage03.style.backgroundImage = "url('" + restImg + "')"// 3번 맛집 이미지
+		    restaurantName03.innerText = restName;
+		    
+		    hotelImage03.style.backgroundImage = "url('" + hotelImg + "')"	  // 3번 호텔 이미지
+		    hotelName03.innerText = hotelName;
+		}
+		function updateDetails04(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
+		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
+		    attractionImage04.style.backgroundImage = "url('" + attImg + "')"; // 4번 명소 이미지
+		    attractionName04.innerText = attName;
+		    
+		    festivalImage04.style.backgroundImage = "url('" + festImg + "')"  // 4번 축제 이미지
+		    festivalName04.innerText = festName;
+		    
+		    restaurantImage04.style.backgroundImage = "url('" + restImg + "')"// 4번 맛집 이미지
+		    restaurantName04.innerText = restName;
+		    
+		    hotelImage04.style.backgroundImage = "url('" + hotelImg + "')"	  // 4번 호텔 이미지
+		    hotelName04.innerText = hotelName;
+		}
+		function updateDetails05(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
+		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
+		    attractionImage05.style.backgroundImage = "url('" + attImg + "')"; // 5번 명소 이미지
+		    attractionName05.innerText = attName;
+		    
+		    festivalImage05.style.backgroundImage = "url('" + festImg + "')"  // 5번 축제 이미지
+		    festivalName05.innerText = festName;
+		    
+		    restaurantImage05.style.backgroundImage = "url('" + restImg + "')"// 5번 맛집 이미지
+		    restaurantName05.innerText = restName;
+		    
+		    hotelImage05.style.backgroundImage = "url('" + hotelImg + "')"	  // 5번 호텔 이미지
+		    hotelName05.innerText = hotelName;
+		}
+		function updateDetails06(attImg, attName, festImg, festName, restImg, restName, hotelImg, hotelName) {
+		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
+		    attractionImage06.style.backgroundImage = "url('" + attImg + "')"; // 6번 명소 이미지
+		    attractionName06.innerText = attName;
+		    
+		    festivalImage06.style.backgroundImage = "url('" + festImg + "')"  // 6번 축제 이미지
+		    festivalName06.innerText = festName;
+		    
+		    restaurantImage06.style.backgroundImage = "url('" + restImg + "')"// 6번 맛집 이미지
+		    restaurantName06.innerText = restName;
+		    
+		    hotelImage06.style.backgroundImage = "url('" + hotelImg + "')"	  // 6번 호텔 이미지
+		    hotelName06.innerText = hotelName;
+		} */
 		//GGG
 		
 		//GGG
@@ -652,29 +751,6 @@
 	});  
   </script>
   <%-- //이병주 JS코드 --%>
-  <%@ include file="/WEB-INF/views/common/footer.jsp" %>
-  
+  <%@ include file="/WEB-INF/views/common/footer.jsp" %>  
   </body>
-  <%-- 희정님 js 코드 --%>
-  <%-- 
-  <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-   
-	<script type="text/javascript">
-		$(document).ready(function(){
-		    // 처음에 rec div 전부 숨김
-		    $("[id^='rec']").hide();
-		    $("[id^='travel_destination']").on("click", function(){
-		        // 클릭한 div의 id
-		        let clickId = $(this).attr("id");
-		        // 숫자만 추출 (01 ~ 10)
-		        let num = clickId.replace("travel_destination", "");
-		        // 모든 req 숨기기
-		        $("[id^='rec']").hide();
-		        // 같은 번호의 rec만 show
-		        $("#rec" + num).show();
-		    });
-		});
-	</script>
-	--%>
 </html>
