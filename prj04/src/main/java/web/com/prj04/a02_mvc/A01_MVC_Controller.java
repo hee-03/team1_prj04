@@ -30,7 +30,7 @@ public class A01_MVC_Controller {
       return "rec_travel";
    }
    
- 	//http://localhost:7070/festival
+ 	
    //http://192.168.0.31:7070/festival
    @GetMapping("/festival")
    public String festival() {

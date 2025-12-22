@@ -37,29 +37,35 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function renderCards(list) {
-        if(!resultArea) return;
-        if(list.length === 0) {
-            resultArea.innerHTML = '<div class="col-md-12 text-center"><p>검색 결과가 없습니다. 😅</p></div>';
-            return;
-        }
-        
-        resultArea.innerHTML = list.map(it => `
-          <div class="col-md-4 d-flex">
-          	<div class="blog-entry justify-content-end" style="width: 100%; margin-bottom: 30px;">
-              <a href="detail.jsp?id=${it.contentid}" class="block-20" style="background-image: url('${it.firstimage || 'images/image_1.jpg'}');"></a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading" style="font-size: 18px;">
-                    <a href="detail.jsp?id=${it.contentid}">${it.title}</a>
-                    <span style="color: #f96d00; font-size: 14px; margin-left: 10px;">❤ ${it.likes}</span>
-                </h3>
-                <p>📍 ${it.addr1 || '지역 정보 없음'}</p>
-                <p style="color: #f96d00; font-size: 12px;">📅 ${it.eventstartdate} ~ ${it.eventenddate}</p>
-              </div>
-            </div>
-          </div>
-        `).join("");
-    }
+	function renderCards(list) {
+	    if(!resultArea) return;
+	    if(list.length === 0) {
+	        resultArea.innerHTML = '<div class="col-md-12 text-center"><p>검색 결과가 없습니다. 😅</p></div>';
+	        return;
+	    }
+	    
+	    resultArea.innerHTML = list.map(it => {
+	        // ✅ [핵심] 네이버 검색 결과 URL 생성 (축제 제목으로 검색)
+	        // encodeURIComponent는 제목에 포함된 한글/공백이 깨지지 않게 해줍니다.
+	        const naverSearchUrl = `https://search.naver.com/search.naver?query=${encodeURIComponent(it.title)}`;
+
+	        return `
+	          <div class="col-md-4 d-flex">
+	            <div class="blog-entry justify-content-end" style="width: 100%; margin-bottom: 30px;">
+	              <a href="${naverSearchUrl}" target="_blank" class="block-20" style="background-image: url('${it.firstimage || 'images/image_1.jpg'}');"></a>
+	              <div class="text mt-3 float-right d-block">
+	                <h3 class="heading" style="font-size: 18px;">
+	                    <a href="${naverSearchUrl}" target="_blank">${it.title}</a>
+	                    <span style="color: #f96d00; font-size: 14px; margin-left: 10px;">❤ ${it.likes}</span>
+	                </h3>
+	                <p>📍 ${it.addr1 || '지역 정보 없음'}</p>
+	                <p style="color: #f96d00; font-size: 12px;">📅 ${it.eventstartdate} ~ ${it.eventenddate}</p>
+	              </div>
+	            </div>
+	          </div>
+	        `;
+	    }).join("");
+	}
 
     function renderPagination() {
         if(!paginationArea) return;
