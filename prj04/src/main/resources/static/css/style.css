@@ -9860,8 +9860,11 @@ footer .container p:last-child{
 
 
 /* 지역별 지도 이미지 */
+#location00 .loc_img{
+	background-image:url('../images/whereGoing/locationImage/서울.png');/*서울*/
+}
 #location01 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/경기_서울.png');/*경기*/
+	background-image:url('../images/whereGoing/locationImage/경기.png');/*경기*/
 }
 #location02 .loc_img{
 	background-image:url('../images/whereGoing/locationImage/강원.png');/*강원*/

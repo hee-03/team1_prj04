@@ -48,12 +48,12 @@
 	    <%-- ★★★ id="location0N" 이거는 js dom 작업할 때 사용 ★★★ --%>
 	    <%-- ================================================= --%>
 
-	    <div id="location00" class="location_item">
+	    <div id="location00" class="location_item selected_location">
 	    	<div class="loc_img"></div><div class="loc_text">서울</div>
 	    </div>
 
-	    <div id="location01" class="location_item selected_location">
-	    	<div class="loc_img"></div><div class="loc_text">경기&서울</div>
+	    <div id="location01" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">경기</div>
 	    </div><%-- 초기에 `경기/서울`이 default로 선택되게 지정. --%>
 	    <div id="location02" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">강원</div>
@@ -91,35 +91,35 @@
           </div>
         </div>
         <div class="row d-flex">
-          <div id="city01" class="city_item col-md-4 d-flex ftco-animate" data-city="서울"><%-- data-city 속성 반드시 지정 --%>
+          <div id="city01" class="city_item col-md-4 d-flex ftco-animate" data-city="종로"><%-- data-city 속성 반드시 지정 --%>
           	<div class="blog-entry justify-content-end">
           	  <%-- 도시 이미지 --%>
-              <span id="city-img01" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-seoul.png');">
+              <span id="city-img01" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-jongro.jpg');">
               </span><%--여기 a 태그에 있던 거 (해당 모든 a태그 공통) : blog-single.html --%>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="city-name01">서울</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
+                <h3 class="heading"><span id="city-name01">종로</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
-          <div id="city02" class="city_item col-md-4 d-flex ftco-animate" data-city="수원"><%-- data-city 속성 반드시 지정 --%>
+          <div id="city02" class="city_item col-md-4 d-flex ftco-animate" data-city="강남"><%-- data-city 속성 반드시 지정 --%>
           	<div class="blog-entry justify-content-end">
               <%-- 도시 이미지 --%>
-              <span id="city-img02" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-suwon.jpg');">
+              <span id="city-img02" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-gangnam.png');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="city-name02">수원</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
+                <h3 class="heading"><span id="city-name02">강남</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
-          <div id="city03" class="city_item col-md-4 d-flex ftco-animate" data-city="안산"><%-- data-city 속성 반드시 지정 --%>
+          <div id="city03" class="city_item col-md-4 d-flex ftco-animate" data-city="마포"><%-- data-city 속성 반드시 지정 --%>
           	<div class="blog-entry">
           	  <%-- 도시 이미지 --%>
-              <span id="city-img03" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-ansan.jpeg');">
+              <span id="city-img03" class="block-20" style="background-image: url('images/whereGoing/cityImage/city-mapo.png');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="city-name03">안산</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
+                <h3 class="heading"><span id="city-name03">마포</span><span class="heartIcon">❤</span></h3><%-- 도시 이름 --%>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -534,12 +534,20 @@
 	            
 	            // 클릭된 요소의 ID에 따라 데이터 변경
 	            const selectedId = this.id;
-	            if (selectedId === "location01") { // 경기&서울
-	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-seoul.png')";//서울
+	            if (selectedId === "location00") { // 경기
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-jongro.jpg')";//종로
+	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-gangnam.png')";//강남
+	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-mapo.png')";//마포
+	                
+	                cityName01.innerText = "종로";
+	                cityName02.innerText = "강남";
+	                cityName03.innerText = "마포";
+	            }else if (selectedId === "location01") { // 경기
+	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-yongin.jpg')";//용인
 	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-suwon.jpg')";//수원
 	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-ansan.jpeg')";//안산
 	                
-	                cityName01.innerText = "서울";
+	                cityName01.innerText = "용인";
 	                cityName02.innerText = "수원";
 	                cityName03.innerText = "안산";
 	            }else if (selectedId === "location02") { // 강원
