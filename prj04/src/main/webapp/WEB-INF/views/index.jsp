@@ -163,11 +163,11 @@
 		        <!-- 카드 1 -->
 		        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 		          <div class="col-md-5 d-flex">
-		            <div class="img w-100 trip-img" style="background-image:url('/images/main/yeosu.jpg');"></div>
+		            <div class="img w-100 region-img" style="background-image:url('/images/main/yeosu.jpg');"></div>
 		          </div>
 		          <div class="col-md-7 p-4">
-		            <h3 class="mb-2 trip-title">남해안 거점도시 미항 여수</h3>
-		            <p class="mb-0 trip-desc">
+		            <h3 class="mb-2 region-title">남해안 거점도시 미항 여수</h3>
+		            <p class="mb-0 region-desc">
 		              국제 해양관광의 중심 전남 여수시. 3천여 그루의 동백나무로 가득 찬 붉은 섬 오동도는 웰빙 트래킹 코스를 갖추고 있어 한층 더 운치 있다. 
 		              해상 케이블카를 타면 마치 바다 위를 걷는 듯한 느낌이 들며 탁 트인 바다 전망을 감상할 수 있다. 노래 가사에도 나오는...
 		            </p>
@@ -177,11 +177,11 @@
 		        <!-- 카드 1 -->
 		        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 		          <div class="col-md-5 d-flex">
-		            <div class="img w-100 trip-img" style="background-image:url('/images/main/gyeongju.jpg');"></div>
+		            <div class="img w-100 region-img" style="background-image:url('/images/main/gyeongju.jpg');"></div>
 		          </div>
 		          <div class="col-md-7 p-4">
-		            <h3 class="mb-2 trip-title">지붕없는 박물관 경주</h3>
-		            <p class="mb-0 trip-desc">
+		            <h3 class="mb-2 region-title">지붕없는 박물관 경주</h3>
+		            <p class="mb-0 region-desc">
 		              발길이 닿는 어느 곳이든 문화 유적지를 만날 수 있는 곳이다. 
 		              밤이면 더 빛나는 동궁과 월지를 비롯해 허허벌판에 자리를 굳건히 지키고 있는 첨성대. 뛰어난 건축미를 자랑하는 불국사 석굴암까지 어느 하나 빼놓을 수 없...
 		            </p>
@@ -191,11 +191,11 @@
 		        <!-- 카드 1 -->
 		        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 		          <div class="col-md-5 d-flex">
-		            <div class="img w-100 trip-img" style="background-image:url('/images/main/gangneung.jpg');"></div>
+		            <div class="img w-100 region-img" style="background-image:url('/images/main/gangneung.jpg');"></div>
 		          </div>
 		          <div class="col-md-7 p-4">
-		            <h3 class="mb-2 trip-title">솔내음 가득한 제일강릉</h3>
-		            <p class="mb-0 trip-desc">
+		            <h3 class="mb-2 region-title">솔내음 가득한 제일강릉</h3>
+		            <p class="mb-0 region-desc">
 		              은은한 커피향이 남다른 강원도 강릉시. 그중에도 카페거리로 유명한 안목해변은 발이 닿는 어디든 향긋한 커피 한 잔에 지평선 끝까지 펼쳐지는 바다 풍경은 덤으로 얻을 수 있다. 
 		              일출 명소로 유명한 정동진과 야경이 아름다운 경포대는 대표 여행 코스! 구름도...
 		            </p>
@@ -237,11 +237,11 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('/images/main/yeosu.jpg');"></div>
+	            <div class="img w-100 season-img" style="background-image:url('/images/main/yeosu.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
-	            <h3 class="mb-2">남해안 거점도시 미항 여수</h3>
-	            <p class="mb-0">
+	            <h3 class="mb-2 season-title">남해안 거점도시 미항 여수</h3>
+	            <p class="mb-0 season-desc">
 	              국제 해양관광의 중심 전남 여수시. 3천여 그루의 동백나무로 가득 찬 붉은 섬 오동도는 웰빙 트래킹 코스를 갖추고 있어 한층 더 운치 있다.
 	            </p>
 	          </div>
@@ -250,11 +250,11 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('/images/main/gyeongju.jpg');"></div>
+	            <div class="img w-100 season-img" style="background-image:url('/images/main/gyeongju.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
-	            <h3 class="mb-2">지붕없는 박물관 경주</h3>
-	            <p class="mb-0">
+	            <h3 class="mb-2 season-title">지붕없는 박물관 경주</h3>
+	            <p class="mb-0 season-desc">
 	              발길이 닿는 어느 곳이든 문화 유적지를 만날 수 있는 곳이다. 
 	              밤이면 더 빛나는 동궁과 월지를 비롯해 허허벌판에 자리를 굳건히 지키고 있는 첨성대.
 	            </p>
@@ -264,11 +264,11 @@
 	        <!-- 카드 1 -->
 	        <div class="row d-flex align-items-stretch mb-4 mytrip-card">
 	          <div class="col-md-5 d-flex">
-	            <div class="img w-100" style="background-image:url('/images/main/gangneung.jpg');"></div>
+	            <div class="img w-100 season-img" style="background-image:url('/images/main/gangneung.jpg');"></div>
 	          </div>
 	          <div class="col-md-7 p-4">
-	            <h3 class="mb-2">솔내음 가득한 제일강릉</h3>
-	            <p class="mb-0">
+	            <h3 class="mb-2 season-title">솔내음 가득한 제일강릉</h3>
+	            <p class="mb-0 season-desc">
 	              은은한 커피향이 남다른 강원도 강릉시. 그중에도 카페거리로 유명한 안목해변은 발이 닿는 어디든 향긋한 커피 한 잔에 지평선 끝까지 펼쳐지는 바다 풍경은 덤으로 얻을 수 있다.
 	            </p>
 	          </div>
@@ -278,12 +278,18 @@
 	      <!-- 지도 -->
 	      <div class="col-lg-4">
 	        <div class="map-box seasonBoxWrap">
-	        	<div class="seasonBox">
-		        	<a href="#" class="eachSeason spring"></a>        
-		        	<a href="#" class="eachSeason summer"></a>        
-		        	<a href="#" class="eachSeason autumn"></a>        
-		        	<a href="#" class="eachSeason winter"></a>   
-	        	</div>     
+	        	<a href="#" class="eachSeason spring" data-season="봄">
+		        	<img alt="" src="/images/main/spring.png">
+		        </a>        
+		        <a href="#" class="eachSeason summer" data-season="여름">
+		        	<img alt="" src="/images/main/summer.png">
+		        </a>        
+		        <a href="#" class="eachSeason autumn" data-season="가을">
+		        	<img alt="" src="/images/main/autumn.png">
+		        </a>        
+		        <a href="#" class="eachSeason winter" data-season="겨울">
+		        	<img alt="" src="/images/main/winter.png">
+		        </a>  
 	        </div>
 	      </div>
 	
@@ -292,62 +298,135 @@
 	</section>
 	
     <%@ include file="/WEB-INF/views/common/footer.jsp" %>
+    <script>
+		document.addEventListener("DOMContentLoaded", () => {
+			// 지역
+			const regionBtns   = document.querySelectorAll(".mytrip-list-map .map-box .region");
+			const regionImgEls = document.querySelectorAll(".region-img");
+			const regionTitleEls = document.querySelectorAll(".region-title");
+			const regionDescEls  = document.querySelectorAll(".region-desc");
+			
+			// 계절
+			const seasonBtns   = document.querySelectorAll(".seasonBoxWrap .eachSeason");
+			const seasonImgEls = document.querySelectorAll(".season-img");
+			const seasonTitleEls = document.querySelectorAll(".season-title");
+			const seasonDescEls  = document.querySelectorAll(".season-desc");
+		
+		  // 임시 데이터 (나중에 공공데이터로 교체)
+		  const regionData  = {
+			"경기": [
+			  { title:"수원화성", desc:"국제 해양관광의 중심 전남 여수시...", img:"/images/main/yeosu.jpg" },
+			  { title:"한국민속촌", desc:"사계절이 아름다운 순천만 국가정원...", img:"/images/main/yeosu.jpg" },
+			  { title:"에버랜드", desc:"항구 도시 감성 가득한 근대문화거리...", img:"/images/main/yeosu.jpg" }
+			],
+		    "강원": [
+		      { title:"낙산사", desc:"국제 해양관광의 중심 전남 여수시...", img:"/images/main/yeosu.jpg" },
+		      { title:"대관령 양떼목장", desc:"사계절이 아름다운 순천만 국가정원...", img:"/images/main/gangneung.jpg" },
+		      { title:"영금정 해돋이정자", desc:"항구 도시 감성 가득한 근대문화거리...", img:"/images/main/yeosu.jpg" }
+		    ],
+		    "충남": [
+		      { title:"해미읍성", desc:"안목해변 카페거리, 정동진...", img:"/images/main/gangneung.jpg" },
+		      { title:"백제문화단지", desc:"시장+바다+드라이브 한 번에!", img:"/images/main/yeosu.jpg" },
+		      { title:"공산성", desc:"조용한 숲과 맑은 공기...", img:"/images/main/yeosu.jpg" }
+		    ],
+		  	"전남": [
+		      { title:"순천만습지", desc:"안목해변 카페거리, 정동진...", img:"/images/main/gangneung.jpg" },
+		      { title:"죽녹원", desc:"시장+바다+드라이브 한 번에!", img:"/images/main/yeosu.jpg" },
+		      { title:"여수해상케이블카", desc:"조용한 숲과 맑은 공기...", img:"/images/main/yeosu.jpg" }
+		    ],
+		  	"충북": [
+			  { title:"단양강 잔도", desc:"안목해변 카페거리, 정동진...", img:"/images/main/gangneung.jpg" },
+			  { title:"청남대", desc:"시장+바다+드라이브 한 번에!", img:"/images/main/yeosu.jpg" },
+			  { title:"중앙탑사적공원", desc:"조용한 숲과 맑은 공기...", img:"/images/main/yeosu.jpg" }
+			],
+		  	"경북": [
+			  { title:"부석사", desc:"안목해변 카페거리, 정동진...", img:"/images/main/gangneung.jpg" },
+			  { title:"동궁과 월지", desc:"시장+바다+드라이브 한 번에!", img:"/images/main/yeosu.jpg" },
+			  { title:"안동 하회마을", desc:"조용한 숲과 맑은 공기...", img:"/images/main/yeosu.jpg" }
+			],
+		  	"전북": [
+			  { title:"전주 한옥마을", desc:"안목해변 카페거리, 정동진...", img:"/images/main/gangneung.jpg" },
+			  { title:"광한루", desc:"시장+바다+드라이브 한 번에!", img:"/images/main/yeosu.jpg" },
+			  { title:"전주 덕진공원", desc:"조용한 숲과 맑은 공기...", img:"/images/main/yeosu.jpg" }
+			],
+		  	"경남": [
+			  { title:"진주성", desc:"안목해변 카페거리, 정동진...", img:"/images/main/gangneung.jpg" },
+			  { title:"사천 바다 케이블카", desc:"시장+바다+드라이브 한 번에!", img:"/images/main/yeosu.jpg" },
+			  { title:"우포늪", desc:"조용한 숲과 맑은 공기...", img:"/images/main/yeosu.jpg" }
+			],
+		  	"제주": [
+			  { title:"섭지코지", desc:"안목해변 카페거리, 정동진...", img:"/images/main/gangneung.jpg" },
+			  { title:"카멜리아 힐", desc:"시장+바다+드라이브 한 번에!", img:"/images/main/yeosu.jpg" },
+			  { title:"아쿠아플라넷 제주", desc:"조용한 숲과 맑은 공기...", img:"/images/main/yeosu.jpg" }
+			]
+		  
+		  };
+		  
+		  const seasonData = {
+			"봄": [
+			  { title:"봄 추천 1", desc:"벚꽃/산책 코스...", img:"/images/main/yeosu.jpg" },
+			  { title:"봄 추천 2", desc:"봄꽃 명소...", img:"/images/main/gangneung.jpg" },
+			  { title:"봄 추천 3", desc:"피크닉 명소...", img:"/images/main/gyeongju.jpg" }
+			],
+			"여름": [
+			  { title:"여름 추천 1", desc:"바다/서핑...", img:"/images/main/yeosu.jpg" },
+			  { title:"여름 추천 2", desc:"계곡/물놀이...", img:"/images/main/gangneung.jpg" },
+			  { title:"여름 추천 3", desc:"야시장/밤바다...", img:"/images/main/gyeongju.jpg" }
+			],
+			"가을": [
+			  { title:"가을 추천 1", desc:"단풍/등산...", img:"/images/main/gangneung.jpg" },
+			  { title:"가을 추천 2", desc:"억새/갈대...", img:"/images/main/yeosu.jpg" },
+			  { title:"가을 추천 3", desc:"가을 축제...", img:"/images/main/gyeongju.jpg" }
+			],
+			"겨울": [
+			  { title:"겨울 추천 1", desc:"눈꽃/스키...", img:"/images/main/yeosu.jpg" },
+			  { title:"겨울 추천 2", desc:"온천/힐링...", img:"/images/main/gangneung.jpg" },
+			  { title:"겨울 추천 3", desc:"겨울 바다...", img:"/images/main/gyeongju.jpg" }
+			]
+		};
+		
+		  function setRegionCards(trips){
+			    regionImgEls.forEach((el, i) => {
+			      const t = trips[i];
+			      if(!t) return;
+			      el.style.backgroundImage = `url("${t.img}")`;
+			      regionTitleEls[i].textContent = t.title;
+			      regionDescEls[i].textContent  = t.desc;
+			    });
+			  }
+		  
+		  function setSeasonCards(trips){
+			    seasonImgEls.forEach((el, i) => {
+			      const t = trips[i];
+			      if(!t) return;
+			      el.style.backgroundImage = `url("${t.img}")`;
+			      seasonTitleEls[i].textContent = t.title;
+			      seasonDescEls[i].textContent  = t.desc;
+			    });
+			  }
+		  
+		  regionBtns.forEach(btn => {
+			    btn.addEventListener("click", (e) => {
+			      e.preventDefault();
+			      const regionName = btn.textContent.trim();
+			      setRegionCards(regionData[regionName] ?? []);
+			    });
+			  });
+		  
+		  seasonBtns.forEach(btn => {
+			    btn.addEventListener("click", (e) => {
+			      e.preventDefault();
+			      const seasonName = btn.dataset.season; // "봄/여름/가을/겨울"
+			      setSeasonCards(seasonData[seasonName] ?? []);
+			    });
+			  });
+		
+		  // 초기값
+		  setRegionCards(regionData["전남"] ?? []);
+		  setSeasonCards(seasonData["봄"] ?? []);
+		});
+	</script>
 </body>
 </html>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const regionBtns = document.querySelectorAll(".map-box .region");
 
-  const imgEls   = document.querySelectorAll(".trip-img");
-  const titleEls = document.querySelectorAll(".trip-title");
-  const descEls  = document.querySelectorAll(".trip-desc");
-
-  // 임시 데이터 (나중에 공공데이터로 교체)
-  const mockData = {
-	"경기": [
-	  { title:"어디게요 경기입니다.", desc:"국제 해양관광의 중심 전남 여수시...", img:"/images/main/yeosu.jpg" },
-	  { title:"순천만 국가정원", desc:"사계절이 아름다운 순천만 국가정원...", img:"/images/main/gangneung.jpg" },
-	  { title:"목포 근대역사거리", desc:"항구 도시 감성 가득한 근대문화거리...", img:"/images/main/yeosu.jpg" }
-	],
-    "강원": [
-      { title:"어디게요 강원입니다.", desc:"국제 해양관광의 중심 전남 여수시...", img:"/images/main/yeosu.jpg" },
-      { title:"순천만 국가정원", desc:"사계절이 아름다운 순천만 국가정원...", img:"/images/main/gangneung.jpg" },
-      { title:"목포 근대역사거리", desc:"항구 도시 감성 가득한 근대문화거리...", img:"/images/main/yeosu.jpg" }
-    ],
-    "충남": [
-      { title:"어디게요 충남입니다.", desc:"안목해변 카페거리, 정동진...", img:"/images/main/gangneung.jpg" },
-      { title:"속초 여행", desc:"시장+바다+드라이브 한 번에!", img:"/images/main/yeosu.jpg" },
-      { title:"평창 힐링", desc:"조용한 숲과 맑은 공기...", img:"/images/main/yeosu.jpg" }
-    ]
-  };
-
-  function setCards(trips) {
-    imgEls.forEach((imgEl, i) => {
-      const t = trips[i];
-      if (!t) return;
-
-      imgEl.style.backgroundImage   = `url('${t.img}')`;
-      titleEls[i].textContent       = t.title;
-      descEls[i].textContent        = t.desc;
-    });
-  }
-
-  async function fetchTripsByRegion(regionName) {
-    // TODO: 공공데이터 fetch
-    return mockData[regionName] ?? [];
-  }
-
-  regionBtns.forEach(btn => {
-    btn.addEventListener("click", async (e) => {
-      e.preventDefault();
-      const regionName = btn.textContent.trim();
-      const trips = await fetchTripsByRegion(regionName);
-      setCards(trips);
-    });
-  });
-
-  // 초기값
-  setCards(mockData["전남"] ?? []);
-});
-</script>
 

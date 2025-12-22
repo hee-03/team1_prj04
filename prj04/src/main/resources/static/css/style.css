@@ -9573,7 +9573,7 @@ textarea.form-control {
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-.mytrip-list-map .mytrip-card .img{
+.mytrip-list-map .mytrip-card .img.trip-img{
   background-size:cover;
   background-position:center;
   min-height:140px;
@@ -9679,23 +9679,42 @@ textarea.form-control {
 }
 /* season */
 .mytrip-list-map .map-box.seasonBoxWrap{
-	background-image: url(../images/main/season.png);
+	background-image: none;
 }
-.mytrip-list-map .map-box.seasonBoxWrap .seasonBox {
-	width: 86%;
-	height: 60%;
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason {
 	position: absolute;
-	top: 117px;
-	left: 24px;
-	display: flex;
-	flex-wrap: wrap;
-	gap:4px;
 }
-
-.mytrip-list-map .map-box.seasonBoxWrap .seasonBox .eachSeason{
-	display: inline-block;
-	width: 49%;
-	height: 49%;
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason:hover{
+	transform: scale(1.1);
+	z-index: 2;
+}
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason.spring{
+	top: 101px;
+    left: 26px;
+}
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason.summer{
+	top: 101px;
+    left: 177px;
+}
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason.autumn{
+	top: 288px;
+    left: 26px;
+}
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason.winter{
+	top: 288px;
+    left: 177px;
+}
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason.spring img{
+	width: calc(429px / 2.9);	
+}
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason.summer img{
+	width: calc(428px / 2.9);	
+}
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason.autumn img{
+	width: calc(431px / 2.9);	
+}
+.mytrip-list-map .map-box.seasonBoxWrap .eachSeason.winter img{
+	width: calc(438px / 2.9);		
 }
 
 .mytrip-list-map.reverse-layout .row {
@@ -9708,7 +9727,7 @@ textarea.form-control {
 .ftco-section.mytrip-list-map{
 	padding: 7em 0 0 0;
 }
-.trip-desc {
+.region-desc, .season-desc{
 	display: -webkit-box;
 	  -webkit-line-clamp: 3;      /* 최대 3줄 */
 	  -webkit-box-orient: vertical;
