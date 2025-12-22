@@ -389,7 +389,7 @@
 			    regionImgEls.forEach((el, i) => {
 			      const t = trips[i];
 			      if(!t) return;
-			      el.style.backgroundImage = `url("${t.img}")`;
+			      el.style.backgroundImage = `url(${t.img})`;
 			      regionTitleEls[i].textContent = t.title;
 			      regionDescEls[i].textContent  = t.desc;
 			    });
@@ -399,7 +399,7 @@
 			    seasonImgEls.forEach((el, i) => {
 			      const t = trips[i];
 			      if(!t) return;
-			      el.style.backgroundImage = `url("${t.img}")`;
+			      el.style.backgroundImage = `url(${t.img})`;
 			      seasonTitleEls[i].textContent = t.title;
 			      seasonDescEls[i].textContent  = t.desc;
 			    });

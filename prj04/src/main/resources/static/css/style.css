@@ -9573,7 +9573,8 @@ textarea.form-control {
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
-.mytrip-list-map .mytrip-card .img.trip-img{
+.mytrip-list-map .mytrip-card .region-img,
+.mytrip-list-map .mytrip-card .season-img{
   background-size:cover;
   background-position:center;
   min-height:140px;
