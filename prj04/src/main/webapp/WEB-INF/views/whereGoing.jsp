@@ -47,6 +47,11 @@
 	    <%-- ================================================= --%>
 	    <%-- ★★★ id="location0N" 이거는 js dom 작업할 때 사용 ★★★ --%>
 	    <%-- ================================================= --%>
+
+	    <div id="location00" class="location_item">
+	    	<div class="loc_img"></div><div class="loc_text">서울</div>
+	    </div>
+
 	    <div id="location01" class="location_item selected_location">
 	    	<div class="loc_img"></div><div class="loc_text">경기&서울</div>
 	    </div><%-- 초기에 `경기/서울`이 default로 선택되게 지정. --%>
@@ -139,7 +144,7 @@
               <span id="attraction_image01" class="block-20" style="background-image: url('images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="attraction_name01">경복궁</span><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attraction_name01">경복궁</span><span data-id="ATTR_001" class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
@@ -429,7 +434,7 @@
   <script>
   document.addEventListener('DOMContentLoaded', function() {
 	  
-	  if(!document.getElementById('map')) {
+	  if(!document.getElementById('map')) {//이 코드 이제 필요없지 않을까 싶음.
 		    const dummyMap = document.createElement('div');
 		    dummyMap.id = 'map';
 		    dummyMap.style.display = 'none';
@@ -631,6 +636,7 @@
 	            if (cityName === "서울") {
 	            	//◆◆◆축제,맛집, 호텔은 임시 지정이니 마저 작성할 것.
 	                updateDetails01(
+	                		//데이터 넣는 곳. 수동 추가 혹은 데이터 연동
 	                		"images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg","경복궁", "",
 	                		"seoul_fest.jpg", "서울 페스티벌", "",
 	                		"seoul_food.jpg", "서울 맛집", "", 
@@ -645,7 +651,7 @@
 	            } else if (cityName === "수원") {
 	                updateDetails01(
 	                		"images/whereGoing/attractionImage/SeoulAndGyeonggi/suwon/suwonHwaseong.jpg", "수원화성", "#",
-	                		"images/whereGoing/festivalImage/SeoulAndGyeonggi/suwon/mediaArt.jpg", "수원 미디어아트", "#",
+	                		"images/whereGoing/festivalImage/SeoulAndGyeonggi/suwon/mediaArt.jpg", "수원화성 미디어아트", "#",
 	                		"images/whereGoing/restaurantImage/SeoulAndGyeonggi/suwon/JinmiChicken.jpg", "진미통닭", "#",
 	                		"images/whereGoing/hotelImage/SeoulAndGyeonggi/suwon/novotelSuwon.jpg", "노보텔 수원", "#"
 	                );
@@ -999,10 +1005,12 @@
 	    });
 	    */
 		//GGG
-		function updateDetails01(attImg, attName, attLink, 
+		function updateDetails01(//여기에 데이터 id값 받는 부분 추가.
+				attImg, attName, attLink, 
 			    festImg, festName, festLink, 
 			    restImg, restName, restLink, 
-			    hotelImg, hotelName, hotelLink) {
+			    hotelImg, hotelName, hotelLink
+		) {  	
 	    	// --- 1. 관광 명소 (Attraction) 업데이트 ---
 	        const attSlot = attractionImage01.parentElement; // .blog-entry 요소
 	        attractionImage01.style.backgroundImage = "url('" + attImg + "')";
@@ -1017,6 +1025,29 @@
 	                console.log(attName + "의 링크가 아직 준비되지 않았습니다.");
 	            }
 	        };
+	        //=======================================================
+	        // ♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+	        //=======================================================
+	        //하트 버튼 담는 변수
+	        const attractionHeartBtn01 = document.querySelector("#attraction_name01 + .heartIcon");
+	        
+	        //하트에 고유 데이터 심기(서버로 보낼 값) : <팀원이 id 주면, 이 부분만 attName으로 바꾸면 끝!! 라고 gemini가 말한다.>
+	        attractionHeartBtn01.setAttribute('data-id', attName);
+	        
+	        //하트 클릭시 반응 함수
+	        attractionHeartBtn01.onclick = function(event){
+	        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
+	        	this.classList.toggle('active');
+	        	
+	        	// 3. 이제 여기서 getAttribute를 하면 위에서 심어준 값이 나옵니다.
+	            const currentId = this.getAttribute('data-id');
+	            const placeName = attName; // 함수 인자로 받은 이름 사용
+	        	
+	        	// 서버로 보낼 데이터 출력 (함수 밖이랑 똑같은 형식으로!)
+	            console.log("서버로 보낼 데이터:", { id: currentId, name: placeName });
+	            alert(placeName + "을(를) 찜했습니다.");
+	        }
+
 
 	        // --- 2. 관광 행사 (Festival) 업데이트 ---
 	        const festSlot = festivalImage01.parentElement;
@@ -1030,6 +1061,20 @@
 	            }
 	        };
 
+	        //=======================================================
+	        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+	        //=======================================================
+	        const festivalHeartBtn01 = document.querySelector("#festivalName01 + .heartIcon");
+	        festivalHeartBtn01.onclick = function(event){
+	        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
+	        	this.classList.toggle('active');
+	        	
+	        	//테스트 나중에 `나의 여행담기`로 이동될 부분.
+	        	//console.log(attName+"을(를) 찜했습니다.")
+	        	alert(festName+"을(를) 찜했습니다.");
+	        }
+
+	        
 	        // --- 3. 맛집 (Restaurant) 업데이트 ---
 	        const restSlot = restaurantImage01.parentElement;
 	        restaurantImage01.style.backgroundImage = "url('" + restImg + "')";
@@ -1041,6 +1086,19 @@
 	                location.href = restLink;
 	            }
 	        };
+	        
+	        //=======================================================
+	        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+	        //=======================================================  	
+	        const restaurantHeartBtn01 = document.querySelector("#restaurantName01 + .heartIcon");
+	        restaurantHeartBtn01.onclick = function(event){
+	        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
+	        	this.classList.toggle('active');
+	        	
+	        	//테스트 나중에 `나의 여행담기`로 이동될 부분.
+	        	//console.log(attName+"을(를) 찜했습니다.")
+	        	alert(restName+"을(를) 찜했습니다.");
+	        }
 
 	        // --- 4. 호텔 (Hotel) 업데이트 ---
 	        const hotelSlot = hotelImage01.parentElement;
@@ -1052,7 +1110,19 @@
 	            if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
 	                location.href = hotelLink;
 	            }
-	        };	    	
+	        };
+	        //=======================================================
+	        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+	        //=======================================================
+	        const hotelHeartBtn01 = document.querySelector("#hotelName01 + .heartIcon");
+	        hotelHeartBtn01.onclick = function(event){
+	        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
+	        	this.classList.toggle('active');
+	        	
+	        	//테스트 나중에 `나의 여행담기`로 이동될 부분.
+	        	//console.log(attName+"을(를) 찜했습니다.")
+	        	alert(hotelName+"을(를) 찜했습니다.");
+	        }
 	    	
 		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
 /* 		    attractionImage01.style.backgroundImage = "url('" + attImg + "')"; // 1번 명소 이미지
@@ -1309,6 +1379,31 @@
 		// 초기 로딩 시 서울 클릭
 	    city01.click();
 	  	//GGG
+	  	
+	    const allHeartIcons = document.querySelectorAll('.heartIcon');
+
+	    allHeartIcons.forEach(function(heart) {
+	        heart.onclick = function(event) {
+	            event.stopPropagation();
+	            this.classList.toggle('active');
+	            
+	            // 1. 클릭한 하트의 고유 ID 가져오기
+	            const placeId = this.getAttribute('data-id'); 
+	            // 2. 장소 이름 가져오기
+	            const placeName = this.parentElement.querySelector('span:first-child').innerText;
+
+	            console.log("서버로 보낼 데이터:", { id: placeId, name: placeName });
+
+	            // [나중에 서버 연동 시]
+	            /*
+	            fetch('/api/wishlist/add', {
+	                method: 'POST',
+	                body: JSON.stringify({ id: placeId })
+	            }).then(...)
+	            */
+	            alert(placeName + "이(가) 나의 여행담기에 저장되었습니다!");
+	        };
+	    });
 	});  
   </script>
   <%-- //이병주 JS코드 --%>
