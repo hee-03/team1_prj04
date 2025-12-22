@@ -31,10 +31,12 @@ public class A01_MVC_Controller {
    }
    
  	//http://localhost:7070/festival
+   //http://192.168.0.31:7070/festival
    @GetMapping("/festival")
    public String festival() {
        return "festival"; // → /WEB-INF/view/festival.jsp
    }
+   
       
    //이병주   
    //http://localhost:7070/whereGoing

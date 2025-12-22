@@ -14,11 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const ITEMS_PER_PAGE = 6;
     let currentPage = 1;
 
+    // 데이터를 서버에서 가져오는 함수
     async function loadData() {
         try {
             if(resultArea) resultArea.innerHTML = '<div class="col-md-12 text-center"><p>데이터를 불러오는 중입니다...</p></div>';
             
-            const res = await fetch("http://localhost:7071/api/festival");
+            // ✅ localhost 대신 알려주신 IP(192.168.0.31)로 수정 완료
+            const res = await fetch("http://192.168.0.31:7071/api/festival");
             const data = await res.json();
             const items = data.response?.body?.items?.item || [];
             
