@@ -322,71 +322,11 @@
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section">
-            <h2 class="mb-4">다른 여행지 둘러보기🗺</h2>
+            <h2 class="mb-4">다른 여행지 둘러보기🔍</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="region-code32 col-md-4 d-flex">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
-                <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
-              </div>
-            </div>
-          </div>
-          <div class="region-code32 col-md-4 d-flex">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
-                <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
-              </div>
-            </div>
-          </div>
-          <div class="region-code01  col-md-4 d-flex">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
-                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="region-code02 col-md-4 d-flex">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
-                <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
-              </div>
-            </div>
-          </div>
-          <div class="region-code02 col-md-4 d-flex">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
-                <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
-              </div>
-            </div>
-          </div>
-          <div class="region-code02 col-md-4 d-flex">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
-                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
-              </div>
-            </div>
-          </div>
+		<div id="travelList" class="d-flex">
+			<!-- ajax결과가 여기에 삽입 -->
         </div>
         <div class="row mt-5">
           <div class="col text-center">
@@ -421,26 +361,8 @@
 		    // 초기상태: rec div, 추천여행지 전부 숨김 처리
 		    $("#destination").addClass("d-none");
 		    $("[id^='rec']").addClass("d-none");
-		    $("[class*='region-code']").removeClass("d-flex").addClass("d-none");
-		    
-		    // 지역명과 지역코드 매핑 (공공데이터 가져와야함)
-		    const regionCodeMap = {
-		        "서울": "1",
-		        "인천": "2",
-		        "대전": "3",
-		        "대구": "4",
-		        "광주": "5",
-		        "부산": "6",
-		        "울산": "7",
-		        "세종": "8",
-		        "경기": "31",
-		        "강원": "32",
-		        "충청": "33",
-		        "경상": "35",
-		        "전라": "37",
-		        "제주": "39"
-		    };
-		    
+		    //$("[class*='region-code']").removeClass("d-flex").addClass("d-none");
+
 		    // 클릭 이벤트
 		    $("[id^='travel_destination']").on("click", function(){
 		    	
@@ -458,24 +380,62 @@
 		        
 		        // 클릭된 여행지 위치에서 지역명 추출
 		        let regionText = $rec.find("p.region").text().trim();
-		        let regionName = regionText.substring(0, 2);
+		        let regionName = regionText.split(" ")[0];
 		        
-		        console.log("클릭된 지역명:", regionName);
+		        console.log("클릭된 지역명->AJAX로 보낼 지역명:", regionName);
 		        
-		        //지역코드로 변환
-		        //v   xml파싱을 위해 제거할 예정
-		        let regionCode = regionCodeMap[regionName];
-		        console.log("클릭된 지역코드:", regionCode);
+		        //AJAX 호출
+		        loadTravel(regionName)
 		        
-		        //예외처리
-		        if(!regionCode){
-		        	console.warn("매핑되지 않은 지역: ", regionName);
-		        	return;
-		        }
-		        // 지역 코드에 맞는 추천 여행지 출력
-		        $("[class*='region-code']").addClass("d-none");
-		        $(".region-code"+regionCode).removeClass("d-none");
 		    });
+		        //AJAX 호출
+		        function loadTravel(regionName){
+		        	$.ajax({
+			        	url: "${pageContext.request.contextPath}/travel/list",
+			        	type: "get",
+			        	data: {regionName: regionName},
+			        	dataType: "json",
+			        	success: function(list){
+			        		drawTravelList(list);
+			        	},
+			        	error: function(){
+			        		alert("데이터 불러오기 실패");
+			        	}
+			        });
+		        }
+			    
+			    function drawTravelList(list){
+			    	
+			    	let html = `<div class="row">`;
+			    	
+			    	if(list.length === 0){
+			    		html += "<p>해당 지역의 데이터가 없습니다.</p>"
+			    	}else{
+			    		$.each(list, function(i, item){
+			    			html += `
+			    					 <div class="col-md-4 d-flex">
+			    					 	<div class="blog-entry justify-content-end" style="width:800px;">
+			    					 		<a href="#" class="block-20"
+			    					 			style="background-image: url('\${item.firstimage}');">
+			    					 		</a>
+			    					 		<div class="text mt-3 float-right d-block">
+				    					 		<h3 class="heading">
+				    					 			<a href="#">\${item.title}</a>
+				    					 			<span class="heartIcon">❤</span>
+				    					 		</h3>
+				    					 		<p>\${item.addr1}</p>
+			    					 		</div>
+			    					 	</div>
+			    					 </div>
+			    					`;
+			    		})	
+			    	}
+			    	html += `</div>`;
+			    	
+			    	console.log("list전체", list);
+			    	console.log("첫번쨰 item", list[0])
+			    	$("#travelList").html(html)
+			    }
 		    
 		});
 	</script>
