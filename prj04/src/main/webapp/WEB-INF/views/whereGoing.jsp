@@ -1203,6 +1203,22 @@
 	    	            console.log(attName + "의 링크가 아직 준비되지 않았습니다.");
 	    	        }
 	    	    };
+	    	    
+	    	    
+	    	  //=======================================================
+	    	 // ♥♥♥ 하트 버튼 클릭 시 반응 (02 시리즈) ♥♥♥ 
+	    	 //=======================================================
+	    	 // 관광명소 02
+	    	 const attractionHeartBtn02 = document.querySelector("#attraction_name02 + .heartIcon");
+	    	 attractionHeartBtn02.setAttribute('data-id', attName); // 나중에 팀원 ID로 교체
+	    	 attractionHeartBtn02.onclick = function(event){
+	    	     event.stopPropagation();
+	    	     this.classList.toggle('active');
+	    	     const currentId = this.getAttribute('data-id');
+	    	     const placeName = attName; 
+	    	     console.log("서버 전송:", { id: currentId, name: placeName });
+	    	     alert(placeName + "을(를) 찜했습니다.");
+	    	 }
 
 	    	    // --- 2. 관광 행사 (Festival) 02 업데이트 ---
 	    	    const festSlot = festivalImage02.parentElement;
@@ -1215,6 +1231,14 @@
 	    	            location.href = festLink;
 	    	        }
 	    	    };
+	    	    
+	    	 // 관광행사 02
+	    	    const festivalHeartBtn02 = document.querySelector("#festivalName02 + .heartIcon");
+	    	    festivalHeartBtn02.onclick = function(event){
+	    	        event.stopPropagation();
+	    	        this.classList.toggle('active');
+	    	        alert(festName + "을(를) 찜했습니다.");
+	    	    }
 
 	    	    // --- 3. 맛집 (Restaurant) 02 업데이트 ---
 	    	    const restSlot = restaurantImage02.parentElement;
@@ -1227,6 +1251,15 @@
 	    	            location.href = restLink;
 	    	        }
 	    	    };
+	    	    
+	    	    
+	    	 // 맛집 02
+	    	    const restaurantHeartBtn02 = document.querySelector("#restaurantName02 + .heartIcon");
+	    	    restaurantHeartBtn02.onclick = function(event){
+	    	        event.stopPropagation();
+	    	        this.classList.toggle('active');
+	    	        alert(restName + "을(를) 찜했습니다.");
+	    	    }
 
 	    	    // --- 4. 호텔 (Hotel) 02 업데이트 ---
 	    	    const hotelSlot = hotelImage02.parentElement;
@@ -1239,6 +1272,14 @@
 	    	            location.href = hotelLink;
 	    	        }
 	    	    };
+	    	    
+	    	 // 호텔 02
+	    	    const hotelHeartBtn02 = document.querySelector("#hotelName02 + .heartIcon");
+	    	    hotelHeartBtn02.onclick = function(event){
+	    	        event.stopPropagation();
+	    	        this.classList.toggle('active');
+	    	        alert(hotelName + "을(를) 찜했습니다.");
+	    	    }
 	    	}/*
 	    	//=============================================================================
 	    	//이 updateDetatils03부터 updateDetatils06까지 나중에 함수 구조 위에 처럼 싹 갈아 엎어야함!!!!(클리어)
