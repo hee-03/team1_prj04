@@ -27,7 +27,7 @@ public class A02_Service {
 		//areaCode2에 있는 지역 목록을 하나씩 검사
 		for(Area area : areaList) {
 			if(area.getName().equals(regionName)) { //xml name값과 클릭한 regionName을 비교
-				System.out.println("areaCode 직접매칭 성공 = "+area.getCode());
+
 				return area.getCode(); //일치하면 지역코드로 변환
 			}
 		}
@@ -43,7 +43,7 @@ public class A02_Service {
 
 	    for (Area area : areaList) {
 	        if (area.getName().equals(normalizedName)) {
-	        	System.out.println("areaCode 정규화 매칭 성공 = "+area.getCode());
+
 	            return area.getCode();
 	        }
 	    }
@@ -56,15 +56,15 @@ public class A02_Service {
 		// areaBasedList2에서 지역 코드로 콘텐츠 목록 찾기
 		List<Content> contentList = areaBasedList2Parser.parse();//areaBasedList2.xml파싱
 															// <item>하나 == Content객체
-		System.out.println("전체 content 개수= "+contentList.size());
 		
 		List<Content> result = new ArrayList<>(); //조건에 맞는 데이터 결과 리스트
 		
 		for(Content c : contentList) { // areaBasedList2.xml 데이터 전체 순회
-			System.out.println("비교중인 areaCode"+c.getAreacode());
+			
 			if(areaCode.equals(c.getAreacode())) { //<code>와 <areaCode>비교(join 조건)
 				result.add(c); //같은 지역이면 결과에 추가
 			}
+			
 		}
 		System.out.println("매칭 결과개수 = "+result.size());
 		return result; // 해당 지역의 가져온 여행 데이터 목록 반환
@@ -85,8 +85,6 @@ public class A02_Service {
 	}
 	
 	public List<Content> getContentsByRegionName(String regionName){ //이 메서드로 xml파일 2개를 연결
-		
-		System.out.println("service진입 regionName= "+regionName);
 		
 		String areaCode = findAreaCodeByName(regionName); //areaCode2 조회 "서울" -> 1
 			

@@ -382,8 +382,6 @@
 		        let regionText = $rec.find("p.region").text().trim();
 		        let regionName = regionText.split(" ")[0];
 		        
-		        console.log("클릭된 지역명->AJAX로 보낼 지역명:", regionName);
-		        
 		        //AJAX 호출
 		        loadTravel(regionName)
 		        
@@ -433,7 +431,7 @@
 			    	html += `</div>`;
 			    	
 			    	console.log("list전체", list);
-			    	console.log("첫번쨰 item", list[0])
+			    	
 			    	$("#travelList").html(html)
 			    }
 		    

@@ -30,11 +30,6 @@ public class A01_Controller {
 	return list;//Service에게 전달
 	}
 	
-	@GetMapping("index")
-	public String index() {
-		return "index";
-	}
-	//http://localhost:7070/index
 	// http://localhost:7070/rec_travel
 	@GetMapping("rec_travel_test")
 	 public String rec_travel_test() {
