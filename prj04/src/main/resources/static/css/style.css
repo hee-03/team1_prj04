@@ -456,7 +456,7 @@ pre {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 1232px; } }
 
 .container-fluid {
   width: 100%;
@@ -8043,7 +8043,7 @@ h1, h2, h3, h4, h5,
       padding-bottom: 0;
       padding-left: 0; } }
   .ftco-navbar-light .container {
-    width: 1110px;
+    /*width: 1110px;*/
     margin: 0 auto;
     padding: 0; }
   .ftco-navbar-light .navbar-brand {
@@ -9764,6 +9764,17 @@ textarea.form-control {
 .gnb > ul > li > a > img {
 	width: 70%;
 }
+.gnb{
+	gap: 10px;
+	align-items: center;
+	
+}
+.gnb p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 100;
+}
+
 /*my trip*/
 .heading{
 	display: flex;

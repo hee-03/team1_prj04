@@ -16,8 +16,9 @@
         <li class="nav-item active"><a href="/mytrip" class="nav-link">나의 여행담기</a></li>
       </ul>
     </div>
-
-    <div class="gnb">
+	
+    <div class="gnb d-flex">
+      <p>ID : ${sessionScope.logInEmail}</p>
       <ul class="d-flex navbar-nav">
         <li><a href="#"><img src="/images/header/search.png" alt=""></a></li>
         <li><a href="/map"><img src="/images/header/map.png" alt=""></a></li>
