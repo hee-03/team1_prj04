@@ -8042,8 +8042,13 @@ h1, h2, h3, h4, h5,
       padding-top: 0;
       padding-bottom: 0;
       padding-left: 0; } }
+@media (min-width: 1200px) {
+  #ftco-navbar .container {
+    max-width: 1232px; /* 원하는 값 */
+  }
+}
   .ftco-navbar-light .container {
-    /*width: 1110px;*/
+    /*width: 1232px;*/
     margin: 0 auto;
     padding: 0; }
   .ftco-navbar-light .navbar-brand {
