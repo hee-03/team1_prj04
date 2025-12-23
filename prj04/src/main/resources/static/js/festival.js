@@ -11,16 +11,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let allList = [];
     let displayList = [];
-    const ITEMS_PER_PAGE = 6;
+    const ITEMS_PER_PAGE = 12; 
     let currentPage = 1;
 
-    // 데이터를 서버에서 가져오는 함수
+    // ✅ 세련된 디자인의 랜덤 추천 카드 생성 함수
+    function renderRecommendation(list) {
+        if (!resultArea || list.length === 0) return;
+        
+        const randomItem = list[Math.floor(Math.random() * list.length)];
+        const naverSearchUrl = `https://search.naver.com/search.naver?query=${encodeURIComponent(randomItem.title)}`;
+
+        // 리스트 최상단에 추천 섹션 삽입
+        const recommendationHtml = `
+            <div class="col-md-12 mb-5">
+                <div style="background: linear-gradient(135deg, #f96d00 0%, #ff851b 100%); border-radius: 20px; padding: 30px; color: white; box-shadow: 0 10px 30px rgba(249, 109, 0, 0.3); display: flex; align-items: center; flex-wrap: wrap;">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div style="width: 100%; height: 200px; background-image: url('${randomItem.firstimage || 'images/image_1.jpg'}'); background-size: cover; background-position: center; border-radius: 15px; border: 3px solid rgba(255,255,255,0.3);"></div>
+                    </div>
+                    <div class="col-md-8 pl-md-4">
+                        <span style="background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 50px; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Editor's Pick 🌟</span>
+                        <h2 class="mt-2 mb-3" style="color: white; font-weight: 800; font-size: 28px;">${randomItem.title}</h2>
+                        <p style="font-size: 16px; opacity: 0.9; margin-bottom: 20px;">📍 ${randomItem.addr1 || '지역 정보 없음'}<br>📅 축제 기간: ${randomItem.eventstartdate} ~ ${randomItem.eventenddate}</p>
+                        <a href="${naverSearchUrl}" target="_blank" class="btn btn-white px-4 py-3" style="background: white; color: #f96d00; font-weight: bold; border-radius: 10px; border: none;">지금 바로 확인하기</a>
+                    </div>
+                </div>
+                <hr style="margin-top: 50px; border-top: 1px solid #eee;">
+                <h4 class="text-center mb-4" style="font-weight: 700; color: #333;">다른 축제들도 둘러보세요 👀</h4>
+            </div>
+        `;
+        resultArea.innerHTML = recommendationHtml;
+    }
+
     async function loadData() {
         try {
             if(resultArea) resultArea.innerHTML = '<div class="col-md-12 text-center"><p>데이터를 불러오는 중입니다...</p></div>';
-            
-            // ✅ localhost 대신 알려주신 IP(192.168.0.31)로 수정 완료
-            const res = await fetch("http://192.168.0.31:7071/api/festival");
+            const res = await fetch("http://localhost:7071/api/festival");
             const data = await res.json();
             const items = data.response?.body?.items?.item || [];
             
@@ -28,54 +53,72 @@ document.addEventListener("DOMContentLoaded", () => {
                 ...it,
                 likes: Math.floor(Math.random() * 100)
             }));
+
+            // 로드 직후 리스트 영역에 추천 카드 노출
+            renderRecommendation(allList);
+            // 추천 카드 아래에 기본 리스트 1페이지 표시
+            displayList = [...allList];
+            const start = (currentPage - 1) * ITEMS_PER_PAGE;
+            resultArea.innerHTML += displayList.slice(start, start + ITEMS_PER_PAGE).map(it => createCardHtml(it)).join("");
+            renderPagination();
             
             return true;
         } catch (e) {
             console.error("데이터 로드 실패:", e);
-            if(resultArea) resultArea.innerHTML = '<div class="col-md-12 text-center"><p>데이터를 불러오는 데 실패했습니다.</p></div>';
             return false;
         }
     }
 
-	function renderCards(list) {
-	    if(!resultArea) return;
-	    if(list.length === 0) {
-	        resultArea.innerHTML = '<div class="col-md-12 text-center"><p>검색 결과가 없습니다. 😅</p></div>';
-	        return;
-	    }
-	    
-	    resultArea.innerHTML = list.map(it => {
-	        // ✅ [핵심] 네이버 검색 결과 URL 생성 (축제 제목으로 검색)
-	        // encodeURIComponent는 제목에 포함된 한글/공백이 깨지지 않게 해줍니다.
-	        const naverSearchUrl = `https://search.naver.com/search.naver?query=${encodeURIComponent(it.title)}`;
+    // 카드 HTML 생성 로직 분리 (중복 방지)
+    function createCardHtml(it) {
+        const naverSearchUrl = `https://search.naver.com/search.naver?query=${encodeURIComponent(it.title)}`;
+        return `
+          <div class="col-md-4 d-flex">
+            <div class="blog-entry justify-content-end" style="width: 100%; margin-bottom: 30px; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+              <a href="${naverSearchUrl}" target="_blank" class="block-20" style="background-image: url('${it.firstimage || 'images/image_1.jpg'}'); height: 200px;"></a>
+              <div class="text mt-3 p-3 d-block">
+                <h3 class="heading" style="font-size: 17px; font-weight: 700;">
+                    <a href="${naverSearchUrl}" target="_blank" style="color: #333;">${it.title}</a>
+                </h3>
+                <div class="meta mb-2" style="font-size: 13px; color: #f96d00;">
+                    <span>📍 ${it.addr1 ? it.addr1.split(' ')[0] : '지역'}</span> | <span>❤ ${it.likes}</span>
+                </div>
+                <p style="color: #999; font-size: 12px;">📅 ${it.eventstartdate} ~ ${it.eventenddate}</p>
+              </div>
+            </div>
+          </div>
+        `;
+    }
 
-	        return `
-	          <div class="col-md-4 d-flex">
-	            <div class="blog-entry justify-content-end" style="width: 100%; margin-bottom: 30px;">
-	              <a href="${naverSearchUrl}" target="_blank" class="block-20" style="background-image: url('${it.firstimage || 'images/image_1.jpg'}');"></a>
-	              <div class="text mt-3 float-right d-block">
-	                <h3 class="heading" style="font-size: 18px;">
-	                    <a href="${naverSearchUrl}" target="_blank">${it.title}</a>
-	                    <span style="color: #f96d00; font-size: 14px; margin-left: 10px;">❤ ${it.likes}</span>
-	                </h3>
-	                <p>📍 ${it.addr1 || '지역 정보 없음'}</p>
-	                <p style="color: #f96d00; font-size: 12px;">📅 ${it.eventstartdate} ~ ${it.eventenddate}</p>
-	              </div>
-	            </div>
-	          </div>
-	        `;
-	    }).join("");
-	}
+    function renderCards(list) {
+        if(!resultArea) return;
+        if(list.length === 0) {
+            resultArea.innerHTML = '<div class="col-md-12 text-center"><p>검색 결과가 없습니다. 😅</p></div>';
+            return;
+        }
+        resultArea.innerHTML = list.map(it => createCardHtml(it)).join("");
+    }
 
     function renderPagination() {
         if(!paginationArea) return;
-        const total = Math.ceil(displayList.length / ITEMS_PER_PAGE);
-        let html = '<ul>';
-        for (let i = 1; i <= Math.min(total, 5); i++) {
-            html += `<li class="${i === currentPage ? 'active' : ''}"><a href="#" onclick="changePage(event, ${i})">${i}</a></li>`;
+        const totalPages = Math.ceil(displayList.length / ITEMS_PER_PAGE);
+        if (totalPages <= 1) {
+            paginationArea.innerHTML = "";
+            return;
         }
+        let html = '<ul>';
+        if (currentPage > 1) html += `<li><a href="#" onclick="changePage(event, ${currentPage - 1})">&lt;</a></li>`;
+        const delta = 5; 
+        for (let i = 1; i <= totalPages; i++) {
+            if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
+                html += `<li class="${i === currentPage ? 'active' : ''}"><a href="#" onclick="changePage(event, ${i})">${i}</a></li>`;
+            } else if (i === currentPage - delta - 1 || i === currentPage + delta + 1) {
+                html += `<li class="disabled"><span style="padding: 0 10px;">...</span></li>`;
+            }
+        }
+        if (currentPage < totalPages) html += `<li><a href="#" onclick="changePage(event, ${currentPage + 1})">&gt;</a></li>`;
         html += '</ul>';
-        paginationArea.innerHTML = total > 1 ? html : "";
+        paginationArea.innerHTML = html;
     }
 
     window.changePage = (e, p) => {
@@ -89,48 +132,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateBtnState(activeBtn) {
         const buttons = [sortDefaultBtn, sortLikeBtn, sortDateBtn];
-        buttons.forEach(btn => {
-            if(btn) btn.classList.remove('active');
-        });
+        buttons.forEach(btn => { if(btn) btn.classList.remove('active'); });
         if(activeBtn) activeBtn.classList.add('active');
     }
 
-    if(sortDefaultBtn) sortDefaultBtn.onclick = () => { 
-        if(allList.length === 0) return;
-        displayList = [...allList]; 
-        updateBtnState(sortDefaultBtn); 
-        renderPage(1); 
-    };
-    if(sortLikeBtn) sortLikeBtn.onclick = () => { 
-        if(allList.length === 0) return;
-        displayList.sort((a,b) => b.likes - a.likes); 
-        updateBtnState(sortLikeBtn); 
-        renderPage(1); 
-    };
-    if(sortDateBtn) sortDateBtn.onclick = () => { 
-        if(allList.length === 0) return;
-        displayList.sort((a,b) => a.eventstartdate.localeCompare(b.eventstartdate)); 
-        updateBtnState(sortDateBtn); 
-        renderPage(1); 
-    };
+    // 정렬/검색 클릭 시 추천 배너는 사라지고 리스트만 깔끔하게 나오도록 유지
+    if(sortDefaultBtn) sortDefaultBtn.onclick = () => { displayList = [...allList]; updateBtnState(sortDefaultBtn); renderPage(1); };
+    if(sortLikeBtn) sortLikeBtn.onclick = () => { displayList.sort((a,b) => b.likes - a.likes); updateBtnState(sortLikeBtn); renderPage(1); };
+    if(sortDateBtn) sortDateBtn.onclick = () => { displayList.sort((a,b) => a.eventstartdate.localeCompare(b.eventstartdate)); updateBtnState(sortDateBtn); renderPage(1); };
 
     if(searchForm) {
         searchForm.addEventListener("submit", async (e) => {
             e.preventDefault();
-            
-            // 처음 검색 시 안내 메시지 숨기기
             if(welcomeMessage) welcomeMessage.style.display = "none";
-            
-            if(allList.length === 0) {
-                const success = await loadData();
-                if(!success) return;
-            }
-
+            if(allList.length === 0) await loadData();
             if(sortContainer) sortContainer.style.display = "flex";
-
             const region = document.getElementById("regionSelect").value;
             const season = document.getElementById("seasonSelect").value;
-
             displayList = allList.filter(it => {
                 const matchRegion = !region || it.addr1.includes(region.substring(0,2));
                 const month = it.eventstartdate ? parseInt(it.eventstartdate.substring(4,6)) : 0;
@@ -141,7 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 else if(season === "겨울") matchSeason = month === 12 || month <= 2;
                 return matchRegion && matchSeason;
             });
-
             updateBtnState(sortDefaultBtn); 
             renderPage(1);
         });
@@ -153,4 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderCards(displayList.slice(start, start + ITEMS_PER_PAGE));
         renderPagination();
     }
+
+    loadData();
 });

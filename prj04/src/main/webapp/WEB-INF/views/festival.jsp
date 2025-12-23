@@ -139,11 +139,7 @@
 <section class="ftco-section no-padding-top">
   <div class="container">
     
-    <div id="welcome-message" class="text-center ftco-animate fadeInUp ftco-animated" style="padding: 100px 0;">
-      <div style="font-size: 80px; margin-bottom: 20px;">🎡</div>
-      <h2 style="font-weight: 500; color: #555;">원하는 축제를 찾아보세요!</h2>
-      <p style="color: #999;">지역과 계절을 선택하고 검색 버튼을 눌러주세요.</p>
-    </div>
+
 
     <div id="sort-container" class="row justify-content-end mb-4" style="display: none;">
       <div class="col-md-5 text-md-right sort-buttons">
