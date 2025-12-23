@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class Z1_LoginController {
 
@@ -22,11 +24,13 @@ public class Z1_LoginController {
     
 	@PostMapping("loginCheck")
 	public String loginCheck(@RequestParam(name="email",defaultValue = "") String email,
-			@RequestParam(name="pwd",defaultValue = "") String pwd
+			@RequestParam(name="pwd",defaultValue = "") String pwd,
+			HttpSession session
 			) {
 
 		String logIn = service.loginCheck(email, pwd);
 		if (logIn.equals("로그인성공")) {
+			session.setAttribute("logInEmail", email);
 			return "redirect:/main";
 		}else {
 			return "redirect:/loginCheck";
