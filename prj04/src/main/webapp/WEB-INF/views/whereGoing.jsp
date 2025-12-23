@@ -141,30 +141,30 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <span id="attraction_image01" class="block-20" style="background-image: url('images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg');">
+              <span id="attractionImage01" class="block-20" style="background-image: url('images/whereGoing/attractionImage/SeoulAndGyeonggi/seoul/GyeongBokGeung.jpg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="attraction_name01">경복궁</span><span data-id="ATTR_001" class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attractionName01">경복궁</span><span data-id="ATTR_001" class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <span id="attraction_image02" class="block-20" style="background-image: url('images/image_2.jpg');">
+              <span id="attractionImage02" class="block-20" style="background-image: url('images/image_2.jpg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="attraction_name02">와온해변</span><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attractionName02">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <span id="attraction_image03" class="block-20" style="background-image: url('images/image_3.jpg');">
+              <span id="attractionImage03" class="block-20" style="background-image: url('images/image_3.jpg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="attraction_name03">선암사</span><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attractionName03">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
@@ -172,30 +172,30 @@
 
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <span id="attraction_image04" class="block-20" style="background-image: url('images/image_1.jpg');">
+              <span id="attractionImage04" class="block-20" style="background-image: url('images/image_1.jpg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="attraction_name04">순천만 생태 체험선</span><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attractionName04">순천만 생태 체험선</span><span class="heartIcon">❤</span></h3>
                 <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <span id="attraction_image05" class="block-20" style="background-image: url('images/image_2.jpg');">
+              <span id="attractionImage05" class="block-20" style="background-image: url('images/image_2.jpg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="attraction_name05">와온해변</span><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attractionName05">와온해변</span><span class="heartIcon">❤</span></h3>
                 <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <span id="attraction_image06" class="block-20" style="background-image: url('images/image_3.jpg');">
+              <span id="attractionImage06" class="block-20" style="background-image: url('images/image_3.jpg');">
               </span>
               <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><span id="attraction_name06">선암사</span><span class="heartIcon">❤</span></h3>
+                <h3 class="heading"><span id="attractionName06">선암사</span><span class="heartIcon">❤</span></h3>
                 <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
               </div>
             </div>
