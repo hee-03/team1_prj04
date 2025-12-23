@@ -9815,6 +9815,7 @@ footer .container p:last-child{
 .location_item {
 	width: 100px;
 	height: 100px;
+	cursor: pointer;
 }
 .loc_img {
 	width: 100px;
@@ -9831,34 +9832,34 @@ footer .container p:last-child{
 
 /* 지역별 지도 이미지 */
 #location00 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/서울.png');/*서울*/
+	background-image:url('../images/whereGoing/locationImage/seoul.png');/*서울*/
 }
 #location01 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/경기.png');/*경기*/
+	background-image:url('../images/whereGoing/locationImage/gyeonggi.png');/*경기*/
 }
 #location02 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/강원.png');/*강원*/
+	background-image:url('../images/whereGoing/locationImage/gangwon.png');/*강원*/
 }
 #location03 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/충남.png');/*충남*/
+	background-image:url('../images/whereGoing/locationImage/chungnam.png');/*충남*/
 }
 #location04 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/충북.png');/*충북*/
+	background-image:url('../images/whereGoing/locationImage/chungbuk.png');/*충북*/
 }
 #location05 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/전남.png');/*전남*/
+	background-image:url('../images/whereGoing/locationImage/jeonnam.png');/*전남*/
 }
 #location06 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/전북.png');/*전북*/
+	background-image:url('../images/whereGoing/locationImage/jeonbuk.png');/*전북*/
 }
 #location07 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/경남.png');/*경남*/
+	background-image:url('../images/whereGoing/locationImage/gyeongnam.png');/*경남*/
 }
 #location08 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/경북.png');/*경북*/
+	background-image:url('../images/whereGoing/locationImage/gyeongbuk.png');/*경북*/
 }
 #location09 .loc_img{
-	background-image:url('../images/whereGoing/locationImage/제주.png');/*제주*/
+	background-image:url('../images/whereGoing/locationImage/jeju.png');/*제주*/
 }
 /* //지역별 지도 이미지 */
 
