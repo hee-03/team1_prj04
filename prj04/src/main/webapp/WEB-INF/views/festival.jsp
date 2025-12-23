@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,62 +7,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
-
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 
-    <style>
-      /* 검색창 섹션 하단 여백 제거 */
-      .ftco-section.no-padding-bottom { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+<style>
+  /* 1. 레이아웃 기본 설정 */
+  .ftco-section.no-padding-bottom { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+  .ftco-section.no-padding-top { padding-top: 30px !important; }
+
+  /* 2. ✅ 검색 필터 박스 (그림자 완전 제거 + 평면 디자인) */
+  .search-property-1 {
+      background: #fff !important;
+      padding: 30px !important;
+      border-radius: 15px !important
+
+      position: relative;
+      z-index: 10;
+  }
+
+  /* 라벨 가독성 */
+  .search-property-1 .form-group label {
+      font-weight: 700 !important;
+      color: #333 !important;
+      font-size: 14px !important;
+      margin-bottom: 8px !important;
+      display: block;
+  }
+
+  /* ✅ 필터 선택 박스 (심플하게) */
+  .search-property-1 .form-control {
+      height: 52px !important;
+      border-radius: 10px !important;
+      border: 1px solid #ccc !important;
+      background: #fff !important;
+      font-weight: 600 !important;
+      color: #222 !important;
+      padding: 10px 15px !important;
+      box-shadow: none !important;
+      appearance: auto !important; /* 화살표 표시 */
+  }
+
+  /* ✅ 검색 버튼 (글자 수직 중앙 정렬 집중) */
+  .search-property-1 .btn-primary {
+      background: #f9ab30 !important;
+      border: none !important;
+      color: #fff !important;
+      height: 52px !important;
+      font-size: 17px !important;
+      font-weight: 700 !important;
+      border-radius: 10px !important;
       
-      /* 제목 섹션 상단 여백 보정 */
-      .ftco-section.no-padding-top { padding-top: 30px !important; }
+      /* 🔥 중앙 정렬을 위한 핵심 속성 */
+      display: flex !important;
+      align-items: center !important;    /* 수직 중앙 */
+      justify-content: center !important; /* 수평 중앙 */
+      line-height: 1 !important;         /* 텍스트 밀림 방지 */
+      padding: 0 !important;
+      
+      box-shadow: none !important;
+      cursor: pointer;
+      width: 100% !important;
+      transition: background 0.2s ease;
+  }
 
-      /* ✅ 검색 버튼 글씨 위치 보정 */
-      .search-property-1 .btn-primary {
-          display: flex !important;
-          align-items: center !important; /* 수직 중앙 정렬 */
-          justify-content: center !important;
-          height: 52px !important; /* input 높이와 통일 */
-          padding-top: 0 !important;
-          padding-bottom: 0 !important;
-          line-height: 1 !important; /* 글씨가 위로 올라오게 조정 */
-      }
+  .search-property-1 .btn-primary:hover {
+      background: #e89a1a !important;
+      transform: none !important; /* 공중 부양 금지 */
+  }
 
-      /* 제목 옆 정렬 버튼 스타일 */
-      .heading-section h2 { font-size: 28px !important; font-weight: 700; }
-      .sort-buttons .btn { 
-          font-size: 13px; 
-          border-color: #f9ab30 !important; 
-          color: #f9ab30;
-          border-radius: 5px !important;
-          margin-left: 2px;
-      }
-      .sort-buttons .btn.active, .sort-buttons .btn:hover {
-          background-color: #f9ab30 !important;
-          color: #fff !important;
-      }
-    </style>
+  /* 3. 정렬 버튼 (기존 디자인 유지) */
+  .sort-buttons .btn { 
+      font-size: 18px !important;
+      padding: 12px 22px !important;
+      font-weight: 600 !important;
+      border: 2px solid #f9ab30 !important;
+      color: #f9ab30 !important;
+      border-radius: 10px !important;
+      background-color: transparent;
+      box-shadow: none !important;
+  }
+
+  .sort-buttons .btn.active, .sort-buttons .btn:hover {
+      background-color: #f9ab30 !important;
+      color: #fff !important;
+  }
+
+  /* 4. 페이지네이션 (기존 디자인 유지) */
+  .block-27 ul {
+      padding: 0;
+      margin: 0;
+  }
+
+  .block-27 ul li {
+      display: inline-block !important;
+      margin: 0 5px !important; /* 🔥 번호 사이의 좌우 여백 (간격 생김) */
+  }
+
+  .block-27 ul li a, .block-27 ul li span {
+      width: 55px !important;  /* 🔥 기존 50px에서 55px로 확대 */
+      height: 55px !important; /* 🔥 기존 50px에서 55px로 확대 */
+      line-height: 51px !important; /* 테두리 두께 고려하여 수직 중앙 조절 */
+      font-size: 20px !important;   /* 🔥 숫자 크기 확대 */
+      font-weight: 600 !important;
+      border-radius: 50% !important;
+      border: 2px solid #e6e6e6 !important;
+      display: inline-block;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: none !important;
+      color: #333;
+  }
+
+  /* 마우스 올렸을 때랑 활성화됐을 때 색상 */
+  .block-27 ul li.active a,
+  .block-27 ul li.active span {
+      background: #f9ab30 !important;
+      color: #fff !important;
+      border-color: #f9ab30 !important;
+  }
+
+  .block-27 ul li a:hover {
+      background: #f9ab30 !important;
+      color: #fff !important;
+      border-color: #f9ab30 !important;
+  }
+</style>
   </head>
 
   <body>
-<jsp:include page="/WEB-INF/views/common/header.jsp" />
+    <jsp:include page="/WEB-INF/views/common/header.jsp" />
     
     <section class="hero-wrap js-fullheight" style="background-image: url('images/festival/festivalmain.png');" data-stellar-background-ratio="0.5">
       <div class="overlay" style="opacity: .2"></div>
@@ -77,7 +160,7 @@
     </section>
 
     <section class="ftco-section no-padding-bottom ftco-no-pt">
-	  <div class="container">
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="search-wrap-1 ftco-animate p-4">
@@ -100,7 +183,6 @@
                       </div>
                     </div>
                   </div>
-
                   <div class="col-lg align-items-end">
                     <div class="form-group">
                       <label for="#">어디로</label>
@@ -120,14 +202,15 @@
                       </div>
                     </div>
                   </div>
-
-                  <div class="col-lg align-self-end">
-                    <div class="form-group">
-                      <div class="form-field">
-                        <input type="submit" value="검색" class="form-control btn btn-primary" style="background: #f9ab30 !important; border: 1px solid #f9ab30 !important; cursor: pointer;">
-                      </div>
-                    </div>
-                  </div>
+                 <div class="col-lg align-self-end">
+					  <div class="form-group">
+					    <div class="form-field">
+					      <button type="submit" class="form-control btn btn-primary search-submit-btn">
+					        검색
+					      </button>
+					    </div>
+					  </div>
+					</div>
                 </div>
               </form>
             </div>
@@ -136,30 +219,18 @@
       </div>
     </section>
 
-<section class="ftco-section no-padding-top">
-  <div class="container">
-    
+    <section class="ftco-section no-padding-top">
+      <div class="container">
+        <div id="festival-result" class="row d-flex">
+            </div>
 
-
-    <div id="sort-container" class="row justify-content-end mb-4" style="display: none;">
-      <div class="col-md-5 text-md-right sort-buttons">
-        <div id="sort-area" class="btn-group" role="group">
-          <button id="sortDefaultBtn" class="btn btn-outline-primary active px-3 py-2">기본순</button>
-          <button id="sortLikeBtn" class="btn btn-outline-primary px-3 py-2">❤️ 좋아요순</button>
-          <button id="sortDateBtn" class="btn btn-outline-primary px-3 py-2">📅 날짜순</button>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div id="pagination" class="block-27"></div>
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div id="festival-result" class="row d-flex"></div>
-
-    <div class="row mt-5">
-      <div class="col text-center">
-        <div id="pagination" class="block-27"></div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -177,7 +248,6 @@
     <script src="js/main.js"></script>
     <script src="js/festival.js"></script>
     
-<jsp:include page="/WEB-INF/views/common/footer.jsp" />
-    
+    <jsp:include page="/WEB-INF/views/common/footer.jsp" />
   </body>
 </html>
