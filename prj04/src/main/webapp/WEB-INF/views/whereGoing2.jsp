@@ -227,7 +227,7 @@
 			    					 			<span class="heartIcon">❤</span>
 			    					 		</h3>
 			    					 		<p>\${item.addr1}</p>
-			    					 		<p>\${item.cat1}</p>//대분류
+			    					 		<p>\${item.cat1}</p>
 		    					 		</div>
 		    					 	</div>
 		    					 </div>

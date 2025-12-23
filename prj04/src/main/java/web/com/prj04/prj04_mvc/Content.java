@@ -5,16 +5,18 @@ public class Content {
 	private String title;
 	private String addr1;
 	private String firstimage;
+	private String cat1;
 	public Content() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Content(String areacode, String title, String addr1, String firstimage) {
+	public Content(String areacode, String title, String addr1, String firstimage, String cat1) {
 		super();
 		this.areacode = areacode;
 		this.title = title;
 		this.addr1 = addr1;
 		this.firstimage = firstimage;
+		this.cat1 = cat1;
 	}
 	public String getAreacode() {
 		return areacode;
@@ -39,6 +41,12 @@ public class Content {
 	}
 	public void setFirstimage(String firstimage) {
 		this.firstimage = firstimage;
+	}
+	public String getCat1() {
+		return cat1;
+	}
+	public void setCat1(String cat1) {
+		this.cat1 = cat1;
 	}
 	
 
