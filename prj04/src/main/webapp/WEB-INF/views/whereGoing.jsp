@@ -460,65 +460,65 @@
 	    //관광 명소 이미지
 	    const attractionImage01 = document.querySelector("#attraction_image01");
 	    const attractionImage02 = document.querySelector("#attraction_image02");
-/* 	    const attractionImage03 = document.querySelector("#attraction_image03");
+ 	    const attractionImage03 = document.querySelector("#attraction_image03");
 	    const attractionImage04 = document.querySelector("#attraction_image04");
 	    const attractionImage05 = document.querySelector("#attraction_image05");
-	    const attractionImage06 = document.querySelector("#attraction_image06"); */
+	    const attractionImage06 = document.querySelector("#attraction_image06");
 	    
 	    //관광 명소 이름
 	    const attractionName01 = document.querySelector("#attraction_name01");
 	    const attractionName02 = document.querySelector("#attraction_name02");
-/* 	    const attractionName03 = document.querySelector("#attraction_name03");
+ 	    const attractionName03 = document.querySelector("#attraction_name03");
 	    const attractionName04 = document.querySelector("#attraction_name04");
 	    const attractionName05 = document.querySelector("#attraction_name05");
-	    const attractionName06 = document.querySelector("#attraction_name06"); */
+	    const attractionName06 = document.querySelector("#attraction_name06"); 
 	    
 	    //GGG
 	    //관광 행사 이미지
 	 // 1. 관광 행사 (Festival)
 	    const festivalImage01 = document.querySelector("#festivalImage01");
 	    const festivalImage02 = document.querySelector("#festivalImage02");
-/* 	    const festivalImage03 = document.querySelector("#festivalImage03");
+	    const festivalImage03 = document.querySelector("#festivalImage03");
 	    const festivalImage04 = document.querySelector("#festivalImage04");
 	    const festivalImage05 = document.querySelector("#festivalImage05");
-	    const festivalImage06 = document.querySelector("#festivalImage06"); */
+	    const festivalImage06 = document.querySelector("#festivalImage06"); 
 
 	    const festivalName01 = document.querySelector("#festivalName01");
 	    const festivalName02 = document.querySelector("#festivalName02");
-/* 	    const festivalName03 = document.querySelector("#festivalName03");
+ 	    const festivalName03 = document.querySelector("#festivalName03");
 	    const festivalName04 = document.querySelector("#festivalName04");
 	    const festivalName05 = document.querySelector("#festivalName05");
-	    const festivalName06 = document.querySelector("#festivalName06"); */
+	    const festivalName06 = document.querySelector("#festivalName06"); 
 
 	    // 2. 맛집 (Restaurant)
 	    const restaurantImage01 = document.querySelector("#restaurantImage01");
 	    const restaurantImage02 = document.querySelector("#restaurantImage02");
-/* 	    const restaurantImage03 = document.querySelector("#restaurantImage03");
+ 	    const restaurantImage03 = document.querySelector("#restaurantImage03");
 	    const restaurantImage04 = document.querySelector("#restaurantImage04");
 	    const restaurantImage05 = document.querySelector("#restaurantImage05");
-	    const restaurantImage06 = document.querySelector("#restaurantImage06"); */
+	    const restaurantImage06 = document.querySelector("#restaurantImage06"); 
 
 	    const restaurantName01 = document.querySelector("#restaurantName01");
 	    const restaurantName02 = document.querySelector("#restaurantName02");
-/* 	    const restaurantName03 = document.querySelector("#restaurantName03");
+	    const restaurantName03 = document.querySelector("#restaurantName03");
 	    const restaurantName04 = document.querySelector("#restaurantName04");
 	    const restaurantName05 = document.querySelector("#restaurantName05");
-	    const restaurantName06 = document.querySelector("#restaurantName06"); */
+	    const restaurantName06 = document.querySelector("#restaurantName06"); 
 
 	    // 3. 호텔 (Hotel)
 	    const hotelImage01 = document.querySelector("#hotelImage01");
 	    const hotelImage02 = document.querySelector("#hotelImage02");
-/* 	    const hotelImage03 = document.querySelector("#hotelImage03");
+	    const hotelImage03 = document.querySelector("#hotelImage03");
 	    const hotelImage04 = document.querySelector("#hotelImage04");
 	    const hotelImage05 = document.querySelector("#hotelImage05");
-	    const hotelImage06 = document.querySelector("#hotelImage06"); */
+	    const hotelImage06 = document.querySelector("#hotelImage06"); 
 
 	    const hotelName01 = document.querySelector("#hotelName01");
 	    const hotelName02 = document.querySelector("#hotelName02");
-/* 	    const hotelName03 = document.querySelector("#hotelName03");
+ 	    const hotelName03 = document.querySelector("#hotelName03");
 	    const hotelName04 = document.querySelector("#hotelName04");
 	    const hotelName05 = document.querySelector("#hotelName05");
-	    const hotelName06 = document.querySelector("#hotelName06"); */
+	    const hotelName06 = document.querySelector("#hotelName06"); 
 	    
 
 
@@ -1043,6 +1043,7 @@
 	    });
 	    // 마우스 오버/아웃 효과 (기존 코드 유지)
 	    /*
+	    2025-12-25~2025-12-30 폐기 예정
 	    locationItems.forEach(function(item) {
 	        item.addEventListener('mouseover', function() {
 	            this.style.border = "3px solid navy";
@@ -1094,7 +1095,9 @@
 	            console.log("서버로 보낼 데이터:", { id: currentId, name: attName });
 	            alert(attName + "을(를) 찜했습니다.");
 	        }
-
+	        //=======================================================
+	        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+	        //=======================================================  
 
 	        // --- 2. 관광 행사 (Festival) 업데이트 ---
 	        const festSlot = festivalImage01.parentElement;
@@ -1120,7 +1123,9 @@
 	            console.log("서버 전송(축제):", { id: currentId, name: festName });
 	            alert(festName + "을(를) 찜했습니다.");
 	        }
-/* 	        const festivalHeartBtn01 = document.querySelector("#festivalName01 + .heartIcon");
+			/* 	 
+			2025-12-25~2025-12-30 폐기 예정
+ 			const festivalHeartBtn01 = document.querySelector("#festivalName01 + .heartIcon");
 	        festivalHeartBtn01.onclick = function(event){
 	        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
 	        	this.classList.toggle('active');
@@ -1129,6 +1134,9 @@
 	        	//console.log(attName+"을(를) 찜했습니다.")
 	        	alert(festName+"을(를) 찜했습니다.");
 	        } */
+	        //=======================================================
+	        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+	        //=======================================================  	        
 
 	        
 	        // --- 3. 맛집 (Restaurant) 업데이트 ---
@@ -1145,7 +1153,18 @@
 	        
 	        //=======================================================
 	        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
-	        //=======================================================  	
+	        //=======================================================  
+	        const restaurantHeartBtn01 = document.querySelector("#restaurantName01 + .heartIcon");
+	        restaurantHeartBtn01.setAttribute('data-id', restId); // 데이터 심기 추가
+	        restaurantHeartBtn01.onclick = function(event){
+	            event.stopPropagation();
+	            this.classList.toggle('active');
+	            const currentId = this.getAttribute('data-id');
+	            console.log("서버 전송(맛집):", { id: currentId, name: restName });
+	            alert(restName + "을(를) 찜했습니다.");
+	        }	
+	        /*
+	        2025-12-25~2025-12-30 폐기 예정
 	        const restaurantHeartBtn01 = document.querySelector("#restaurantName01 + .heartIcon");
 	        restaurantHeartBtn01.onclick = function(event){
 	        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
@@ -1154,7 +1173,10 @@
 	        	//테스트 나중에 `나의 여행담기`로 이동될 부분.
 	        	//console.log(attName+"을(를) 찜했습니다.")
 	        	alert(restName+"을(를) 찜했습니다.");
-	        }
+	        } */
+	        //=======================================================
+	        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+	        //=======================================================  	        
 
 	        // --- 4. 호텔 (Hotel) 업데이트 ---
 	        const hotelSlot = hotelImage01.parentElement;
@@ -1171,6 +1193,18 @@
 	        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
 	        //=======================================================
 	        const hotelHeartBtn01 = document.querySelector("#hotelName01 + .heartIcon");
+	        hotelHeartBtn01.setAttribute('data-id', hotelId); // 데이터 심기 추가
+	        hotelHeartBtn01.onclick = function(event){
+	            event.stopPropagation();
+	            this.classList.toggle('active');
+	            const currentId = this.getAttribute('data-id');
+	            console.log("서버 전송(호텔):", { id: currentId, name: hotelName });
+	            alert(hotelName + "을(를) 찜했습니다.");
+	        }
+
+	        /*
+	        2025-12-25~2025-12-30 폐기 예정
+	        const hotelHeartBtn01 = document.querySelector("#hotelName01 + .heartIcon");
 	        hotelHeartBtn01.onclick = function(event){
 	        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
 	        	this.classList.toggle('active');
@@ -1178,7 +1212,10 @@
 	        	//테스트 나중에 `나의 여행담기`로 이동될 부분.
 	        	//console.log(attName+"을(를) 찜했습니다.")
 	        	alert(hotelName+"을(를) 찜했습니다.");
-	        }
+	        } */
+	        //=======================================================
+	        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+	        //=======================================================
 	    	
 		    // 그냥 매개변수로 들어온 전체 경로(attImg 등)를 그대로 url() 안에 넣습니다.
 /* 		    attractionImage01.style.backgroundImage = "url('" + attImg + "')"; // 1번 명소 이미지
@@ -1218,7 +1255,17 @@
 	    	 // ♥♥♥ 하트 버튼 클릭 시 반응 (02 시리즈) ♥♥♥ 
 	    	 //=======================================================
 	    	 // 관광명소 02
-	    	 const attractionHeartBtn02 = document.querySelector("#attraction_name02 + .heartIcon");
+	    	    const attractionHeartBtn02 = document.querySelector("#attraction_name02 + .heartIcon");
+	    	    attractionHeartBtn02.setAttribute('data-id', attId); 
+	    	    attractionHeartBtn02.onclick = function(event){
+	    	        event.stopPropagation();
+	    	        this.classList.toggle('active');
+	    	        const currentId = this.getAttribute('data-id');
+	    	        console.log("서버 전송(명소02):", { id: currentId, name: attName });
+	    	        alert(attName + "을(를) 찜했습니다.");
+	    	    }
+	    	 
+/* 	    	 const attractionHeartBtn02 = document.querySelector("#attraction_name02 + .heartIcon");
 	    	 attractionHeartBtn02.setAttribute('data-id', attName); // 나중에 팀원 ID로 교체
 	    	 attractionHeartBtn02.onclick = function(event){
 	    	     event.stopPropagation();
@@ -1227,7 +1274,7 @@
 	    	     const placeName = attName; 
 	    	     console.log("서버 전송:", { id: currentId, name: placeName });
 	    	     alert(placeName + "을(를) 찜했습니다.");
-	    	 }
+	    	 } */
 
 	    	    // --- 2. 관광 행사 (Festival) 02 업데이트 ---
 	    	    const festSlot = festivalImage02.parentElement;
@@ -1243,11 +1290,21 @@
 	    	    
 	    	 // 관광행사 02
 	    	    const festivalHeartBtn02 = document.querySelector("#festivalName02 + .heartIcon");
+	    	    festivalHeartBtn02.setAttribute('data-id', festId); 
+	    	    festivalHeartBtn02.onclick = function(event){
+	    	        event.stopPropagation();
+	    	        this.classList.toggle('active');
+	    	        const currentId = this.getAttribute('data-id');
+	    	        console.log("서버 전송(축제02):", { id: currentId, name: festName });
+	    	        alert(festName + "을(를) 찜했습니다.");
+	    	    }	    	 
+	    	 
+/* 	    	    const festivalHeartBtn02 = document.querySelector("#festivalName02 + .heartIcon");
 	    	    festivalHeartBtn02.onclick = function(event){
 	    	        event.stopPropagation();
 	    	        this.classList.toggle('active');
 	    	        alert(festName + "을(를) 찜했습니다.");
-	    	    }
+	    	    } */
 
 	    	    // --- 3. 맛집 (Restaurant) 02 업데이트 ---
 	    	    const restSlot = restaurantImage02.parentElement;
@@ -1264,11 +1321,21 @@
 	    	    
 	    	 // 맛집 02
 	    	    const restaurantHeartBtn02 = document.querySelector("#restaurantName02 + .heartIcon");
+	    	    restaurantHeartBtn02.setAttribute('data-id', restId); 
+	    	    restaurantHeartBtn02.onclick = function(event){
+	    	        event.stopPropagation();
+	    	        this.classList.toggle('active');
+	    	        const currentId = this.getAttribute('data-id');
+	    	        console.log("서버 전송(맛집02):", { id: currentId, name: restName });
+	    	        alert(restName + "을(를) 찜했습니다.");
+	    	    }	    	 
+	    	 
+/* 	    	    const restaurantHeartBtn02 = document.querySelector("#restaurantName02 + .heartIcon");
 	    	    restaurantHeartBtn02.onclick = function(event){
 	    	        event.stopPropagation();
 	    	        this.classList.toggle('active');
 	    	        alert(restName + "을(를) 찜했습니다.");
-	    	    }
+	    	    } */
 
 	    	    // --- 4. 호텔 (Hotel) 02 업데이트 ---
 	    	    const hotelSlot = hotelImage02.parentElement;
@@ -1284,12 +1351,489 @@
 	    	    
 	    	 // 호텔 02
 	    	    const hotelHeartBtn02 = document.querySelector("#hotelName02 + .heartIcon");
+	    	    hotelHeartBtn02.setAttribute('data-id', hotelId); 
+	    	    hotelHeartBtn02.onclick = function(event){
+	    	        event.stopPropagation();
+	    	        this.classList.toggle('active');
+	    	        const currentId = this.getAttribute('data-id');
+	    	        console.log("서버 전송(호텔02):", { id: currentId, name: hotelName });
+	    	        alert(hotelName + "을(를) 찜했습니다.");
+	    	    }	    	 
+/* 	    	    const hotelHeartBtn02 = document.querySelector("#hotelName02 + .heartIcon");
 	    	    hotelHeartBtn02.onclick = function(event){
 	    	        event.stopPropagation();
 	    	        this.classList.toggle('active');
 	    	        alert(hotelName + "을(를) 찜했습니다.");
-	    	    }
-	    	}/*
+	    	    } */
+	    	}
+	    	function updateDetails03(
+					attId, attImg, attName, attLink, 
+					festId, festImg, festName, festLink, 
+					restId, restImg, restName, restLink, 
+					hotelId, hotelImg, hotelName, hotelLink
+	    	){
+	    		// --- 3. 관광 명소 (Attraction) 업데이트 ---
+		        const attSlot03 = attractionImage03.parentElement; // .blog-entry 요소
+		        attractionImage03.style.backgroundImage = "url('" + attImg + "')";
+		        attractionName03.innerText = attName;
+		        
+		        // 클릭 이벤트 설정
+		        attSlot03.style.cursor = "pointer";
+		        attSlot03.onclick = function() {
+		            if (attLink && attLink !== "#" && attLink !== "") {
+		                location.href = attLink;
+		            } else {
+		                console.log(attName + "의 링크가 아직 준비되지 않았습니다.");
+		            }
+		        };
+		        //=======================================================
+		        // ♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================
+		        //하트 버튼 담는 변수
+		        const attractionHeartBtn03 = document.querySelector("#attraction_name03 + .heartIcon");
+		        
+		        //하트에 고유 데이터 심기(서버로 보낼 값)
+		        attractionHeartBtn03.setAttribute('data-id', attId);
+		        
+		        //하트 클릭시 반응 함수
+		        attractionHeartBtn03.onclick = function(event){
+		        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
+		        	this.classList.toggle('active');
+		        	
+		        	// 3. 이제 여기서 getAttribute를 하면 위에서 심어준 값이 나옵니다.
+		            const currentId = this.getAttribute('data-id');
+		        	
+		        	// 서버로 보낼 데이터 출력 (함수 밖이랑 똑같은 형식으로!)
+		            console.log("서버로 보낼 데이터:", { id: currentId, name: attName });
+		            alert(attName + "을(를) 찜했습니다.");
+		        }
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  
+
+		        // --- 3. 관광 행사 (Festival) 업데이트 ---
+		        const festSlot03 = festivalImage03.parentElement;
+		        festivalImage03.style.backgroundImage = "url('" + festImg + "')";
+		        festivalName03.innerText = festName;
+		        
+		        festSlot03.style.cursor = "pointer";
+		        festSlot03.onclick = function() {
+		            if (festLink && festLink !== "#" && festLink !== "") {
+		                location.href = festLink;
+		            }
+		        };
+
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================
+		        const festivalHeartBtn03 = document.querySelector("#festivalName03 + .heartIcon");
+		        festivalHeartBtn03.setAttribute('data-id', festId); // 데이터 심기 추가
+		        festivalHeartBtn03.onclick = function(event){
+		            event.stopPropagation();
+		            this.classList.toggle('active');
+		            const currentId = this.getAttribute('data-id');
+		            console.log("서버 전송(축제):", { id: currentId, name: festName });
+		            alert(festName + "을(를) 찜했습니다.");
+		        }
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  	        
+
+		        
+		        // --- 3. 맛집 (Restaurant) 업데이트 ---
+		        const restSlot03 = restaurantImage03.parentElement;
+		        restaurantImage03.style.backgroundImage = "url('" + restImg + "')";
+		        restaurantName03.innerText = restName;
+		        
+		        restSlot03.style.cursor = "pointer";
+		        restSlot03.onclick = function() {
+		            if (restLink && restLink !== "#" && restLink !== "") {
+		                location.href = restLink;
+		            }
+		        };
+		        
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  
+		        const restaurantHeartBtn03 = document.querySelector("#restaurantName03 + .heartIcon");
+		        restaurantHeartBtn03.setAttribute('data-id', restId); // 데이터 심기 추가
+		        restaurantHeartBtn03.onclick = function(event){
+		            event.stopPropagation();
+		            this.classList.toggle('active');
+		            const currentId = this.getAttribute('data-id');
+		            console.log("서버 전송(맛집):", { id: currentId, name: restName });
+		            alert(restName + "을(를) 찜했습니다.");
+		        }	
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  	        
+
+		        // --- 3. 호텔 (Hotel) 업데이트 ---
+		        const hotelSlot03 = hotelImage03.parentElement;
+		        hotelImage03.style.backgroundImage = "url('" + hotelImg + "')";
+		        hotelName03.innerText = hotelName;
+		        
+		        hotelSlot03.style.cursor = "pointer";
+		        hotelSlot03.onclick = function() {
+		            if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
+		                location.href = hotelLink;
+		            }
+		        };
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================
+		        const hotelHeartBtn03 = document.querySelector("#hotelName03 + .heartIcon");
+		        hotelHeartBtn03.setAttribute('data-id', hotelId); // 데이터 심기 추가
+		        hotelHeartBtn03.onclick = function(event){
+		            event.stopPropagation();
+		            this.classList.toggle('active');
+		            const currentId = this.getAttribute('data-id');
+		            console.log("서버 전송(호텔):", { id: currentId, name: hotelName });
+		            alert(hotelName + "을(를) 찜했습니다.");
+		        }
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================	    		
+	    	}
+	    	function updateDetails04(
+					attId, attImg, attName, attLink, 
+					festId, festImg, festName, festLink, 
+					restId, restImg, restName, restLink, 
+					hotelId, hotelImg, hotelName, hotelLink
+	    	){
+	    		// --- 4. 관광 명소 (Attraction) 업데이트 ---
+		        const attSlot04 = attractionImage04.parentElement; // .blog-entry 요소
+		        attractionImage04.style.backgroundImage = "url('" + attImg + "')";
+		        attractionName04.innerText = attName;
+		        
+		        // 클릭 이벤트 설정
+		        attSlot04.style.cursor = "pointer";
+		        attSlot04.onclick = function() {
+		            if (attLink && attLink !== "#" && attLink !== "") {
+		                location.href = attLink;
+		            } else {
+		                console.log(attName + "의 링크가 아직 준비되지 않았습니다.");
+		            }
+		        };
+		        //=======================================================
+		        // ♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================
+		        //하트 버튼 담는 변수
+		        const attractionHeartBtn04 = document.querySelector("#attraction_name04 + .heartIcon");
+		        
+		        //하트에 고유 데이터 심기(서버로 보낼 값)
+		        attractionHeartBtn04.setAttribute('data-id', attId);
+		        
+		        //하트 클릭시 반응 함수
+		        attractionHeartBtn04.onclick = function(event){
+		        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
+		        	this.classList.toggle('active');
+		        	
+		        	// 이제 여기서 getAttribute를 하면 위에서 심어준 값이 나옵니다.
+		            const currentId = this.getAttribute('data-id');
+		        	
+		        	// 서버로 보낼 데이터 출력 (함수 밖이랑 똑같은 형식으로!)
+		            console.log("서버로 보낼 데이터:", { id: currentId, name: attName });
+		            alert(attName + "을(를) 찜했습니다.");
+		        }
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  
+
+		        // --- 4. 관광 행사 (Festival) 업데이트 ---
+		        const festSlot04 = festivalImage04.parentElement;
+		        festivalImage04.style.backgroundImage = "url('" + festImg + "')";
+		        festivalName04.innerText = festName;
+		        
+		        festSlot04.style.cursor = "pointer";
+		        festSlot04.onclick = function() {
+		            if (festLink && festLink !== "#" && festLink !== "") {
+		                location.href = festLink;
+		            }
+		        };
+
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================
+		        const festivalHeartBtn04 = document.querySelector("#festivalName04 + .heartIcon");
+		        festivalHeartBtn04.setAttribute('data-id', festId); // 데이터 심기 추가
+		        festivalHeartBtn04.onclick = function(event){
+		            event.stopPropagation();
+		            this.classList.toggle('active');
+		            const currentId = this.getAttribute('data-id');
+		            console.log("서버 전송(축제):", { id: currentId, name: festName });
+		            alert(festName + "을(를) 찜했습니다.");
+		        }
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  	        
+
+		        
+		        // --- 4. 맛집 (Restaurant) 업데이트 ---
+		        const restSlot04 = restaurantImage04.parentElement;
+		        restaurantImage04.style.backgroundImage = "url('" + restImg + "')";
+		        restaurantName04.innerText = restName;
+		        
+		        restSlot04.style.cursor = "pointer";
+		        restSlot04.onclick = function() {
+		            if (restLink && restLink !== "#" && restLink !== "") {
+		                location.href = restLink;
+		            }
+		        };
+		        
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  
+		        const restaurantHeartBtn04 = document.querySelector("#restaurantName04 + .heartIcon");
+		        restaurantHeartBtn04.setAttribute('data-id', restId); // 데이터 심기 추가
+		        restaurantHeartBtn04.onclick = function(event){
+		            event.stopPropagation();
+		            this.classList.toggle('active');
+		            const currentId = this.getAttribute('data-id');
+		            console.log("서버 전송(맛집):", { id: currentId, name: restName });
+		            alert(restName + "을(를) 찜했습니다.");
+		        }	
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  	        
+
+		        // --- 4. 호텔 (Hotel) 업데이트 ---
+		        const hotelSlot04 = hotelImage04.parentElement;
+		        hotelImage04.style.backgroundImage = "url('" + hotelImg + "')";
+		        hotelName04.innerText = hotelName;
+		        
+		        hotelSlot04.style.cursor = "pointer";
+		        hotelSlot04.onclick = function() {
+		            if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
+		                location.href = hotelLink;
+		            }
+		        };
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================
+		        const hotelHeartBtn04 = document.querySelector("#hotelName04 + .heartIcon");
+		        hotelHeartBtn04.setAttribute('data-id', hotelId); // 데이터 심기 추가
+		        hotelHeartBtn04.onclick = function(event){
+		            event.stopPropagation();
+		            this.classList.toggle('active');
+		            const currentId = this.getAttribute('data-id');
+		            console.log("서버 전송(호텔):", { id: currentId, name: hotelName });
+		            alert(hotelName + "을(를) 찜했습니다.");
+		        }
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================	    		
+	    	}	 
+	    	function updateDetails05(
+					attId, attImg, attName, attLink, 
+					festId, festImg, festName, festLink, 
+					restId, restImg, restName, restLink, 
+					hotelId, hotelImg, hotelName, hotelLink
+	    	){
+	    		// --- 5. 관광 명소 (Attraction) 업데이트 ---
+		        const attSlot05 = attractionImage05.parentElement; // .blog-entry 요소
+		        attractionImage05.style.backgroundImage = "url('" + attImg + "')";
+		        attractionName05.innerText = attName;
+		        
+		        // 클릭 이벤트 설정
+		        attSlot05.style.cursor = "pointer";
+		        attSlot05.onclick = function() {
+		            if (attLink && attLink !== "#" && attLink !== "") {
+		                location.href = attLink;
+		            } else {
+		                console.log(attName + "의 링크가 아직 준비되지 않았습니다.");
+		            }
+		        };
+		        //=======================================================
+		        // ♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================
+		        //하트 버튼 담는 변수
+		        const attractionHeartBtn05 = document.querySelector("#attraction_name05 + .heartIcon");
+		        
+		        //하트에 고유 데이터 심기(서버로 보낼 값)
+		        attractionHeartBtn05.setAttribute('data-id', attId);
+		        
+		        //하트 클릭시 반응 함수
+		        attractionHeartBtn05.onclick = function(event){
+		        	event.stopPropagation(); //하트 클릭시 해당 요소의 상세 페이지 이동을 방지해주는 코드
+		        	this.classList.toggle('active');
+		        	
+		        	// 3. 이제 여기서 getAttribute를 하면 위에서 심어준 값이 나옵니다.
+		            const currentId = this.getAttribute('data-id');
+		        	
+		        	// 서버로 보낼 데이터 출력 (함수 밖이랑 똑같은 형식으로!)
+		            console.log("서버로 보낼 데이터:", { id: currentId, name: attName });
+		            alert(attName + "을(를) 찜했습니다.");
+		        }
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  
+
+		        // --- 5. 관광 행사 (Festival) 업데이트 ---
+		        const festSlot05 = festivalImage05.parentElement;
+		        festivalImage05.style.backgroundImage = "url('" + festImg + "')";
+		        festivalName05.innerText = festName;
+		        
+		        festSlot05.style.cursor = "pointer";
+		        festSlot05.onclick = function() {
+		            if (festLink && festLink !== "#" && festLink !== "") {
+		                location.href = festLink;
+		            }
+		        };
+
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================
+		        const festivalHeartBtn05 = document.querySelector("#festivalName05 + .heartIcon");
+		        festivalHeartBtn05.setAttribute('data-id', festId); // 데이터 심기 추가
+		        festivalHeartBtn05.onclick = function(event){
+		            event.stopPropagation();
+		            this.classList.toggle('active');
+		            const currentId = this.getAttribute('data-id');
+		            console.log("서버 전송(축제):", { id: currentId, name: festName });
+		            alert(festName + "을(를) 찜했습니다.");
+		        }
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  	        
+
+		        
+		        // --- 5. 맛집 (Restaurant) 업데이트 ---
+		        const restSlot05 = restaurantImage05.parentElement;
+		        restaurantImage05.style.backgroundImage = "url('" + restImg + "')";
+		        restaurantName05.innerText = restName;
+		        
+		        restSlot05.style.cursor = "pointer";
+		        restSlot05.onclick = function() {
+		            if (restLink && restLink !== "#" && restLink !== "") {
+		                location.href = restLink;
+		            }
+		        };
+		        
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  
+		        const restaurantHeartBtn05 = document.querySelector("#restaurantName05 + .heartIcon");
+		        restaurantHeartBtn05.setAttribute('data-id', restId); // 데이터 심기 추가
+		        restaurantHeartBtn05.onclick = function(event){
+		            event.stopPropagation();
+		            this.classList.toggle('active');
+		            const currentId = this.getAttribute('data-id');
+		            console.log("서버 전송(맛집):", { id: currentId, name: restName });
+		            alert(restName + "을(를) 찜했습니다.");
+		        }	
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================  	        
+
+		        // --- 5. 호텔 (Hotel) 업데이트 ---
+		        const hotelSlot05 = hotelImage05.parentElement;
+		        hotelImage05.style.backgroundImage = "url('" + hotelImg + "')";
+		        hotelName05.innerText = hotelName;
+		        
+		        hotelSlot05.style.cursor = "pointer";
+		        hotelSlot05.onclick = function() {
+		            if (hotelLink && hotelLink !== "#" && hotelLink !== "") {
+		                location.href = hotelLink;
+		            }
+		        };
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================
+		        const hotelHeartBtn05 = document.querySelector("#hotelName05 + .heartIcon");
+		        hotelHeartBtn05.setAttribute('data-id', hotelId); // 데이터 심기 추가
+		        hotelHeartBtn05.onclick = function(event){
+		            event.stopPropagation();
+		            this.classList.toggle('active');
+		            const currentId = this.getAttribute('data-id');
+		            console.log("서버 전송(호텔):", { id: currentId, name: hotelName });
+		            alert(hotelName + "을(를) 찜했습니다.");
+		        }
+		        //=======================================================
+		        //♥♥♥ 하트 버튼 클릭 시 반응 ==> 추후 `나의 여행담기`로 이동. ♥♥♥ 
+		        //=======================================================	    		
+	    	}
+	    	function updateDetails06(
+	    		    attId, attImg, attName, attLink, 
+	    		    festId, festImg, festName, festLink, 
+	    		    restId, restImg, restName, restLink, 
+	    		    hotelId, hotelImg, hotelName, hotelLink
+	    		) {
+	    		    // --- 6. 관광 명소 (Attraction) 업데이트 ---
+	    		    const attSlot06 = attractionImage06.parentElement;
+	    		    attractionImage06.style.backgroundImage = "url('" + attImg + "')";
+	    		    attractionName06.innerText = attName;
+	    		    
+	    		    attSlot06.style.cursor = "pointer";
+	    		    attSlot06.onclick = function() {
+	    		        if (attLink && attLink !== "#" && attLink !== "") {
+	    		            location.href = attLink;
+	    		        }
+	    		    };
+
+	    		    const attractionHeartBtn06 = document.querySelector("#attraction_name06 + .heartIcon");
+	    		    attractionHeartBtn06.setAttribute('data-id', attId);
+	    		    attractionHeartBtn06.onclick = function(event) {
+	    		        event.stopPropagation();
+	    		        this.classList.toggle('active');
+	    		        const currentId = this.getAttribute('data-id');
+	    		        console.log("서버 전송(명소):", { id: currentId, name: attName });
+	    		        alert(attName + "을(를) 찜했습니다.");
+	    		    };
+
+	    		    // --- 6. 관광 행사 (Festival) 업데이트 ---
+	    		    const festSlot06 = festivalImage06.parentElement;
+	    		    festivalImage06.style.backgroundImage = "url('" + festImg + "')";
+	    		    festivalName06.innerText = festName;
+	    		    
+	    		    festSlot06.onclick = function() {
+	    		        if (festLink && festLink !== "#" && festLink !== "") location.href = festLink;
+	    		    };
+
+	    		    const festivalHeartBtn06 = document.querySelector("#festivalName06 + .heartIcon");
+	    		    festivalHeartBtn06.setAttribute('data-id', festId);
+	    		    festivalHeartBtn06.onclick = function(event) {
+	    		        event.stopPropagation();
+	    		        this.classList.toggle('active');
+	    		        alert(festName + "을(를) 찜했습니다.");
+	    		    };
+
+	    		    // --- 6. 맛집 (Restaurant) 업데이트 ---
+	    		    const restSlot06 = restaurantImage06.parentElement;
+	    		    restaurantImage06.style.backgroundImage = "url('" + restImg + "')";
+	    		    restaurantName06.innerText = restName;
+	    		    
+	    		    restSlot06.onclick = function() {
+	    		        if (restLink && restLink !== "#" && restLink !== "") location.href = restLink;
+	    		    };
+
+	    		    const restaurantHeartBtn06 = document.querySelector("#restaurantName06 + .heartIcon");
+	    		    restaurantHeartBtn06.setAttribute('data-id', restId);
+	    		    restaurantHeartBtn06.onclick = function(event) {
+	    		        event.stopPropagation();
+	    		        this.classList.toggle('active');
+	    		        alert(restName + "을(를) 찜했습니다.");
+	    		    };
+
+	    		    // --- 6. 호텔 (Hotel) 업데이트 ---
+	    		    const hotelSlot06 = hotelImage06.parentElement;
+	    		    hotelImage06.style.backgroundImage = "url('" + hotelImg + "')";
+	    		    hotelName06.innerText = hotelName;
+	    		    
+	    		    hotelSlot06.onclick = function() {
+	    		        if (hotelLink && hotelLink !== "#" && hotelLink !== "") location.href = hotelLink;
+	    		    };
+
+	    		    const hotelHeartBtn06 = document.querySelector("#hotelName06 + .heartIcon");
+	    		    hotelHeartBtn06.setAttribute('data-id', hotelId);
+	    		    hotelHeartBtn06.onclick = function(event) {
+	    		        event.stopPropagation();
+	    		        this.classList.toggle('active');
+	    		        alert(hotelName + "을(를) 찜했습니다.");
+	    		    };
+	    		}	    	
+	    
+	    	/*
 	    	//=============================================================================
 	    	//이 updateDetatils03부터 updateDetatils06까지 나중에 함수 구조 위에 처럼 싹 갈아 엎어야함!!!!(클리어)
 	    	//싹 갈아엎었고, 나중에 주석 풀어.
