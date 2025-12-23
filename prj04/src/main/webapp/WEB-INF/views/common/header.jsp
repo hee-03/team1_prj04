@@ -20,7 +20,7 @@
 	
     <div class="gnb d-flex">
       <c:if test="${not empty sessionScope.logInEmail }">
-      	<p>ID : ${sessionScope.logInEmail}</p>
+      	<p>${sessionScope.logInEmail}</p>
       </c:if>
       <ul class="d-flex navbar-nav">
         <li><a href="#"><img src="/images/header/search.png" alt=""></a></li>
