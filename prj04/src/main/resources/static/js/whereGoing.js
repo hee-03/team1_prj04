@@ -75,6 +75,42 @@
 	            // 클릭된 요소의 ID에 따라 데이터 변경
 	            const selectedId = this.id;
 	            if (selectedId === "location00") { // 경기
+					// 1. 경기도 데이터 (원래는 DB에서 가져오겠지만, 일단 테스트용 데이터)
+/*					    
+						// ===== 코드를 이런식으로 수정한다고 함.. =====						
+
+						const gyeonggiAttractions = [
+					        { id: "G_A01", img: "images/...", name: "수원 화성", link: "..." },
+					        { id: "G_A02", img: "images/...", name: "에버랜드", link: "..." },
+					        { id: "G_A03", img: "images/...", name: "한국민속촌", link: "..." },
+					        { id: "G_A04", img: "images/...", name: "아침고요수목원", link: "..." },
+					        { id: "G_A05", img: "images/...", name: "광명동굴", link: "..." },
+					        { id: "G_A06", img: "images/...", name: "제부도", link: "..." }
+					    ];
+
+					    // 2. 반복문으로 경기도 명소 6개 즉시 업데이트
+					    gyeonggiAttractions.forEach((item, i) => {
+					        updateSlotData('attraction', i, item);
+					    });
+
+					    // 3. 축제, 맛집도 위와 같은 방식으로 gyeonggiFestivals.forEach(...) 실행
+
+					    // 4. 호텔은 3개만! (팀원 요구사항)
+					    const gyeonggiHotels = [
+					        { id: "G_H01", img: "...", name: "호텔1", link: "..." },
+					        { id: "G_H02", img: "...", name: "호텔2", link: "..." },
+					        { id: "G_H03", img: "...", name: "호텔3", link: "..." }
+					    ];
+					    
+					    gyeonggiHotels.forEach((item, i) => {
+					        updateSlotData('hotel', i, item);
+					    });
+
+					    // 5. 4~6번 호텔 칸은 안보이게 처리 (퇴근 전 꿀팁)
+					    for(let i = 3; i < 6; i++) {
+					        slots.hotel[i].image.parentElement.style.display = 'none';
+					    }*/
+					
 	                cityImg01.style.backgroundImage = "url('images/whereGoing/cityImage/city-jongro.jpg')";//종로
 	                cityImg02.style.backgroundImage = "url('images/whereGoing/cityImage/city-gangnam.png')";//강남
 	                cityImg03.style.backgroundImage = "url('images/whereGoing/cityImage/city-mapo.png')";//마포
