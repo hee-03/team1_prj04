@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <nav class="navbar navbar-expand-lg ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
@@ -18,7 +19,9 @@
     </div>
 	
     <div class="gnb d-flex">
-      <p>ID : ${sessionScope.logInEmail}</p>
+      <c:if test="${not empty sessionScope.logInEmail }">
+      	<p>ID : ${sessionScope.logInEmail}</p>
+      </c:if>
       <ul class="d-flex navbar-nav">
         <li><a href="#"><img src="/images/header/search.png" alt=""></a></li>
         <li><a href="/map"><img src="/images/header/map.png" alt=""></a></li>
