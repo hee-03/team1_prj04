@@ -51,7 +51,7 @@
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav01.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
@@ -61,7 +61,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav02.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
@@ -71,7 +71,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
@@ -82,7 +82,7 @@
 
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav01.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
@@ -92,7 +92,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav02.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
@@ -102,7 +102,7 @@
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
                 <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
@@ -138,13 +138,19 @@
 	        </div>
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/mytrip/rec01.jpg);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+		            <h2 class="mb-4">순천만국가정원</h2>
+		            <p>
+						클래스가 다른 꽃들의 향연, 꽃들이 이토록 아름다울 수 있을까.
+						인간이 아니라 신이 조경한 듯 황활한 정원들이 다채로운 모습으로 반긴다. 
+						우리 조상들이 가꾸던 전통 정원을 비롯해 세계적 정원 디자이너 찰스쟁스가 디자인한 호수정원이 있는 테마정원, 
+						11개국의 세계정원 등을 하나씩 감상하다 보면 그 웅장한 규모와 기발한 디자인, 
+						영롱한 자태에 매료돼 시간이 어떻게 가는지 모를 정도로 넋 놓고 구경하게 될 것이다.
+					</p>
 		          </div>
 		        </div>
 	        </div>
@@ -155,13 +161,26 @@
     	<div class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/mytrip/rec02.jpg);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+		            <h2 class="mb-4">호미곶</h2>
+		            <p>
+						호미곶은 한반도의 최동단에 위치, 한반도 지형상 호랑이 꼬리에 해당하는 곳이다. 
+						고산자 김정호는 대동여지도를 만들면서 이곳을 일곱번이나 답사 측정한 뒤 우리나라의 가장 동쪽임을 확인하였다고 한다. 
+						가장 먼저 해가 뜨는 곳으로 2000년 및 2001년 두차례에 걸쳐 국가지정 해맞이 축전이 개최되었으며 
+						해마다 한민족 해맞이 축전이 열리고 있다. 
+						이곳에 조성된 해맞이 광장에는 천년대의 마지막 햇빛과 날짜변경선인 피지섬의 첫 햇빛, 
+						그리고 이곳 호미곶에서 채화된 시작의 햇빛 등을 합해 영원의 불로 간직하고 있는 영원의 불씨함이 있으며 
+						바다와 육지에 각각 오른손과 왼손의 형상을 하고 화합과 상생을 뜻하고 있는 대형 청동 조형물 상생의 손과 
+						삼국유사에 전해 내려오는 이 지방 설화의 주인공 연오랑세오녀상이 있다. 
+						상생의 손은 국가행사인 호미곶 해맞이 축전을 기리는 상징물이다. 
+						육지에선 왼손, 바다에선 오른손인 상생의 손은 새천년을 맞아 모든 국민이 서로를 도우며 살자는 뜻에서 만든 조형물인 
+						상생의 손은 두 손이 상생을 의미한다. 성화대의 화반은 해의 이미지이며, 두 개의 원형고리는 화합을 의미한다. 
+						상생의 두손은 새천년을 맞아 화해와 상쇄의 기념정신을 담고 있다.						
+					</p>
 		          </div>
 		        </div>
 	        </div>
@@ -172,13 +191,19 @@
     	<div class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(images/about.jpg);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/mytrip/rec03.jpg);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+		            <h2 class="mb-4">공주 군밤축제</h2>
+		            <p>
+						중부권 대표 겨울 축제인 '겨울공주 군밤축제'가 '공주 알밤과 떠나는 달콤한 여행'을 주제로 
+						1월 16일부터 20일까지 5일간 공주 금강신관공원에서 개최 된다. 
+						대표프로그램은 지름 2m에 달하는 대형화로에서 긴 알밤뜰망을 활용해 직접 품질좋은 공주 알밤을 구워먹는 '대형화로체험', 
+						공주에서 생산된 지역 농축산물을 그릴위에서 구워 먹을 수 있는 '공주 군밤 그릴존,' 알밤관련 음식, 물품 만들기 체험이 있으며, 
+						추억의 민속놀이 체험, 추억 포토존 등 다양한 볼거리와 즐길거리를 제공한다.
+					</p>
 		          </div>
 		        </div>
 	        </div>
