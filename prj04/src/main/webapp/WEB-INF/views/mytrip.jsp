@@ -212,6 +212,7 @@
     </section>
     
     <%@ include file="/WEB-INF/views/common/footer.jsp" %>
+    <script src="js/heartIcon.js"></script>
 </body>
 </html>
     
