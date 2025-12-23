@@ -332,13 +332,13 @@
           <div class="col text-center">
             <div class="block-27">
               <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(1)">&lt;</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(1)">1</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(2)">2</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(3)">3</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(4)">4</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(5)">5</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(5)">&gt;</a></li>
               </ul>
             </div>
           </div>
@@ -358,89 +358,125 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
    
 	<script type="text/javascript">
-		$(document).ready(function(){
-		    // 초기상태: rec div, 추천여행지 전부 숨김 처리
-		    $("#destination").addClass("d-none");
-		    $("[id^='rec']").addClass("d-none");
-		    //$("[class*='region-code']").removeClass("d-flex").addClass("d-none");
+	$(document).ready(function(){
+		
+		let listCntPerPage = 12; //한페이지에 보여줄 개수
+		let currentPage = 1; // 현재 페이지
+		let randomList = []; // 랜덤 60개 저장할 변수
+		
+	    // 초기상태: rec div, 추천여행지 전부 숨김 처리
+	    $("#destination").addClass("d-none");
+	    $("[id^='rec']").addClass("d-none");
+	    //$("[class*='region-code']").removeClass("d-flex").addClass("d-none");
 
-		    // 클릭 이벤트
-		    $("[id^='travel_destination']").on("click", function(){
-		    	
-		        $("#destination").removeClass("d-none");
-		        
-		        // 클릭한 div의 id
-		        let clickId = $(this).attr("id");
-		        // 숫자만 추출 (01 ~ 10)
-		        let num = clickId.replace("travel_destination", "");
-		        
-		        // (재클릭시)모든 rec 숨기기
-		        $("[id^='rec']").addClass("d-none");
-		        // 클릭된 div와 동일한 숫자를 가진 rec 화면에 출력
-		        let $rec = $("#rec" + num).removeClass("d-none");
-		        
-		        // 클릭된 여행지 위치에서 지역명 추출
-		        let regionText = $rec.find("p.region").text().trim();
-		        let regionName = regionText.split(" ")[0];
-		        console.log(regionText);
-		        console.log(regionName);
-		        //AJAX 호출
-		        loadTravel(regionName)
-		        
-		    });
-		        //AJAX 호출
-		        function loadTravel(regionName){
-		        	$.ajax({
-			        	url: "${pageContext.request.contextPath}/travel/list",
-			        	type: "get",
-			        	data: {regionName: regionName},
-			        	dataType: "json",
-			        	success: function(list){
-			        		drawTravelList(list);
-			        	},
-			        	error: function(){
-			        		alert("데이터 불러오기 실패");
-			        	}
-			        });
-		        }
-			    
-			    function drawTravelList(list){
-			    	
-			    	let html = `<div class="row">`;
-			    	
-			    	if(list.length === 0){
-			    		html += "<p>해당 지역의 데이터가 없습니다.</p>"
-			    	}else{
-			    		$.each(list, function(i, item){
-			    			if(!item.firstimage || item.firstimage.trim() === ""){
-			    				return true;
-			    			}
-			    			html += `
-			    					 <div class="col-md-4 d-flex">
-			    					 	<div class="blog-entry justify-content-end" style="width:800px;">
-			    					 		<a href="#" class="block-20"
-			    					 			style="background-image: url('\${item.firstimage}');">
-			    					 		</a>
-			    					 		<div class="text mt-3 float-right d-block">
-				    					 		<h3 class="heading">
-				    					 			<a href="#">\${item.title}</a>
-				    					 			<span class="heartIcon">❤</span>
-				    					 		</h3>
-				    					 		<p>\${item.addr1}</p>
-			    					 		</div>
-			    					 	</div>
-			    					 </div>
-			    					`;
-			    		})	
-			    	}
-			    	html += `</div>`;
-			    	
-			    	console.log("list전체", list);
-			    	
-			    	$("#travelList").html(html)
-			    }
+	    // 클릭 이벤트
+	    $("[id^='travel_destination']").on("click", function(){
+	    	
+	        $("#destination").removeClass("d-none");
+	        
+	        // 클릭한 div의 id
+	        let clickId = $(this).attr("id");
+	        // 숫자만 추출 (01 ~ 10)
+	        let num = clickId.replace("travel_destination", "");
+	        
+	        // (재클릭시)모든 rec 숨기기
+	        $("[id^='rec']").addClass("d-none");
+	        // 클릭된 div와 동일한 숫자를 가진 rec 화면에 출력
+	        let $rec = $("#rec" + num).removeClass("d-none");
+	        
+	        // 클릭된 여행지 위치에서 지역명 추출
+	        let regionText = $rec.find("p.region").text().trim();
+	        let regionName = regionText.split(" ")[0];
+
+	        console.log("클릭된 지역명->AJAX로 보낼 지역명:", regionName);
+	        
+	        //AJAX 호출
+	        loadTravel(regionName)
+	        
+	    });
+	        //AJAX 호출
+	        function loadTravel(regionName){
+	        	$.ajax({
+		        	url: "${pageContext.request.contextPath}/travel/list",
+		        	type: "get",
+		        	data: {regionName: regionName},
+		        	dataType: "json",
+		        	success: function(list){
+		        		//drawTravelList(list);
+		        		initTravelList(list)
+		        	},
+		        	error: function(){
+		        		alert("데이터 불러오기 실패");
+		        	}
+		        });
+	        }
 		    
-		});
+	        function initTravelList(list){
+	        	
+	        	let imageList = list.filter(function(item){
+	        		return item.firstimage && item.firstimage.trim() !== "";
+	        	})
+	        	
+	        	//랜덤 셔플
+	        	imageList.sort(function(){
+	        		return Math.random() - 0.5;
+	        	});
+	        	
+	        	// 60개 선택
+	        	randomList = imageList.slice(0, 60);
+	        	
+	        	// 첫 페이지 출력
+	        	currentPage = 1;
+	        	drawPage(currentPage);
+	        }
+	        
+	        window.drawPage = function(page){
+	        	currentPage = page;
+	        	
+	        	let startIndex = (page - 1) * listCntPerPage;
+	        	let endIndex = startIndex + listCntPerPage;
+	        	
+	        	let pageList = randomList.slice(startIndex, endIndex);
+	        	
+	        	drawTravelList(pageList);
+	        	console.log("현재 페이지", page);
+	        }
+	        
+		    function drawTravelList(pageList){
+		    	
+		    	let html = `<div class="row">`;
+		    	
+		    	if(pageList.length === 0){
+		    		html += "<p>해당 지역의 데이터가 없습니다.</p>"
+		    	}else{
+		    		$.each(pageList, function(i, item){
+		    			html += `
+		    					 <div class="col-md-4 d-flex">
+		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
+		    					 		<a href="#" class="block-20"
+		    					 			style="background-image: url('\${item.firstimage}');">
+		    					 		</a>
+		    					 		<div class="text mt-3 float-right d-block">
+			    					 		<h3 class="heading">
+			    					 			<a href="#">\${item.title}</a>
+			    					 			<span class="heartIcon">❤</span>
+			    					 		</h3>
+			    					 		<p>\${item.addr1}</p>
+		    					 		</div>
+		    					 	</div>
+		    					 </div>
+		    					`;
+		    		})	
+		    	}
+		    	html += `</div>`;
+		    	
+		    	console.log("list전체", pageList);
+		    	console.log("첫번쨰 item", pageList[0])
+		    	$("#travelList").html(html)
+		    	
+		    }
+	    
+	});
 	</script>
 
 </html>
