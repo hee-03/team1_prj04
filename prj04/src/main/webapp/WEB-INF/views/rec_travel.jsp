@@ -350,6 +350,7 @@
 	<!-- footer 연결하기 -->
   	<%@ include file="/WEB-INF/views/common/footer.jsp" %>
     <!-- //footer 연결하기 -->
+    <script src="js/heartIcon.js"></script>
   </body>
   
 
@@ -381,7 +382,8 @@
 		        // 클릭된 여행지 위치에서 지역명 추출
 		        let regionText = $rec.find("p.region").text().trim();
 		        let regionName = regionText.split(" ")[0];
-		        
+		        console.log(regionText);
+		        console.log(regionName);
 		        //AJAX 호출
 		        loadTravel(regionName)
 		        
@@ -410,6 +412,9 @@
 			    		html += "<p>해당 지역의 데이터가 없습니다.</p>"
 			    	}else{
 			    		$.each(list, function(i, item){
+			    			if(!item.firstimage || item.firstimage.trim() === ""){
+			    				return true;
+			    			}
 			    			html += `
 			    					 <div class="col-md-4 d-flex">
 			    					 	<div class="blog-entry justify-content-end" style="width:800px;">

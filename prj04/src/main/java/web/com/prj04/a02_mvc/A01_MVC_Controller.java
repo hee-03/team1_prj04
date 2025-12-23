@@ -29,6 +29,11 @@ public class A01_MVC_Controller {
    public String rec_travel() {
       return "rec_travel";
    }
+   //http://localhost:7070/whereGoing2
+   @GetMapping("whereGoing2")
+   public String whereGoing2() {
+	   return "whereGoing2";
+   }
    
  	
    //http://192.168.0.31:7070/festival
