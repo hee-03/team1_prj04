@@ -27,6 +27,14 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+    	#btnMore {
+		  padding: 10px 28px;
+		  border-radius: 30px;
+		  font-size: 15px;
+		}
+		.d-none { display: none !important; }
+    </style>
   </head>
   <body>    
   	<%@ include file="/WEB-INF/views/common/header.jsp" %>
@@ -48,7 +56,7 @@
             <h2 class="mb-4">내가 좋아하는 여행</h2>
           </div>
         </div>
-        <div class="row d-flex">
+        <div class="row d-flex" id="favList">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
               <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav01.jpg');">
@@ -110,22 +118,87 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
+          
+          <div class="col-md-4 d-flex ftco-animate d-none">
+          	<div class="blog-entry justify-content-end">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav01.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
+              </div>
             </div>
           </div>
+          <div class="col-md-4 d-flex ftco-animate d-none">
+          	<div class="blog-entry justify-content-end">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav02.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate d-none">
+          	<div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 d-flex ftco-animate d-none">
+          	<div class="blog-entry justify-content-end">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav01.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
+                <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate d-none">
+          	<div class="blog-entry justify-content-end">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav02.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
+                <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate d-none">
+          	<div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate d-none">
+          	<div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
+                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
+              </div>
+            </div>
+          </div>
+          
         </div>
+        <div class="row mt-5">
+		  <div class="col text-center">
+		    <button type="button" id="btnMore" class="btn btn-outline-primary">
+		      더보기
+		    </button>
+		  </div>
+		</div>
       </div>
     </section>
     
@@ -213,6 +286,31 @@
     
     <%@ include file="/WEB-INF/views/common/footer.jsp" %>
     <script src="js/heartIcon.js"></script>
+    <script>
+		document.addEventListener("DOMContentLoaded", () => {
+		  const list = document.getElementById("favList");
+		  const btn  = document.getElementById("btnMore");
+		  if (!list || !btn) return;
+		
+		  const cards = Array.from(list.querySelectorAll(".col-md-4"));
+		  const STEP = 6;
+		
+		  btn.addEventListener("click", () => {
+		    const hidden = cards.filter(card => card.classList.contains("d-none"));
+		    hidden.slice(0, STEP).forEach(card => card.classList.remove("d-none"));
+		
+		    // 더 이상 숨겨진 카드가 없으면 버튼 숨김
+		    if (cards.every(card => !card.classList.contains("d-none"))) {
+		      btn.style.display = "none";
+		    }
+		  });
+		});
+	</script>
+
+
+
+
+		    
 </body>
 </html>
     

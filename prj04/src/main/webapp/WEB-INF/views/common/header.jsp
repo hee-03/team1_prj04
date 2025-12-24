@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav">
         <li class="nav-item"><a href="/main" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="/whereGoing" class="nav-link">어디로 갈까요?</a></li>
+        <li class="nav-item"><a href="/whereGoing2" class="nav-link">어디로 갈까요?</a></li>
         <li class="nav-item"><a href="/rec_travel" class="nav-link">지금 가장 좋은 여행</a></li>
         <li class="nav-item"><a href="http://192.168.0.31:7070/festival" class="nav-link">축제와 공연</a></li>
         <!-- 수정 성준 -->
