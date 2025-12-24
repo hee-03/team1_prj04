@@ -9859,6 +9859,14 @@ footer .container p:last-child{
 .my-4 {
   margin-bottom: 3rem !important; }
 
+/* whereGoing2.jsp */
+.ftco-section3 {
+    padding: 5em 0em 0em 0em;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
 /*이병주 css -------------------------------------*/
 #location_select{
 	padding: 50px 10px;
@@ -9870,7 +9878,6 @@ footer .container p:last-child{
 .location_item {
 	width: 100px;
 	height: 100px;
-	cursor: pointer;
 }
 .loc_img {
 	width: 100px;
@@ -9879,6 +9886,7 @@ footer .container p:last-child{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
 .loc_text {
 	text-align: center;

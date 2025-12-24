@@ -79,11 +79,11 @@
 	<%-- //도 or 특별시 단위 지역 선택 (기본값: 서울)--%>
 	
 	<!-- 관광명소 -->
-    <section id="destination" class="ftco-section">
+    <section id="destination_travel" class="ftco-section3">
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2 class="mb-4">관광 명소</h2>
+            <h2 class="mb-41">관광 명소</h2>
           </div>
         </div>
         <div id="travelList" class="d-flex">
@@ -94,11 +94,11 @@
     <!-- //관광명소 -->
 
     <!-- 관광행사 -->
-    <section id="destination" class="ftco-section">
+    <section id="destination_festival" class="ftco-section3">
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2 class="mb-4">관광 행사</h2>
+            <h2 class="mb-41">관광 행사</h2>
           </div>
         </div>
         <div id="leisureList" class="d-flex">
@@ -109,11 +109,11 @@
     <!-- //관광행사 -->
     
     <%-- 맛집 --%>
-    <section id="destination" class="ftco-section">
+    <section id="destination_food" class="ftco-section3">
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2 class="mb-4">지역 맛집</h2>
+            <h2 class="mb-41">지역 맛집</h2>
           </div>
         </div>
         <div id="foodList" class="d-flex">
@@ -124,7 +124,18 @@
     <%-- //맛집 --%>
     
     <%-- 호텔 --%>
-    
+    <section id="destination_hotel" class="ftco-section3">
+      <div class="container">
+      	<div class="row justify-content-center pb-4">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <h2 class="mb-41">지역 호텔</h2>
+          </div>
+        </div>
+        <div id="hotelList" class="d-flex">
+			<!-- ajax결과가 여기에 삽입 -->
+        </div>
+      </div>
+    </section>
     <%-- //호텔 --%>  
 
   <%@ include file="/WEB-INF/views/common/footer.jsp" %>  
@@ -132,47 +143,37 @@
       
   <script>
   $(document).ready(function(){
-
+		
+	  let regionName = "서울";
+	  // 서울 초기 선택
+	  $("#location00").addClass("active");
+	  // 초기화면에서 영역표시
+	  $("[id^='destination']").removeClass("d-none");
+	  
 	    // 클릭 이벤트
 	    $("[id^='location']").on("click", function(){
 	    	
-	        $("#destination").removeClass("d-none");
+	    	// 서울 선택 초기화
+	    	$("[id^='location']").removeClass("active");
+	    	$(this).addClass("active");
+	    	
+	        //$("#destination").removeClass("d-none");
 	        
 	        // 클릭된 여행지 위치에서 지역명 추출
 	        let regionText = $(this).children(".loc_text").text();
 	        console.log(regionText);// 지역 나오는거 확인
 	        
 	        switch (regionText) {
-	        case "경기":
-	            regionName = "경기도";
-	            break;
-	        case "강원":
-	            regionName = "강원특별자치도";
-	            break;
-	        case "전북":
-	            regionName = "전북특별자치도";
-	            break;
-	        case "경남":
-	            regionName = "경상남도";
-	            break;
-	        case "경북":
-	            regionName = "경상북도";
-	            break;
-	        case "제주":
-	            regionName = "제주특별자치도";
-	            break;
-	        case "서울":
-	            regionName = "서울";
-	            break;
-	        case "충남":
-	            regionName = "충청남도";
-	            break;
-	        case "충북":
-	            regionName = "충청북도";
-	            break;
-	        case "전남":
-	            regionName = "전라남도";
-	            break;
+	        case "경기": regionName = "경기도"; break;
+	        case "강원": regionName = "강원특별자치도"; break;
+	        case "전북": regionName = "전북특별자치도"; break;
+	        case "경남": regionName = "경상남도"; break;
+	        case "경북": regionName = "경상북도"; break;
+	        case "제주": regionName = "제주특별자치도"; break;
+	        case "서울": regionName = "서울"; break;
+	        case "충남": regionName = "충청남도"; break;
+	        case "충북": regionName = "충청북도"; break;
+	        case "전남": regionName = "전라남도"; break;
 	        default:
 	            break;
 	    	}
@@ -182,6 +183,7 @@
 	        loadTravel(regionName)
 	        
 	    });
+	    	loadTravel(regionName);
 	        //AJAX 호출
 	        function loadTravel(regionName){
 	        	$.ajax({
@@ -190,7 +192,7 @@
 		        	data: {regionName: regionName},
 		        	dataType: "json",
 		        	success: function(list){
-		        		drawTravelList(list);
+		        		initTravelList(list);
 		        	},
 		        	error: function(){
 		        		alert("데이터 불러오기 실패");
@@ -198,22 +200,30 @@
 		        });
 	        }
 		    
-		    function drawTravelList(list){
+			function initTravelList(list){
+	        	
+	        	let imageList = list.filter(function(item){
+	        		return item.firstimage && item.firstimage.trim() !== "";
+	        	})
+	        	
+	        	//랜덤 셔플
+	        	imageList.sort(function(){
+	        		return Math.random() - 0.5;
+	        	});
+	        	
+	        	// 6개 선택
+	        	let randomList = imageList.slice(0, 6);
+	        	drawTravelList(randomList);
+	        }
+	        
+		    function drawTravelList(randomList){
 		    	
 		    	let html = `<div class="row">`;
-		    	let count = 0; //출력 개수 카운트
 		    	
-		    	if(list.length === 0){
+		    	if(randomList.length === 0){
 		    		html += "<p>해당 지역의 데이터가 없습니다.</p>"
 		    	}else{
-		    		$.each(list, function(i, item){
-		    			if(!item.firstimage || item.firstimage.trim() === ""){
-		    				return true;
-		    			}
-		    			
-		    			if(count >= 6){
-		    				return false;
-		    			}
+		    		$.each(randomList, function(i, item){
 		    			
 		    			html += `
 		    					 <div class="col-md-4 d-flex">
@@ -232,12 +242,11 @@
 		    					 	</div>
 		    					 </div>
 		    					`;
-		    			count++;
 		    		});	
 		    	}
 		    	html += `</div>`;
 		    	
-		    	console.log("list전체", list);
+		    	console.log("list전체", randomList);
 		    	
 		    	$("#travelList").html(html)
 		    }
