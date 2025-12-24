@@ -23,14 +23,33 @@
       	<p>${sessionScope.logInEmail}</p>
       </c:if>
       <ul class="d-flex navbar-nav">
-        <li><a href="#"><img src="/images/header/search.png" alt=""></a></li>
-        <li><a href="/map"><img src="/images/header/map.png" alt=""></a></li>
         <li><a href="/loginCheck"><img src="/images/header/enter.png" alt=""></a></li>
+        <li><a href="#" id="btnHeaderSearch"><img src="/images/header/search.png" alt=""></a></li>
+        <li><a href="/map"><img src="/images/header/map.png" alt=""></a></li>
         <li><a href="#"><img src="/images/header/lang.png" alt=""></a></li>
       </ul>
     </div>
   </div>
 </nav>
+<!-- 검색창 -->
+<div id="headerSearchWrap" class="header-search-wrap" aria-hidden="true">
+  <div class="container">
+    <form id="headerSearchForm" class="header-search" action="#" method="get">
+      <label class="sr-only" for="headerSearchInput">검색</label>
+
+      <input
+        id="headerSearchInput"
+        name="q"
+        type="text"
+        class="header-search__input"
+        placeholder="여행지 · 축제 · 지역 검색"
+        autocomplete="off"
+      />
+
+      <button type="submit" class="header-search__btn">검색</button>
+    </form>
+  </div>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -45,4 +64,53 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("btnHeaderSearch");
+  const wrap = document.getElementById("headerSearchWrap");
+  const form = document.getElementById("headerSearchForm");
+  const input = document.getElementById("headerSearchInput");
+
+  if (!btn || !wrap || !input) return;
+
+  function openSearch() {
+    wrap.classList.add("is-open");
+    wrap.setAttribute("aria-hidden", "false");
+    // 펼쳐진 뒤 포커스
+    setTimeout(() => input.focus(), 50);
+  }
+
+  function closeSearch() {
+    wrap.classList.remove("is-open");
+    wrap.setAttribute("aria-hidden", "true");
+  }
+
+  function toggleSearch() {
+    const isOpen = wrap.classList.contains("is-open");
+    isOpen ? closeSearch() : openSearch();
+  }
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    toggleSearch();
+  });
+
+  // ESC로 닫기
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeSearch();
+  });
+
+  // 바깥 클릭 시 닫기 (검색바 내부 클릭은 유지)
+  document.addEventListener("click", function (e) {
+    const clickedInside = wrap.contains(e.target) || btn.contains(e.target);
+    if (!clickedInside) closeSearch();
+  });
+
+  // submit은 그대로 진행 (action으로 이동)
+  form && form.addEventListener("submit", function () {
+    // 필요하면 여기에서 q 값 검증 가능
+  });
+});
+</script>
+
 
