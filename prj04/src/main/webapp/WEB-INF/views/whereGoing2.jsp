@@ -192,15 +192,58 @@
 		        	data: {regionName: regionName},
 		        	dataType: "json",
 		        	success: function(list){
-		        		initTravelList(list);
+		        		let split = splitByCategory(list);
+		        		let randomTravel = getRandomList(split.travelList);
+		        		let randomLeisure = getRandomList(split.leisureList);
+		        		let randomFood = getRandomList(split.foodList);
+		        		let randomHotel = getRandomList(split.hotelList);
+		        		//initTravelList(list);
+		        		drawTravelList(randomTravel);
+		        		drawLeisureList(randomLeisure);
+		        		drawFoodList(randomFood);
+		        		drawHotelList(randomHotel);
 		        	},
 		        	error: function(){
 		        		alert("데이터 불러오기 실패");
 		        	}
 		        });
 	        }
+	        
+	        // 대분류(cat1)별로 분류
+	        function splitByCategory(list){
+	        	let travelList = [];
+	        	let leisureList = [];
+	        	let foodList = [];
+	        	let hotelList = [];
+	        	
+	        	$.each(list, function(i, item){
+	        		
+	        		if(["A01", "A02", "A04", "C01"].includes(item.cat1)){
+	        			// 여행지 A01, A02, A04, C01
+	        			travelList.push(item);
+	        		}
+	        		if(item.cat1 === "A03"){
+	        			// 레포츠
+	        			leisureList.push(item);
+	        		}
+	        		if(item.cat1 === "A05"){
+	        			//음식
+	        			foodList.push(item);
+	        		}
+	        		if(item.cat1 === "B02"){
+	        			// 호텔
+	        			hotelList.push(item);
+	        		}
+	        	})
+	        	return {
+	        		travelList: travelList,
+	        		leisureList: leisureList,
+	        		foodList: foodList,
+	        		hotelList: hotelList
+	        	};
+	        }
 		    
-			function initTravelList(list){
+			function getRandomList(list){
 	        	
 	        	let imageList = list.filter(function(item){
 	        		return item.firstimage && item.firstimage.trim() !== "";
@@ -211,19 +254,22 @@
 	        		return Math.random() - 0.5;
 	        	});
 	        	
-	        	// 6개 선택
+	        	/* // 6개 선택
 	        	let randomList = imageList.slice(0, 6);
-	        	drawTravelList(randomList);
+	        	drawTravelList(randomList); */
+	        	
+	        	return imageList.slice(0, 6);
 	        }
 	        
-		    function drawTravelList(randomList){
+			// 명소 리스트
+		    function drawTravelList(list){
 		    	
 		    	let html = `<div class="row">`;
 		    	
-		    	if(randomList.length === 0){
-		    		html += "<p>해당 지역의 데이터가 없습니다.</p>"
+		    	if(list.length === 0){
+		    		html += "<p>해당 지역의 여행지 데이터가 없습니다.</p>"
 		    	}else{
-		    		$.each(randomList, function(i, item){
+		    		$.each(list, function(i, item){
 		    			
 		    			html += `
 		    					 <div class="col-md-4 d-flex">
@@ -246,9 +292,106 @@
 		    	}
 		    	html += `</div>`;
 		    	
-		    	console.log("list전체", randomList);
-		    	
 		    	$("#travelList").html(html)
+		    }
+			// 레저 리스트
+			function drawLeisureList(list){
+		    	
+		    	let html = `<div class="row">`;
+		    	
+		    	if(list.length === 0){
+		    		html += "<p>해당 지역의 레저 데이터가 없습니다.</p>"
+		    	}else{
+		    		$.each(list, function(i, item){
+		    			
+		    			html += `
+		    					 <div class="col-md-4 d-flex">
+		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
+		    					 		<a href="#" class="block-20"
+		    					 			style="background-image: url('\${item.firstimage}');">
+		    					 		</a>
+		    					 		<div class="text mt-3 float-right d-block">
+			    					 		<h3 class="heading">
+			    					 			<a href="#">\${item.title}</a>
+			    					 			<span class="heartIcon">❤</span>
+			    					 		</h3>
+			    					 		<p>\${item.addr1}</p>
+			    					 		<p>\${item.cat1}</p>
+		    					 		</div>
+		    					 	</div>
+		    					 </div>
+		    					`;
+		    		});	
+		    	}
+		    	html += `</div>`;
+		    	
+		    	$("#leisureList").html(html)
+		    }
+			// 맛집 리스트
+			function drawFoodList(list){
+		    	
+		    	let html = `<div class="row">`;
+		    	
+		    	if(list.length === 0){
+		    		html += "<p>해당 지역의 맛집 데이터가 없습니다.</p>"
+		    	}else{
+		    		$.each(list, function(i, item){
+		    			
+		    			html += `
+		    					 <div class="col-md-4 d-flex">
+		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
+		    					 		<a href="#" class="block-20"
+		    					 			style="background-image: url('\${item.firstimage}');">
+		    					 		</a>
+		    					 		<div class="text mt-3 float-right d-block">
+			    					 		<h3 class="heading">
+			    					 			<a href="#">\${item.title}</a>
+			    					 			<span class="heartIcon">❤</span>
+			    					 		</h3>
+			    					 		<p>\${item.addr1}</p>
+			    					 		<p>\${item.cat1}</p>
+		    					 		</div>
+		    					 	</div>
+		    					 </div>
+		    					`;
+		    		});	
+		    	}
+		    	html += `</div>`;
+		    	
+		    	$("#foodList").html(html)
+		    }
+			// 호텔 리스트
+			function drawHotelList(list){
+		    	
+		    	let html = `<div class="row">`;
+		    	
+		    	if(list.length === 0){
+		    		html += "<p>해당 지역의 호텔 데이터가 없습니다.</p>"
+		    	}else{
+		    		$.each(list, function(i, item){
+		    			
+		    			html += `
+		    					 <div class="col-md-4 d-flex">
+		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
+		    					 		<a href="#" class="block-20"
+		    					 			style="background-image: url('\${item.firstimage}');">
+		    					 		</a>
+		    					 		<div class="text mt-3 float-right d-block">
+			    					 		<h3 class="heading">
+			    					 			<a href="#">\${item.title}</a>
+			    					 			<span class="heartIcon">❤</span>
+			    					 		</h3>
+			    					 		<p>\${item.addr1}</p>
+			    					 		<p>\${item.cat1}</p>
+		    					 		</div>
+		    					 	</div>
+		    					 </div>
+		    					`;
+		    		});	
+		    	}
+		    	html += `</div>`;
+		    	
+		    	$("#hotelList").html(html)
 		    }
 	    
 	});
