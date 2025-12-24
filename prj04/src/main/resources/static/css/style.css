@@ -9850,6 +9850,14 @@ footer .container p:last-child{
 	border-radius:50%;
 	position:absolute;
 }
+.ftco-section2 {
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+}
+.mb-41,
+.my-4 {
+  margin-bottom: 3rem !important; }
 
 /*이병주 css -------------------------------------*/
 #location_select{
