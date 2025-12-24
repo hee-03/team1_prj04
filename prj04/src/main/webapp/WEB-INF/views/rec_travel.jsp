@@ -70,13 +70,13 @@
 	<!-- //제철여행지도-->
 
 		<!-- 이달의 여행지-->
-    <section class="ftco-counter img" id="section-counter">
+    <section class="ftco-counter img box-shadow" id="section-counter">
     	<div id="rec01" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec01.PNG);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">파라다이스 시티 씨메르(인천)</h2>
@@ -98,7 +98,7 @@
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec02.PNG);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">나무향기한증막</h2>
@@ -118,7 +118,7 @@
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec03.PNG);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">대관령자연휴양림</h2>
@@ -140,7 +140,7 @@
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec04.png);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">초정행궁</h2>
@@ -163,7 +163,7 @@
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec05.png);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">대전근현대사전시관</h2>
@@ -187,7 +187,7 @@
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec06.png);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">1925감포</h2>
@@ -210,7 +210,7 @@
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec07.png);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">정우굴구이</h2>
@@ -233,7 +233,7 @@
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec08.png);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">한마음식당</h2>
@@ -256,7 +256,7 @@
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec09.png);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">부네치아 선셋 전망대</h2>
@@ -280,7 +280,7 @@
     			<div class="col-md-6 d-flex">
     				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec10.png);"></div>
     			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
+    			<div class="col-md-6 pl-md-5 py-4">
     				<div class="row justify-content-start pb-3">
 			          <div class="col-md-12 heading-section ftco-animate">
 			            <h2 class="mb-4">센텀시티 스파랜드</h2>
@@ -421,6 +421,15 @@
 	        	let endIndex = startIndex + listCntPerPage;
 	        	
 	        	let pageList = randomList.slice(startIndex, endIndex);
+	        	
+	        	$(".block-27 ul li").removeClass("active");
+	        	
+	        	$(".block-27 ul li").each(function(){
+	        		let text = $(this).text().trim();
+	        		if(text === String(page)){
+	        			$(this).addClass("active");
+	        		}
+	        	});
 	        	
 	        	drawTravelList(pageList);
 	        	console.log("현재 페이지", page);

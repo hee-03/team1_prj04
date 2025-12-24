@@ -9916,9 +9916,10 @@ footer .container p:last-child{
     position: relative;
     width: 100%;
 }
-.mb-41,
-.my-4 {
-  margin-bottom: 3rem !important; }
+
+.box-shadow{
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
 /* whereGoing2.jsp */
 .ftco-section3 {
