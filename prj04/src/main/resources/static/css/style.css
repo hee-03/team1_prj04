@@ -9816,6 +9816,7 @@ textarea.form-control {
   max-height: 90px; 
   position: relative;
   top: 83px;
+  z-index: 999;
 }
 
 .header-search {
