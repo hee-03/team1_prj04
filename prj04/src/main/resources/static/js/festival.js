@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const paginationArea = document.getElementById("pagination");
     const searchForm = document.getElementById("searchForm");
 
-    let allList = [];      // 서버에서 가져온 전체 원본 데이터
-    let displayList = [];  // 현재 화면에 필터링/정렬되어 보여질 데이터
+    let allList = [];
+    let displayList = [];
     let recommendedItem = null; 
     let currentSortType = 'default'; 
     const ITEMS_PER_PAGE = 12; 
@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let likedItems = JSON.parse(localStorage.getItem("festivalLikes")) || {};
 
-    // 1. 추천 배너 HTML
     function getBannerHtml(item) {
         if (!item) return "";
         const naverSearchUrl = `https://search.naver.com/search.naver?query=${encodeURIComponent(item.title)}`;
@@ -32,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>`;
     }
 
-    // 2. 정렬 영역 HTML
     function getSortAreaHtml() {
         return `
             <div class="col-md-12 mb-4">
@@ -61,16 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
             displayList = allList.filter(it => likedItems[it.id] && likedItems[it.id].active);
         } else {
             displayList = [...allList];
-            if (type === 'like') {
-                displayList.sort((a, b) => b.likes - a.likes);
-            } else if (type === 'date') {
-                displayList.sort((a, b) => a.eventstartdate.localeCompare(b.eventstartdate));
-            }
+            if (type === 'like') displayList.sort((a, b) => b.likes - a.likes);
+            else if (type === 'date') displayList.sort((a, b) => a.eventstartdate.localeCompare(b.eventstartdate));
         }
         renderPage(1); 
     };
 
-    // ✅ 카드 HTML: 하트 배경(흰 동그라미) 제거
     function createCardHtml(it) {
         const naverSearchUrl = `https://search.naver.com/search.naver?query=${encodeURIComponent(it.title)}`;
         const isLiked = likedItems[it.id] && likedItems[it.id].active;
@@ -82,12 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="blog-entry" style="width: 100%; margin-bottom: 40px; border-radius: 20px; overflow: hidden; background: #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 1px solid #f0f0f0;">
               <div style="position: relative; overflow: hidden; height: 220px;">
                 <a href="${naverSearchUrl}" target="_blank" class="block-20" style="background-image: url('${it.firstimage || 'images/image_1.jpg'}'); background-size: cover; background-position: center; height: 100%; display: block;"></a>
-                
-                <div onclick="toggleLike('${it.id}')" class="like-btn" 
-                     style="position: absolute; top: 10px; right: 10px; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
-                    <span style="color: ${isLiked ? '#ff4136' : 'rgba(255,255,255,0.8)'}; font-size: 24px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); transition: color 0.3s ease;">
-                        ${isLiked ? '❤️' : '🤍'}
-                    </span>
+                <div onclick="toggleLike('${it.id}')" class="like-btn" style="position: absolute; top: 15px; right: 15px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                    <span style="color: ${isLiked ? '#ff4136' : 'rgba(255,255,255,0.8)'}; font-size: 24px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">${isLiked ? '❤️' : '🤍'}</span>
                 </div>
               </div>
               <div class="text p-4">
@@ -110,12 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const res = await fetch("http://192.168.0.31:7071/api/festival");
             const data = await res.json();
             const items = data.response?.body?.items?.item || [];
-            
             allList = (Array.isArray(items) ? items : [items]).map(it => {
                 const id = it.contentid || it.title;
                 return { ...it, id: id, likes: likedItems[id] ? likedItems[id].count : Math.floor(Math.random() * 100) };
             });
-
             recommendedItem = allList[Math.floor(Math.random() * allList.length)];
             displayList = [...allList];
             renderPage(1);
@@ -129,66 +117,43 @@ document.addEventListener("DOMContentLoaded", () => {
         currentPage = p;
         const start = (p - 1) * ITEMS_PER_PAGE;
         const sliced = displayList.slice(start, start + ITEMS_PER_PAGE);
-        resultArea.style.minHeight = "1200px";
-
-        let html = getBannerHtml(recommendedItem);
-        html += getSortAreaHtml();
-
-        if(sliced.length === 0) {
-            html += '<div class="col-md-12 text-center py-5"><h3 style="color:#ccc;">표시할 항목이 없습니다.</h3></div>';
-        } else {
-            html += sliced.map(it => createCardHtml(it)).join("");
-        }
-        
+        let html = getBannerHtml(recommendedItem) + getSortAreaHtml();
+        if(sliced.length === 0) html += '<div class="col-md-12 text-center py-5"><h3 style="color:#ccc;">표시할 항목이 없습니다.</h3></div>';
+        else html += sliced.map(it => createCardHtml(it)).join("");
         resultArea.innerHTML = html;
         renderPagination();
     }
 
+    // ✅ 사용자의 원본 페이지네이션 로직 복구 (<< 1 2 3 4 5 >> 형태)
     function renderPagination() {
         if(!paginationArea) return;
         const totalPages = Math.ceil(displayList.length / ITEMS_PER_PAGE);
         if (totalPages <= 1) { paginationArea.innerHTML = ""; return; }
         
         let html = '<ul>';
-        if (currentPage > 1) html += `<li><a href="javascript:void(0);" onclick="changePage(event, 1)">&lt;&lt;</a></li>`;
+        if (currentPage > 1) html += `<li><a href="#" onclick="changePage(event, 1)">&lt;&lt;</a></li>`;
 
         let startPage = Math.max(1, currentPage - 2);
         let endPage = Math.min(totalPages, startPage + 4);
         if (endPage - startPage < 4) startPage = Math.max(1, endPage - 4);
 
         for (let i = startPage; i <= endPage; i++) {
-            html += `<li class="${i === currentPage ? 'active' : ''}"><a href="javascript:void(0);" onclick="changePage(event, ${i})">${i}</a></li>`;
+            html += `<li class="${i === currentPage ? 'active' : ''}"><a href="#" onclick="changePage(event, ${i})">${i}</a></li>`;
         }
 
-        if (currentPage < totalPages) html += `<li><a href="javascript:void(0);" onclick="changePage(event, ${totalPages})">&gt;&gt;</a></li>`;
+        if (currentPage < totalPages) html += `<li><a href="#" onclick="changePage(event, ${totalPages})">&gt;&gt;</a></li>`;
         html += '</ul>';
         paginationArea.innerHTML = html;
     }
 
     window.changePage = (e, p) => {
-        if(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-            renderPage(p);
-            setTimeout(() => {
-                window.scrollTo(0, scrollPos);
-            }, 0);
-        } else {
-            renderPage(p);
-        }
+        if(e) e.preventDefault();
+        renderPage(p);
     };
 
     window.toggleLike = (id) => {
         const item = allList.find(it => it.id == id);
         if(!item) return;
-
-        const btn = document.querySelector(`[data-id="${id}"] .like-btn`);
-        if(btn) {
-            btn.style.transform = "scale(1.4)";
-            setTimeout(() => btn.style.transform = "scale(1)", 200);
-        }
-
         if(!likedItems[id]) likedItems[id] = { count: item.likes + 1, active: true };
         else {
             likedItems[id].active = !likedItems[id].active;
@@ -196,26 +161,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         item.likes = likedItems[id].count;
         localStorage.setItem("festivalLikes", JSON.stringify(likedItems));
-        
-        if (currentSortType === 'my') {
-            displayList = allList.filter(it => likedItems[it.id] && likedItems[it.id].active);
-            renderPage(currentPage);
-        } else {
-            const countNum = document.querySelector(`[data-id="${id}"] .like-count-num`);
-            const icon = document.querySelector(`[data-id="${id}"] .like-btn span`);
-            if(countNum) countNum.innerText = item.likes;
-            if(icon) {
-                icon.innerText = likedItems[id].active ? '❤️' : '🤍';
-                // ✅ 활성화되지 않았을 때 하얀색 하트가 사진 배경에 잘 보이도록 처리
-                icon.style.color = likedItems[id].active ? '#ff4136' : 'rgba(255,255,255,0.8)';
-            }
-        }
+        if (currentSortType === 'my') displayList = allList.filter(it => likedItems[it.id] && likedItems[it.id].active);
+        renderPage(currentPage);
     };
 
     searchForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const reg = document.getElementById("regionSelect").value;
         const sea = document.getElementById("seasonSelect").value;
+        const keyword = document.getElementById("keywordInput").value.trim().toLowerCase();
+
         displayList = allList.filter(it => {
             const mReg = !reg || it.addr1.includes(reg.substring(0,2));
             const month = parseInt(it.eventstartdate.substring(4,6));
@@ -224,7 +179,9 @@ document.addEventListener("DOMContentLoaded", () => {
             else if(sea === "여름") mSea = month >= 6 && month <= 8;
             else if(sea === "가을") mSea = month >= 9 && month <= 11;
             else if(sea === "겨울") mSea = month === 12 || month <= 2;
-            return mReg && mSea;
+            
+            const mKey = !keyword || (it.title && it.title.toLowerCase().includes(keyword));
+            return mReg && mSea && mKey;
         });
         currentSortType = 'default';
         renderPage(1);

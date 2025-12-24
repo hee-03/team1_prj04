@@ -22,21 +22,17 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
 
 <style>
-  /* 1. 레이아웃 기본 설정 */
   .ftco-section.no-padding-bottom { padding-bottom: 0 !important; margin-bottom: 0 !important; }
   .ftco-section.no-padding-top { padding-top: 30px !important; }
 
-  /* 2. ✅ 검색 필터 박스 (그림자 완전 제거 + 평면 디자인) */
   .search-property-1 {
       background: #fff !important;
       padding: 30px !important;
-      border-radius: 15px !important
-
+      border-radius: 15px !important;
       position: relative;
       z-index: 10;
   }
 
-  /* 라벨 가독성 */
   .search-property-1 .form-group label {
       font-weight: 700 !important;
       color: #333 !important;
@@ -45,7 +41,6 @@
       display: block;
   }
 
-  /* ✅ 필터 선택 박스 (심플하게) */
   .search-property-1 .form-control {
       height: 52px !important;
       border-radius: 10px !important;
@@ -55,10 +50,8 @@
       color: #222 !important;
       padding: 10px 15px !important;
       box-shadow: none !important;
-      appearance: auto !important; /* 화살표 표시 */
   }
 
-  /* ✅ 검색 버튼 (글자 수직 중앙 정렬 집중) */
   .search-property-1 .btn-primary {
       background: #f9ab30 !important;
       border: none !important;
@@ -67,26 +60,15 @@
       font-size: 17px !important;
       font-weight: 700 !important;
       border-radius: 10px !important;
-      
-      /* 🔥 중앙 정렬을 위한 핵심 속성 */
       display: flex !important;
-      align-items: center !important;    /* 수직 중앙 */
-      justify-content: center !important; /* 수평 중앙 */
-      line-height: 1 !important;         /* 텍스트 밀림 방지 */
+      align-items: center !important;
+      justify-content: center !important;
+      line-height: 1 !important;
       padding: 0 !important;
-      
-      box-shadow: none !important;
-      cursor: pointer;
       width: 100% !important;
-      transition: background 0.2s ease;
+      cursor: pointer;
   }
 
-  .search-property-1 .btn-primary:hover {
-      background: #e89a1a !important;
-      transform: none !important; /* 공중 부양 금지 */
-  }
-
-  /* 3. 정렬 버튼 (기존 디자인 유지) */
   .sort-buttons .btn { 
       font-size: 18px !important;
       padding: 12px 22px !important;
@@ -94,8 +76,6 @@
       border: 2px solid #f9ab30 !important;
       color: #f9ab30 !important;
       border-radius: 10px !important;
-      background-color: transparent;
-      box-shadow: none !important;
   }
 
   .sort-buttons .btn.active, .sort-buttons .btn:hover {
@@ -103,41 +83,20 @@
       color: #fff !important;
   }
 
-  /* 4. 페이지네이션 (기존 디자인 유지) */
-  .block-27 ul {
-      padding: 0;
-      margin: 0;
-  }
-
-  .block-27 ul li {
-      display: inline-block !important;
-      margin: 0 5px !important; /* 🔥 번호 사이의 좌우 여백 (간격 생김) */
-  }
-
+  .block-27 ul li { display: inline-block !important; margin: 0 5px !important; }
   .block-27 ul li a, .block-27 ul li span {
-      width: 55px !important;  /* 🔥 기존 50px에서 55px로 확대 */
-      height: 55px !important; /* 🔥 기존 50px에서 55px로 확대 */
-      line-height: 51px !important; /* 테두리 두께 고려하여 수직 중앙 조절 */
-      font-size: 20px !important;   /* 🔥 숫자 크기 확대 */
+      width: 55px !important;
+      height: 55px !important;
+      line-height: 51px !important;
+      font-size: 20px !important;
       font-weight: 600 !important;
       border-radius: 50% !important;
       border: 2px solid #e6e6e6 !important;
       display: inline-block;
       text-align: center;
-      transition: all 0.3s ease;
-      box-shadow: none !important;
       color: #333;
   }
-
-  /* 마우스 올렸을 때랑 활성화됐을 때 색상 */
-  .block-27 ul li.active a,
-  .block-27 ul li.active span {
-      background: #f9ab30 !important;
-      color: #fff !important;
-      border-color: #f9ab30 !important;
-  }
-
-  .block-27 ul li a:hover {
+  .block-27 ul li.active a, .block-27 ul li.active span {
       background: #f9ab30 !important;
       color: #fff !important;
       border-color: #f9ab30 !important;
@@ -152,7 +111,7 @@
       <div class="overlay" style="opacity: .2"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate text-center" style="padding-bottom: 380px; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);">
+          <div class="col-md-9 ftco-animate text-center" style="padding-bottom: 380px;">
             <h1 class="bread">축제와 공연</h1>
           </div>
         </div>
@@ -168,49 +127,42 @@
                 <div class="row">
                   <div class="col-lg align-items-end">
                     <div class="form-group">
-                      <label for="#">언제</label>
-                      <div class="form-field">
-                        <div class="select-wrap">
-                          <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                          <select id="seasonSelect" class="form-control">
-                            <option value="">전체</option>
-                            <option value="봄">봄</option>
-                            <option value="여름">여름</option>
-                            <option value="가을">가을</option>
-                            <option value="겨울">겨울</option>
-                          </select>
-                        </div>
-                      </div>
+                      <label>📅 언제</label>
+                      <select id="seasonSelect" class="form-control">
+                        <option value="">전체</option>
+                        <option value="봄">🌸 봄 (3~5월)</option>
+                        <option value="여름">☀️ 여름 (6~8월)</option>
+                        <option value="가을">🍁 가을 (9~11월)</option>
+                        <option value="겨울">❄️ 겨울 (12~2월)</option>
+                      </select>
                     </div>
                   </div>
                   <div class="col-lg align-items-end">
                     <div class="form-group">
-                      <label for="#">어디로</label>
-                      <div class="form-field">
-                        <div class="select-wrap">
-                          <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                          <select id="regionSelect" class="form-control">
-                            <option value="">전체</option>
-                            <option value="서울">서울</option>
-                            <option value="경기도">경기도</option>
-                            <option value="강원도">강원도</option>
-                            <option value="충청도">충청도</option>
-                            <option value="경상도">경상도</option>
-                            <option value="전라도">전라도</option>
-                          </select>
-                        </div>
-                      </div>
+                      <label>📍 어디로</label>
+                      <select id="regionSelect" class="form-control">
+                        <option value="">전체</option>
+                        <option value="서울">🏙️ 서울</option>
+                        <option value="경기">🌳 경기도</option>
+                        <option value="강원">⛰️ 강원도</option>
+                        <option value="충청">🌾 충청도</option>
+                        <option value="경상">🌊 경상도</option>
+                        <option value="전라">🍚 전라도</option>
+                        <option value="제주">🌴 제주도</option>
+                      </select>
                     </div>
                   </div>
-                 <div class="col-lg align-self-end">
-					  <div class="form-group">
-					    <div class="form-field">
-					      <button type="submit" class="form-control btn btn-primary search-submit-btn">
-					        검색
-					      </button>
-					    </div>
-					  </div>
-					</div>
+                  <div class="col-lg align-items-end">
+                    <div class="form-group">
+                      <label>🔍 축제명 검색</label>
+                      <input type="text" id="keywordInput" class="form-control" placeholder="검색어를 입력하세요">
+                    </div>
+                  </div>
+                  <div class="col-lg align-self-end">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary search-submit-btn">검색</button>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
@@ -221,9 +173,7 @@
 
     <section class="ftco-section no-padding-top">
       <div class="container">
-        <div id="festival-result" class="row d-flex">
-            </div>
-
+        <div id="festival-result" class="row d-flex"></div>
         <div class="row mt-5">
           <div class="col text-center">
             <div id="pagination" class="block-27"></div>
@@ -247,7 +197,6 @@
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/festival.js"></script>
-    
     <jsp:include page="/WEB-INF/views/common/footer.jsp" />
   </body>
 </html>
