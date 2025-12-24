@@ -56,7 +56,11 @@ public class A01_MVC_Controller {
        return "map";
    }
       
-      
+   //http://localhost:7070/findResult
+   @GetMapping("findResult")
+   public String findResult() {
+	   return "findResult";
+   }
       
       
       // Model : 핵심

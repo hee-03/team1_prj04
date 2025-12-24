@@ -146,7 +146,8 @@
 		
 	  let regionName = "서울";
 	  // 서울 초기 선택
-	  $("#location00").addClass("active");
+	  $("#location00").addClass("active selected_location");
+	  
 	  // 초기화면에서 영역표시
 	  $("[id^='destination']").removeClass("d-none");
 	  
@@ -154,7 +155,8 @@
 	    $("[id^='location']").on("click", function(){
 	    	
 	    	// 서울 선택 초기화
-	    	$("[id^='location']").removeClass("active");
+	    	$("#location_select > div").removeClass("active selected_location");
+	    	
 	    	$(this).addClass("active");
 	    	
 	        //$("#destination").removeClass("d-none");
@@ -253,10 +255,6 @@
 	        	imageList.sort(function(){
 	        		return Math.random() - 0.5;
 	        	});
-	        	
-	        	/* // 6개 선택
-	        	let randomList = imageList.slice(0, 6);
-	        	drawTravelList(randomList); */
 	        	
 	        	return imageList.slice(0, 6);
 	        }
