@@ -24,7 +24,7 @@
 <style>
   .ftco-section.no-padding-bottom { padding-bottom: 0 !important; margin-bottom: 0 !important; }
   .ftco-section.no-padding-top { padding-top: 30px !important; }
-
+/**/
   .search-property-1 {
       background: #fff !important;
       padding: 30px !important;
@@ -181,6 +181,7 @@
         </div>
       </div>
     </section>
+    
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>

@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentSortType === 'my') displayList = allList.filter(it => likedItems[it.id] && likedItems[it.id].active);
         renderPage(currentPage);
     };
-
+/**/
     searchForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const reg = document.getElementById("regionSelect").value;
