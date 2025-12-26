@@ -9910,6 +9910,7 @@ footer .container p:last-child{
 	width:80px;height:80px;
 	border-radius:50%;
 	position:absolute;
+	cursor: pointer;
 }
 .ftco-section2 {
     padding: 1em 0;
