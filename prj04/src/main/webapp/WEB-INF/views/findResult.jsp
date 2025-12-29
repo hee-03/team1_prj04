@@ -33,11 +33,11 @@
     <%@ include file="/WEB-INF/views/common/header.jsp" %>
 	
 	<%-- ooo 검색결과 --%>
-    <section id="destination_travel" class="ftco-section3">
+    <section id="destination_travel" class="ftco-section3" style="margin-top:50px;">
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2 class="mb-41">관광 명소</h2>
+            <h2 class="mb-41">검색 결과</h2>
           </div>
         </div>
         <div id="travelList" class="d-flex">
@@ -48,7 +48,7 @@
     <%-- //ooo 검색결과 --%>
     
     <%-- 이곳도 추천해요 --%>
-    <section class="ftco-counter img mytripsect" id="section-counter">
+    <section class="ftco-counter img mytripsect" id="section-counter" style="margin-top:80px;">
     	<div class="container">
     		<div class="row justify-content-center pb-4">
 	          <div class="col-md-7 text-center heading-section ftco-animate">
@@ -57,18 +57,24 @@
 	        </div>
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/mytrip/rec01.jpg);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/findResult/GyeongBokGeung.jpg);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">순천만국가정원</h2>
+		            <h2 class="mb-4">경복궁</h2>
 		            <p>
-						클래스가 다른 꽃들의 향연, 꽃들이 이토록 아름다울 수 있을까.
-						인간이 아니라 신이 조경한 듯 황활한 정원들이 다채로운 모습으로 반긴다. 
-						우리 조상들이 가꾸던 전통 정원을 비롯해 세계적 정원 디자이너 찰스쟁스가 디자인한 호수정원이 있는 테마정원, 
-						11개국의 세계정원 등을 하나씩 감상하다 보면 그 웅장한 규모와 기발한 디자인, 
-						영롱한 자태에 매료돼 시간이 어떻게 가는지 모를 정도로 넋 놓고 구경하게 될 것이다.
+						서울특별시 종로구 사직로 161 (세종로)에 있는 조선시대의 궁궐 중 하나이자 조선의 정궁(법궁)으로, 사적 제117호로 지정되었다. 
+						태조가 조선을 건국하고 한양 천도를 단행하면서 조선 시대에 가장 먼저 지은 궁궐이다.
+						1592년 임진왜란 때 소실되어 275년 간 방치되었다. 
+						그러던 1865년 고종 재위 시기에 왕실의 권위를 높이기 위한 목적으로 중건되어, 
+						궐내 전각 7,225칸과 후원(後苑) 내 전각 232칸 반을 합해 7,450여 칸의 거대한 규모를 자랑하는 건축물로 거듭났다. 
+						하지만 조선 말기와 대한제국 시기에 일부 전각이 이전되었으며 특히 일제강점기에 전각 수천 칸이 헐리거나 매각되면서 대부분의 건축물이 소실되었다. 
+						게다가 광복 이후 대한민국 정부가 수립되고 나서도 9동 106칸이 철거되는 등 수난을 겪었다.
+						복원 사업에 착수하기 직전에는 고종 재위 당시의 불과 7% 수준인 36동만 남아있는 상태였으며, 
+						1990년 강녕전, 교태전 권역 등을 시작으로 단계적인 복원이 이루어지고 있다. 
+						다만 현재까지 수립된 복원 사업이 모두 진행되어도 고종 재위 시기의 41%에 불과할 정도로 자료 부족 등 
+						현실적인 문제로 인해 미래에도 온전한 조선시대 말의 모습을 보기는 어려울 듯하다.
 					</p>
 		          </div>
 		        </div>
@@ -80,25 +86,20 @@
     	<div class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/mytrip/rec02.jpg);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/findResult/Coex.jpg);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">호미곶</h2>
+		            <h2 class="mb-4">서울 코엑스</h2>
 		            <p>
-						호미곶은 한반도의 최동단에 위치, 한반도 지형상 호랑이 꼬리에 해당하는 곳이다. 
-						고산자 김정호는 대동여지도를 만들면서 이곳을 일곱번이나 답사 측정한 뒤 우리나라의 가장 동쪽임을 확인하였다고 한다. 
-						가장 먼저 해가 뜨는 곳으로 2000년 및 2001년 두차례에 걸쳐 국가지정 해맞이 축전이 개최되었으며 
-						해마다 한민족 해맞이 축전이 열리고 있다. 
-						이곳에 조성된 해맞이 광장에는 천년대의 마지막 햇빛과 날짜변경선인 피지섬의 첫 햇빛, 
-						그리고 이곳 호미곶에서 채화된 시작의 햇빛 등을 합해 영원의 불로 간직하고 있는 영원의 불씨함이 있으며 
-						바다와 육지에 각각 오른손과 왼손의 형상을 하고 화합과 상생을 뜻하고 있는 대형 청동 조형물 상생의 손과 
-						삼국유사에 전해 내려오는 이 지방 설화의 주인공 연오랑세오녀상이 있다. 
-						상생의 손은 국가행사인 호미곶 해맞이 축전을 기리는 상징물이다. 
-						육지에선 왼손, 바다에선 오른손인 상생의 손은 새천년을 맞아 모든 국민이 서로를 도우며 살자는 뜻에서 만든 조형물인 
-						상생의 손은 두 손이 상생을 의미한다. 성화대의 화반은 해의 이미지이며, 두 개의 원형고리는 화합을 의미한다. 
-						상생의 두손은 새천년을 맞아 화해와 상쇄의 기념정신을 담고 있다.						
+						서울특별시 강남구 영동대로 513(삼성동)에 위치한 한국종합전시장의 영문 명칭이다. 
+						일반적으로 ‘코엑스’라고 하면 전시장뿐만 아니라 코엑스몰, 호텔 등 부대시설까지 포함한 
+						한국종합무역센터 전체를 통칭하는 경우가 많지만, 엄밀히 말하면 전시장만 ‘코엑스’이다.
+						코엑스는 전시·컨벤션 시설로서 국내외 전시회와 행사, 회의 등을 개최하며, 
+						동시에 코엑스몰과 연결되어 쇼핑·문화·관광의 복합 공간으로 기능한다.
+						이 때문에 코엑스라는 명칭은 시설 전체를 통칭할 때와 전시장만을 지칭할 때 
+						혼용되어 사용되는 경우가 많다.						
 					</p>
 		          </div>
 		        </div>
@@ -106,27 +107,28 @@
         </div>
     	</div>
     </section>
-    <section class="ftco-counter img mytripsect" id="section-counter2">
+    <section class="ftco-counter img mytripsect" id="section-counter2" style="margin-bottom:80px;">
     	<div class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/mytrip/rec03.jpg);"></div>
+    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/findResult/hongdaeStreet.jpg);"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-5">
     				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">공주 군밤축제</h2>
-		            <p>
-						중부권 대표 겨울 축제인 '겨울공주 군밤축제'가 '공주 알밤과 떠나는 달콤한 여행'을 주제로 
-						1월 16일부터 20일까지 5일간 공주 금강신관공원에서 개최 된다. 
-						대표프로그램은 지름 2m에 달하는 대형화로에서 긴 알밤뜰망을 활용해 직접 품질좋은 공주 알밤을 구워먹는 '대형화로체험', 
-						공주에서 생산된 지역 농축산물을 그릴위에서 구워 먹을 수 있는 '공주 군밤 그릴존,' 알밤관련 음식, 물품 만들기 체험이 있으며, 
-						추억의 민속놀이 체험, 추억 포토존 등 다양한 볼거리와 즐길거리를 제공한다.
-					</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
+		          		<div class="col-md-12 heading-section ftco-animate">
+		            		<h2 class="mb-4">홍대거리</h2>
+		            		<p>
+								홍대거리는 홍익대학교, 홍대입구역, 상수역, 합정역, 망원역 일대에 위치한 서울의 상권이다. 
+								옛 당인리선 철길을 따라 완만한 곡선으로 중심 거리(어울마당로)가 형성되어 있다.
+								홍대거리의 홍대는 홍익대학교의 줄임말인데, 학교명이 인근 상권의 이름이 된것은 홍대입구역이 개통된 후
+								특색 있는 상권이 갖춰진 서교동, 동교동, 상수동 일대 또는 이 지역에서 발달한 국내 인디씬을 흔히 홍대 앞이라고 칭하던 것에서 유래했다.
+								건대, 이대 등 대학교 이름의 줄임말이 인근 번화가 그 자체를 가리키는 명칭으로 제법 쓰이는 것처럼 이 일대를 그냥 '홍대'라고 부르기도 한다. '홍대'라는 약칭 자체가 일종의 지명처럼 굳어졌기에 외국에서도 '홍대(Hongdae)'라고 그대로 부른다. 
+								한국 초대 국가 철학인 홍익인간 널리 인류를 이롭게 한다 뜻으로 인류 문명이 나아가야 할 방향성에서 따왔다.
+							</p>
+		          		</div>
+		        	</div>
+	        	</div>
+        	</div>
     	</div>
     </section>    
     <%-- //이곳도 추천해요 --%>
