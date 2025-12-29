@@ -1,1 +1,1 @@
-{"resources":{"src/main/webapp/WEB-INF/views/CheckSql.sql":{"default-datasource":"oracle_thin-19b3052cfb5-757553b0f0d89a03"}}}
+{"resources":{"Scripts/myTrip.sql":{"default-datasource":"oracle_thin-19b3052cfb5-757553b0f0d89a03"},"src/main/webapp/WEB-INF/views/CheckSql.sql":{"default-schema":"TEAM1","default-datasource":"oracle_thin-19b3052cfb5-757553b0f0d89a03"}}}
