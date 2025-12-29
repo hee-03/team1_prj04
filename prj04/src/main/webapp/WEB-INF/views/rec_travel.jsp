@@ -443,6 +443,10 @@
 		    		html += "<p>해당 지역의 데이터가 없습니다.</p>"
 		    	}else{
 		    		$.each(pageList, function(i, item){
+                        // 네이버 검색 쿼리 생성 --성준--
+                        const searchQuery = encodeURIComponent(item.title);
+                        const naverUrl = "https://search.naver.com/search.naver?query=" + searchQuery;
+
 		    			html += `
 		    					 <div class="col-md-4 d-flex">
 		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
