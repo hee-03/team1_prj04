@@ -28,10 +28,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  <!-- 헤더 연결하기 -->
-    <%@ include file="/WEB-INF/views/common/header.jsp" %>
-  <!-- //헤더 연결하기 -->
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/rec_travel/recmain.png'); margin-top: 50px;" data-stellar-background-ratio="0.5">
+  <%@ include file="/WEB-INF/views/common/header.jsp" %>
+  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/rec_travel/recmain.png'); margin-top: 50px;" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -43,7 +41,6 @@
     </section>
 
 
-	<!-- 제철여행지도(이미지 넣고 동그라미 클릭시 하단에 해당 여행지 출력)-->
 	<section class="ftco-section2">
     	<div class="container">
     		<div class="row justify-content-center pb-4">
@@ -51,26 +48,13 @@
 	          		<div>
     					<div style="background-image: url('images/rec_travel/Dec_travel_map.png');background-size: contain;
     							 background-repeat: no-repeat;background-position:center;width:1140px;height: 800px;position:relative;">
-    						<div id="travel_destination01" class="tr_dst_circle" style="left:422px;top:216px;"></div><!-- 파라다이스 -->
-    						<div id="travel_destination02" class="tr_dst_circle" style="left:602px;top:192px;"></div><!-- 나무향기한증막 -->
-    						<div id="travel_destination03" class="tr_dst_circle" style="left:693px;top:232px;"></div><!-- 대관령자연휴양림 -->
-    						<div id="travel_destination04" class="tr_dst_circle" style="left:508px;top:304px;"></div><!-- 초정행궁 -->
-    						<div id="travel_destination05" class="tr_dst_circle" style="left:404px;top:374px;"></div><!-- 대전근현대사전시관 -->
-    						<div id="travel_destination06" class="tr_dst_circle" style="left:665px;top:400px;"></div><!-- 1925감포 -->
-    						<div id="travel_destination07" class="tr_dst_circle" style="left:390px;top:540px;"></div><!-- 정우굴구이 -->
-    						<div id="travel_destination08" class="tr_dst_circle" style="left:513px;top:506px;"></div><!-- 한마음식당 -->
-    						<div id="travel_destination09" class="tr_dst_circle" style="left:607px;top:628px;"></div><!-- 부네치아 선셋 전망대 -->
-    						<div id="travel_destination10" class="tr_dst_circle" style="left:712px;top:552px;"></div><!-- 센텀시티 스파랜드 -->
-    					</div>
+    						<div id="travel_destination01" class="tr_dst_circle" style="left:422px;top:216px;"></div><div id="travel_destination02" class="tr_dst_circle" style="left:602px;top:192px;"></div><div id="travel_destination03" class="tr_dst_circle" style="left:693px;top:232px;"></div><div id="travel_destination04" class="tr_dst_circle" style="left:508px;top:304px;"></div><div id="travel_destination05" class="tr_dst_circle" style="left:404px;top:374px;"></div><div id="travel_destination06" class="tr_dst_circle" style="left:665px;top:400px;"></div><div id="travel_destination07" class="tr_dst_circle" style="left:390px;top:540px;"></div><div id="travel_destination08" class="tr_dst_circle" style="left:513px;top:506px;"></div><div id="travel_destination09" class="tr_dst_circle" style="left:607px;top:628px;"></div><div id="travel_destination10" class="tr_dst_circle" style="left:712px;top:552px;"></div></div>
 	          		</div>
           		</div>
         	</div>
     	</div>
     </section>
-	<!-- //제철여행지도-->
-
-		<!-- 이달의 여행지-->
-    <section class="ftco-counter img box-shadow" id="section-counter">
+	<section class="ftco-counter img box-shadow" id="section-counter">
     	<div id="rec01" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
@@ -299,10 +283,7 @@
         	</div>
     	</div>
     </section>
-		<!-- //이달의 여행지-->
-	
-	<!-- 추천 여행지 2 -->
-	<section id="destination" class="ftco-section">
+		<section id="destination" class="ftco-section">
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section">
@@ -310,8 +291,7 @@
           </div>
         </div>
 		<div id="travelList" class="d-flex">
-			<!-- ajax결과가 여기에 삽입 -->
-        </div>
+			</div>
         <div class="row mt-5">
           <div class="col text-center">
             <div class="block-27">
@@ -329,11 +309,7 @@
         </div>
       </div>
     </section>
-	<!-- //추천 여행지2 -->
-	
-	<!-- footer 연결하기 -->
-  	<%@ include file="/WEB-INF/views/common/footer.jsp" %>
-    <!-- //footer 연결하기 -->
+	<%@ include file="/WEB-INF/views/common/footer.jsp" %>
     <script src="js/heartIcon.js"></script>
   </body>
   
@@ -450,12 +426,12 @@
 		    			html += `
 		    					 <div class="col-md-4 d-flex">
 		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
-		    					 		<a href="#" class="block-20"
+		    					 		<a href="\${naverUrl}" target="_blank" class="block-20"
 		    					 			style="background-image: url('\${item.firstimage}');">
 		    					 		</a>
 		    					 		<div class="text mt-3 float-right d-block">
 			    					 		<h3 class="heading">
-			    					 			<a href="#">\${item.title}</a>
+			    					 			<a href="\${naverUrl}" target="_blank">\${item.title}</a>
 			    					 			<span class="heartIcon">❤</span>
 			    					 		</h3>
 			    					 		<p>\${item.addr1}</p>
