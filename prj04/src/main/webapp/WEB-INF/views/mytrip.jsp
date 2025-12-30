@@ -100,6 +100,7 @@
     
     <%@ include file="/WEB-INF/views/common/footer.jsp" %>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/heartIcon.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
         var listCntPerPage = 12;
