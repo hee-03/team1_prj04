@@ -10004,3 +10004,18 @@ footer .container p:last-child{
     border-radius: 10px 10px 0 0;
 }
 /* //gemini*/
+
+.blog-entry .text {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+.blog-entry:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+  border-radius: 15px;
+}
+.blog-entry:hover .text{
+	border: none;
+}
