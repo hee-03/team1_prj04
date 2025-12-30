@@ -443,12 +443,13 @@ $(document).ready(function(){
             var isLiked = myLikes.indexOf(String(item.areacode)) !== -1;
             var heartClass = isLiked ? "" : "off";
 
+            // [수정] 이미지와 제목에 네이버 검색창 이동 속성 추가
             html += '<div class="col-md-4 d-flex">' +
                         '<div class="blog-entry justify-content-end" style="width:100%;">' +
-                            '<div class="block-20" style="background-image: url(\'' + img + '\');"></div>' +
+                            '<div class="block-20" style="background-image: url(\'' + img + '\'); cursor:pointer;" onclick="window.open(\'https://search.naver.com/search.naver?query=\' + encodeURIComponent(\'' + item.title + '\'), \'_blank\')"></div>' +
                             '<div class="text mt-3 float-right d-block">' +
                                 '<h3 class="heading">' +
-                                    '<a>' + item.title + '</a>' +
+                                    '<a href="javascript:void(0)" onclick="window.open(\'https://search.naver.com/search.naver?query=\' + encodeURIComponent(\'' + item.title + '\'), \'_blank\')">' + item.title + '</a>' +
                                     '<span class="heartIcon ' + heartClass + '" data-areacode="' + item.areacode + '">❤</span>' +
                                 '</h3>' +
                                 '<p>' + (item.addr1 ? item.addr1 : "") + '</p>' +
@@ -483,7 +484,7 @@ $(document).ready(function(){
         });
     });
 
-    // 추천 여행지 로드 함수 (별도 분리)
+    // 추천 여행지 로드 함수
     function loadRecommendations() {
         console.log("추천 데이터 요청 시작");
         $.ajax({
@@ -503,8 +504,9 @@ $(document).ready(function(){
                         var title = item.title ? item.title : "추천 여행지";
                         var addr = item.addr1 ? item.addr1 : "주소 정보 없음";
 
+                        // [수정] 추천 리스트 전체 엔트리에 네이버 검색창 이동 속성 추가
                         html += '<div class="col-md-4 mb-4">' +
-                                    '<div class="recommend-entry">' +
+                                    '<div class="recommend-entry" style="cursor:pointer;" onclick="window.open(\'https://search.naver.com/search.naver?query=\' + encodeURIComponent(\'' + title + '\'), \'_blank\')">' +
                                         '<div class="block-20" style="background-image: url(\'' + img + '\'); height: 200px; background-size: cover; background-position: center; position: relative;">' +
                                             '<span style="position: absolute; top: 15px; left: 15px; background: #ff4f4f; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">알고리즘 추천</span>' +
                                         '</div>' +
@@ -518,10 +520,6 @@ $(document).ready(function(){
                     
                     $recList.html(html);
                     $("#recommend-section").show();
-                } else {
-                    console.log("추천 데이터가 없습니다.");
-                    // 데이터가 없을 때는 섹션 자체를 숨길 수도 있습니다.
-                    // $("#recommend-section").hide(); 
                 }
             },
             error: function(xhr, status, error) {
