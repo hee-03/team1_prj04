@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Eclipse / STS 개인 설정 파일 (절대 커밋 X)
+.project-metadata.json
+.project-metadata.json.bak
+
+# deaver 폴더 전체 무시 (있다면)
+.prj04/.deaver/
