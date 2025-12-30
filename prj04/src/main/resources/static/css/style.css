@@ -10021,6 +10021,7 @@ footer .container p:last-child{
   transform: translateY(-6px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
   border-radius: 15px;
+  cursor: pointer;
 }
 .blog-entry:hover .text{
 	border: none;
