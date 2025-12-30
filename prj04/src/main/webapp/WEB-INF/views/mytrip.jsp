@@ -49,6 +49,22 @@
       </div>
     </section>
 
+<section class="ftco-counter img mytripsect" id="section-counter">
+    	<div class="container">
+		    <section id="recommend-section" class="ftco-section">
+		        <div class="container">
+		            <div class="row justify-content-center pb-4">
+		                <div class="col-md-12 heading-section text-center">
+		                    <h2 class="mb-4">🌟 나만을 위한 맞춤 여행지</h2>
+		                </div>
+		            </div>
+		            <div id="recommendList" class="row">
+		                </div>
+		        </div>
+		    </section>
+    	</div>
+    </section>
+    
     <section class="ftco-section">
       <div class="container">
       	<div class="row justify-content-center pb-4">
@@ -67,131 +83,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav02.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
-                <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
-                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav01.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
-                <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav02.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
-                <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
-                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
-              </div>
-            </div>
-          </div>
           
-          <div class="col-md-4 d-flex ftco-animate d-none">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav01.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
-                <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate d-none">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav02.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
-                <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate d-none">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
-                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-4 d-flex ftco-animate d-none">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav01.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
-                <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate d-none">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav02.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">와온해변</a><span class="heartIcon">❤</span></h3>
-                <p>#일몰의 명소이자 드라이브 코스로 유명한 와온해변 #인생샷 포토존 명소</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate d-none">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
-                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate d-none">
-          	<div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav03.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">선암사</a><span class="heartIcon">❤</span></h3>
-                <p>#한국에서 가장 아름다운 절 #전각과 수목의 조화</p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
         <div class="row mt-5">
 		  <div class="col text-center">
 		    <button type="button" id="btnMore" class="btn btn-outline-primary">
@@ -202,109 +94,181 @@
       </div>
     </section>
     
-    <section class="ftco-counter img mytripsect" id="section-counter">
-    	<div class="container">
-    		<div class="row justify-content-center pb-4">
-	          <div class="col-md-7 text-center heading-section ftco-animate">
-	            <h2 class="mb-4">여행담기가 추천하는 여행지</h2>
-	          </div>
-	        </div>
-    		<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/mytrip/rec01.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">순천만국가정원</h2>
-		            <p>
-						클래스가 다른 꽃들의 향연, 꽃들이 이토록 아름다울 수 있을까.
-						인간이 아니라 신이 조경한 듯 황활한 정원들이 다채로운 모습으로 반긴다. 
-						우리 조상들이 가꾸던 전통 정원을 비롯해 세계적 정원 디자이너 찰스쟁스가 디자인한 호수정원이 있는 테마정원, 
-						11개국의 세계정원 등을 하나씩 감상하다 보면 그 웅장한 규모와 기발한 디자인, 
-						영롱한 자태에 매료돼 시간이 어떻게 가는지 모를 정도로 넋 놓고 구경하게 될 것이다.
-					</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-    	</div>
-    </section>
-    <section class="ftco-counter img mytripsect" id="section-counter1">
-    	<div class="container">
-    		<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/mytrip/rec02.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">호미곶</h2>
-		            <p>
-						호미곶은 한반도의 최동단에 위치, 한반도 지형상 호랑이 꼬리에 해당하는 곳이다. 
-						고산자 김정호는 대동여지도를 만들면서 이곳을 일곱번이나 답사 측정한 뒤 우리나라의 가장 동쪽임을 확인하였다고 한다. 
-						가장 먼저 해가 뜨는 곳으로 2000년 및 2001년 두차례에 걸쳐 국가지정 해맞이 축전이 개최되었으며 
-						해마다 한민족 해맞이 축전이 열리고 있다. 
-						이곳에 조성된 해맞이 광장에는 천년대의 마지막 햇빛과 날짜변경선인 피지섬의 첫 햇빛, 
-						그리고 이곳 호미곶에서 채화된 시작의 햇빛 등을 합해 영원의 불로 간직하고 있는 영원의 불씨함이 있으며 
-						바다와 육지에 각각 오른손과 왼손의 형상을 하고 화합과 상생을 뜻하고 있는 대형 청동 조형물 상생의 손과 
-						삼국유사에 전해 내려오는 이 지방 설화의 주인공 연오랑세오녀상이 있다. 
-						상생의 손은 국가행사인 호미곶 해맞이 축전을 기리는 상징물이다. 
-						육지에선 왼손, 바다에선 오른손인 상생의 손은 새천년을 맞아 모든 국민이 서로를 도우며 살자는 뜻에서 만든 조형물인 
-						상생의 손은 두 손이 상생을 의미한다. 성화대의 화반은 해의 이미지이며, 두 개의 원형고리는 화합을 의미한다. 
-						상생의 두손은 새천년을 맞아 화해와 상쇄의 기념정신을 담고 있다.						
-					</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-    	</div>
-    </section>
-    <section class="ftco-counter img mytripsect" id="section-counter2">
-    	<div class="container">
-    		<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img d-flex align-self-stretch" style="background-image:url(/images/mytrip/rec03.jpg);"></div>
-    			</div>
-    			<div class="col-md-6 pl-md-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		            <h2 class="mb-4">공주 군밤축제</h2>
-		            <p>
-						중부권 대표 겨울 축제인 '겨울공주 군밤축제'가 '공주 알밤과 떠나는 달콤한 여행'을 주제로 
-						1월 16일부터 20일까지 5일간 공주 금강신관공원에서 개최 된다. 
-						대표프로그램은 지름 2m에 달하는 대형화로에서 긴 알밤뜰망을 활용해 직접 품질좋은 공주 알밤을 구워먹는 '대형화로체험', 
-						공주에서 생산된 지역 농축산물을 그릴위에서 구워 먹을 수 있는 '공주 군밤 그릴존,' 알밤관련 음식, 물품 만들기 체험이 있으며, 
-						추억의 민속놀이 체험, 추억 포토존 등 다양한 볼거리와 즐길거리를 제공한다.
-					</p>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-    	</div>
-    </section>
+    
+    
     
     <%@ include file="/WEB-INF/views/common/footer.jsp" %>
     <script src="js/heartIcon.js"></script>
     <script>
-		document.addEventListener("DOMContentLoaded", () => {
-		  const list = document.getElementById("favList");
-		  const btn  = document.getElementById("btnMore");
-		  if (!list || !btn) return;
-		
-		  const cards = Array.from(list.querySelectorAll(".col-md-4"));
-		  const STEP = 6;
-		
-		  btn.addEventListener("click", () => {
-		    const hidden = cards.filter(card => card.classList.contains("d-none"));
-		    hidden.slice(0, STEP).forEach(card => card.classList.remove("d-none"));
-		
-		    // 더 이상 숨겨진 카드가 없으면 버튼 숨김
-		    if (cards.every(card => !card.classList.contains("d-none"))) {
-		      btn.style.display = "none";
-		    }
-		  });
-		});
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var listCntPerPage = 12;
+        var randomList = [];
+        var myLikes = []; 
+
+        // [중요] 초기화 시 추천 섹션은 절대로 d-none 처리하지 않습니다.
+        $("#destination").addClass("d-none");
+        $("div.container[id^='rec']").addClass("d-none"); // 상세페이지들만 숨김
+        
+        // 페이지 로드 시 바로 실행
+        loadMyLikes();
+        loadRecommendations(); 
+
+        function loadMyLikes() {
+            $.ajax({
+                url: "${pageContext.request.contextPath}/travel/myLikes", 
+                type: "get",
+                dataType: "json",
+                success: function(list) {
+                    myLikes = list.map(function(item) { return String(item); }); 
+                }
+            });
+        }
+
+        // 지도 클릭 시 동작 수정
+        $("[id^='travel_destination']").on("click", function(){
+            $("#destination").removeClass("d-none");
+            var num = $(this).attr("id").replace("travel_destination", "");
+            
+            // 상세 섹션들(id="rec01" 등)만 정확히 선택해서 숨깁니다.
+            $("div.container[id^='rec']").addClass("d-none");
+            $("#rec" + num).removeClass("d-none");
+            
+            var regionName = $("#rec" + num).find("p.region").text().trim().split(" ")[0];
+            loadTravel(regionName);
+            
+            $('html, body').animate({
+                scrollTop: $("#destination").offset().top - 100
+            }, 500);
+        });
+
+        function loadTravel(regionName){
+            $.ajax({
+                url: "${pageContext.request.contextPath}/travel/list",
+                type: "get",
+                data: {regionName: regionName},
+                dataType: "json",
+                success: function(list){ 
+                    initTravelList(list); 
+                }
+            });
+        }
+            
+        function initTravelList(list){
+            var imageList = list.filter(function(item){ 
+                return item.firstimage && item.firstimage.trim() !== ""; 
+            });
+            imageList.sort(function(){ return Math.random() - 0.5; });
+            randomList = imageList.slice(0, 60);
+            drawPage(1);
+        }
+            
+        window.drawPage = function(page){
+            var startIndex = (page - 1) * listCntPerPage;
+            var pageList = randomList.slice(startIndex, startIndex + listCntPerPage);
+            
+            $(".block-27 ul li").removeClass("active");
+            $(".block-27 ul li").each(function(){
+                if($(this).text().trim() === String(page)) $(this).addClass("active");
+            });
+            drawTravelList(pageList);
+        }
+            
+        function drawTravelList(pageList){
+            var html = '<div class="row" style="width:100%">';
+            $.each(pageList, function(i, item){
+                var img = item.firstimage ? item.firstimage : 'images/no_image.png';
+                var isLiked = myLikes.indexOf(String(item.areacode)) !== -1;
+                var heartClass = isLiked ? "" : "off";
+
+                html += '<div class="col-md-4 d-flex">' +
+                            '<div class="blog-entry justify-content-end" style="width:100%;">' +
+                                '<div class="block-20" style="background-image: url(\'' + img + '\');"></div>' +
+                                '<div class="text mt-3 float-right d-block">' +
+                                    '<h3 class="heading">' +
+                                        '<a>' + item.title + '</a>' +
+                                        '<span class="heartIcon ' + heartClass + '" data-areacode="' + item.areacode + '">❤</span>' +
+                                    '</h3>' +
+                                    '<p>' + (item.addr1 ? item.addr1 : "") + '</p>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>';
+            });
+            $("#travelList").html(html + "</div>");
+        }
+
+        $(document).on("click", ".heartIcon", function(){
+            var heart = $(this);
+            var title = heart.siblings("a").text();
+            var areacode = String(heart.data("areacode"));
+            var action = heart.hasClass("off") ? "INSERT" : "DELETE";
+
+            $.ajax({
+                url: "${pageContext.request.contextPath}/travel/like",
+                type: "post",
+                data: { title: title, areacode: areacode, action: action },
+                success: function(res){
+                    if(res === "success") {
+                        heart.toggleClass("off");
+                        if(action === "INSERT") {
+                            if(myLikes.indexOf(areacode) === -1) myLikes.push(areacode);
+                        } else {
+                            myLikes = myLikes.filter(function(code) { return code !== areacode; });
+                        }
+                        loadRecommendations(); // 하트 누를 때마다 추천 리스트 갱신
+                    }
+                }
+            });
+        });
+
+        // 추천 여행지 로드 함수 (별도 분리)
+        function loadRecommendations() {
+            console.log("추천 데이터 요청 시작");
+            $.ajax({
+                url: "${pageContext.request.contextPath}/travel/recommend",
+                type: "get",
+                dataType: "json",
+                cache: false,
+                success: function(data) {
+                    var $recList = $("#recommendList");
+                    $recList.empty(); 
+
+                    if (data && data.length > 0) {
+                        console.log("받은 추천 데이터 개수:", data.length);
+                        var html = "";
+                        $.each(data, function(i, item) {
+                            var img = (item.firstimage && item.firstimage !== "") ? item.firstimage : "images/rec_travel/recmain.png";
+                            var title = item.title ? item.title : "추천 여행지";
+                            var addr = item.addr1 ? item.addr1 : "주소 정보 없음";
+
+                            html += '<div class="col-md-4 mb-4">' +
+                                        '<div class="recommend-entry">' +
+                                            '<div class="block-20" style="background-image: url(\'' + img + '\'); height: 200px; background-size: cover; background-position: center; position: relative;">' +
+                                                '<span style="position: absolute; top: 15px; left: 15px; background: #ff4f4f; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">알고리즘 추천</span>' +
+                                            '</div>' +
+                                            '<div class="text p-3">' +
+                                                '<h3 style="font-size: 18px; font-weight: 700; color: #333; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + title + '</h3>' +
+                                                '<p style="font-size: 13px; color: #888; margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + addr + '</p>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>';
+                        });
+                        
+                        $recList.html(html);
+                        $("#recommend-section").show();
+                    } else {
+                        console.log("추천 데이터가 없습니다.");
+                        // 데이터가 없을 때는 섹션 자체를 숨길 수도 있습니다.
+                        // $("#recommend-section").hide(); 
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("추천 로드 실패:", error);
+                }
+            });
+        }
+    });
+    
 	</script>
 
 

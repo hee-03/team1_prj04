@@ -43,7 +43,7 @@ public class ContentParser {
 				c.setTitle(getTagValue("title", item));
 				c.setAddr1(getTagValue("addr1", item));
 				c.setFirstimage(getTagValue("firstimage", item));
-				c.setCat1(getTagValue("cat1", item));
+
 				
 				list.add(c);
 			}
