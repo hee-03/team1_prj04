@@ -102,7 +102,7 @@
     	</div>
     </section>
 
-	<section class="ftco-counter img box-shadow" id="section-counter">
+	<section class="ftco-counter img box-radius" id="section-counter">
     	<div id="rec01" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
