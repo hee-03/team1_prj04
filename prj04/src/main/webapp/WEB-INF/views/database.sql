@@ -15,3 +15,22 @@ CREATE TABLE  area_based(
 	cat1 varchar2(50) NOT null
 );
 SELECT * FROM area_based;
+
+CREATE TABLE TRIP_USER(
+	user_id NUMBER PRIMARY KEY,
+	name VARCHAR2(50) NOT NULL,
+	email VARCHAR2(100) NOT NULL,
+	password VARCHAR2(100) NOT NULL,
+	phone_number NUMBER NOT NULL
+);
+SELECT * FROM TRIP_USER;
+
+CREATE TABLE FESTIVAL(
+	festival_id NUMBER PRIMARY KEY,
+	festival_name VARCHAR2(100) NOT NULL,
+	festival_region VARCHAR2(100) NOT NULL,
+	festival_start DATE NOT NULL,
+	festival_end DATE NOT NULL,
+	festival_heart VARCHAR2(1)	
+);
+SELECT * FROM FESTIVAL;

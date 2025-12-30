@@ -61,6 +61,13 @@ public class A01_MVC_Controller {
    public String findResult() {
 	   return "findResult";
    }
+   
+   @GetMapping("search")
+	public String search(@RequestParam("keyword") String keyword, Model model) {
+		model.addAttribute("keyword", keyword);
+	    return "findResult";
+	    
+	}
       
       
       // Model : 핵심

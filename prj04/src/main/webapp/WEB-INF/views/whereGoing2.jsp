@@ -43,36 +43,36 @@
     </div> 
     </section> 
 	<%-- 도 or 특별시 단위 지역 선택 (기본값: 서울)--%>
-	<div id="location_select" class="d-flex">
+	<div id="select_location" class="d-flex">
 	
-	    <div id="location00" class="">
+	    <div id="location00" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">서울</div>
 	    </div>
-	    <div id="location01" class="">
+	    <div id="location01" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">경기</div>
 	    </div><%-- 초기에 `경기/서울`이 default로 선택되게 지정. --%>
-	    <div id="location02" class="">
+	    <div id="location02" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">강원</div>
 	    </div>
-	    <div id="location03" class="">
+	    <div id="location03" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">충남</div>
 	    </div>
-	    <div id="location04" class="">
+	    <div id="location04" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">충북</div>
 	    </div>
-	    <div id="location05" class="">
+	    <div id="location05" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">전남</div>
 	    </div>
-	    <div id="location06" class="">
+	    <div id="location06" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">전북</div>
 	    </div>
-	    <div id="location07" class="">
+	    <div id="location07" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">경남</div>
 	    </div>
-	    <div id="location08" class="">
+	    <div id="location08" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">경북</div>
 	    </div>
-	    <div id="location09" class="">
+	    <div id="location09" class="location_item">
 	    	<div class="loc_img"></div><div class="loc_text">제주</div>
 	    </div>
 	</div>
@@ -143,7 +143,7 @@
       
   <script>
   $(document).ready(function(){
-		
+		//
 	  let regionName = "서울";
 	  // 서울 초기 선택
 	  $("#location00").addClass("active selected_location");
@@ -154,8 +154,40 @@
 	    // 클릭 이벤트
 	    $("[id^='location']").on("click", function(){
 	    	
-	    	// 서울 선택 초기화
-	    	$("#location_select > div").removeClass("active selected_location");
+	    	// 1. 모든 지역 아이템에서 강조 클래스(active, selected_location)를 제거
+	        $(".location_item").removeClass("active selected_location");
+	        
+	        // 2. 현재 클릭된 요소(this)에만 강조 클래스 추가
+	        $(this).addClass("active selected_location");
+	        
+	        // 3. 클릭된 요소에서 지역 텍스트 추출
+	        let regionText = $(this).find(".loc_text").text().trim();
+	        
+	        // 4. DB 조회를 위한 풀네임 변환 (기존 로직 유지)
+	        switch (regionText) {
+	            case "경기": regionName = "경기도"; break;
+	            case "강원": regionName = "강원특별자치도"; break;
+	            case "전북": regionName = "전북특별자치도"; break;
+	            case "경남": regionName = "경상남도"; break;
+	            case "경북": regionName = "경상북도"; break;
+	            case "제주": regionName = "제주특별자치도"; break;
+	            case "서울": regionName = "서울"; break;
+	            case "충남": regionName = "충청남도"; break;
+	            case "충북": regionName = "충청북도"; break;
+	            case "전남": regionName = "전라남도"; break;
+		        default:
+		            break;	
+	        }
+	        console.log("변환된 regionName:", regionName);
+	        // 5. 데이터 새로고침
+	        loadTravel(regionName);	    	
+	    	
+/*
+			
+			//===희정님 기존 코드 ===
+			// 서울 선택 초기화
+	    	$("#select_location > div").removeClass("active selected_location");
+	    	// ※※※위에 location_select를 select_location으로 `이병주`가 수정※※※
 	    	
 	    	$(this).addClass("active");
 	    	
@@ -182,7 +214,9 @@
 	    	console.log("변환된 regionName:", regionName);
 	        
 	        //AJAX 호출
-	        loadTravel(regionName)
+	        loadTravel(regionName) */
+	        
+	       //  //===희정님 기존 코드 ===
 	        
 	    });
 	    	loadTravel(regionName);

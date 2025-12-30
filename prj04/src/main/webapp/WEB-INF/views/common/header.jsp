@@ -34,15 +34,15 @@
 <!-- 검색창 -->
 <div id="headerSearchWrap" class="header-search-wrap" aria-hidden="true">
   <div class="container">
-    <form id="headerSearchForm" class="header-search" action="#" method="get">
+    <form id="headerSearchForm" class="header-search" action="${pageContext.request.contextPath}/search" method="get">
       <label class="sr-only" for="headerSearchInput">검색</label>
 
       <input
         id="headerSearchInput"
-        name="q"
+        name="keyword"
         type="text"
         class="header-search__input"
-        placeholder="여행지 · 축제 · 지역 검색"
+        placeholder="여행지 검색"
         autocomplete="off"
       />
 
@@ -52,65 +52,65 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const currentPath = window.location.pathname;
-
-  document.querySelectorAll("#ftco-nav .navbar-nav .nav-item").forEach(li => {
-    const a = li.querySelector("a.nav-link");
-    if (!a) return;
-
-    const href = a.getAttribute("href");
-    li.classList.toggle("active", href === currentPath || (currentPath === "/" && href === "/index"));
-  });
-});
+	document.addEventListener("DOMContentLoaded", function () {
+	  const currentPath = window.location.pathname;
+	
+	  document.querySelectorAll("#ftco-nav .navbar-nav .nav-item").forEach(li => {
+	    const a = li.querySelector("a.nav-link");
+	    if (!a) return;
+	
+	    const href = a.getAttribute("href");
+	    li.classList.toggle("active", href === currentPath || (currentPath === "/" && href === "/index"));
+	  });
+	});
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("btnHeaderSearch");
-  const wrap = document.getElementById("headerSearchWrap");
-  const form = document.getElementById("headerSearchForm");
-  const input = document.getElementById("headerSearchInput");
-
-  if (!btn || !wrap || !input) return;
-
-  function openSearch() {
-    wrap.classList.add("is-open");
-    wrap.setAttribute("aria-hidden", "false");
-    // 펼쳐진 뒤 포커스
-    setTimeout(() => input.focus(), 50);
-  }
-
-  function closeSearch() {
-    wrap.classList.remove("is-open");
-    wrap.setAttribute("aria-hidden", "true");
-  }
-
-  function toggleSearch() {
-    const isOpen = wrap.classList.contains("is-open");
-    isOpen ? closeSearch() : openSearch();
-  }
-
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    toggleSearch();
-  });
-
-  // ESC로 닫기
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeSearch();
-  });
-
-  // 바깥 클릭 시 닫기 (검색바 내부 클릭은 유지)
-  document.addEventListener("click", function (e) {
-    const clickedInside = wrap.contains(e.target) || btn.contains(e.target);
-    if (!clickedInside) closeSearch();
-  });
-
-  // submit은 그대로 진행 (action으로 이동)
-  form && form.addEventListener("submit", function () {
-    // 필요하면 여기에서 q 값 검증 가능
-  });
-});
+	document.addEventListener("DOMContentLoaded", function () {
+	  const btn = document.getElementById("btnHeaderSearch");
+	  const wrap = document.getElementById("headerSearchWrap");
+	  const form = document.getElementById("headerSearchForm");
+	  const input = document.getElementById("headerSearchInput");
+	
+	  if (!btn || !wrap || !input) return;
+	
+	  function openSearch() {
+	    wrap.classList.add("is-open");
+	    wrap.setAttribute("aria-hidden", "false");
+	    // 펼쳐진 뒤 포커스
+	    setTimeout(() => input.focus(), 50);
+	  }
+	
+	  function closeSearch() {
+	    wrap.classList.remove("is-open");
+	    wrap.setAttribute("aria-hidden", "true");
+	  }
+	
+	  function toggleSearch() {
+	    const isOpen = wrap.classList.contains("is-open");
+	    isOpen ? closeSearch() : openSearch();
+	  }
+	
+	  btn.addEventListener("click", function (e) {
+	    e.preventDefault();
+	    toggleSearch();
+	  });
+	
+	  // ESC로 닫기
+	  document.addEventListener("keydown", function (e) {
+	    if (e.key === "Escape") closeSearch();
+	  });
+	
+	  // 바깥 클릭 시 닫기 (검색바 내부 클릭은 유지)
+	  document.addEventListener("click", function (e) {
+	    const clickedInside = wrap.contains(e.target) || btn.contains(e.target);
+	    if (!clickedInside) closeSearch();
+	  });
+	
+	  // submit은 그대로 진행 (action으로 이동)
+	  form && form.addEventListener("submit", function () {
+	    // 필요하면 여기에서 q 값 검증 가능
+	  });
+	});
 </script>
 
 
