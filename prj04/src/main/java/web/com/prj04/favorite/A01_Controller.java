@@ -24,7 +24,7 @@ public class A01_Controller {
 	public List<Content> travelList(@RequestParam String regionName){
 		return service.getContentsByRegionName(regionName);
 	}
-//http://localhost:7777/rec_travel_test
+//http://localhost:7070/rec_travel_test
 	@GetMapping("rec_travel_test")
 	public String rec_travel_test() {
 	    return "rec_travel2";
