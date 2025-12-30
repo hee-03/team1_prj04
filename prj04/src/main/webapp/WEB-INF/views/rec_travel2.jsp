@@ -76,17 +76,6 @@
       </div>
     </section>
 
-    <section id="recommend-section" class="ftco-section">
-        <div class="container">
-            <div class="row justify-content-center pb-4">
-                <div class="col-md-12 heading-section text-center">
-                    <h2 class="mb-4">🌟 나만을 위한 맞춤 여행지</h2>
-                </div>
-            </div>
-            <div id="recommendList" class="row">
-                </div>
-        </div>
-    </section>
 
 	<section class="ftco-section2">
     	<div class="container">
