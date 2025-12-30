@@ -1,0 +1,535 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>지금 가장 좋은 여행</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .heartIcon { 
+            cursor: pointer; 
+            color: #ff4f4f !important; 
+            margin-left: 8px; 
+            display: inline-block; 
+            transition: transform 0.2s; 
+        }
+        .heartIcon.off { 
+            color: #ccc !important; 
+            opacity: 0.8; 
+        }
+        .heartIcon:hover { transform: scale(1.2); }
+        
+        /* 추천 섹션 전용 스타일 추가 */
+        .recommend-entry {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+            background: #fff;
+            margin-bottom: 30px;
+        }
+        .recommend-entry:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        /* 추천 섹션이 다른 요소에 의해 숨겨지지 않도록 설정 */
+        #recommend-section {
+            display: block !important;
+            padding: 50px 0;
+            background: #fcfcfc;
+        }
+        #recommendList {
+            min-height: 200px;
+        }
+    </style>
+  </head>
+  <body>
+  <%@ include file="/WEB-INF/views/common/header.jsp" %>
+  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/rec_travel/recmain.png'); margin-top: 50px;" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate text-center" style="padding-bottom: 380px; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);">
+            <h1 class="mb-3 bread">지금 가장 좋은 여행</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recommend-section" class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center pb-4">
+                <div class="col-md-12 heading-section text-center">
+                    <h2 class="mb-4">🌟 나만을 위한 맞춤 여행지</h2>
+                </div>
+            </div>
+            <div id="recommendList" class="row">
+                </div>
+        </div>
+    </section>
+
+	<section class="ftco-section2">
+    	<div class="container">
+    		<div class="row justify-content-center pb-4">
+          		<div class="col-md-12 heading-section text-center ftco-animate">
+	          		<div>
+    					<div style="background-image: url('images/rec_travel/Dec_travel_map.png');background-size: contain;
+    							 background-repeat: no-repeat;background-position:center;width:1140px;height: 800px;position:relative;">
+    						<div id="travel_destination01" class="tr_dst_circle" style="left:422px;top:216px;"></div><div id="travel_destination02" class="tr_dst_circle" style="left:602px;top:192px;"></div><div id="travel_destination03" class="tr_dst_circle" style="left:693px;top:232px;"></div><div id="travel_destination04" class="tr_dst_circle" style="left:508px;top:304px;"></div><div id="travel_destination05" class="tr_dst_circle" style="left:404px;top:374px;"></div><div id="travel_destination06" class="tr_dst_circle" style="left:665px;top:400px;"></div><div id="travel_destination07" class="tr_dst_circle" style="left:390px;top:540px;"></div><div id="travel_destination08" class="tr_dst_circle" style="left:513px;top:506px;"></div><div id="travel_destination09" class="tr_dst_circle" style="left:607px;top:628px;"></div><div id="travel_destination10" class="tr_dst_circle" style="left:712px;top:552px;"></div></div>
+	          		</div>
+          		</div>
+        	</div>
+    	</div>
+    </section>
+
+	<section class="ftco-counter img box-shadow" id="section-counter">
+    	<div id="rec01" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec01.PNG);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">파라다이스 시티 씨메르(인천)</h2>
+			            <h5>인천 중구</h5>
+			            <h3>바다와 하늘이 럭셔리함으로 물드는 공간</h3>
+			            <p>
+						씨메르는 인천 중구 영종도 파라다이스시티에서 2018년 9월에 오픈하여 1만 3,000여 ㎡(4,000평) 규모로, 동시에 약 2,000명까지 이용할 수 있다. 씨메르는 하늘을 뜻하는 프랑스어 ‘ciel’과 바다을 뜻하는 ‘mer’를 합친 이름이다. 하늘과 바다의 만남을 한데 아울러 특별한 공간에서 만날 볼 수 있다. 또한, 럭셔리하고 트렌디한 아쿠아 스파 존에서는 수영 시설뿐만 아니라 다이나믹한 LED 미디어 아트와 차별화된 컨셉 풀 파티를 즐길 수 있다. 이 외에도 찜질 스파존과 사우나, 다양한 휴게 공간이 마련되어 있다.						</p>
+						<p>위치: 	</p>
+						<p class="region">인천광역시 중구 영종해안남로321번길 186</p>
+						<p>전화번호: 1833-8855</p>
+						<p>영업시간: 평일 10:00~19:00 | 주말 및 공휴일 10:00~21:00</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+    	<div id="rec02" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec02.PNG);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">나무향기한증막</h2>
+			            <p>나무향기 한증막은 춘천시의 조용한 곳에 있는 힐링 휴게 공간이다. 정적의 분위기를 최대로 즐길 수 있도록 관리 중이며, 땀을 빼고 가볍게 씻는 원초적인 행위에 집중할 수 있도록 다양한 시설들이 마련되어 있다. 대표적으로 불한증막은 매일 새벽, 나무향기의 본질이자 근원인 소나무 장작을 넣고 불을 지피고 있다. 이 외에도 고즈넉한 분위기의 대청마루, 따뜻한 담소방, 야외 툇마루, 관어대와 중정 등이 있다. 조용하고 쾌적한 공간을 만들기 위해 권고 사항이 있으니, 방문 전 홈페이지를 통해 확인하기를 추천한다.
+						</p>
+						<p>위치: </p>
+						<p class="region">강원특별자치도 춘천시 스포츠타운길433번길 10 (삼천동)</p>
+						<p>전화번호: 033-241-9877</p>
+						<p>영업시간: 11:00~21:50 (입장 마감 20:20) 매주 수,목요일</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+    	<div id="rec03" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec03.PNG);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">대관령자연휴양림</h2>
+			            <p>
+			            영동과 영서 지방을 가르는 분수령인 대관령 정상에서 동쪽으로 바라보면 강릉시와 동해가 한눈에 보이고, 발아래는 아름드리 소나무 숲이 융단처럼 펼쳐지는데, 이 속에 대관령 자연휴양림이 있다. 한국에서 최초로 개장한 휴양림으로 1989년 2월 15일에 문을 열어 면적은 2,808만 제곱미터이다. 1일 최대 수용 인원은 1,000명, 최적 인원은 500명이다.
+						대관령자연휴양림은 태고의 웅장함을 그대로 갖춘 우리나라 제일의 소나무 숲으로, 각종 편의 시설과 소나무 숲이 조화를 이루어 가족 단위 휴식 및 산림욕을 즐기기에 최적의 휴식 공간이다. 강릉시가 가까워 이곳을 거점으로 경포대와 오죽헌 등 강릉 부근 역사 유적지 여행을 곁들여 바다 경치를 구경할 수 있다. 맑은 날이면 짙은 야경이 휘황찬란하다. 휴양림은 2지구로 나뉘는데 왼쪽 계곡에는 단체를 위한 수련장 시설이 오른쪽 계곡에는 가족 단위 위락 시설들이 있다.
+						</p>
+						<p>위치: 	</p>
+						<p class="region">강원특별자치도 강릉시 성산면 삼포암길 133</p>
+						<p>전화번호: 033-641-9990</p>
+						<p>영업시간: [일일개장] 09:00~18:00 [숙박시설] 15:00~익일 11:00</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+    	<div id="rec04" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec04.png);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">초정행궁</h2>
+			            <h5>충북 청주시</h5>
+			            <h3>세종대왕이 머물렀던 한옥에서의 하루</h3>
+			            <p>
+							초정행궁은 청주시 청원구 내수읍 초정리에 자리 잡고 있다 있다. 목욕, 질병 치료, 휴양 등을 목적으로 지은 행궁으로 세종대왕이 눈병 등 질병을 치료하기 위해 짓고 머물렀던 행궁이다. 조청약수 체험관, 전통찻집, 천문 과학관, 수라간, 독서강, 집현전 등 다양한 시설에서 전통 체험을 즐길 수 있다. 객실은 훈민관, 초정관 등의 이름으로 스러움을 한껏 느낄 수 있으면서도 한옥의 아름다움을 즐길 수 있어 관광객들의 발길이 끊기지 않는다.						
+							</p>
+						<p>위치: 	</p>
+						<p class="region">충청북도 청주시 청원구 내수읍 초정약수로 851</p>
+						<p>전화번호: 043-270-7332</p>
+						<p>영업시간: 입실 15:00 | 퇴실 12:00</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+    	<div id="rec05" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec05.png);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">대전근현대사전시관</h2>
+			            <h5>대전 중구</h5>
+			            <h3>문화유산 아래 펼쳐지는 대전 역사의 숨결을 느낄 수 있는 곳</h3>
+			            <p>
+			            대전근현대사전시관은 대전시립박물관에서 운영하는 전시관으로, 1932년에 건축된 우리나라 근대 건축물인 옛 충남도청사 본관 1층에 자리 잡고 있다. 이 건물은 1930년대 초에 지어진 건축물 중에서도 원형이 잘 보존된 보기 드문 근대 문화유산으로, 건축적 가치와 역사적 의미를 함께 지닌 공간이다. 전시관에서는 건축물 자체를 감상하는 것은 물론, 대전의 근현대사와 관련된 다양한 상설 전시와 대전 근현대사의 많은 사건들과 역사, 건축, 도시계획, 디자인, 대중문화 등 다양한 분야의 특별 전시를 함께 즐길 수 있다. 역사와 문화에 관심 있는 시민은 물론, 가족 단위 관람객에게도 유익한 공간으로, 교육적 가치 또한 높다.
+						</p>
+						<p>위치: 	</p>
+						<p class="region">대전광역시 중구 중앙로 101 (선화동)</p>
+						<p>전화번호: 042-270-4537</p>
+						<p>영업시간: [하절기(3월~10월)] 10:00~19:00 | [동절기(11월~2월)] 10:00~18:00
+						</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+		<div id="rec06" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec06.png);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">1925감포</h2>
+			            <h5>경북 경주시</h5>
+			            <h3>옛 감성이 모락모락 피어나는 카페</h3>
+			            <p>
+			            1925감포는 경상북도 경주시 감포읍 감포리에 있다. 감포항이 개항하던 1925년이었던 것에 영감받아 카페가 만들어졌다. 인테리어 내부는 약 30년 동안 폐업한 옛날 목욕탕을 리모델링하여 카페로 탈바꿈한 공간이다. 외관은 빈티지한 멋과 현대적인 감각이 돋보인다. 감성적인 분위기를 연출하는 인테리어가 눈에 띈다. 대표 메뉴는 부표가 동동 떠 있는 부표라떼이다. 이밖에 아메리카노, 감포비취, 산내 어서오곡, 송대말의 오후, 고아라의 아침 등 이색 음료와 디저트 등을 맛볼 수 있다.
+						</p>
+						<p>위치: </p>
+						<p class="region">경상북도 경주시 감포안길 15</p>
+						<p>전화번호: 0507-1388-7118</p>
+						<p>영업시간: 09:30~18:00 (마지막 주문 17:30)</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+    	<div id="rec07" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec07.png);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">정우굴구이</h2>
+			            <h5>전남 여수시</h5>
+			            <h3>제철 굴의 진수를 맛볼 수 있는 곳</h3>
+			            <p>
+			            정우굴구이는 바람이 차가워지는 10월 중순부터 3월 말까지만 운영하는데, 제철에만 맛볼 수 있는 굴을 재료로 하는 굴 전문점이다. 5,000㎡가 넘는 굴 양식장을 직접 운영해 매일 굴을 수확해 신선함이 뛰어나다. 깨끗하게 씻은 굴을 직화로 구워 먹는 굴구이, 굴 향 가득 품고 바싹한 식감을 자랑하는 굴파전, 굴회 무침, 얼큰한 굴라면, 든든한 한 끼 굴 돌솥밥 등 굴로 만든 음식들이 다양하게 준비되어 있다.
+						</p>
+						<p>위치: </p>
+						<p class="region">전라남도 여수시 돌산읍 안굴전길 57</p>
+						<p>전화번호: 0507-1316-6125</p>
+						<p>영업시간: 10:00~22:00 (마지막 주문 21:00)</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+    	<div id="rec08" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec08.png);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">한마음식당</h2>
+			            <h5>경남 통영시</h5>
+			            <h3>하루 100테이블로 지키는 통영 굴의 신선함</h3>
+			            <p>
+			            한마음 식당은 국내 굴 공급량의 상당 부분을 차지하고 있는 통영에 있다. 신선한 요리를 제공하기 위해 하루에 100테이블만 받는 식당이다. 대표 메뉴는 삼겹살과 김치, 굴을 한꺼번에 즐기는 '굴삼합' 이다. 그 외에 굴전, 굴탕수육, 굴어묵 등 다양한 굴 요리도 판매한다.
+						</p>
+						<p>위치: </p>
+						<p class="region">경상남도 통영시 해송정1길 6</p>
+						<p>전화번호: 0507-1401-0971</p>
+						<p>영업시간: 08:00~23:00</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+    	<div id="rec09" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec09.png);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">부네치아 선셋 전망대</h2>
+			            <h5>부산 사하구</h5>
+			            <h3>색으로 물든 항구, 그림이 되는 순간</h3>
+			            <p>
+			            장림포구는 SNS 상에서 '부네치아'로 불리며 명성을 얻고 있다. 형형색색의 건물들이 이탈리아 베네치아 무라노섬과 닮았기 때문이다. 부네치아 선셋 전망대는 부산의 일몰 명소로 알려져 있으며 카페를 즐기며 장림포구의 전체적인 모습을 느낄 수 있다.
+						</p>
+						<p>위치: </p>
+						<p class="region">부산광역시 사하구 장림로93번길 72 (장림동) 일원</p>
+						<p>전화번호: 051-220-4501</p>
+						<p>영업시간: [전망대] 상시 개방 | [맛술촌] 10:00~18:00
+						</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+    	<div id="rec10" class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img d-flex align-self-stretch" style="background-image:url(images/rec_travel/rec10.png);"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 py-4">
+    				<div class="row justify-content-start pb-3">
+			          <div class="col-md-12 heading-section ftco-animate">
+			            <h2 class="mb-4">센텀시티 스파랜드</h2>
+			            <h5>부산 해운대구</h5>
+			            <h3>궁전 같은 웅장함 속에서 휴식을 즐길 수 있는 공간</h3>
+			            <p>
+			            스파랜드는 부산 도심 속에 위치한 휴양형 온천 명소이다. 18개의 온천탕과 13개의 테마로 즐기는 찜질을 즐길 수 있으며, 천연 온천수를 각기 다른 온도로 제공하여 피로를 풀고 건강 입욕을 즐길 수 있다.
+						</p>
+						<p>위치: </p>
+						<p class="region">부산광역시 해운대구 센텀남대로 35 (우동)</p>
+						<p>전화번호: 1668-2850</p>
+						<p>영업시간: 09:00~22:00 (입장 마감 21:00)</p>
+			          </div>
+		        	</div>
+	        	</div>
+        	</div>
+    	</div>
+    </section>
+
+	<section id="destination" class="ftco-section">
+      <div class="container">
+      	<div class="row justify-content-center pb-4">
+          <div class="col-md-7 text-center heading-section">
+            <h2 class="mb-41">다른 여행지 둘러보기🔍</h2>
+          </div>
+        </div>
+		<div id="travelList" class="d-flex"></div>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="javascript:void(0)" onclick="drawPage(1)">&lt;</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(1)">1</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(2)">2</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(3)">3</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(4)">4</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(5)">5</a></li>
+                <li><a href="javascript:void(0)" onclick="drawPage(5)">&gt;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	<%@ include file="/WEB-INF/views/common/footer.jsp" %>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+<script type="text/javascript">
+$(document).ready(function(){
+    var listCntPerPage = 12;
+    var randomList = [];
+    var myLikes = []; 
+
+    // [중요] 초기화 시 추천 섹션은 절대로 d-none 처리하지 않습니다.
+    $("#destination").addClass("d-none");
+    $("div.container[id^='rec']").addClass("d-none"); // 상세페이지들만 숨김
+    
+    // 페이지 로드 시 바로 실행
+    loadMyLikes();
+    loadRecommendations(); 
+
+    function loadMyLikes() {
+        $.ajax({
+            url: "${pageContext.request.contextPath}/travel/myLikes", 
+            type: "get",
+            dataType: "json",
+            success: function(list) {
+                myLikes = list.map(function(item) { return String(item); }); 
+            }
+        });
+    }
+
+    // 지도 클릭 시 동작 수정
+    $("[id^='travel_destination']").on("click", function(){
+        $("#destination").removeClass("d-none");
+        var num = $(this).attr("id").replace("travel_destination", "");
+        
+        // 상세 섹션들(id="rec01" 등)만 정확히 선택해서 숨깁니다.
+        $("div.container[id^='rec']").addClass("d-none");
+        $("#rec" + num).removeClass("d-none");
+        
+        var regionName = $("#rec" + num).find("p.region").text().trim().split(" ")[0];
+        loadTravel(regionName);
+        
+        $('html, body').animate({
+            scrollTop: $("#destination").offset().top - 100
+        }, 500);
+    });
+
+    function loadTravel(regionName){
+        $.ajax({
+            url: "${pageContext.request.contextPath}/travel/list",
+            type: "get",
+            data: {regionName: regionName},
+            dataType: "json",
+            success: function(list){ 
+                initTravelList(list); 
+            }
+        });
+    }
+        
+    function initTravelList(list){
+        var imageList = list.filter(function(item){ 
+            return item.firstimage && item.firstimage.trim() !== ""; 
+        });
+        imageList.sort(function(){ return Math.random() - 0.5; });
+        randomList = imageList.slice(0, 60);
+        drawPage(1);
+    }
+        
+    window.drawPage = function(page){
+        var startIndex = (page - 1) * listCntPerPage;
+        var pageList = randomList.slice(startIndex, startIndex + listCntPerPage);
+        
+        $(".block-27 ul li").removeClass("active");
+        $(".block-27 ul li").each(function(){
+            if($(this).text().trim() === String(page)) $(this).addClass("active");
+        });
+        drawTravelList(pageList);
+    }
+        
+    function drawTravelList(pageList){
+        var html = '<div class="row" style="width:100%">';
+        $.each(pageList, function(i, item){
+            var img = item.firstimage ? item.firstimage : 'images/no_image.png';
+            var isLiked = myLikes.indexOf(String(item.areacode)) !== -1;
+            var heartClass = isLiked ? "" : "off";
+
+            html += '<div class="col-md-4 d-flex">' +
+                        '<div class="blog-entry justify-content-end" style="width:100%;">' +
+                            '<div class="block-20" style="background-image: url(\'' + img + '\');"></div>' +
+                            '<div class="text mt-3 float-right d-block">' +
+                                '<h3 class="heading">' +
+                                    '<a>' + item.title + '</a>' +
+                                    '<span class="heartIcon ' + heartClass + '" data-areacode="' + item.areacode + '">❤</span>' +
+                                '</h3>' +
+                                '<p>' + (item.addr1 ? item.addr1 : "") + '</p>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+        });
+        $("#travelList").html(html + "</div>");
+    }
+
+    $(document).on("click", ".heartIcon", function(){
+        var heart = $(this);
+        var title = heart.siblings("a").text();
+        var areacode = String(heart.data("areacode"));
+        var action = heart.hasClass("off") ? "INSERT" : "DELETE";
+
+        $.ajax({
+            url: "${pageContext.request.contextPath}/travel/like",
+            type: "post",
+            data: { title: title, areacode: areacode, action: action },
+            success: function(res){
+                if(res === "success") {
+                    heart.toggleClass("off");
+                    if(action === "INSERT") {
+                        if(myLikes.indexOf(areacode) === -1) myLikes.push(areacode);
+                    } else {
+                        myLikes = myLikes.filter(function(code) { return code !== areacode; });
+                    }
+                    loadRecommendations(); // 하트 누를 때마다 추천 리스트 갱신
+                }
+            }
+        });
+    });
+
+    // 추천 여행지 로드 함수 (별도 분리)
+    function loadRecommendations() {
+        console.log("추천 데이터 요청 시작");
+        $.ajax({
+            url: "${pageContext.request.contextPath}/travel/recommend",
+            type: "get",
+            dataType: "json",
+            cache: false,
+            success: function(data) {
+                var $recList = $("#recommendList");
+                $recList.empty(); 
+
+                if (data && data.length > 0) {
+                    console.log("받은 추천 데이터 개수:", data.length);
+                    var html = "";
+                    $.each(data, function(i, item) {
+                        var img = (item.firstimage && item.firstimage !== "") ? item.firstimage : "images/rec_travel/recmain.png";
+                        var title = item.title ? item.title : "추천 여행지";
+                        var addr = item.addr1 ? item.addr1 : "주소 정보 없음";
+
+                        html += '<div class="col-md-4 mb-4">' +
+                                    '<div class="recommend-entry">' +
+                                        '<div class="block-20" style="background-image: url(\'' + img + '\'); height: 200px; background-size: cover; background-position: center; position: relative;">' +
+                                            '<span style="position: absolute; top: 15px; left: 15px; background: #ff4f4f; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">알고리즘 추천</span>' +
+                                        '</div>' +
+                                        '<div class="text p-3">' +
+                                            '<h3 style="font-size: 18px; font-weight: 700; color: #333; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + title + '</h3>' +
+                                            '<p style="font-size: 13px; color: #888; margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + addr + '</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>';
+                    });
+                    
+                    $recList.html(html);
+                    $("#recommend-section").show();
+                } else {
+                    console.log("추천 데이터가 없습니다.");
+                    // 데이터가 없을 때는 섹션 자체를 숨길 수도 있습니다.
+                    // $("#recommend-section").hide(); 
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error("추천 로드 실패:", error);
+            }
+        });
+    }
+});
+</script>
+  </body>
+</html>
