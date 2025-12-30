@@ -83,7 +83,8 @@
               </div>
             </div>
           </div>
-          
+          <div id="travelList"></div>
+           </div>
         <div class="row mt-5">
 		  <div class="col text-center">
 		    <button type="button" id="btnMore" class="btn btn-outline-primary">
@@ -91,15 +92,14 @@
 		    </button>
 		  </div>
 		</div>
-      </div>
+     
     </section>
     
     
     
     
     <%@ include file="/WEB-INF/views/common/footer.jsp" %>
-    <script src="js/heartIcon.js"></script>
-    <script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
         var listCntPerPage = 12;
@@ -107,7 +107,6 @@
         var myLikes = []; 
 
         // [중요] 초기화 시 추천 섹션은 절대로 d-none 처리하지 않습니다.
-        $("#destination").addClass("d-none");
         $("div.container[id^='rec']").addClass("d-none"); // 상세페이지들만 숨김
         
         // 페이지 로드 시 바로 실행
