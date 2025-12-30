@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="web.com.prj04.favorite.TravelMapper">
+
+    <select id="getContentsByRegionName" resultType="web.com.prj04.prj04_mvc.Content">
+        SELECT * FROM area_based 
+        WHERE addr1 LIKE '%' || #{regionName} || '%'
+    </select>
+
+    <insert id="insertLike">
+        INSERT INTO Favorite (email, areacode, cat1)
+        SELECT DISTINCT #{email}, #{areacode}, cat1
+        FROM area_based
+        WHERE areacode = #{areacode} AND title = #{title}
+        AND ROWNUM = 1
+    </insert>
+
+    <delete id="deleteLike">
+        DELETE FROM Favorite 
+        WHERE email = #{email} AND areacode = #{areacode}
+    </delete>
+
+    <select id="getTopPreference" resultType="web.com.prj04.favorite.Top">
+        SELECT c.email, c.cat1, a.areacode
+        FROM (
+            SELECT email, cat1
+            FROM (
+                SELECT email, cat1, ROW_NUMBER() OVER (ORDER BY COUNT(*) DESC) AS rn
+                FROM Favorite WHERE email = #{email}
+                GROUP BY email, cat1
+            ) WHERE rn = 1
+        ) c
+        JOIN (
+            SELECT email, areacode
+            FROM (
+                SELECT email, areacode, ROW_NUMBER() OVER (ORDER BY COUNT(*) DESC) AS rn
+                FROM Favorite WHERE email = #{email}
+                GROUP BY email, areacode
+            ) WHERE rn = 1
+        ) a ON c.email = a.email
+    </select>
+
+    <select id="getRecommendedByTop" resultType="web.com.prj04.prj04_mvc.Content">
+        SELECT * FROM (
+            SELECT * FROM area_based 
+            WHERE areacode = #{areacode} AND cat1 = #{cat1}
+            ORDER BY DBMS_RANDOM.VALUE
+        ) WHERE ROWNUM &lt;= 3
+    </select>
+
+</mapper>

@@ -306,12 +306,12 @@
 		    			html += `
 		    					 <div class="col-md-4 d-flex">
 		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
-		    					 		<a href="#" class="block-20"
+		    					 		<a href="https://search.naver.com/search.naver?query=\${encodeURIComponent(item.title)}" target="_blank" class="block-20"
 		    					 			style="background-image: url('\${item.firstimage}');">
 		    					 		</a>
 		    					 		<div class="text mt-3 float-right d-block">
 			    					 		<h3 class="heading">
-			    					 			<a href="#">\${item.title}</a>
+			    					 			<a href="https://search.naver.com/search.naver?query=\${encodeURIComponent(item.title)}" target="_blank">\${item.title}</a>
 			    					 			<span class="heartIcon">❤</span>
 			    					 		</h3>
 			    					 		<p>\${item.addr1}</p>
@@ -340,12 +340,12 @@
 		    			html += `
 		    					 <div class="col-md-4 d-flex">
 		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
-		    					 		<a href="#" class="block-20"
+		    					 		<a href="https://search.naver.com/search.naver?query=\${encodeURIComponent(item.title)}" target="_blank" class="block-20"
 		    					 			style="background-image: url('\${item.firstimage}');">
 		    					 		</a>
 		    					 		<div class="text mt-3 float-right d-block">
 			    					 		<h3 class="heading">
-			    					 			<a href="#">\${item.title}</a>
+			    					 			<a href="https://search.naver.com/search.naver?query=\${encodeURIComponent(item.title)}" target="_blank">\${item.title}</a>
 			    					 			<span class="heartIcon">❤</span>
 			    					 		</h3>
 			    					 		<p>\${item.addr1}</p>
@@ -373,12 +373,12 @@
 		    			html += `
 		    					 <div class="col-md-4 d-flex">
 		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
-		    					 		<a href="#" class="block-20"
+		    					 		<a href="https://search.naver.com/search.naver?query=\${encodeURIComponent(item.title)}" target="_blank" class="block-20"
 		    					 			style="background-image: url('\${item.firstimage}');">
 		    					 		</a>
 		    					 		<div class="text mt-3 float-right d-block">
 			    					 		<h3 class="heading">
-			    					 			<a href="#">\${item.title}</a>
+			    					 			<a href="https://search.naver.com/search.naver?query=\${encodeURIComponent(item.title)}" target="_blank">\${item.title}</a>
 			    					 			<span class="heartIcon">❤</span>
 			    					 		</h3>
 			    					 		<p>\${item.addr1}</p>
@@ -406,12 +406,12 @@
 		    			html += `
 		    					 <div class="col-md-4 d-flex">
 		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
-		    					 		<a href="#" class="block-20"
+		    					 		<a href="https://search.naver.com/search.naver?query=\${encodeURIComponent(item.title)}" target="_blank" class="block-20"
 		    					 			style="background-image: url('\${item.firstimage}');">
 		    					 		</a>
 		    					 		<div class="text mt-3 float-right d-block">
 			    					 		<h3 class="heading">
-			    					 			<a href="#">\${item.title}</a>
+			    					 			<a href="https://search.naver.com/search.naver?query=\${encodeURIComponent(item.title)}" target="_blank">\${item.title}</a>
 			    					 			<span class="heartIcon">❤</span>
 			    					 		</h3>
 			    					 		<p>\${item.addr1}</p>

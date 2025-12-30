@@ -26,6 +26,42 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .heartIcon { 
+            cursor: pointer; 
+            color: #ff4f4f !important; 
+            margin-left: 8px; 
+            display: inline-block; 
+            transition: transform 0.2s; 
+        }
+        .heartIcon.off { 
+            color: #ccc !important; 
+            opacity: 0.8; 
+        }
+        .heartIcon:hover { transform: scale(1.2); }
+        
+        /* 추천 섹션 전용 스타일 추가 */
+        .recommend-entry {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+            background: #fff;
+            margin-bottom: 30px;
+        }
+        .recommend-entry:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        /* 추천 섹션이 다른 요소에 의해 숨겨지지 않도록 설정 */
+        #recommend-section {
+            display: block !important;
+            padding: 50px 0;
+            background: #fcfcfc;
+        }
+        #recommendList {
+            min-height: 200px;
+        }
+    </style>
   </head>
   <body>
   <%@ include file="/WEB-INF/views/common/header.jsp" %>
@@ -40,6 +76,17 @@
       </div>
     </section>
 
+    <section id="recommend-section" class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center pb-4">
+                <div class="col-md-12 heading-section text-center">
+                    <h2 class="mb-4">🌟 나만을 위한 맞춤 여행지</h2>
+                </div>
+            </div>
+            <div id="recommendList" class="row">
+                </div>
+        </div>
+    </section>
 
 	<section class="ftco-section2">
     	<div class="container">
@@ -54,6 +101,7 @@
         	</div>
     	</div>
     </section>
+
 	<section class="ftco-counter img box-shadow" id="section-counter">
     	<div id="rec01" class="container">
     		<div class="row d-flex">
@@ -67,7 +115,7 @@
 			            <h5>인천 중구</h5>
 			            <h3>바다와 하늘이 럭셔리함으로 물드는 공간</h3>
 			            <p>
-						씨메르는 인천 중구 영종도 파라다이스시티에서 2018년 9월에 오픈하여 1만 3,000여 ㎡(4,000평) 규모로, 동시에 약 2,000명까지 이용할 수 있다. 씨메르는 하늘을 뜻하는 프랑스어 ‘ciel’과 바다를 뜻하는 ‘mer’를 합친 이름이다. 하늘과 바다의 만남을 한데 아울러 특별한 공간에서 만날 볼 수 있다. 또한, 럭셔리하고 트렌디한 아쿠아 스파 존에서는 수영 시설뿐만 아니라 다이나믹한 LED 미디어 아트와 차별화된 컨셉 풀 파티를 즐길 수 있다. 이 외에도 찜질 스파존과 사우나, 다양한 휴게 공간이 마련되어 있다.						</p>
+						씨메르는 인천 중구 영종도 파라다이스시티에서 2018년 9월에 오픈하여 1만 3,000여 ㎡(4,000평) 규모로, 동시에 약 2,000명까지 이용할 수 있다. 씨메르는 하늘을 뜻하는 프랑스어 ‘ciel’과 바다을 뜻하는 ‘mer’를 합친 이름이다. 하늘과 바다의 만남을 한데 아울러 특별한 공간에서 만날 볼 수 있다. 또한, 럭셔리하고 트렌디한 아쿠아 스파 존에서는 수영 시설뿐만 아니라 다이나믹한 LED 미디어 아트와 차별화된 컨셉 풀 파티를 즐길 수 있다. 이 외에도 찜질 스파존과 사우나, 다양한 휴게 공간이 마련되어 있다.						</p>
 						<p>위치: 	</p>
 						<p class="region">인천광역시 중구 영종해안남로321번길 186</p>
 						<p>전화번호: 1833-8855</p>
@@ -201,7 +249,7 @@
 			            <h5>전남 여수시</h5>
 			            <h3>제철 굴의 진수를 맛볼 수 있는 곳</h3>
 			            <p>
-			            정우굴구이는 바람이 차가워지는 10월 중순부터 3월 말까지만 운영하는데, 제철에만 맛볼 수 있는 굴을 재료로 하는 굴 전문점이다. 5,000㎡가 넘는 굴 양식장을 직접 운영해 매일 굴을 수확해 신선함이 뛰어나다. 깨끗하게 씻은 굴을 직화로 구워 먹는 굴구이, 굴 향 가득 품고 바싹한 식감을 자랑하는 굴파전, 초장에 버무려 매콤새콤한 굴회 무침, 얼큰한 굴라면, 든든한 한 끼 굴 돌솥밥 등 굴로 만든 음식들이 다양하게 준비되어 있다. 방문객이 가장 많이 찾는 굴구이는 직화로 구운 굴을 왼손에 목장갑, 오른손의 나이프를 사용해 먹으면 되는데, 통통하게 살이 오른 굴을 초장에 찍어 먹으면 쫄깃한 겉과 부드러운 속을 같이 음미할 수 있어 먹는 재미와 행복을 같이 느낄 수 있다.
+			            정우굴구이는 바람이 차가워지는 10월 중순부터 3월 말까지만 운영하는데, 제철에만 맛볼 수 있는 굴을 재료로 하는 굴 전문점이다. 5,000㎡가 넘는 굴 양식장을 직접 운영해 매일 굴을 수확해 신선함이 뛰어나다. 깨끗하게 씻은 굴을 직화로 구워 먹는 굴구이, 굴 향 가득 품고 바싹한 식감을 자랑하는 굴파전, 굴회 무침, 얼큰한 굴라면, 든든한 한 끼 굴 돌솥밥 등 굴로 만든 음식들이 다양하게 준비되어 있다.
 						</p>
 						<p>위치: </p>
 						<p class="region">전라남도 여수시 돌산읍 안굴전길 57</p>
@@ -224,7 +272,7 @@
 			            <h5>경남 통영시</h5>
 			            <h3>하루 100테이블로 지키는 통영 굴의 신선함</h3>
 			            <p>
-			            한마음 식당은 국내 굴 공급량의 상당 부분을 차지하고 있는 통영에 있다. 신선한 요리를 제공하기 위해 하루에 100테이블만 받는 식당이다. 신선한 요리를 남김없이 판매하기 위해 재활용하지 않고, 천연 재료로 단맛과 간을 맞추며, 초음파식이 세척기로 안전하게 세척하고 있다. 대표 메뉴는 삼겹살과 김치, 굴을 한꺼번에 즐기는 '굴삼합' 이다. 그 외에 굴전, 굴탕수육, 굴어묵 등 다양한 굴 요리도 판매한다.
+			            한마음 식당은 국내 굴 공급량의 상당 부분을 차지하고 있는 통영에 있다. 신선한 요리를 제공하기 위해 하루에 100테이블만 받는 식당이다. 대표 메뉴는 삼겹살과 김치, 굴을 한꺼번에 즐기는 '굴삼합' 이다. 그 외에 굴전, 굴탕수육, 굴어묵 등 다양한 굴 요리도 판매한다.
 						</p>
 						<p>위치: </p>
 						<p class="region">경상남도 통영시 해송정1길 6</p>
@@ -247,7 +295,7 @@
 			            <h5>부산 사하구</h5>
 			            <h3>색으로 물든 항구, 그림이 되는 순간</h3>
 			            <p>
-			            장림포구는 장림포구 명소화 사업을 통하여 어항을 정비함과 동시에 해양보호구역 홍보관, 문화촌, 놀이촌, 맛술촌, 도시숲 등 관광객 이용 시설이 조성되어 있다. 이렇게 조성된 장림포구 모습, 특히 수면에 떠 있는 배와 형형색색의 건물들이 이탈리아 베네치아 무라노섬과 닮았다 하여 부산의 베네치아, ‘부네치아’로 불리며 SNS, 블로그상에서 인생 사진을 찍을 수 있는 장소로 명성을 얻고 있다. 부네치아 선셋 전망대는 부산의 일몰 명소로 알려져 있는데, 2층의 장림항 홍보관, 카페를 즐기며 장림포구의 전체적인 모습을 느낄 수 있다. 또한, 부네치아 선셋 전망대의 맛술촌은 다양한 먹거리를 제공하여 보는 재미 이외에도 먹는 재미까지 제공하고 있다.
+			            장림포구는 SNS 상에서 '부네치아'로 불리며 명성을 얻고 있다. 형형색색의 건물들이 이탈리아 베네치아 무라노섬과 닮았기 때문이다. 부네치아 선셋 전망대는 부산의 일몰 명소로 알려져 있으며 카페를 즐기며 장림포구의 전체적인 모습을 느낄 수 있다.
 						</p>
 						<p>위치: </p>
 						<p class="region">부산광역시 사하구 장림로93번길 72 (장림동) 일원</p>
@@ -271,7 +319,7 @@
 			            <h5>부산 해운대구</h5>
 			            <h3>궁전 같은 웅장함 속에서 휴식을 즐길 수 있는 공간</h3>
 			            <p>
-			            스파랜드는 부산 도심 속에 위치한 휴양형 온천 명소이다. 18개의 온천탕과 13개의 테마로 즐기는 찜질을 즐길 수 있으며, 지하에서 끌어올린 2종류의 천연 온천수와 다양한 테마의 욕탕으로 입욕의 즐거움을 더한다. 스파랜드는 천연 온천수를 각기 다른 온도로 제공한다. 고온욕에서는 체온을 빠르게 상승시키고, 중온욕에서는 느긋하게 입욕할 수 있는 등 23종류의 다양한 욕탕에 번갈아 입욕함으로써 만족감을 느낄 수 있다. 외벽으로 들어오는 자연 채광과 호텔급 이상의 급배기 시스템의 환경에서 두 가지 온천수를 활용한 대욕장에서 도심 속의 피로를 풀고 건강 입욕을 즐길 수 있다. 온천과 찜질 외에도 휴식 공간, 엔터테인먼트존, 각종 에스테틱 프로그램은 물론, 이벤트룸, 카페, 레스토랑 등 휴식과 즐거움을 동시에 누릴 수 있다.
+			            스파랜드는 부산 도심 속에 위치한 휴양형 온천 명소이다. 18개의 온천탕과 13개의 테마로 즐기는 찜질을 즐길 수 있으며, 천연 온천수를 각기 다른 온도로 제공하여 피로를 풀고 건강 입욕을 즐길 수 있다.
 						</p>
 						<p>위치: </p>
 						<p class="region">부산광역시 해운대구 센텀남대로 35 (우동)</p>
@@ -283,15 +331,15 @@
         	</div>
     	</div>
     </section>
-		<section id="destination" class="ftco-section">
+
+	<section id="destination" class="ftco-section">
       <div class="container">
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section">
             <h2 class="mb-41">다른 여행지 둘러보기🔍</h2>
           </div>
         </div>
-		<div id="travelList" class="d-flex">
-			</div>
+		<div id="travelList" class="d-flex"></div>
         <div class="row mt-5">
           <div class="col text-center">
             <div class="block-27">
@@ -310,147 +358,176 @@
       </div>
     </section>
 	<%@ include file="/WEB-INF/views/common/footer.jsp" %>
-    <script src="js/heartIcon.js"></script>
-  </body>
-  
-
-  <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
    
-	<script type="text/javascript">
-	$(document).ready(function(){
-		
-		let listCntPerPage = 12; //한페이지에 보여줄 개수
-		let currentPage = 1; // 현재 페이지
-		let randomList = []; // 랜덤 60개 저장할 변수
-		
-	    // 초기상태: rec div, 추천여행지 전부 숨김 처리
-	    $("#destination").addClass("d-none");
-	    $("[id^='rec']").addClass("d-none");
-	    //$("[class*='region-code']").removeClass("d-flex").addClass("d-none");
+<script type="text/javascript">
+$(document).ready(function(){
+    var listCntPerPage = 12;
+    var randomList = [];
+    var myLikes = []; 
 
-	    // 클릭 이벤트
-	    $("[id^='travel_destination']").on("click", function(){
-	    	
-	        $("#destination").removeClass("d-none");
-	        
-	        // 클릭한 div의 id
-	        let clickId = $(this).attr("id");
-	        // 숫자만 추출 (01 ~ 10)
-	        let num = clickId.replace("travel_destination", "");
-	        
-	        // (재클릭시)모든 rec 숨기기
-	        $("[id^='rec']").addClass("d-none");
-	        // 클릭된 div와 동일한 숫자를 가진 rec 화면에 출력
-	        let $rec = $("#rec" + num).removeClass("d-none");
-	        
-	        // 클릭된 여행지 위치에서 지역명 추출
-	        let regionText = $rec.find("p.region").text().trim();
-	        let regionName = regionText.split(" ")[0];
+    // [중요] 초기화 시 추천 섹션은 절대로 d-none 처리하지 않습니다.
+    $("#destination").addClass("d-none");
+    $("div.container[id^='rec']").addClass("d-none"); // 상세페이지들만 숨김
+    
+    // 페이지 로드 시 바로 실행
+    loadMyLikes();
+    loadRecommendations(); 
 
-	        console.log("클릭된 지역명->AJAX로 보낼 지역명:", regionName);
-	        
-	        //AJAX 호출
-	        loadTravel(regionName)
-	        
-	    });
-	        //AJAX 호출
-	        function loadTravel(regionName){
-	        	$.ajax({
-		        	url: "${pageContext.request.contextPath}/travel/list",
-		        	type: "get",
-		        	data: {regionName: regionName},
-		        	dataType: "json",
-		        	success: function(list){
-		        		//drawTravelList(list);
-		        		initTravelList(list)
-		        	},
-		        	error: function(){
-		        		alert("데이터 불러오기 실패");
-		        	}
-		        });
-	        }
-		    
-	        function initTravelList(list){
-	        	
-	        	let imageList = list.filter(function(item){
-	        		return item.firstimage && item.firstimage.trim() !== "";
-	        	})
-	        	
-	        	//랜덤 셔플
-	        	imageList.sort(function(){
-	        		return Math.random() - 0.5;
-	        	});
-	        	
-	        	// 60개 선택
-	        	randomList = imageList.slice(0, 60);
-	        	
-	        	// 첫 페이지 출력
-	        	currentPage = 1;
-	        	drawPage(currentPage);
-	        }
-	        
-	        window.drawPage = function(page){
-	        	currentPage = page;
-	        	
-	        	let startIndex = (page - 1) * listCntPerPage;
-	        	let endIndex = startIndex + listCntPerPage;
-	        	
-	        	let pageList = randomList.slice(startIndex, endIndex);
-	        	
-	        	$(".block-27 ul li").removeClass("active");
-	        	
-	        	$(".block-27 ul li").each(function(){
-	        		let text = $(this).text().trim();
-	        		if(text === String(page)){
-	        			$(this).addClass("active");
-	        		}
-	        	});
-	        	
-	        	drawTravelList(pageList);
-	        	console.log("현재 페이지", page);
-	        }
-	        
-		    function drawTravelList(pageList){
-		    	
-		    	let html = `<div class="row">`;
-		    	
-		    	if(pageList.length === 0){
-		    		html += "<p>해당 지역의 데이터가 없습니다.</p>"
-		    	}else{
-		    		$.each(pageList, function(i, item){
-                        // 네이버 검색 쿼리 생성 --성준--
-                        const searchQuery = encodeURIComponent(item.title);
-                        const naverUrl = "https://search.naver.com/search.naver?query=" + searchQuery;
+    function loadMyLikes() {
+        $.ajax({
+            url: "${pageContext.request.contextPath}/travel/myLikes", 
+            type: "get",
+            dataType: "json",
+            success: function(list) {
+                myLikes = list.map(function(item) { return String(item); }); 
+            }
+        });
+    }
 
-		    			html += `
-		    					 <div class="col-md-4 d-flex">
-		    					 	<div class="blog-entry justify-content-end" style="width:800px;">
-		    					 		<a href="\${naverUrl}" target="_blank" class="block-20"
-		    					 			style="background-image: url('\${item.firstimage}');">
-		    					 		</a>
-		    					 		<div class="text mt-3 float-right d-block">
-			    					 		<h3 class="heading">
-			    					 			<a href="\${naverUrl}" target="_blank">\${item.title}</a>
-			    					 			<span class="heartIcon">❤</span>
-			    					 		</h3>
-			    					 		<p>\${item.addr1}</p>
-		    					 		</div>
-		    					 	</div>
-		    					 </div>
-		    					`;
-		    		})	
-		    	}
-		    	html += `</div>`;
-		    	
-		    	console.log("list전체", pageList);
-		    	console.log("첫번쨰 item", pageList[0])
-		    	$("#travelList").html(html)
-		    	
-		    }
-	    
-	});
-	
-	</script>
+    // 지도 클릭 시 동작 수정
+    $("[id^='travel_destination']").on("click", function(){
+        $("#destination").removeClass("d-none");
+        var num = $(this).attr("id").replace("travel_destination", "");
+        
+        // 상세 섹션들(id="rec01" 등)만 정확히 선택해서 숨깁니다.
+        $("div.container[id^='rec']").addClass("d-none");
+        $("#rec" + num).removeClass("d-none");
+        
+        var regionName = $("#rec" + num).find("p.region").text().trim().split(" ")[0];
+        loadTravel(regionName);
+        
+        $('html, body').animate({
+            scrollTop: $("#destination").offset().top - 100
+        }, 500);
+    });
 
+    function loadTravel(regionName){
+        $.ajax({
+            url: "${pageContext.request.contextPath}/travel/list",
+            type: "get",
+            data: {regionName: regionName},
+            dataType: "json",
+            success: function(list){ 
+                initTravelList(list); 
+            }
+        });
+    }
+        
+    function initTravelList(list){
+        var imageList = list.filter(function(item){ 
+            return item.firstimage && item.firstimage.trim() !== ""; 
+        });
+        imageList.sort(function(){ return Math.random() - 0.5; });
+        randomList = imageList.slice(0, 60);
+        drawPage(1);
+    }
+        
+    window.drawPage = function(page){
+        var startIndex = (page - 1) * listCntPerPage;
+        var pageList = randomList.slice(startIndex, startIndex + listCntPerPage);
+        
+        $(".block-27 ul li").removeClass("active");
+        $(".block-27 ul li").each(function(){
+            if($(this).text().trim() === String(page)) $(this).addClass("active");
+        });
+        drawTravelList(pageList);
+    }
+        
+    function drawTravelList(pageList){
+        var html = '<div class="row" style="width:100%">';
+        $.each(pageList, function(i, item){
+            var img = item.firstimage ? item.firstimage : 'images/no_image.png';
+            var isLiked = myLikes.indexOf(String(item.areacode)) !== -1;
+            var heartClass = isLiked ? "" : "off";
+
+            // [수정] 이미지와 제목에 네이버 검색창 이동 속성 추가
+            html += '<div class="col-md-4 d-flex">' +
+                        '<div class="blog-entry justify-content-end" style="width:100%;">' +
+                            '<div class="block-20" style="background-image: url(\'' + img + '\'); cursor:pointer;" onclick="window.open(\'https://search.naver.com/search.naver?query=\' + encodeURIComponent(\'' + item.title + '\'), \'_blank\')"></div>' +
+                            '<div class="text mt-3 float-right d-block">' +
+                                '<h3 class="heading">' +
+                                    '<a href="javascript:void(0)" onclick="window.open(\'https://search.naver.com/search.naver?query=\' + encodeURIComponent(\'' + item.title + '\'), \'_blank\')">' + item.title + '</a>' +
+                                    '<span class="heartIcon ' + heartClass + '" data-areacode="' + item.areacode + '">❤</span>' +
+                                '</h3>' +
+                                '<p>' + (item.addr1 ? item.addr1 : "") + '</p>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+        });
+        $("#travelList").html(html + "</div>");
+    }
+
+    $(document).on("click", ".heartIcon", function(){
+        var heart = $(this);
+        var title = heart.siblings("a").text();
+        var areacode = String(heart.data("areacode"));
+        var action = heart.hasClass("off") ? "INSERT" : "DELETE";
+
+        $.ajax({
+            url: "${pageContext.request.contextPath}/travel/like",
+            type: "post",
+            data: { title: title, areacode: areacode, action: action },
+            success: function(res){
+                if(res === "success") {
+                    heart.toggleClass("off");
+                    if(action === "INSERT") {
+                        if(myLikes.indexOf(areacode) === -1) myLikes.push(areacode);
+                    } else {
+                        myLikes = myLikes.filter(function(code) { return code !== areacode; });
+                    }
+                    loadRecommendations(); // 하트 누를 때마다 추천 리스트 갱신
+                }
+            }
+        });
+    });
+
+    // 추천 여행지 로드 함수
+    function loadRecommendations() {
+        console.log("추천 데이터 요청 시작");
+        $.ajax({
+            url: "${pageContext.request.contextPath}/travel/recommend",
+            type: "get",
+            dataType: "json",
+            cache: false,
+            success: function(data) {
+                var $recList = $("#recommendList");
+                $recList.empty(); 
+
+                if (data && data.length > 0) {
+                    console.log("받은 추천 데이터 개수:", data.length);
+                    var html = "";
+                    $.each(data, function(i, item) {
+                        var img = (item.firstimage && item.firstimage !== "") ? item.firstimage : "images/rec_travel/recmain.png";
+                        var title = item.title ? item.title : "추천 여행지";
+                        var addr = item.addr1 ? item.addr1 : "주소 정보 없음";
+
+                        // [수정] 추천 리스트 전체 엔트리에 네이버 검색창 이동 속성 추가
+                        html += '<div class="col-md-4 mb-4">' +
+                                    '<div class="recommend-entry" style="cursor:pointer;" onclick="window.open(\'https://search.naver.com/search.naver?query=\' + encodeURIComponent(\'' + title + '\'), \'_blank\')">' +
+                                        '<div class="block-20" style="background-image: url(\'' + img + '\'); height: 200px; background-size: cover; background-position: center; position: relative;">' +
+                                            '<span style="position: absolute; top: 15px; left: 15px; background: #ff4f4f; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">알고리즘 추천</span>' +
+                                        '</div>' +
+                                        '<div class="text p-3">' +
+                                            '<h3 style="font-size: 18px; font-weight: 700; color: #333; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + title + '</h3>' +
+                                            '<p style="font-size: 13px; color: #888; margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + addr + '</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>';
+                    });
+                    
+                    $recList.html(html);
+                    $("#recommend-section").show();
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error("추천 로드 실패:", error);
+            }
+        });
+    }
+});
+</script>
+  </body>
 </html>

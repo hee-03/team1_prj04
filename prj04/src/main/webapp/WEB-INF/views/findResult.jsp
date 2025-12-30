@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -10,24 +11,24 @@
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/jquery.timepicker.css">
 
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/flaticon.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/icomoon.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
   </head>
   <body>
     <%@ include file="/WEB-INF/views/common/header.jsp" %>
@@ -38,6 +39,8 @@
       	<div class="row justify-content-center pb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
             <h2 class="mb-41">검색 결과</h2>
+            <!-- ✅ 키워드 표시(선택) -->
+          	<p style="margin-top:10px;">검색어: <strong><c:out value="${keyword}"/></strong></p>
           </div>
         </div>
         <div id="travelList" class="d-flex">
@@ -134,8 +137,68 @@
     <%-- //이곳도 추천해요 --%>
     
   <%@ include file="/WEB-INF/views/common/footer.jsp" %>  
-  </body>
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
   <script>
+	$(function () {
+	  const keyword = "<c:out value='${keyword}'/>";
+	
+	  $.ajax({
+	    url: "${pageContext.request.contextPath}/travel/search",
+	    type: "get",
+	    data: { keyword: keyword },
+	    dataType: "json",
+	    success: function(list){
+	    	console.log("keys joined:", Object.keys(list[0]).join(", "));
+	    	console.log("first obj json:", JSON.stringify(list[0]));
+	      // 이미지 없는 데이터 제외(선택)
+	      list = (list || []).filter(item => item.firstimage && item.firstimage.trim() !== "");
+	      drawTravelList(list);
+	    },
+	    error: function(xhr){
+	      console.log("검색 API 실패", xhr.status, xhr.responseText);
+	      alert("검색 결과 불러오기 실패");
+	    }
+	  });
+	
+	  function drawTravelList(list){
+		  let html = `<div class="row">`;
+
+		  if(!list || list.length === 0){
+		    html += `<p>검색 결과가 없습니다.</p>`;
+		  } else {
+		    $.each(list, function(i, item){
+
+		      const img = item.firstimage;
+
+		      html += `
+		        <div class="col-md-4 d-flex">
+		          <div class="blog-entry justify-content-end">
+		            <a href="#" class="block-20"
+		               style="background-image:url('${img}');"></a>
+
+		            <div class="text mt-3 float-right d-block">
+		              <h3 class="heading">
+		                <a href="#">${item.title}</a>
+		                <span class="heartIcon">❤</span>
+		              </h3>
+		              <p>${item.addr1 || ""}</p>
+		              <p>${item.cat1 || ""}</p>
+		            </div>
+		          </div>
+		        </div>
+		      `;
+		    });
+		  }
+
+		  html += `</div>`;
+		  $("#travelList").html(html);
+		}
+	});
+</script>
+
+  <!-- <script>
   $(document).ready(function(){
 		
 	  let regionName = "서울";
@@ -389,5 +452,6 @@
 		    }
 	    
 	});
-  </script>
+  </script> -->
+  </body>
 </html>

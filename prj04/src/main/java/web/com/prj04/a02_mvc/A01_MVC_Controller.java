@@ -1,10 +1,13 @@
 package web.com.prj04.a02_mvc;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
@@ -62,23 +65,19 @@ public class A01_MVC_Controller {
 	   return "findResult";
    }
    
+   // header 검색 ==> 결과 페이지 이동
    @GetMapping("search")
 	public String search(@RequestParam("keyword") String keyword, Model model) {
 		model.addAttribute("keyword", keyword);
 	    return "findResult";
-	    
 	}
-      
-      
-      // Model : 핵심
-      // http://localhost:6060/deptList
-      /*
-       * @GetMapping("deptList") public String deptList(Model d) { // model : 핵심데이터,
-       * view 보낼데이터.. d.addAttribute("deptList", service.getDeptList()); return
-       * "deptList";
-       * 
-       * }
-       */
+   
+   // 검색 결과 ajax용
+   @GetMapping("/travel/search")
+   @ResponseBody
+   public List<AreaBasedVO> searchTravel(@RequestParam("keyword") String keyword) {
+       return service.searchByKeyword(keyword);
+   }
    
 
 }
