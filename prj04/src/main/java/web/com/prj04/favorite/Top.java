@@ -4,11 +4,10 @@ public class Top {
     private String email;
     private String cat1;
     private String areacode;
+    private String contentid; // [추가] 고유 식별자
 
-    // 기본 생성자
     public Top() {}
 
-    // Getter 및 Setter (직접 작성)
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
 
@@ -18,8 +17,12 @@ public class Top {
     public String getAreacode() { return areacode; }
     public void setAreacode(String areacode) { this.areacode = areacode; }
 
+    public String getContentid() { return contentid; }
+    public void setContentid(String contentid) { this.contentid = contentid; }
+
     @Override
     public String toString() {
-        return "Top [email=" + email + ", cat1=" + cat1 + ", areacode=" + areacode + "]";
+        return "Top [email=" + email + ", cat1=" + cat1 + ", areacode=" + areacode + 
+               ", contentid=" + contentid + "]";
     }
 }

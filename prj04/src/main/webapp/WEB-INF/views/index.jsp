@@ -391,6 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setRegionCards(regionData["전남"]);
     setSeasonCards(seasonData["봄"]);
 });
+
 </script>
 </body>
 </html>

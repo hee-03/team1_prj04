@@ -102,7 +102,7 @@
     	</div>
     </section>
 
-	<section class="ftco-counter img box-radius" id="section-counter">
+	<section class="ftco-counter img box-shadow" id="section-counter">
     	<div id="rec01" class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex">
@@ -364,15 +364,14 @@
    
 <script type="text/javascript">
 $(document).ready(function(){
+    // 1. 초기 변수 선언
     var listCntPerPage = 12;
     var randomList = [];
     var myLikes = []; 
 
-    // [중요] 초기화 시 추천 섹션은 절대로 d-none 처리하지 않습니다.
-    $("#destination").addClass("d-none");
-    $("div.container[id^='rec']").addClass("d-none"); // 상세페이지들만 숨김
-    
-    // 페이지 로드 시 바로 실행
+    console.log("스크립트 초기화 시작...");
+
+    // 2. 초기 로딩 (좋아요 목록 & 추천 목록)
     loadMyLikes();
     loadRecommendations(); 
 
@@ -382,49 +381,41 @@ $(document).ready(function(){
             type: "get",
             dataType: "json",
             success: function(list) {
+                console.log("좋아요 목록 가져오기 성공:", list);
                 myLikes = list.map(function(item) { return String(item); }); 
             }
         });
     }
 
-    // 지도 클릭 시 동작 수정
+    // 3. 지역 선택 시 리스트 로드
     $("[id^='travel_destination']").on("click", function(){
         $("#destination").removeClass("d-none");
         var num = $(this).attr("id").replace("travel_destination", "");
-        
-        // 상세 섹션들(id="rec01" 등)만 정확히 선택해서 숨깁니다.
-        $("div.container[id^='rec']").addClass("d-none");
+        $("div.container[id^='rec']").addClass("d-none"); 
         $("#rec" + num).removeClass("d-none");
         
         var regionName = $("#rec" + num).find("p.region").text().trim().split(" ")[0];
-        loadTravel(regionName);
+        console.log("지역 선택됨:", regionName);
         
-        $('html, body').animate({
-            scrollTop: $("#destination").offset().top - 100
-        }, 500);
-    });
-
-    function loadTravel(regionName){
         $.ajax({
             url: "${pageContext.request.contextPath}/travel/list",
             type: "get",
             data: {regionName: regionName},
             dataType: "json",
             success: function(list){ 
-                initTravelList(list); 
+                var imageList = list.filter(function(item){ 
+                    return item.firstimage && item.firstimage.trim() !== ""; 
+                });
+                imageList.sort(function(){ return Math.random() - 0.5; });
+                randomList = imageList.slice(0, 60);
+                drawPage(1);
             }
         });
-    }
         
-    function initTravelList(list){
-        var imageList = list.filter(function(item){ 
-            return item.firstimage && item.firstimage.trim() !== ""; 
-        });
-        imageList.sort(function(){ return Math.random() - 0.5; });
-        randomList = imageList.slice(0, 60);
-        drawPage(1);
-    }
-        
+        $('html, body').animate({ scrollTop: $("#destination").offset().top - 100 }, 500);
+    });
+
+    // 4. 페이지 그리기
     window.drawPage = function(page){
         var startIndex = (page - 1) * listCntPerPage;
         var pageList = randomList.slice(startIndex, startIndex + listCntPerPage);
@@ -433,60 +424,91 @@ $(document).ready(function(){
         $(".block-27 ul li").each(function(){
             if($(this).text().trim() === String(page)) $(this).addClass("active");
         });
-        drawTravelList(pageList);
-    }
         
-    function drawTravelList(pageList){
-        var html = '<div class="row" style="width:100%">';
-        $.each(pageList, function(i, item){
-            var img = item.firstimage ? item.firstimage : 'images/no_image.png';
-            var isLiked = myLikes.indexOf(String(item.areacode)) !== -1;
-            var heartClass = isLiked ? "" : "off";
+        drawTravelList(pageList);
+    };
 
-            // [수정] 이미지와 제목에 네이버 검색창 이동 속성 추가
-            html += '<div class="col-md-4 d-flex">' +
-                        '<div class="blog-entry justify-content-end" style="width:100%;">' +
-                            '<div class="block-20" style="background-image: url(\'' + img + '\'); cursor:pointer;" onclick="window.open(\'https://search.naver.com/search.naver?query=\' + encodeURIComponent(\'' + item.title + '\'), \'_blank\')"></div>' +
-                            '<div class="text mt-3 float-right d-block">' +
-                                '<h3 class="heading">' +
-                                    '<a href="javascript:void(0)" onclick="window.open(\'https://search.naver.com/search.naver?query=\' + encodeURIComponent(\'' + item.title + '\'), \'_blank\')">' + item.title + '</a>' +
-                                    '<span class="heartIcon ' + heartClass + '" data-areacode="' + item.areacode + '">❤</span>' +
-                                '</h3>' +
-                                '<p>' + (item.addr1 ? item.addr1 : "") + '</p>' +
-                            '</div>' +
-                        '</div>' +
-                    '</div>';
+    // 5. 여행지 리스트 그리기 (문법 오류 방지를 위해 표준 문자열 결합 사용)
+    function drawTravelList(pageList){
+        var html = '<div class="row">';
+        if(pageList.length === 0){
+            html += '<p>데이터가 없습니다.</p>';
+        } else {
+            $.each(pageList, function(i, item){
+                var naverUrl = "https://search.naver.com/search.naver?query=" + encodeURIComponent(item.title);
+                
+                html += '<div class="col-md-4 d-flex">';
+                html += '    <div class="blog-entry" style="width:100%;">';
+                html += '        <a href="' + naverUrl + '" target="_blank" class="block-20" style="background-image: url(\'' + item.firstimage + '\');"></a>';
+                html += '        <div class="text mt-3">';
+                html += '            <h3 class="heading">';
+                html += '                <a href="' + naverUrl + '" target="_blank">' + item.title + '</a>';
+                html += '                <span class="heartIcon off" data-contentid="' + item.contentid + '" data-areacode="' + item.areacode + '">❤</span>';
+                html += '            </h3>';
+                html += '            <p>' + item.addr1 + '</p>';
+                html += '        </div>';
+                html += '    </div>';
+                html += '</div>';
+            });
+        }
+        html += '</div>';
+        $("#travelList").html(html);
+        
+        // 하트 상태 복구 (색칠)
+        $(".heartIcon").each(function(){
+            var cid = String($(this).attr("data-contentid"));
+            if(myLikes.indexOf(cid) !== -1){
+                $(this).removeClass("off");
+            }
         });
-        $("#travelList").html(html + "</div>");
     }
 
+    // 6. 하트 클릭 이벤트 (가장 중요한 부분)
     $(document).on("click", ".heartIcon", function(){
+        console.log("하트 아이콘 클릭됨!"); // 이게 찍히는지 반드시 확인
+        
         var heart = $(this);
-        var title = heart.siblings("a").text();
-        var areacode = String(heart.data("areacode"));
+        var contentid = String(heart.attr("data-contentid")); // attr로 확실하게 추출
+        var title = heart.siblings("a").text().trim();
+        var areacode = String(heart.attr("data-areacode"));
         var action = heart.hasClass("off") ? "INSERT" : "DELETE";
+
+        console.log("전송 데이터 확인:", {contentid: contentid, title: title, action: action});
+
+        if(!contentid || contentid === "undefined") {
+            alert("ID를 찾을 수 없습니다. 리스트 로딩을 다시 확인하세요.");
+            return;
+        }
 
         $.ajax({
             url: "${pageContext.request.contextPath}/travel/like",
             type: "post",
-            data: { title: title, areacode: areacode, action: action },
+            data: { 
+                contentid: contentid,
+                title: title, 
+                areacode: areacode, 
+                action: action 
+            },
             success: function(res){
-                if(res === "success") {
+                console.log("서버 결과:", res);
+                if(res.trim() === "success") {
                     heart.toggleClass("off");
                     if(action === "INSERT") {
-                        if(myLikes.indexOf(areacode) === -1) myLikes.push(areacode);
+                        if(myLikes.indexOf(contentid) === -1) myLikes.push(contentid);
                     } else {
-                        myLikes = myLikes.filter(function(code) { return code !== areacode; });
+                        myLikes = myLikes.filter(function(id) { return id !== contentid; });
                     }
-                    loadRecommendations(); // 하트 누를 때마다 추천 리스트 갱신
+                    loadRecommendations(); 
                 }
+            },
+            error: function(xhr) {
+                console.error("AJAX 에러:", xhr.status);
             }
         });
     });
 
-    // 추천 여행지 로드 함수
+    // 7. 추천 로드
     function loadRecommendations() {
-        console.log("추천 데이터 요청 시작");
         $.ajax({
             url: "${pageContext.request.contextPath}/travel/recommend",
             type: "get",
@@ -495,35 +517,24 @@ $(document).ready(function(){
             success: function(data) {
                 var $recList = $("#recommendList");
                 $recList.empty(); 
-
                 if (data && data.length > 0) {
-                    console.log("받은 추천 데이터 개수:", data.length);
                     var html = "";
                     $.each(data, function(i, item) {
                         var img = (item.firstimage && item.firstimage !== "") ? item.firstimage : "images/rec_travel/recmain.png";
-                        var title = item.title ? item.title : "추천 여행지";
-                        var addr = item.addr1 ? item.addr1 : "주소 정보 없음";
-
-                        // [수정] 추천 리스트 전체 엔트리에 네이버 검색창 이동 속성 추가
                         html += '<div class="col-md-4 mb-4">' +
-                                    '<div class="recommend-entry" style="cursor:pointer;" onclick="window.open(\'https://search.naver.com/search.naver?query=\' + encodeURIComponent(\'' + title + '\'), \'_blank\')">' +
+                                    '<div class="recommend-entry">' +
                                         '<div class="block-20" style="background-image: url(\'' + img + '\'); height: 200px; background-size: cover; background-position: center; position: relative;">' +
                                             '<span style="position: absolute; top: 15px; left: 15px; background: #ff4f4f; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">알고리즘 추천</span>' +
                                         '</div>' +
                                         '<div class="text p-3">' +
-                                            '<h3 style="font-size: 18px; font-weight: 700; color: #333; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + title + '</h3>' +
-                                            '<p style="font-size: 13px; color: #888; margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + addr + '</p>' +
+                                            '<h3 style="font-size: 18px; font-weight: 700; color: #333; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + item.title + '</h3>' +
+                                            '<p style="font-size: 13px; color: #888; margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + item.addr1 + '</p>' +
                                         '</div>' +
                                     '</div>' +
                                 '</div>';
                     });
-                    
                     $recList.html(html);
-                    $("#recommend-section").show();
                 }
-            },
-            error: function(xhr, status, error) {
-                console.error("추천 로드 실패:", error);
             }
         });
     }
