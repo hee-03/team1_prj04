@@ -138,9 +138,10 @@
     
   <%@ include file="/WEB-INF/views/common/footer.jsp" %>  
   
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   
-  <script>
+  <script type="text/javascript">
 	$(function () {
 	  const keyword = "<c:out value='${keyword}'/>";
 	
@@ -169,18 +170,19 @@
 		    html += `<p>검색 결과가 없습니다.</p>`;
 		  } else {
 		    $.each(list, function(i, item){
-
+		    	const searchQuery = encodeURIComponent(item.title);
+              const naverUrl = "https://search.naver.com/search.naver?query=" + searchQuery;
 		      const img = item.firstimage;
 
 		      html += `
 		        <div class="col-md-4 d-flex">
 		          <div class="blog-entry justify-content-end">
-		            <a href="#" class="block-20"
+		            <a href="\${naverUrl}" target="_blank" class="block-20"
 		               style="background-image:url('${'${'}img}');"></a>
 
 		            <div class="text mt-3 float-right d-block">
 		              <h3 class="heading">
-		                <a href="#">${'${'}item.title}</a>
+		                <a href="\${naverUrl}" target="_blank">${'${'}item.title}</a>
 		                <span class="heartIcon">❤</span>
 		              </h3>
 		              <p>${'${'}(item.addr1 || "")}</p>
