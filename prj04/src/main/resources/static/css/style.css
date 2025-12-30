@@ -9931,7 +9931,7 @@ footer .container p:last-child{
 }
 
 /*이병주 css -------------------------------------*/
-#location_select{
+#select_location{
 	padding: 50px 10px;
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 	align-items: center;
