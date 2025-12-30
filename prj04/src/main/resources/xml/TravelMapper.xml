@@ -9,16 +9,16 @@
     </select>
 
     <insert id="insertLike">
-        INSERT INTO Favorite (email, areacode, cat1)
-        SELECT DISTINCT #{email}, #{areacode}, cat1
+        INSERT INTO Favorite (email, contentid, areacode, cat1)
+        SELECT DISTINCT #{email}, #{contentid}, #{areacode}, cat1
         FROM area_based
-        WHERE areacode = #{areacode} AND title = #{title}
+        WHERE contentid = #{contentid}
         AND ROWNUM = 1
     </insert>
 
     <delete id="deleteLike">
         DELETE FROM Favorite 
-        WHERE email = #{email} AND areacode = #{areacode}
+        WHERE email = #{email} AND contentid = #{contentid}
     </delete>
 
     <select id="getTopPreference" resultType="web.com.prj04.favorite.Top">
@@ -47,6 +47,12 @@
             WHERE areacode = #{areacode} AND cat1 = #{cat1}
             ORDER BY DBMS_RANDOM.VALUE
         ) WHERE ROWNUM &lt;= 3
+    </select>
+
+    <select id="getMyLikeContentIds" resultType="string">
+        SELECT contentid 
+        FROM Favorite 
+        WHERE email = #{email}
     </select>
 
 </mapper>

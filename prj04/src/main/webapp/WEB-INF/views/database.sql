@@ -16,6 +16,13 @@ CREATE TABLE  area_based(
 );
 SELECT * FROM area_based;
 
+CREATE TABLE favorite(
+	email varchar2(100) NOT NULL,
+	cat1 varchar2(100) ,
+	areacode varchar2(100) ,
+	contentid varchar2(100) 
+);
+DROP TABLE favorite;
 CREATE TABLE TRIP_USER(
 	user_id NUMBER PRIMARY KEY,
 	name VARCHAR2(50) NOT NULL,
