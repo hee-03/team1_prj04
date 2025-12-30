@@ -143,7 +143,7 @@
       
   <script>
   $(document).ready(function(){
-		
+		//
 	  let regionName = "서울";
 	  // 서울 초기 선택
 	  $("#location00").addClass("active selected_location");
