@@ -43,7 +43,7 @@
           	<p style="margin-top:10px;">검색어: <strong><c:out value="${keyword}"/></strong></p>
           </div>
         </div>
-        <div id="travelList" class="d-flex">
+        <div id="travelList" class="row">
 			<!-- ajax결과가 여기에 삽입 -->
         </div>
       </div>
@@ -176,15 +176,15 @@
 		        <div class="col-md-4 d-flex">
 		          <div class="blog-entry justify-content-end">
 		            <a href="#" class="block-20"
-		               style="background-image:url('${img}');"></a>
+		               style="background-image:url('${'${'}img}');"></a>
 
 		            <div class="text mt-3 float-right d-block">
 		              <h3 class="heading">
-		                <a href="#">${item.title}</a>
+		                <a href="#">${'${'}item.title}</a>
 		                <span class="heartIcon">❤</span>
 		              </h3>
-		              <p>${item.addr1 || ""}</p>
-		              <p>${item.cat1 || ""}</p>
+		              <p>${'${'}(item.addr1 || "")}</p>
+		              <p>${'${'}(item.cat1 || "")}</p>
 		            </div>
 		          </div>
 		        </div>

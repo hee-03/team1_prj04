@@ -10019,3 +10019,6 @@ footer .container p:last-child{
 .blog-entry:hover .text{
 	border: none;
 }
+
+#travelList .col-md-4 { min-width: 300px; }
+#travelList .blog-entry { width: 100%; }
