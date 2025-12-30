@@ -9922,6 +9922,12 @@ footer .container p:last-child{
 	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+.box-radius{
+	background:#fff;
+  	border-radius: 18px;
+  	box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 12px 30px rgba(0,0,0,.08);
+}
+
 /* whereGoing2.jsp */
 .ftco-section3 {
     padding: 5em 0em 0em 0em;
@@ -10015,10 +10021,11 @@ footer .container p:last-child{
   transform: translateY(-6px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
   border-radius: 15px;
+  cursor: pointer;
 }
 .blog-entry:hover .text{
 	border: none;
 }
 
-#travelList .col-md-4 { min-width: 300px; }
+#travelList .col-md-4 { min-width: 380px; }
 #travelList .blog-entry { width: 100%; }
