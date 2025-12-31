@@ -29,17 +29,17 @@ public class A01_MVC_Controller {
       return "index";
    }
    
-   // http://localhost:7777/mytrip
+   // http://localhost:7070/mytrip
    @GetMapping("mytrip")
    public String mytrip() {
       return "mytrip";
    }
-   // http://localhost:7777/rec_travel
+   // http://localhost:7070/rec_travel
    @GetMapping("rec_travel")
    public String rec_travel() {
       return "rec_travel";
    }
-   //http://localhost:7777/whereGoing2 
+   //http://localhost:7070/whereGoing2 
    @GetMapping("whereGoing2")
    public String whereGoing2() {
        return "whereGoing2";
@@ -47,7 +47,7 @@ public class A01_MVC_Controller {
    
  //박성준   
  //http://192.168.0.31:7070/festival
- //http://localhost:7777/festival 
+ //http://localhost:7070/festival 
    @GetMapping("/festival")
    public String festival() {
        return "festival"; // → /WEB-INF/view/festival.jsp
@@ -56,7 +56,7 @@ public class A01_MVC_Controller {
    
       
    //이병주   
-   //http://localhost:7077/whereGoing
+   //http://localhost:7070/whereGoing
    @GetMapping("whereGoing")
    public String whereGoing() {
        return "whereGoing";
