@@ -328,6 +328,7 @@
 		    }
 			// 레저 리스트
 			function drawLeisureList(list){
+				
 		    	
 		    	let html = `<div class="row">`;
 		    	
