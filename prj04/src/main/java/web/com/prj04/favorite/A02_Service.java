@@ -55,4 +55,14 @@ public class A02_Service {
         System.out.println("가져온 ID 개수: " + (list != null ? list.size() : 0));
         return list;
     }
+
+    // ==========================================
+    // 아래 메서드를 새로 추가했습니다. (기존 코드 건드리지 않음)
+    // 찜한 여행지들의 전체 정보를 가져오기 위해 Mapper를 호출합니다.
+    // ==========================================
+    public List<Content> getLikedContentList(String email) {
+        System.out.println("=== Service: 찜한 목록 상세 정보 조회 시작 ===");
+        // Mapper에 해당 기능을 수행할 메서드가 있어야 합니다.
+        return mapper.getLikedContentList(email);
+    }
 }

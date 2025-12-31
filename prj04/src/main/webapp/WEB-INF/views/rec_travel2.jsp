@@ -507,38 +507,6 @@ $(document).ready(function(){
         });
     });
 
-    // 7. 추천 로드
-    function loadRecommendations() {
-        $.ajax({
-            url: "${pageContext.request.contextPath}/travel/recommend",
-            type: "get",
-            dataType: "json",
-            cache: false,
-            success: function(data) {
-                var $recList = $("#recommendList");
-                $recList.empty(); 
-                if (data && data.length > 0) {
-                    var html = "";
-                    $.each(data, function(i, item) {
-                        var img = (item.firstimage && item.firstimage !== "") ? item.firstimage : "images/rec_travel/recmain.png";
-                        html += '<div class="col-md-4 mb-4">' +
-                                    '<div class="recommend-entry">' +
-                                        '<div class="block-20" style="background-image: url(\'' + img + '\'); height: 200px; background-size: cover; background-position: center; position: relative;">' +
-                                            '<span style="position: absolute; top: 15px; left: 15px; background: #ff4f4f; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">알고리즘 추천</span>' +
-                                        '</div>' +
-                                        '<div class="text p-3">' +
-                                            '<h3 style="font-size: 18px; font-weight: 700; color: #333; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + item.title + '</h3>' +
-                                            '<p style="font-size: 13px; color: #888; margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + item.addr1 + '</p>' +
-                                        '</div>' +
-                                    '</div>' +
-                                '</div>';
-                    });
-                    $recList.html(html);
-                }
-            }
-        });
-    }
-});
 </script>
   </body>
 </html>

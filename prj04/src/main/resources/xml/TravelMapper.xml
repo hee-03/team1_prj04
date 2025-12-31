@@ -8,13 +8,16 @@
         WHERE addr1 LIKE '%' || #{regionName} || '%'
     </select>
 
-    <insert id="insertLike">
-        INSERT INTO Favorite (email, contentid, areacode, cat1)
-        SELECT DISTINCT #{email}, #{contentid}, #{areacode}, cat1
-        FROM area_based
-        WHERE contentid = #{contentid}
-        AND ROWNUM = 1
-    </insert>
+<insert id="insertLike">
+    INSERT INTO Favorite (email, contentid, areacode, cat1)
+    SELECT DISTINCT 
+        #{email}, 
+        #{contentid}, 
+        #{areacode, jdbcType=VARCHAR}, cat1
+    FROM area_based
+    WHERE contentid = #{contentid}
+    AND ROWNUM = 1
+</insert>
 
     <delete id="deleteLike">
         DELETE FROM Favorite 
@@ -53,6 +56,12 @@
         SELECT contentid 
         FROM Favorite 
         WHERE email = #{email}
+    </select>
+
+    <select id="getLikedContentList" resultType="web.com.prj04.prj04_mvc.Content">
+        SELECT a.* FROM area_based a
+        JOIN Favorite f ON a.contentid = f.contentid
+        WHERE f.email = #{email}
     </select>
 
 </mapper>

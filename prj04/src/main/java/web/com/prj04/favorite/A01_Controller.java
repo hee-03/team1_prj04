@@ -22,13 +22,13 @@ public class A01_Controller {
 	public List<Content> travelList(@RequestParam String regionName){
 		return service.getContentsByRegionName(regionName);
 	}
-	// http://localhost:7070/rec_travel_test
+	// http://localhost:7777/rec_travel_test
 	@GetMapping("rec_travel_test")
 	public String rec_travel_test() {
 	    return "rec_travel2";
 	}
 
-	@PostMapping("/travel/like")
+/*	@PostMapping("/travel/like")
 	@ResponseBody
 	public ResponseEntity<String> toggleLike(
 	        @RequestParam("contentid") String contentid,
@@ -47,7 +47,7 @@ public class A01_Controller {
 	        return ResponseEntity.status(500).body("error");
 	    }
 	}
-
+*/
 	@GetMapping("/travel/recommend")
 	@ResponseBody
 	public List<Content> getRecommend(HttpSession session) {

@@ -26,6 +26,13 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* 하트 클릭을 위한 스타일 추가 */
+        .heartIcon { cursor: pointer; font-size: 20px; margin-left: 10px; transition: color 0.3s; }
+        .heartIcon.off { color: #ccc; } /* 빈 하트 상태 */
+        .heartIcon:not(.off) { color: #ff4f4f; } /* 찬 하트 상태 */
+    </style>
   </head>
   <body>
   <%@ include file="/WEB-INF/views/common/header.jsp" %>
@@ -67,7 +74,7 @@
 			            <h5>인천 중구</h5>
 			            <h3>바다와 하늘이 럭셔리함으로 물드는 공간</h3>
 			            <p>
-						씨메르는 인천 중구 영종도 파라다이스시티에서 2018년 9월에 오픈하여 1만 3,000여 ㎡(4,000평) 규모로, 동시에 약 2,000명까지 이용할 수 있다. 씨메르는 하늘을 뜻하는 프랑스어 ‘ciel’과 바다를 뜻하는 ‘mer’를 합친 이름이다. 하늘과 바다의 만남을 한데 아울러 특별한 공간에서 만날 볼 수 있다. 또한, 럭셔리하고 트렌디한 아쿠아 스파 존에서는 수영 시설뿐만 아니라 다이나믹한 LED 미디어 아트와 차별화된 컨셉 풀 파티를 즐길 수 있다. 이 외에도 찜질 스파존과 사우나, 다양한 휴게 공간이 마련되어 있다.						</p>
+						씨메르는 인천 중구 영종도 파라다이스시티에서 2018년 9월에 오픈하여 1만 3,000여 ㎡(4,000평) 규모로, 동시에 약 2,000명까지 이용할 수 있다. 씨메르는 하늘을 뜻하는 프랑스어 ‘ciel’과 바다을 뜻하는 ‘mer’를 합친 이름이다. 하늘과 바다의 만남을 한데 아울러 특별한 공간에서 만날 볼 수 있다. 또한, 럭셔리하고 트렌디한 아쿠아 스파 존에서는 수영 시설뿐만 아니라 다이나믹한 LED 미디어 아트와 차별화된 컨셉 풀 파티를 즐길 수 있다. 이 외에도 찜질 스파존과 사우나, 다양한 휴게 공간이 마련되어 있다.						</p>
 						<p>위치: 	</p>
 						<p class="region">인천광역시 중구 영종해안남로321번길 186</p>
 						<p>전화번호: 1833-8855</p>
@@ -323,38 +330,35 @@
 		let listCntPerPage = 12; //한페이지에 보여줄 개수
 		let currentPage = 1; // 현재 페이지
 		let randomList = []; // 랜덤 60개 저장할 변수
+        let myLikes = []; // 좋아요 리스트 저장 변수 추가
 		
 	    // 초기상태: rec div, 추천여행지 전부 숨김 처리
 	    $("#destination").addClass("d-none");
 	    $("[id^='rec']").addClass("d-none");
-	    //$("[class*='region-code']").removeClass("d-flex").addClass("d-none");
+
+        // [추가] 내가 이미 좋아요 한 목록 가져와서 myLikes에 담기
+        $.ajax({
+            url: "${pageContext.request.contextPath}/travel/myLikes",
+            type: "get",
+            dataType: "json",
+            success: function(list) {
+                myLikes = list.map(item => String(item)); // 문자열 배열로 변환
+            }
+        });
 
 	    // 클릭 이벤트
 	    $("[id^='travel_destination']").on("click", function(){
-	    	
 	        $("#destination").removeClass("d-none");
-	        
-	        // 클릭한 div의 id
 	        let clickId = $(this).attr("id");
-	        // 숫자만 추출 (01 ~ 10)
 	        let num = clickId.replace("travel_destination", "");
-	        
-	        // (재클릭시)모든 rec 숨기기
 	        $("[id^='rec']").addClass("d-none");
-	        // 클릭된 div와 동일한 숫자를 가진 rec 화면에 출력
 	        let $rec = $("#rec" + num).removeClass("d-none");
-	        
-	        // 클릭된 여행지 위치에서 지역명 추출
 	        let regionText = $rec.find("p.region").text().trim();
 	        let regionName = regionText.split(" ")[0];
-
 	        console.log("클릭된 지역명->AJAX로 보낼 지역명:", regionName);
-	        
-	        //AJAX 호출
 	        loadTravel(regionName)
-	        
 	    });
-	        //AJAX 호출
+
 	        function loadTravel(regionName){
 	        	$.ajax({
 		        	url: "${pageContext.request.contextPath}/travel/list",
@@ -362,7 +366,6 @@
 		        	data: {regionName: regionName},
 		        	dataType: "json",
 		        	success: function(list){
-		        		//drawTravelList(list);
 		        		initTravelList(list)
 		        	},
 		        	error: function(){
@@ -372,56 +375,39 @@
 	        }
 		    
 	        function initTravelList(list){
-	        	
 	        	let imageList = list.filter(function(item){
 	        		return item.firstimage && item.firstimage.trim() !== "";
 	        	})
-	        	
-	        	//랜덤 셔플
-	        	imageList.sort(function(){
-	        		return Math.random() - 0.5;
-	        	});
-	        	
-	        	// 60개 선택
+	        	imageList.sort(function(){ return Math.random() - 0.5; });
 	        	randomList = imageList.slice(0, 60);
-	        	
-	        	// 첫 페이지 출력
 	        	currentPage = 1;
 	        	drawPage(currentPage);
 	        }
 	        
 	        window.drawPage = function(page){
 	        	currentPage = page;
-	        	
 	        	let startIndex = (page - 1) * listCntPerPage;
 	        	let endIndex = startIndex + listCntPerPage;
-	        	
 	        	let pageList = randomList.slice(startIndex, endIndex);
-	        	
 	        	$(".block-27 ul li").removeClass("active");
-	        	
 	        	$(".block-27 ul li").each(function(){
 	        		let text = $(this).text().trim();
-	        		if(text === String(page)){
-	        			$(this).addClass("active");
-	        		}
+	        		if(text === String(page)) $(this).addClass("active");
 	        	});
-	        	
 	        	drawTravelList(pageList);
-	        	console.log("현재 페이지", page);
 	        }
 	        
 		    function drawTravelList(pageList){
-		    	
 		    	let html = `<div class="row">`;
-		    	
 		    	if(pageList.length === 0){
 		    		html += "<p>해당 지역의 데이터가 없습니다.</p>"
 		    	}else{
 		    		$.each(pageList, function(i, item){
-                        // 네이버 검색 쿼리 생성 --성준--
                         const searchQuery = encodeURIComponent(item.title);
                         const naverUrl = "https://search.naver.com/search.naver?query=" + searchQuery;
+
+                        // [중요] 내 좋아요 목록에 있는지 확인하여 하트 색상(클래스) 결정
+                        let heartClass = (myLikes.indexOf(String(item.contentid)) !== -1) ? "" : "off";
 
 		    			html += `
 		    					 <div class="col-md-4 d-flex">
@@ -432,7 +418,10 @@
 		    					 		<div class="text mt-3 float-right d-block">
 			    					 		<h3 class="heading">
 			    					 			<a href="\${naverUrl}" target="_blank">\${item.title}</a>
-			    					 			<span class="heartIcon">❤</span>
+                                                <span class="heartIcon \${heartClass}" 
+                                                      data-contentid="\${item.contentid}" 
+                                                      data-areacode="\${item.areacode}" 
+                                                      data-cat1="\${item.cat1}">❤</span>
 			    					 		</h3>
 			    					 		<p>\${item.addr1}</p>
 		    					 		</div>
@@ -442,15 +431,46 @@
 		    		})	
 		    	}
 		    	html += `</div>`;
-		    	
-		    	console.log("list전체", pageList);
-		    	console.log("첫번쨰 item", pageList[0])
 		    	$("#travelList").html(html)
-		    	
 		    }
-	    
-	});
-	
-	</script>
 
+        // [추가] 하트 클릭 이벤트 (동적 생성된 .heartIcon에 대해 작동하도록 바인딩)
+        $(document).on("click", ".heartIcon", function(){
+            let heart = $(this);
+            let contentid = String(heart.attr("data-contentid"));
+            let areacode = String(heart.attr("data-areacode"));
+            let cat1 = String(heart.attr("data-cat1"));
+            let title = heart.siblings("a").text().trim();
+            let action = heart.hasClass("off") ? "INSERT" : "DELETE";
+
+            if(!contentid || contentid === "undefined") {
+                alert("ID를 찾을 수 없습니다. Content.java를 확인하세요.");
+                return;
+            }
+
+            $.ajax({
+                url: "${pageContext.request.contextPath}/travel/like",
+                type: "post",
+                data: { 
+                    contentid: contentid,
+                    title: title, 
+                    areacode: areacode, 
+                    cat1: cat1,
+                    action: action 
+                },
+                success: function(res){
+                    if(res.trim() === "success") {
+                        heart.toggleClass("off"); // 하트 색깔 토글
+                        // 로컬 myLikes 리스트도 최신화
+                        if(action === "INSERT") {
+                            if(myLikes.indexOf(contentid) === -1) myLikes.push(contentid);
+                        } else {
+                            myLikes = myLikes.filter(id => id !== contentid);
+                        }
+                    }
+                }
+            });
+        });
+	});
+	</script>
 </html>
