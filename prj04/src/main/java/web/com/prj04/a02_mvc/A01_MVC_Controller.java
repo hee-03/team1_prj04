@@ -23,7 +23,7 @@ public class A01_MVC_Controller {
    @Autowired
    private web.com.prj04.favorite.A02_Service favoriteService;
    
-   // http://localhost:7777/main
+   // http://localhost:7070/main
    @GetMapping("main")
    public String main() {
       return "index";
