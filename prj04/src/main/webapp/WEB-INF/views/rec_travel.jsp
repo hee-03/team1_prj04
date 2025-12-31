@@ -434,43 +434,8 @@
 		    	$("#travelList").html(html)
 		    }
 
-        // [추가] 하트 클릭 이벤트 (동적 생성된 .heartIcon에 대해 작동하도록 바인딩)
-        $(document).on("click", ".heartIcon", function(){
-            let heart = $(this);
-            let contentid = String(heart.attr("data-contentid"));
-            let areacode = String(heart.attr("data-areacode"));
-            let cat1 = String(heart.attr("data-cat1"));
-            let title = heart.siblings("a").text().trim();
-            let action = heart.hasClass("off") ? "INSERT" : "DELETE";
+		    
+    });
 
-            if(!contentid || contentid === "undefined") {
-                alert("ID를 찾을 수 없습니다. Content.java를 확인하세요.");
-                return;
-            }
-
-            $.ajax({
-                url: "${pageContext.request.contextPath}/travel/like",
-                type: "post",
-                data: { 
-                    contentid: contentid,
-                    title: title, 
-                    areacode: areacode, 
-                    cat1: cat1,
-                    action: action 
-                },
-                success: function(res){
-                    if(res.trim() === "success") {
-                        heart.toggleClass("off"); // 하트 색깔 토글
-                        // 로컬 myLikes 리스트도 최신화
-                        if(action === "INSERT") {
-                            if(myLikes.indexOf(contentid) === -1) myLikes.push(contentid);
-                        } else {
-                            myLikes = myLikes.filter(id => id !== contentid);
-                        }
-                    }
-                }
-            });
-        });
-	});
 	</script>
 </html>

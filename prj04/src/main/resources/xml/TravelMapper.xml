@@ -8,16 +8,16 @@
         WHERE addr1 LIKE '%' || #{regionName} || '%'
     </select>
 
-<insert id="insertLike">
-    INSERT INTO Favorite (email, contentid, areacode, cat1)
-    SELECT DISTINCT 
-        #{email}, 
-        #{contentid}, 
-        #{areacode, jdbcType=VARCHAR}, cat1
-    FROM area_based
-    WHERE contentid = #{contentid}
-    AND ROWNUM = 1
-</insert>
+    <insert id="insertLike">
+        INSERT INTO Favorite (email, contentid, areacode, cat1)
+        SELECT DISTINCT 
+            #{email}, 
+            #{contentid}, 
+            #{areacode, jdbcType=VARCHAR}, cat1
+        FROM area_based
+        WHERE contentid = #{contentid}
+        AND ROWNUM = 1
+    </insert>
 
     <delete id="deleteLike">
         DELETE FROM Favorite 
@@ -47,7 +47,13 @@
     <select id="getRecommendedByTop" resultType="web.com.prj04.prj04_mvc.Content">
         SELECT * FROM (
             SELECT * FROM area_based 
-            WHERE areacode = #{areacode} AND cat1 = #{cat1}
+            WHERE 1=1
+            <if test="areacode != null and areacode != ''">
+                AND areacode = #{areacode, jdbcType=VARCHAR}
+            </if>
+            <if test="cat1 != null and cat1 != ''">
+                AND cat1 = #{cat1, jdbcType=VARCHAR}
+            </if>
             ORDER BY DBMS_RANDOM.VALUE
         ) WHERE ROWNUM &lt;= 3
     </select>

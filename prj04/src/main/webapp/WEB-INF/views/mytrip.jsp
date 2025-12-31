@@ -34,6 +34,9 @@
 		  font-size: 15px;
 		}
 		.d-none { display: none !important; }
+        /* 하트 스타일 보존 */
+        .heartIcon { cursor: pointer; color: #ff4f4f; margin-left: 8px; }
+        .heartIcon.off { color: #ccc; }
     </style>
   </head>
   <body>    
@@ -73,18 +76,10 @@
           </div>
         </div>
         <div class="row d-flex" id="favList">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="blog-single.html" class="block-20" style="background-image: url('/images/mytrip/fav01.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="#">순천만 생태 체험선</a><span class="heartIcon">❤</span></h3>
-                <p>#뱃길따라 탐사하는 선상투어 #다양한 생물을 볼 수 있는 시간</p>
-              </div>
-            </div>
           </div>
-          <div id="travelList"></div>
-           </div>
+        
+        <div id="travelList"></div>
+
         <div class="row mt-5">
 		  <div class="col text-center">
 		    <button type="button" id="btnMore" class="btn btn-outline-primary">
@@ -95,9 +90,6 @@
      
     </section>
     
-    
-    
-    
     <%@ include file="/WEB-INF/views/common/footer.jsp" %>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/heartIcon.js"></script>
@@ -107,12 +99,52 @@
         var randomList = [];
         var myLikes = []; 
 
-        // [중요] 초기화 시 추천 섹션은 절대로 d-none 처리하지 않습니다.
-        $("div.container[id^='rec']").addClass("d-none"); // 상세페이지들만 숨김
+        // [중요] 초기화 시 상세페이지들만 숨김
+        $("div.container[id^='rec']").addClass("d-none"); 
         
-        // 페이지 로드 시 바로 실행
-        loadMyLikes();
+        // 페이지 로드 시 실행
+        loadMyLikes();       
+        loadLikedList();     
         loadRecommendations(); 
+
+        // [핵심] 내가 좋아하는 여행 리스트 로드 함수 (데이터 바인딩 보완)
+        function loadLikedList() {
+            console.log("찜 상세 목록 요청 중...");
+            $.ajax({
+                url: "${pageContext.request.contextPath}/travel/myLikeDetails",
+                type: "get",
+                dataType: "json",
+                success: function(data) {
+                    console.log("서버에서 받은 찜 데이터:", data);
+                    var html = "";
+                    if (data && data.length > 0) {
+                        $.each(data, function(i, item) {
+                            // 필드명이 혹시 다를 경우를 대비해 꼼꼼하게 체크
+                            var id = item.contentid || item.areacode; 
+                            var img = (item.firstimage && item.firstimage !== "") ? item.firstimage : 'images/mytrip/fav01.jpg';
+                            var title = item.title || "제목 없음";
+                            var addr = item.addr1 || "";
+
+                            html += '<div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">' +
+                                    '  <div class="blog-entry justify-content-end" style="width:100%">' +
+                                    '    <div class="block-20" style="background-image: url(\'' + img + '\');"></div>' +
+                                    '    <div class="text mt-3 float-right d-block">' +
+                                    '      <h3 class="heading"><a>' + title + '</a><span class="heartIcon" data-contentid="' + id + '">❤</span></h3>' +
+                                    '      <p>' + addr + '</p>' +
+                                    '    </div>' +
+                                    '  </div>' +
+                                    '</div>';
+                        });
+                    } else {
+                        html = '<div class="col-md-12 text-center" style="padding:40px;"><p>아직 찜한 여행지가 없습니다.</p></div>';
+                    }
+                    $("#favList").html(html);
+                },
+                error: function(err) {
+                    console.error("찜 목록 로드 에러:", err);
+                }
+            });
+        }
 
         function loadMyLikes() {
             $.ajax({
@@ -125,21 +157,15 @@
             });
         }
 
-        // 지도 클릭 시 동작 수정
+        // 기존 지도 클릭/상세보기 로직 보존
         $("[id^='travel_destination']").on("click", function(){
             $("#destination").removeClass("d-none");
             var num = $(this).attr("id").replace("travel_destination", "");
-            
-            // 상세 섹션들(id="rec01" 등)만 정확히 선택해서 숨깁니다.
             $("div.container[id^='rec']").addClass("d-none");
             $("#rec" + num).removeClass("d-none");
-            
             var regionName = $("#rec" + num).find("p.region").text().trim().split(" ")[0];
             loadTravel(regionName);
-            
-            $('html, body').animate({
-                scrollTop: $("#destination").offset().top - 100
-            }, 500);
+            $('html, body').animate({ scrollTop: $("#destination").offset().top - 100 }, 500);
         });
 
         function loadTravel(regionName){
@@ -148,9 +174,7 @@
                 type: "get",
                 data: {regionName: regionName},
                 dataType: "json",
-                success: function(list){ 
-                    initTravelList(list); 
-                }
+                success: function(list){ initTravelList(list); }
             });
         }
             
@@ -166,7 +190,6 @@
         window.drawPage = function(page){
             var startIndex = (page - 1) * listCntPerPage;
             var pageList = randomList.slice(startIndex, startIndex + listCntPerPage);
-            
             $(".block-27 ul li").removeClass("active");
             $(".block-27 ul li").each(function(){
                 if($(this).text().trim() === String(page)) $(this).addClass("active");
@@ -177,8 +200,9 @@
         function drawTravelList(pageList){
             var html = '<div class="row" style="width:100%">';
             $.each(pageList, function(i, item){
+                var id = item.contentid || item.areacode;
                 var img = item.firstimage ? item.firstimage : 'images/no_image.png';
-                var isLiked = myLikes.indexOf(String(item.areacode)) !== -1;
+                var isLiked = myLikes.indexOf(String(id)) !== -1;
                 var heartClass = isLiked ? "" : "off";
 
                 html += '<div class="col-md-4 d-flex">' +
@@ -187,7 +211,7 @@
                                 '<div class="text mt-3 float-right d-block">' +
                                     '<h3 class="heading">' +
                                         '<a>' + item.title + '</a>' +
-                                        '<span class="heartIcon ' + heartClass + '" data-areacode="' + item.areacode + '">❤</span>' +
+                                        '<span class="heartIcon ' + heartClass + '" data-contentid="' + id + '">❤</span>' +
                                     '</h3>' +
                                     '<p>' + (item.addr1 ? item.addr1 : "") + '</p>' +
                                 '</div>' +
@@ -197,33 +221,30 @@
             $("#travelList").html(html + "</div>");
         }
 
+        // 하트 클릭 이벤트 (찜 취소/추가)
         $(document).on("click", ".heartIcon", function(){
             var heart = $(this);
             var title = heart.siblings("a").text();
-            var areacode = String(heart.data("areacode"));
+            var contentid = String(heart.attr("data-contentid"));
             var action = heart.hasClass("off") ? "INSERT" : "DELETE";
 
             $.ajax({
                 url: "${pageContext.request.contextPath}/travel/like",
                 type: "post",
-                data: { title: title, areacode: areacode, action: action },
+                data: { title: title, contentid: contentid, action: action },
                 success: function(res){
-                    if(res === "success") {
-                        heart.toggleClass("off");
-                        if(action === "INSERT") {
-                            if(myLikes.indexOf(areacode) === -1) myLikes.push(areacode);
-                        } else {
-                            myLikes = myLikes.filter(function(code) { return code !== areacode; });
-                        }
-                        loadRecommendations(); // 하트 누를 때마다 추천 리스트 갱신
+                    if(res.trim() === "success") {
+                        // 찜 취소 시 즉시 화면에서 제거하거나 상태 변경
+                        loadLikedList();     // 하단 '내가 좋아하는 여행' 리스트 갱신
+                        loadMyLikes();       // 전체 찜 ID 목록 갱신
+                        loadRecommendations(); // 추천 목록 갱신
                     }
                 }
             });
         });
 
-        // 추천 여행지 로드 함수 (별도 분리)
+        // 맞춤 여행지 로드 함수 보존
         function loadRecommendations() {
-            console.log("추천 데이터 요청 시작");
             $.ajax({
                 url: "${pageContext.request.contextPath}/travel/recommend",
                 type: "get",
@@ -232,49 +253,28 @@
                 success: function(data) {
                     var $recList = $("#recommendList");
                     $recList.empty(); 
-
                     if (data && data.length > 0) {
-                        console.log("받은 추천 데이터 개수:", data.length);
                         var html = "";
                         $.each(data, function(i, item) {
                             var img = (item.firstimage && item.firstimage !== "") ? item.firstimage : "images/rec_travel/recmain.png";
-                            var title = item.title ? item.title : "추천 여행지";
-                            var addr = item.addr1 ? item.addr1 : "주소 정보 없음";
-
                             html += '<div class="col-md-4 mb-4">' +
                                         '<div class="recommend-entry">' +
                                             '<div class="block-20" style="background-image: url(\'' + img + '\'); height: 200px; background-size: cover; background-position: center; position: relative;">' +
                                                 '<span style="position: absolute; top: 15px; left: 15px; background: #ff4f4f; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">알고리즘 추천</span>' +
                                             '</div>' +
                                             '<div class="text p-3">' +
-                                                '<h3 style="font-size: 18px; font-weight: 700; color: #333; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + title + '</h3>' +
-                                                '<p style="font-size: 13px; color: #888; margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + addr + '</p>' +
+                                                '<h3 style="font-size: 18px; font-weight: 700; color: #333; margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + item.title + '</h3>' +
+                                                '<p style="font-size: 13px; color: #888; margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + item.addr1 + '</p>' +
                                             '</div>' +
                                         '</div>' +
                                     '</div>';
                         });
-                        
                         $recList.html(html);
-                        $("#recommend-section").show();
-                    } else {
-                        console.log("추천 데이터가 없습니다.");
-                        // 데이터가 없을 때는 섹션 자체를 숨길 수도 있습니다.
-                        // $("#recommend-section").hide(); 
                     }
-                },
-                error: function(xhr, status, error) {
-                    console.error("추천 로드 실패:", error);
                 }
             });
         }
     });
-    
 	</script>
-
-
-
-
-		    
 </body>
 </html>
-    
